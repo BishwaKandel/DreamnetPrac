@@ -1,0 +1,7 @@
+C:\Users\ASUS\Desktop\HRMS\HRMSwebAPI\obj\Debug\net8.0\HRMSwebAPI.csproj.AssemblyReference.cache
+C:\Users\ASUS\Desktop\HRMS\HRMSwebAPI\obj\Debug\net8.0\HRMSwebAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ASUS\Desktop\HRMS\HRMSwebAPI\obj\Debug\net8.0\HRMSwebAPI.AssemblyInfoInputs.cache
+C:\Users\ASUS\Desktop\HRMS\HRMSwebAPI\obj\Debug\net8.0\HRMSwebAPI.AssemblyInfo.cs
+C:\Users\ASUS\Desktop\HRMS\HRMSwebAPI\obj\Debug\net8.0\HRMSwebAPI.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\HRMS\HRMSwebAPI\obj\Debug\net8.0\HRMSwebAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\ASUS\Desktop\HRMS\HRMSwebAPI\obj\Debug\net8.0\HRMSwebAPI.MvcApplicationPartsAssemblyInfo.cache

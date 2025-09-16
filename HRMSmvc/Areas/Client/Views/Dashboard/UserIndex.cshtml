@@ -1,0 +1,254 @@
+﻿@using Domain.DTO
+@model UserDTO
+@{
+    ViewData["Title"] = "User Dashboard";
+    Layout = "_UserLayout";
+    var url = ViewData["APIurl"]?.ToString() ?? "";
+}
+
+<div class="pagetitle">
+    <h1>Profile</h1>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item">Users</li>
+            <li class="breadcrumb-item active">Profile</li>
+        </ol>
+    </nav>
+</div><!-- End Page Title -->
+
+<section class="section profile">
+    <div class="row">
+        <div class="col-xl-4">
+
+            <div class="card">
+                <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
+
+                    @if (Model.ProfilePictureFileName != null)
+                    {
+
+                        <img src="@url/@Model.ProfilePictureFileName" alt="Profile" id="preview">
+                    }
+                    else
+                    {
+                        <img src="~/images/defultpfp.jpg" alt="Profile" id="preview">
+
+                    }
+                    <h2>@Model?.Name</h2>
+
+
+                    <h3>@Model?.Position</h3>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-xl-8">
+
+            <div class="card">
+                <div class="card-body pt-3">
+                    <!-- Bordered Tabs -->
+                    <ul class="nav nav-tabs nav-tabs-bordered">
+
+                        <li class="nav-item">
+                            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#profile-overview">Overview</button>
+                        </li>
+
+                        <li class="nav-item">
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit">Edit Profile</button>
+                        </li>
+
+                        <li class="nav-item">
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-change-password">Change Password</button>
+                        </li>
+
+                    </ul>
+                    <div class="tab-content pt-2">
+
+                        <div class="tab-pane fade show active profile-overview" id="profile-overview">
+
+                            <h5 class="card-title">Profile Details</h5>
+
+                            <div class="row">
+                                <div class="col-lg-3 col-md-4 label ">Full Name</div>
+                                <div class="col-lg-9 col-md-8">@Model.Name</div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-3 col-md-4 label">Email</div>
+                                <div class="col-lg-9 col-md-8">@Model.Email</div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-3 col-md-4 label">Position</div>
+                                <div class="col-lg-9 col-md-8">@Model.Position</div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-3 col-md-4 label">Date Of Birth</div>
+                                <div class="col-lg-9 col-md-8">@Model.DOB.ToString("yyyy-MM-dd")</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-3 col-md-4 label">Joining Date</div>
+                                <div class="col-lg-9 col-md-8">@Model.JoiningDate.ToString("yyyy-MM-dd")</div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-3 col-md-4 label">Address</div>
+                                <div class="col-lg-9 col-md-8">@Model.Address</div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-3 col-md-4 label">Phone</div>
+                                <div class="col-lg-9 col-md-8">@Model.PhoneNumber</div>
+                            </div>
+
+                            @* <div class="row">
+                                    <div class="col-lg-3 col-md-4 label">Email</div>
+                                    <div class="col-lg-9 col-md-8">@Model.</div>
+                                </div> *@
+
+                        </div>
+
+                        <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
+
+                            <!-- Profile Edit Form -->
+                            <form asp-controller="Client" asp-action="ChangePhoto" enctype="multipart/form-data" id="photoForm" method="post">
+                                <div class="row mb-3">
+                                    <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Profile Image</label>
+                                    <div class="col-md-8 col-lg-9">
+                                        @if(Model.ProfilePictureFileName!= null)
+                                        {
+
+                                            <img src="@url/@Model.ProfilePictureFileName" alt="Profile" id="preview">
+                                        }
+                                        else 
+                                        {
+											<img src="~/images/defultpfp.jpg" alt="Profile" id="preview">
+
+                                        }
+                                        <div class="pt-2">
+                                            <input type="hidden" asp-for="Id" />
+                                            <!-- File input (hidden by default) -->
+                                            <input asp-for="formFile" type="file" class="custom-file-input" id="changeFile" style="display:none" />
+
+                                            <!-- Button that triggers the file input -->
+                                            <a class="btn btn-primary btn-sm" title="Upload new profile image" id="uploadBtn">
+                                                <i class="fa-solid fa-pen"></i>
+                                            </a>
+
+                                            <a class="btn btn-danger btn-sm" title="Remove my profile image" id="deleteBtn"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <form asp-controller="Client" asp-action="Edit" id="editForm" method="post">
+                                <div class="row mb-3">
+                                    <label asp-for="Name" class="col-md-4 col-lg-3 col-form-label">Name</label>
+                                    <div class="col-md-8 col-lg-9">
+                                        <input asp-for="Name" class="form-control" value="@Model.Name" />
+                                    </div>
+                                </div>
+                                <input type="hidden" name="Id" value="@Model.Id"/>
+                                <input type="hidden" asp-for="JoiningDate" />
+                                <input type="hidden" asp-for="Salary" />
+
+
+
+                                @* <div class="row mb-3">
+                                    <label asp-for="Position" class="col-md-4 col-lg-3 col-form-label">Position</label>
+                                    <div class="col-md-8 col-lg-9">
+                                        <input name="job" type="text" class="form-control" id="Job" value="@Model.Position">
+                                    </div>
+                                </div> *@
+
+                                <div class="row mb-3">
+                                    <label asp-for="Address" class="col-md-4 col-lg-3 col-form-label">Address</label>
+                                    <div class="col-md-8 col-lg-9">
+                                        <input asp-for="Address" type="text" class="form-control" value="@Model.Address">
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label for="PhoneNumber" class="col-md-4 col-lg-3 col-form-label">Phone Number</label>
+                                    <div class="col-md-8 col-lg-9">
+                                        <input asp-for="PhoneNumber" class="form-control" value="@Model.PhoneNumber" />
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label asp-for="Email" class="col-md-4 col-lg-3 col-form-label">Email</label>
+                                    <div class="col-md-8 col-lg-9">
+                                        <input asp-for="Email" class="form-control" value="@Model.Email" />
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label asp-for="DOB" class="col-md-4 col-lg-3 col-form-label">Date of Birth </label>
+                                    <div class="col-md-8 col-lg-9">
+                                        <input type="text" asp-for="DOB" value="@Model.DOB.ToString("yyyy-MM-dd")" class="form-control" />
+                                    </div>
+                                </div>
+
+
+                                @* <div class="row mb-3">
+                                    <label for="JoiningDate" class="col-md-4 col-lg-3 col-form-label">Joining Date</label>
+                                    <div class="col-md-8 col-lg-9">
+                                        <input asp-for="JoiningDate" class="form-control" />
+                                    </div>
+                                </div> *@
+
+
+                                <div class="text-center mt-3">
+                                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                                </div>
+                            </form><!-- End Profile Edit Form -->
+
+                        </div>
+                        <div class="tab-pane fade pt-3" id="profile-change-password">
+                            <!-- Change Password Form -->
+                            <form asp-controller="Dashboard" asp-action="ChangePassword" id="changepasswordForm" method="post">
+                                <input type="hidden" name="Id" value="@Model.Id" />
+
+                                <div class="row mb-3">
+                                    <label for="CurrentPassword" class="col-md-4 col-lg-3 col-form-label">Current Password</label>
+                                    <div class="col-md-8 col-lg-9">
+                                        <input name="CurrentPassword" type="password" class="form-control" id="CurrentPassword">
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label for="NewPassword" class="col-md-4 col-lg-3 col-form-label">New Password</label>
+                                    <div class="col-md-8 col-lg-9">
+                                        <input name="NewPassword" type="password" class="form-control" id="NewPassword">
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label for="ConfirmPassword" class="col-md-4 col-lg-3 col-form-label">Re-enter New Password</label>
+                                    <div class="col-md-8 col-lg-9">
+                                        <input name="ConfirmPassword" type="password" class="form-control" id="ConfirmPassword">
+                                    </div>
+                                </div>
+
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary">Change Password</button>
+                                </div>
+                            </form>
+                            <!-- End Change Password Form -->
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+</section>
+
+@section Scripts {
+	<script src="~/js/userindex.js"></script>
+}
+

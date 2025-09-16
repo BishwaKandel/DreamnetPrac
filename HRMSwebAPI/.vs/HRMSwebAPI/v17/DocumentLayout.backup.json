@@ -1,0 +1,196 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSwebAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CF36FB35-AD7B-4199-B30A-5E915EDA9946}|..\\HRMSmvc\\HRMSmvc.csproj|c:\\users\\asus\\desktop\\hrms\\hrmsmvc\\areas\\admin\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF36FB35-AD7B-4199-B30A-5E915EDA9946}|..\\HRMSmvc\\HRMSmvc.csproj|c:\\users\\asus\\desktop\\hrms\\hrmsmvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF36FB35-AD7B-4199-B30A-5E915EDA9946}|..\\HRMSmvc\\HRMSmvc.csproj|c:\\users\\asus\\desktop\\hrms\\hrmsmvc\\views\\shared\\_loginlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF36FB35-AD7B-4199-B30A-5E915EDA9946}|..\\HRMSmvc\\HRMSmvc.csproj|c:\\users\\asus\\desktop\\hrms\\hrmsmvc\\views\\shared\\_userlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF36FB35-AD7B-4199-B30A-5E915EDA9946}|..\\HRMSmvc\\HRMSmvc.csproj|c:\\users\\asus\\desktop\\hrms\\hrmsmvc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF36FB35-AD7B-4199-B30A-5E915EDA9946}|..\\HRMSmvc\\HRMSmvc.csproj|c:\\users\\asus\\desktop\\hrms\\hrmsmvc\\areas\\client\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF36FB35-AD7B-4199-B30A-5E915EDA9946}|..\\HRMSmvc\\HRMSmvc.csproj|c:\\users\\asus\\desktop\\hrms\\hrmsmvc\\viewmodel\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF36FB35-AD7B-4199-B30A-5E915EDA9946}|..\\HRMSmvc\\HRMSmvc.csproj|c:\\users\\asus\\desktop\\hrms\\hrmsmvc\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF36FB35-AD7B-4199-B30A-5E915EDA9946}|..\\HRMSmvc\\HRMSmvc.csproj|c:\\users\\asus\\desktop\\hrms\\hrmsmvc\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF36FB35-AD7B-4199-B30A-5E915EDA9946}|..\\HRMSmvc\\HRMSmvc.csproj|c:\\users\\asus\\desktop\\hrms\\hrmsmvc\\areas\\admin\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF36FB35-AD7B-4199-B30A-5E915EDA9946}|..\\HRMSmvc\\HRMSmvc.csproj|c:\\users\\asus\\desktop\\hrms\\hrmsmvc\\areas\\client\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_LoginLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Views\\Shared\\_LoginLayout.cshtml",
+              "RelativeDocumentMoniker": "..\\HRMSmvc\\Views\\Shared\\_LoginLayout.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Views\\Shared\\_LoginLayout.cshtml",
+              "RelativeToolTip": "..\\HRMSmvc\\Views\\Shared\\_LoginLayout.cshtml",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-16T10:52:00.584Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_UserLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Views\\Shared\\_UserLayout.cshtml",
+              "RelativeDocumentMoniker": "..\\HRMSmvc\\Views\\Shared\\_UserLayout.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Views\\Shared\\_UserLayout.cshtml",
+              "RelativeToolTip": "..\\HRMSmvc\\Views\\Shared\\_UserLayout.cshtml",
+              "ViewState": "AgIAACkBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-16T10:52:03.768Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "..\\HRMSmvc\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "..\\HRMSmvc\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAE8BAAAAAAAAAAAcwGABAABiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-16T10:50:23.455Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "..\\HRMSmvc\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "..\\HRMSmvc\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-16T10:50:19.151Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Areas\\Client\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "..\\HRMSmvc\\Areas\\Client\\Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Areas\\Client\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "..\\HRMSmvc\\Areas\\Client\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-16T10:50:03.154Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RegisterViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\ViewModel\\RegisterViewModel.cs",
+              "RelativeDocumentMoniker": "..\\HRMSmvc\\ViewModel\\RegisterViewModel.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\ViewModel\\RegisterViewModel.cs",
+              "RelativeToolTip": "..\\HRMSmvc\\ViewModel\\RegisterViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T10:49:58.094Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "..\\HRMSmvc\\Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "..\\HRMSmvc\\Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-16T10:49:49.003Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "..\\HRMSmvc\\Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "..\\HRMSmvc\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-16T10:49:45.583Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Areas\\Admin\\Views\\Dashboard\\Index.cshtml",
+              "RelativeDocumentMoniker": "..\\HRMSmvc\\Areas\\Admin\\Views\\Dashboard\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Areas\\Admin\\Views\\Dashboard\\Index.cshtml",
+              "RelativeToolTip": "..\\HRMSmvc\\Areas\\Admin\\Views\\Dashboard\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-16T10:49:33.624Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Areas\\Admin\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "..\\HRMSmvc\\Areas\\Admin\\Controllers\\DashboardController.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Areas\\Admin\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "..\\HRMSmvc\\Areas\\Admin\\Controllers\\DashboardController.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAIwDUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T10:47:54.956Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Areas\\Client\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "..\\HRMSmvc\\Areas\\Client\\Controllers\\DashboardController.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Areas\\Client\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "..\\HRMSmvc\\Areas\\Client\\Controllers\\DashboardController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T10:47:36.849Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+﻿@using Domain.DTO
+@model RegisterDTO
+@{
+    Layout = "_LoginLayout";
+}
+
+<section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 col-md-12 d-flex flex-column align-items-center justify-content-center">
+
+                <div class="card mb-10">
+
+                    <div class="card-body">
+
+                        <div class="pt-4 pb-2">
+                            <h5 class="card-title text-center pb-0 fs-4">Register Account</h5>
+                            <p class="text-center small">Enter credentials to register</p>
+                        </div>
+                        <form id="registerForm" asp-action="Register" enctype="multipart/form-data" method="post">
+                            <div class="row mb-3">
+                                <div class="col-8">
+                                    <label for="Name" class="form-label">Name</label>
+                                    <input asp-for="Name" class="form-control" required>
+                                    <div class="invalid-feedback">Please, enter your Name!</div>
+                                </div>
+                            
+                            <div class="col-4">
+                                <label for="ProfilePicture" class="form-label">Profile Picture</label>
+                                <div class="custom-file">
+                                        <input asp-for="formFile" class="custom-file-input" id="customFile" />
+                                </div>
+                                <div class="invalid-feedback">Please enter a valid photo</div>
+                            </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-6">
+                                    <label for="Name" class="form-label">UserName</label>
+                                    <input asp-for="UserName" class="form-control" required>
+                                    <div class="invalid-feedback">Please, enter your UserName!</div>
+                                </div>
+                                    <div class="col-6">
+                                        <label for="Position" class="form-label">Position</label>
+                                        <input asp-for="Position" name="Position" class="form-control" required>
+                                        <div class="invalid-feedback">Please enter your Position</div>
+                                    </div>
+                             </div>
+                            <div class="row mb-3">
+                                <div class="col-6">
+                                    <label for="DOB" class="form-label">Date Of Birth</label>
+                                    <input asp-for="DOB" name="DOB" class="form-control" required>
+                                    <div class="invalid-feedback">Please enter a valid Date</div>
+                                </div>
+                                <div class="col-6">
+                                    <label for="JoiningDate" class="form-label">Joining Date</label>
+                                    <input asp-for="JoiningDate" name="JoiningDate" class="form-control" required>
+                                    <div class="invalid-feedback">Please enter a valid JoiningDate!</div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                            <div class="col-6">
+                                <label for="PhoneNumber">Phone Number</label>
+                                <input asp-for="PhoneNumber" class="form-control" />
+                                @* <span asp-validation-for="PhoneNumber" class="text-danger"></span> *@
+                            </div>
+                            <div class="col-6">
+                                <label asp-for="Address"></label>
+                                <input asp-for="Address" class="form-control" />
+                                @* <span asp-validation-for="Address" class="text-danger"></span> *@
+                            </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="Email" class="form-label">Email</label>
+                                <input asp-for="Email" name="email" class="form-control" required>
+                                <div class="invalid-feedback">Please enter a valid Email adddress!</div>
+                            </div>
+                           
+                            
+                           
+
+                            <div class="col-12">
+                                <label for="Password" class="form-label">Password</label>
+                                <input asp-for="Password" class="form-control" id="yourPassword" type="password" required>
+                                <i class='bx bx-hide eye-icon' id="toggle-password"></i>
+                                <div class="invalid-feedback">Please enter your password!</div>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="ConfPassword" class="form-label">Confirm Password</label>
+                                <input asp-for="ConfirmPassword" class="form-control" id="confirmPassword" type="password" required>
+                                <i class='bx bx-hide eye-icon' id="toggle-confirm-password"></i>
+                                <div class="invalid-feedback">Please enter your password!</div>
+                            </div>
+                              
+
+
+                            <div class="col-12">
+                                <button class="btn btn-primary w-100 mt-3 mb-3 " type="submit">Create Account</button>
+                            </div>
+                            <div class="col-12">
+                                <p class="small mb-0">Already have an account? <a asp-controller="Auth" asp-action="Login">Log in</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+@section Scripts {
+    <script>
+                   $(document).ready(function() {
+            $('#registerForm').submit(function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Serialize the form data
+             var formData = new FormData(this);
+            // Send the AJAX request
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("Register", "Auth")',
+                   data: formData,               // Use FormData instead of serialize()
+            processData: false,           // Required for FormData
+            contentType: false,
+            //dataType: 'json', //
+                success: function(response) {
+                    console.log('Response:', response); // For debugging
+                    if (response.success) {
+                        // Show success message with SweetAlert
+                        Swal.fire({
+                            title: "Registration successful!",
+                            icon: "success",
+                            confirmButtonText: "OK",
+                        }).then((result) => {
+                            // If user clicks 'OK', redirect to login page
+                            if (result.isConfirmed) {
+                                window.location.href = '@Url.Action("Login", "Auth")'; // Redirect to login
+                            }
+                        });
+                    } else {
+                        // If registration fails, show the error message from the server
+                        Swal.fire({
+                            title: 'Registration Failed!',
+                            text: response.message || 'Please try again.',
+                            icon: 'error',
+                            confirmButtonText: 'OK'
+                        });
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error('Error occurred:', error);
+                    Swal.fire({
+                        title: 'Registration Failed!',
+                        text: 'An unexpected error occurred. Please try again later.',
+                        icon: 'error',
+                        confirmButtonText: 'OK'
+                    });
+                }
+            });
+        });
+
+          $("#DOB").flatpickr({
+            dateFormat: "Y-m-d",  // Format of the selected date
+            maxDate: "today",     // Prevent past dates
+            allowInput: true      // Allow the user to type the date manually
+          });
+               $("#JoiningDate").flatpickr({
+          dateFormat: "Y-m-d",  // Format of the selected date
+          allowInput: true      // Allow the user to type the date manually
+        });
+        });
+
+
+    </script>
+}
+

@@ -1,0 +1,167 @@
+﻿@using Domain.DTO
+@model LoginDTO
+
+
+@{
+	Layout = "_LoginLayout"; 
+}
+
+      @*   <div class="container">
+
+            <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
+
+                            <div class="card mb-3">
+                                <div class="card-body">
+
+                                    <div class="pt-4 pb-2">
+                                        <h5 class="card-title text-center pb-0 fs-4">Login to Your Account</h5>
+                                        <p class="text-center small">Enter your username & password to login</p>
+                                    </div>
+
+                                    <!-- Start of Form -->
+                                    <form asp-action="Login" method="post">
+                                        <div class="col-12">
+                                            <div class="input-group has-validation">
+                                                <label asp-for="Email" class="form-label">Username</label>
+                                                <input asp-for="Email" class="form-control" required />
+                                                <span asp-validation-for="Email" class="text-danger"></span>
+                                                <div class="invalid-feedback">Please enter your username.</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <label asp-for="Password" class="form-label">Password</label>
+                                            <input asp-for="Password" class="form-control" required />
+                                            <span asp-validation-for="Password" class="text-danger"></span>
+                                            <div class="invalid-feedback">Please enter your password!</div>
+                                        </div>
+
+                                        <!-- Login Button -->
+                                        <div class="col-12">
+                                            <button class="btn btn-primary w-100" type="submit">Login</button>
+                                        </div>
+
+                                        <!-- Register Link -->
+                                        <div class="col-12">
+                                            <p class="small mb-0">Don't have an account? <a asp-controller="Auth" asp-action="Register" class="btn btn-primary">Create an account</a></p>
+                                        </div>
+                                    </form>
+                                    <!-- End of Form -->
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div> *@
+
+
+        
+    
+      <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
+
+              <div class="card mb-3">
+
+                <div class="card-body">
+
+                  <div class="pt-4 pb-2">
+                    <h5 class="card-title text-center pb-0 fs-4">Login to Your Account</h5>
+                    <p class="text-center small">Enter your username & password to login</p>
+                  </div>
+
+                        <form id="loginForm" asp-action="Login" method="post">
+                            <div class="col-12">
+                                <label for="yourUsername" class="form-label">Username</label>
+                                <div class="input-group has-validation">
+                                    <span id="inputGroupPrepend"></span>
+                                    <input asp-for="Email" class="form-control" id="yourUsername" required>
+                                    <div class="invalid-feedback">Please enter your username.</div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="yourPassword" class="form-label">Password</label>
+                                <input asp-for="Password" class="form-control" id="yourPassword" required>
+                                <div class="invalid-feedback">Please enter your password!</div>
+                            </div>
+
+                            <div class="col-12">
+                                <button class="btn btn-primary w-100 mt-3 mb-3" type="submit">Login</button>
+                            </div>
+                            <div class="col-12">
+                                <p class="small mb-0">Don't have an account? <a asp-controller="Auth" asp-action="Register">Create an account</a></p>
+                            </div>
+                        </form>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+@section Scripts {
+    <script>
+            $(document).ready(function() {
+            $('#loginForm').submit(function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Send the AJAX request
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("Login", "Auth")',
+                data:   $('#loginForm').serialize(),
+
+                dataType: 'json', // Expect JSON response
+                success: function(response) {
+                    console.log('Response:', response); // For debugging
+                    if (response.success) {                                //Changes Data to LOGIN
+                        // Show success message with SweetAlert
+                        Swal.fire({
+                            title: "Login successful!",
+                            icon: "success",
+                            confirmButtonText: "OK",
+                        }).then((result) => {
+                            // If user clicks 'OK', redirect to login page
+                            if (result.isConfirmed) {
+                                window.location.href = response.message; // Redirect to login
+                            }
+                        });
+                    } else {
+                        // If registration fails, show the error message from the server
+                        Swal.fire({
+                            title: 'Login Failed!',
+                            text: response.message || 'Please try again.',
+                            icon: 'error',
+                            confirmButtonText: 'OK'
+                        });
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error('Error occurred:', error);
+                    Swal.fire({
+                        title: 'Login Failed!',
+                        text: 'An unexpected error occurred. Please try again later.',
+                        icon: 'error',
+                        confirmButtonText: 'OK'
+                    });
+                }
+            });
+        });
+
+        });
+    </script>
+}
+
+

@@ -1,0 +1,175 @@
+﻿@model Domain.Models.User
+@{
+    ViewData["Title"] = "Create Employee";
+}
+@* <h2>Create Employee</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="FirstName"></label>
+        <input asp-for="FirstName" class="form-control" />
+        <span asp-validation-for="FirstName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="LastName"></label>
+        <input asp-for="LastName" class="form-control" />
+        <span asp-validation-for="LastName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="PhoneNumber"></label>
+        <input asp-for="PhoneNumber" class="form-control" />
+        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="DateOfBirth"></label>
+        <input asp-for="DateOfBirth" type ="date"class="form-control" />
+        <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="JoiningDate"></label>
+        <input asp-for="JoiningDate" type = "date" class="form-control" />
+        <span asp-validation-for="JoiningDate" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Position"></label>
+        <input asp-for="Position" class="form-control" />
+        <span asp-validation-for="Position" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Salary"></label>
+        <input asp-for="Salary" class="form-control" />
+        <span asp-validation-for="Salary" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Address"></label>
+        <input asp-for="Address" class="form-control" />
+        <span asp-validation-for="Address" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Add Student</button>
+    <a asp-controller="Employee" asp-action="Index" class="btn btn-primary">Back</a>
+
+</form> *@
+
+
+<h2> @(Model != null ? "Edit Employee" : "Create Employee")</h2>
+@if (Model == null)
+{
+    <form asp-action="Create" method="post">
+        <div class="col-12">
+            <label asp-for="FirstName"></label>
+            <input asp-for="FirstName" class="form-control" />
+            @* <span asp-validation-for="FirstName" class="text-danger"></span> *@
+        </div>
+        <div class="col-12">
+            <label asp-for="LastName"></label>
+            <input asp-for="LastName" class="form-control" />
+            @* <span asp-validation-for="LastName" class="text-danger"></span> *@
+        </div>
+        <div class="col-12">
+            <label asp-for="Email"></label>
+            <input asp-for="Email" class="form-control" />
+            @* <span asp-validation-for="Email" class="text-danger"></span> *@
+        </div>
+        <div class="col-12">
+            <label asp-for="PhoneNumber"></label>
+            <input asp-for="PhoneNumber" class="form-control" />
+            @* <span asp-validation-for="PhoneNumber" class="text-danger"></span> *@
+        </div>
+        <div class="col-12">
+            <label asp-for="DOB"></label>
+            <input asp-for="DOB" type="date" class="form-control" />
+            @* <span asp-validation-for="DateOfBirth" class="text-danger"></span> *@
+        </div>
+
+        <div class="col-12">
+            <label asp-for="JoiningDate"></label>
+            <input asp-for="JoiningDate" type="date" class="form-control" />
+            @* <span asp-validation-for="DateOfBirth" class="text-danger"></span> *@
+        </div>
+        <div class="col-12">
+            <label asp-for="Position"></label>
+            <input asp-for="Position" class="form-control" />
+            @* <span asp-validation-for="Position" class="text-danger"></span> *@
+        </div>
+        <div class="col-12">
+            <label asp-for="Salary"></label>
+            <input asp-for="Salary" class="form-control" />
+            @* <span asp-validation-for="Salary" class="text-danger"></span> *@
+        </div>
+        <div class="col-12">
+            <label asp-for="Address"></label>
+            <input asp-for="Address" class="form-control" />
+            @* <span asp-validation-for="Address" class="text-danger"></span> *@
+        </div>
+        <div></div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary">Add Employee</button>
+            <a asp-controller="Employee" asp-action="Index" class="btn btn-primary">Back</a>
+            <button type="reset" class="btn btn-secondary">Reset</button>
+        </div>
+    </form>
+}
+else
+{
+    <form asp-action="Edit" method="post">
+        <div class="col-12">
+            <label asp-for="FirstName"></label>
+            <input asp-for="FirstName" class="form-control" />
+            @* <span asp-validation-for="FirstName" class="text-danger"></span> *@
+        </div>
+        <div class="col-12">
+            <label asp-for="LastName"></label>
+            <input asp-for="LastName" class="form-control" />
+            @* <span asp-validation-for="LastName" class="text-danger"></span> *@
+        </div>
+        <div class="col-12">
+            <label asp-for="Email"></label>
+            <input asp-for="Email" class="form-control" />
+            @* <span asp-validation-for="Email" class="text-danger"></span> *@
+        </div>
+        <div class="col-12">
+            <label asp-for="PhoneNumber"></label>
+            <input asp-for="PhoneNumber" class="form-control" />
+            @* <span asp-validation-for="PhoneNumber" class="text-danger"></span> *@
+        </div>
+        <div class="col-12">
+            <label asp-for="DOB"></label>
+            <input asp-for="DOB" type="date" class="form-control" />
+            @* <span asp-validation-for="DateOfBirth" class="text-danger"></span> *@
+        </div>
+
+        <div class="col-12">
+            <label asp-for="JoiningDate"></label>
+            <input asp-for="JoiningDate" type="date" class="form-control" />
+            @* <span asp-validation-for="DateOfBirth" class="text-danger"></span> *@
+        </div>
+        <div class="col-12">
+            <label asp-for="Position"></label>
+            <input asp-for="Position" class="form-control" />
+            @* <span asp-validation-for="Position" class="text-danger"></span> *@
+        </div>
+        <div class="col-12">
+            <label asp-for="Salary"></label>
+            <input asp-for="Salary" class="form-control" />
+            @* <span asp-validation-for="Salary" class="text-danger"></span> *@
+        </div>
+        <div class="col-12">
+            <label asp-for="Address"></label>
+            <input asp-for="Address" class="form-control" />
+            @* <span asp-validation-for="Address" class="text-danger"></span> *@
+        </div>
+        <div></div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary">Update Employee</button>
+            <a asp-controller="Employee" asp-action="Index" class="btn btn-primary">Back</a>
+            <button type="reset" class="btn btn-secondary">Reset</button>
+        </div>
+    </form>
+
+}
+
