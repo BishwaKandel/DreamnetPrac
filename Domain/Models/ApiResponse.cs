@@ -8,9 +8,9 @@ namespace Domain.Models
 {
     public class ApiResponse<T>
     {
-        public bool success { get; set; }
+        public bool success { get; set; } //True false
 
-        public string message { get; set; }
-        public T? Data { get; set; }
+        public string message { get; set; } // Employee retrieved successfully
+        public T? Data { get; set; } // Id : Name : 
     }
 }

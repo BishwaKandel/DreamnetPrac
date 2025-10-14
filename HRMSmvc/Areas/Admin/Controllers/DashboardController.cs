@@ -1,6 +1,8 @@
-﻿using Domain.Models;
+﻿using Domain.DTO;
+using Domain.Models;
 using HRMSmvc.Controllers;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 
 namespace HRMSmvc.Areas.Admin.Controllers
 {
@@ -16,7 +18,7 @@ namespace HRMSmvc.Areas.Admin.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            var employee = await GetAsync<List<User>>("/api/Employee/GetEmp");
+            var employee = await GetAsync<ApiResponse<List<UserDTO>>> ("/api/Employee/GetEmp");
 
             if (employee == null)
             {
@@ -25,41 +27,45 @@ namespace HRMSmvc.Areas.Admin.Controllers
             }
 
             // Return the list of employees to the view
-            return View(employee);
+            return View(employee.Data);
         }
-
 
         [HttpPost]
-        public async Task<IActionResult> Create(User employee)
+        public async Task<IActionResult> Create([FromForm] User employee)
         {
-            var response = await PostAsync<User>("/api/Employee/CreateEmp", employee, null);
-
-            if (response != null)
-            {
-                return RedirectToAction(nameof(Index));
-            }
-
-            // If creation failed, show the form again
-            ModelState.AddModelError("", "Failed to create employee.");
-            return View("CreateorEdit", employee);
+            var response = await PostAsync<ApiResponse<UserDTO>>("/api/Employee/CreateEmp", employee, null);
+            return Json(response);  // Always return JSON
         }
+
 
         [HttpGet]
         public async Task<IActionResult> CreateorEdit(string Id)
         {
+            if (Id != null)
+            {
+                var response = await GetAsync<ApiResponse<User>>("/api/Employee/GetEmpbyID?id=" + Id);
 
-            var response = await GetAsync<ApiResponse<User>>("/api/Employee/GetEmpbyID?id=" + Id);
+                return View(response.Data);
+            }
+            else
+            {
+                var user = new User
+                {
+                    DOB = DateTime.Today,
+                    JoiningDate = DateTime.Today,
+                    Id = null // Ensure Id is not set
+                };
+                return View(user);
 
-            return View(response.Data);
-
+            }
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(User employee)
+        public async Task<IActionResult> Edit([FromForm] User employee)
         {
-            var response = await PostAsync<ApiResponse<string>>("/api/Employee/UpdateEmp", employee, null);
+            var response = await PostAsync<ApiResponse<UserDTO>>("/api/Employee/UpdateEmp", employee, null);
 
-            return Json(response);  //Get ma ni yestai garne 
+            return Json(response);  
         }
 
         [HttpPost]

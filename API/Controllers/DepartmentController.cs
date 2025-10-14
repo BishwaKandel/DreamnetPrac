@@ -1,5 +1,6 @@
 ﻿using Application.Interface;
 using Domain.DTO;
+using Domain.DTO.DepartmentDTO;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
@@ -9,15 +10,17 @@ namespace API.Controllers
     public class DepartmentController : Controller
     {
         private readonly IDepartmentService _deptService;
+        private readonly IEmployeeService _empService;
 
-        public DepartmentController(IDepartmentService deptService)
+        public DepartmentController(IDepartmentService deptService , IEmployeeService empService)
         {
             _deptService = deptService;
+            _empService = empService;
         }
 
         //Create a Department
         [HttpPost("CreateDept")]
-        public async Task<IActionResult> CreateDepartmentAsync(DepartmentDTO department)
+        public async Task<IActionResult> CreateDepartmentAsync(DeptInfoDTO department)
         {
             var createdDepartment = await _deptService.CreateDepartmentAsync(department);
             return CreatedAtAction(
@@ -50,8 +53,8 @@ namespace API.Controllers
         }
 
         //Update Department
-        [HttpPut("UpdateDept")]
-        public async Task<IActionResult> UpdateDepartmentAsync(DepartmentDTO department)
+        [HttpPost("UpdateDept")]
+        public async Task<IActionResult> UpdateDepartmentAsync([FromBody] DeptInfoDTO department)
         {
             var updatedDepartment = await _deptService.UpdateDepartmentAsync(department);
             if (updatedDepartment == null)
@@ -75,6 +78,35 @@ namespace API.Controllers
                 return NotFound();
             }
             return NoContent();
+        }
+
+        //Get Employees EXCEPT it's department 
+        [HttpGet("GetEmpExceptDeptId")]
+        public async Task<IActionResult> GetEmpExceptDeptId(Guid id)
+        {
+            var employees = await _deptService.GetEmployeesExceptDeptIdAsync(id);
+            return Ok(employees);
+        }
+
+        //Add Employees to a Department 
+        [HttpPost("AddEmpToDept")]
+        public async Task<IActionResult> AddEmployeesToDepartmentAsync([FromBody] AddEmpReq request)
+        {
+            var result = await _deptService.AddEmployeesToDepartmentAsync(request.DepartmentId , request.EmployeeIds);
+            if (result == null || !result.success)  
+            {
+                return BadRequest(result?.message ?? "Failed to add employees to department");
+            }
+            return Ok(result);
+        }
+
+        //Get All Employees in a Department 
+        [HttpGet("GetAllEmpInDept")]
+
+        public async Task<IActionResult> GetAllEmployeesInDepartmentAsync(Guid deptId)
+        {
+            var employees = await _empService.GetAllEmployeesAsync(deptId);
+            return Ok(employees);
         }
     }
 }

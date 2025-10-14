@@ -1,0 +1,54 @@
+﻿@using Domain.DTO
+@using Domain.Models
+@model List<UserDTO>
+@{
+    ViewData["Title"] = "Employee List";
+}
+@{
+    int counter = 1;
+}
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">List of Employees</h5>
+        <!-- Default Table -->
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">S.N.</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Phone Number</th>
+                    <th scope="col">Date of Birth</th>
+                    <th scope="col">Joining Date</th>
+                    <th scope="col">Position</th>
+                    <th scope="col">Salary</th>
+                    <th scope="col">Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var row in Model)
+                {
+                    <tr>
+                        <td>@counter</td>
+                        <td>@row.Name</td>
+                        <td>@row.Email</td>
+                        <td>@row.PhoneNumber</td>
+                        <td>@row.DOB.ToShortDateString()</td>
+                        <td>@row.JoiningDate.ToShortDateString()</td>
+                        <td>@row.Position</td>
+                        <td>@row.Salary</td>
+                        <td>@row.Address</td>
+                    </tr>
+                    counter++;
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+       
+    </script>
+}

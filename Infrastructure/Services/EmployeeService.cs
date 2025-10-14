@@ -21,18 +21,38 @@ namespace Infrastructure.Services
             _mapper = mapper;
 
         }
-        public async Task<ApiResponse<List<UserDTO>>> GetAllEmployeesAsync()
+        
+        public async Task<ApiResponse<List<UserDTO>>> GetAllEmployeesAsync(Guid? deptId)
         {
-            List<User> user = await _context.Users.ToListAsync();
-            List<UserDTO> userDTOs = _mapper.Map<List<UserDTO>>(user);
+            IList<User> usersInRole = await _userManager.GetUsersInRoleAsync("User");
 
-            return new ApiResponse<List<UserDTO>>
+            if (deptId == null)
             {
-                success = true,
-                message = "Employees retrieved successfully",
-                Data = userDTOs
-            };
+                List<UserDTO> userDTOs = _mapper.Map<List<UserDTO>>(usersInRole);
+
+                return new ApiResponse<List<UserDTO>>
+                {
+                    success = true,
+                    message = "Employees retrieved successfully",
+                    Data = userDTOs
+                };
+            }
+            else
+            {
+                var employees = usersInRole.Where(e => e.DepartmentId == deptId).ToList();
+                List<UserDTO> userDTOs = _mapper.Map<List<UserDTO>>(employees);
+                return new ApiResponse<List<UserDTO>>
+                {
+                    success = true,
+                    message = "Employees retrieved successfully",
+                    Data = userDTOs
+                };
+            }
+
+
+
         }
+
 
         public async Task<ApiResponse<UserDTO>> GetEmployeeByIdAsync(String id)
         {
@@ -67,7 +87,7 @@ namespace Infrastructure.Services
                     IsActive = employeeDTO.IsActive,
                     ProfilePictureFileName = employeeDTO.ProfilePictureFileName
                 }
-            }; ;
+            }; 
         }
 
         public async Task<ApiResponse<UserDTO>> CreateEmployeeAsync(UserDTO user)
@@ -76,6 +96,7 @@ namespace Infrastructure.Services
             {
                 FirstName = user.FirstName,
                 LastName = user.LastName,
+                Name = user.Name,
                 Email = user.Email,
                 PhoneNumber = user.PhoneNumber,
                 DOB = user.DOB,
@@ -175,52 +196,65 @@ namespace Infrastructure.Services
 
         public async Task<ApiResponse<UserDTO>> UpdateEmployeeAsync(UserUpdateDTO employee)
         {
-            User? existingEmployee = await _context.Users.FindAsync(employee.Id);
-            if (existingEmployee == null)
+            try
+            {
+                User? existingEmployee = await _context.Users.FindAsync(employee.Id);
+                if (existingEmployee == null)
+                {
+                    return new ApiResponse<UserDTO>
+                    {
+                        success = false,
+                        message = "Employee not found"
+                    };
+                }
+                existingEmployee.Name = employee.Name ?? existingEmployee.Name;
+                existingEmployee.FirstName = employee.FirstName ?? existingEmployee.FirstName;
+                existingEmployee.LastName = employee.LastName ?? existingEmployee.LastName;
+                existingEmployee.Email = employee.Email ?? existingEmployee.Email;
+                existingEmployee.PhoneNumber = employee.PhoneNumber ?? existingEmployee.PhoneNumber;
+                existingEmployee.DOB = employee.DOB.HasValue ? employee.DOB.Value : existingEmployee.DOB;
+
+                existingEmployee.JoiningDate = employee.JoiningDate.HasValue ? employee.JoiningDate.Value : existingEmployee.JoiningDate;
+                existingEmployee.Position = employee.Position ?? existingEmployee.Position;
+                existingEmployee.Salary = employee.Salary.HasValue ? employee.Salary.Value : existingEmployee.Salary;
+                existingEmployee.Address = employee.Address ?? existingEmployee.Address;
+                existingEmployee.isActive = employee.IsActive.HasValue ? employee.IsActive.Value : existingEmployee.isActive;
+                //existingEmployee.ProfilePictureFileName = employee.ProfilePictureFileName ?? existingEmployee.ProfilePictureFileName;
+                _context.Users.Update(existingEmployee);
+                await _context.SaveChangesAsync();
+                UserDTO updatedEmployeeDTO = _mapper.Map<UserDTO>(existingEmployee);
+                return new ApiResponse<UserDTO>
+                {
+                    success = true,
+                    message = "Employee updated Successfully",
+                    Data = new UserDTO
+                    {
+                        Id = updatedEmployeeDTO.Id,
+                        Name = updatedEmployeeDTO.Name,
+                        FirstName = updatedEmployeeDTO.FirstName,
+                        LastName = updatedEmployeeDTO.LastName,
+                        Email = updatedEmployeeDTO.Email,
+                        PhoneNumber = updatedEmployeeDTO.PhoneNumber,
+                        DOB = updatedEmployeeDTO.DOB,
+                        JoiningDate = updatedEmployeeDTO.JoiningDate,
+                        Position = updatedEmployeeDTO.Position,
+                        Salary = updatedEmployeeDTO.Salary,
+                        Address = updatedEmployeeDTO.Address,
+                        ProfilePictureFileName = updatedEmployeeDTO.ProfilePictureFileName,
+                        IsActive = updatedEmployeeDTO.IsActive
+                    }
+                };
+            }
+
+            catch(Exception e)
             {
                 return new ApiResponse<UserDTO>
                 {
                     success = false,
-                    message = "Employee not found"
+                    message = "An error occurred while updating the employee."
                 };
             }
-            existingEmployee.Name = employee.Name ?? existingEmployee.Name;
-            existingEmployee.FirstName = employee.FirstName ?? existingEmployee.FirstName;
-            existingEmployee.LastName = employee.LastName ?? existingEmployee.LastName;
-            existingEmployee.Email = employee.Email ?? existingEmployee.Email;
-            existingEmployee.PhoneNumber = employee.PhoneNumber ?? existingEmployee.PhoneNumber;
-            existingEmployee.DOB = employee.DOB.HasValue ? employee.DOB.Value : existingEmployee.DOB;
-
-            existingEmployee.JoiningDate = employee.JoiningDate.HasValue ? employee.JoiningDate.Value : existingEmployee.JoiningDate;
-            existingEmployee.Position = employee.Position ?? existingEmployee.Position;
-            existingEmployee.Salary = employee.Salary.HasValue ? employee.Salary.Value : existingEmployee.Salary;
-            existingEmployee.Address = employee.Address ?? existingEmployee.Address;
-            existingEmployee.isActive = employee.IsActive.HasValue ? employee.IsActive.Value : existingEmployee.isActive;
-            //existingEmployee.ProfilePictureFileName = employee.ProfilePictureFileName ?? existingEmployee.ProfilePictureFileName;
-            _context.Users.Update(existingEmployee);
-            await _context.SaveChangesAsync();
-            UserDTO updatedEmployeeDTO = _mapper.Map<UserDTO>(existingEmployee);
-            return new ApiResponse<UserDTO>
-            {
-                success = true,
-                message = "Employee updated Successfully",
-                Data = new UserDTO
-                {
-                    Id = updatedEmployeeDTO.Id,
-                    Name = updatedEmployeeDTO.Name,
-                    FirstName = updatedEmployeeDTO.FirstName,
-                    LastName = updatedEmployeeDTO.LastName,
-                    Email = updatedEmployeeDTO.Email,
-                    PhoneNumber = updatedEmployeeDTO.PhoneNumber,
-                    DOB = updatedEmployeeDTO.DOB,
-                    JoiningDate = updatedEmployeeDTO.JoiningDate,
-                    Position = updatedEmployeeDTO.Position,
-                    Salary = updatedEmployeeDTO.Salary,
-                    Address = updatedEmployeeDTO.Address,
-                    ProfilePictureFileName = updatedEmployeeDTO.ProfilePictureFileName,
-                    IsActive = updatedEmployeeDTO.IsActive
-                }
-            };
+            
         }
 
         public async Task<bool> DeleteEmployeeAsync(Guid Id)

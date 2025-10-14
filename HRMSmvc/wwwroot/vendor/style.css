@@ -6,6 +6,24 @@
 	border-bottom: 1px solid #d9d9d9;
 }
 
+
+/* For dropdown submenu */
+.dropdown-submenu {
+	position: relative;
+}
+
+/* Show the submenu on hover */
+.dropdown-submenu > .dropdown-menu {
+	display: none;
+	margin-left: 0;
+}
+
+.dropdown-submenu:hover > .dropdown-menu {
+	display: block;
+}
+
+
+
 .datatable-top,
 .datatable-bottom {
 	padding: 8px 10px;

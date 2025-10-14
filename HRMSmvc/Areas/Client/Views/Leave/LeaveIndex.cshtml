@@ -1,0 +1,54 @@
+﻿@using Domain.DTO
+@using Domain.Models
+@model List<LeaveRequestDTO>
+@{
+	int counter = 1;
+	// Initialize a counter to 1
+}
+@{
+    ViewData["Title"] = "View Leave";
+    Layout = "_UserLayout";
+
+}
+<div class="card-body">
+	<h5 class="card-title">List of Leaves</h5>
+	<!-- Default Table -->
+	<table class="table">
+		<thead>
+			<tr>
+				@* <th scope="col">ID</th> *@
+				<th scope="col">S.N.</th>
+				<th scope="col">StartDate</th>
+				<th scope="col">EndDate</th>
+				<th scope="col">Reason</th>
+				<th scope="col">Description</th>
+				<th scope="col">LeaveType</th>
+				<th scope="col">Status</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var row in Model)
+			{
+				<tr>
+					@* <td>@row.Id</td> *@
+					<td>@counter</td>
+					<td>@row.StartDate</td>
+					<td>@row.EndDate</td>
+					<td>@row.Reason</td>
+					<td>@row.Description</td>
+					<td>@row.LeaveType</td>
+					<td>@row.Status</td>
+					
+				</tr>
+				counter++;
+			}
+		</tbody>
+	</table>
+</div>
+</div>
+
+
+@section Scripts {
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+	<script src="~/js/leave.js"></script>
+}

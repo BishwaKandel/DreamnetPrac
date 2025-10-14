@@ -1,0 +1,1000 @@
+2025-09-17 09:18:45.591 +05:45  INF  User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-17 09:18:45.869 +05:45  INF  Now listening on: https://localhost:7189
+2025-09-17 09:18:45.899 +05:45  INF  Now listening on: http://localhost:5227
+2025-09-17 09:18:46.038 +05:45  INF  Application started. Press Ctrl+C to shut down.
+2025-09-17 09:18:46.038 +05:45  INF  Hosting environment: Development
+2025-09-17 09:18:46.038 +05:45  INF  Content root path: C:\Users\ASUS\Desktop\HRMS\HRMSmvc
+2025-09-17 09:18:47.814 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/ - null null
+2025-09-17 09:18:48.004 +05:45  INF  Executing endpoint 'HRMSmvc.Controllers.AuthController.Login (HRMSmvc)'
+2025-09-17 09:18:48.069 +05:45  INF  Route matched with {action = "Login", controller = "Auth", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller HRMSmvc.Controllers.AuthController (HRMSmvc).
+2025-09-17 09:18:48.101 +05:45  INF  Executing ViewResult, running view login.
+2025-09-17 09:18:48.446 +05:45  INF  Executed ViewResult - view login executed in 356.1349ms.
+2025-09-17 09:18:48.462 +05:45  INF  Executed action HRMSmvc.Controllers.AuthController.Login (HRMSmvc) in 390.9898ms
+2025-09-17 09:18:48.464 +05:45  INF  Executed endpoint 'HRMSmvc.Controllers.AuthController.Login (HRMSmvc)'
+2025-09-17 09:18:48.494 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/ - 200 null text/html; charset=utf-8 669.214ms
+2025-09-17 09:18:48.716 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 09:18:48.716 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/js/main.js - null null
+2025-09-17 09:18:48.722 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 6.1002ms
+2025-09-17 09:18:48.725 +05:45  INF  The file /js/main.js was not modified
+2025-09-17 09:18:48.727 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/js/main.js - 304 null text/javascript 10.5263ms
+2025-09-17 09:18:48.756 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-09-17 09:18:48.864 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 107.8194ms
+2025-09-17 09:19:11.588 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Auth/Register - null null
+2025-09-17 09:19:11.608 +05:45  INF  Executing endpoint 'HRMSmvc.Controllers.AuthController.Register (HRMSmvc)'
+2025-09-17 09:19:11.613 +05:45  INF  Route matched with {action = "Register", controller = "Auth", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register() on controller HRMSmvc.Controllers.AuthController (HRMSmvc).
+2025-09-17 09:19:11.617 +05:45  INF  Executing ViewResult, running view register.
+2025-09-17 09:19:11.664 +05:45  INF  Executed ViewResult - view register executed in 49.2602ms.
+2025-09-17 09:19:11.664 +05:45  INF  Executed action HRMSmvc.Controllers.AuthController.Register (HRMSmvc) in 50.4059ms
+2025-09-17 09:19:11.664 +05:45  INF  Executed endpoint 'HRMSmvc.Controllers.AuthController.Register (HRMSmvc)'
+2025-09-17 09:19:11.665 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Auth/Register - 200 null text/html; charset=utf-8 77.0283ms
+2025-09-17 09:19:11.715 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-09-17 09:19:11.718 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 09:19:11.738 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 21.6372ms
+2025-09-17 09:19:11.779 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 63.6711ms
+2025-09-17 09:20:21.132 +05:45  INF  Request starting HTTP/2 POST https://localhost:7189/Auth/Register - multipart/form-data; boundary=----WebKitFormBoundaryWLXRsc7CEV2PBDuS 8534
+2025-09-17 09:20:21.185 +05:45  INF  Executing endpoint 'HRMSmvc.Controllers.AuthController.RegisterAsync (HRMSmvc)'
+2025-09-17 09:20:21.207 +05:45  INF  Route matched with {action = "Register", controller = "Auth", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterAsync(Domain.DTO.RegisterDTO) on controller HRMSmvc.Controllers.AuthController (HRMSmvc).
+2025-09-17 09:20:28.249 +05:45  INF  Executing JsonResult, writing value of type 'Domain.Models.ApiResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-17 09:20:28.257 +05:45  INF  Executed action HRMSmvc.Controllers.AuthController.RegisterAsync (HRMSmvc) in 7049.4827ms
+2025-09-17 09:20:28.257 +05:45  INF  Executed endpoint 'HRMSmvc.Controllers.AuthController.RegisterAsync (HRMSmvc)'
+2025-09-17 09:20:28.259 +05:45  INF  Request finished HTTP/2 POST https://localhost:7189/Auth/Register - 200 null application/json; charset=utf-8 7127.8011ms
+2025-09-17 09:20:34.761 +05:45  INF  Request starting HTTP/2 POST https://localhost:7189/Auth/Register - multipart/form-data; boundary=----WebKitFormBoundary1dlOQiat9AEoLv7H 8538
+2025-09-17 09:20:34.761 +05:45  INF  Executing endpoint 'HRMSmvc.Controllers.AuthController.RegisterAsync (HRMSmvc)'
+2025-09-17 09:20:34.762 +05:45  INF  Route matched with {action = "Register", controller = "Auth", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterAsync(Domain.DTO.RegisterDTO) on controller HRMSmvc.Controllers.AuthController (HRMSmvc).
+2025-09-17 09:20:37.496 +05:45  INF  Executing JsonResult, writing value of type 'Domain.Models.ApiResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-17 09:20:37.496 +05:45  INF  Executed action HRMSmvc.Controllers.AuthController.RegisterAsync (HRMSmvc) in 2734.5414ms
+2025-09-17 09:20:37.496 +05:45  INF  Executed endpoint 'HRMSmvc.Controllers.AuthController.RegisterAsync (HRMSmvc)'
+2025-09-17 09:20:37.496 +05:45  INF  Request finished HTTP/2 POST https://localhost:7189/Auth/Register - 200 null application/json; charset=utf-8 2735.5394ms
+2025-09-17 09:20:41.667 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/ - null null
+2025-09-17 09:20:41.709 +05:45  INF  Executing endpoint 'HRMSmvc.Controllers.AuthController.Login (HRMSmvc)'
+2025-09-17 09:20:41.709 +05:45  INF  Route matched with {action = "Login", controller = "Auth", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller HRMSmvc.Controllers.AuthController (HRMSmvc).
+2025-09-17 09:20:41.709 +05:45  INF  Executing ViewResult, running view login.
+2025-09-17 09:20:41.713 +05:45  INF  Executed ViewResult - view login executed in 3.0836ms.
+2025-09-17 09:20:41.713 +05:45  INF  Executed action HRMSmvc.Controllers.AuthController.Login (HRMSmvc) in 4.0117ms
+2025-09-17 09:20:41.713 +05:45  INF  Executed endpoint 'HRMSmvc.Controllers.AuthController.Login (HRMSmvc)'
+2025-09-17 09:20:41.714 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/ - 200 null text/html; charset=utf-8 46.4301ms
+2025-09-17 09:20:41.767 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-09-17 09:20:41.775 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 09:20:41.779 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 12.7004ms
+2025-09-17 09:20:41.812 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 44.7665ms
+2025-09-17 09:20:55.326 +05:45  INF  Request starting HTTP/2 POST https://localhost:7189/ - application/x-www-form-urlencoded; charset=UTF-8 228
+2025-09-17 09:20:55.328 +05:45  INF  Executing endpoint 'HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc)'
+2025-09-17 09:20:55.339 +05:45  INF  Route matched with {action = "Login", controller = "Auth", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginAsync(Domain.DTO.LoginDTO) on controller HRMSmvc.Controllers.AuthController (HRMSmvc).
+2025-09-17 09:20:56.852 +05:45  INF  AuthenticationScheme: Cookies signed in.
+2025-09-17 09:20:56.853 +05:45  INF  Executing JsonResult, writing value of type 'Domain.Models.ApiResponse`1[[Domain.DTO.LoginResponseDto, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-17 09:20:56.856 +05:45  INF  Executed action HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc) in 1516.9881ms
+2025-09-17 09:20:56.857 +05:45  INF  Executed endpoint 'HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc)'
+2025-09-17 09:20:56.857 +05:45  INF  Request finished HTTP/2 POST https://localhost:7189/ - 200 null application/json; charset=utf-8 1531.2183ms
+2025-09-17 09:20:59.291 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Admin/Dashboard/Index - null null
+2025-09-17 09:20:59.299 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Admin.Controllers.DashboardController.Index (HRMSmvc)'
+2025-09-17 09:20:59.302 +05:45  INF  Route matched with {area = "Admin", action = "Index", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller HRMSmvc.Areas.Admin.Controllers.DashboardController (HRMSmvc).
+2025-09-17 09:21:03.433 +05:45  INF  Executing ViewResult, running view Index.
+2025-09-17 09:21:03.448 +05:45  INF  Executed action HRMSmvc.Areas.Admin.Controllers.DashboardController.Index (HRMSmvc) in 4146.1542ms
+2025-09-17 09:21:03.449 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Admin.Controllers.DashboardController.Index (HRMSmvc)'
+2025-09-17 09:21:03.454 +05:45  ERR  An unhandled exception has occurred while executing the request.System.InvalidOperationException: The model item passed into the ViewDataDictionary is of type 'Domain.Models.ApiResponse`1[System.Collections.Generic.List`1[Domain.Models.User]]', but this ViewDataDictionary instance requires a model item of type 'System.Collections.Generic.IEnumerable`1[Domain.Models.User]'.
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary.EnsureCompatible(Object value)
+   at lambda_method96(Closure, ViewDataDictionary)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPagePropertyActivator.Activate(Object page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+
+2025-09-17 09:21:03.508 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Admin/Dashboard/Index - 500 null text/html; charset=utf-8 4217.2279ms
+2025-09-17 09:21:03.548 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-09-17 09:21:03.548 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 09:21:03.549 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 1.6376ms
+2025-09-17 09:21:03.598 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 49.9689ms
+2025-09-17 09:21:10.879 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/ - null null
+2025-09-17 09:21:10.886 +05:45  INF  Executing endpoint 'HRMSmvc.Controllers.AuthController.Login (HRMSmvc)'
+2025-09-17 09:21:10.887 +05:45  INF  Route matched with {action = "Login", controller = "Auth", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller HRMSmvc.Controllers.AuthController (HRMSmvc).
+2025-09-17 09:21:10.894 +05:45  INF  Executing ViewResult, running view login.
+2025-09-17 09:21:10.900 +05:45  INF  Executed ViewResult - view login executed in 12.2834ms.
+2025-09-17 09:21:10.900 +05:45  INF  Executed action HRMSmvc.Controllers.AuthController.Login (HRMSmvc) in 12.8704ms
+2025-09-17 09:21:10.901 +05:45  INF  Executed endpoint 'HRMSmvc.Controllers.AuthController.Login (HRMSmvc)'
+2025-09-17 09:21:10.901 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/ - 200 null text/html; charset=utf-8 21.9012ms
+2025-09-17 09:21:10.921 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 09:21:10.922 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 0.6112ms
+2025-09-17 09:21:19.103 +05:45  INF  Request starting HTTP/2 POST https://localhost:7189/ - application/x-www-form-urlencoded; charset=UTF-8 265
+2025-09-17 09:21:19.104 +05:45  INF  Executing endpoint 'HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc)'
+2025-09-17 09:21:19.104 +05:45  INF  Route matched with {action = "Login", controller = "Auth", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginAsync(Domain.DTO.LoginDTO) on controller HRMSmvc.Controllers.AuthController (HRMSmvc).
+2025-09-17 09:21:21.151 +05:45  INF  AuthenticationScheme: Cookies signed in.
+2025-09-17 09:21:21.151 +05:45  INF  Executing JsonResult, writing value of type 'Domain.Models.ApiResponse`1[[Domain.DTO.LoginResponseDto, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-17 09:21:21.151 +05:45  INF  Executed action HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc) in 2047.1147ms
+2025-09-17 09:21:21.151 +05:45  INF  Executed endpoint 'HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc)'
+2025-09-17 09:21:21.151 +05:45  INF  Request finished HTTP/2 POST https://localhost:7189/ - 200 null application/json; charset=utf-8 2048.6107ms
+2025-09-17 09:21:25.299 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Client - null null
+2025-09-17 09:21:25.310 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Client.Controllers.DashboardController.UserIndex (HRMSmvc)'
+2025-09-17 09:21:25.317 +05:45  INF  Route matched with {area = "Client", action = "UserIndex", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserIndex() on controller HRMSmvc.Areas.Client.Controllers.DashboardController (HRMSmvc).
+2025-09-17 09:21:27.101 +05:45  INF  Executing ViewResult, running view UserIndex.
+2025-09-17 09:21:27.107 +05:45  INF  Executed action HRMSmvc.Areas.Client.Controllers.DashboardController.UserIndex (HRMSmvc) in 1790.0286ms
+2025-09-17 09:21:27.107 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Client.Controllers.DashboardController.UserIndex (HRMSmvc)'
+2025-09-17 09:21:27.108 +05:45  ERR  An unhandled exception has occurred while executing the request.System.InvalidOperationException: The model item passed into the ViewDataDictionary is of type 'Domain.Models.ApiResponse`1[Domain.DTO.UserDTO]', but this ViewDataDictionary instance requires a model item of type 'Domain.DTO.UserDTO'.
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary.EnsureCompatible(Object value)
+   at lambda_method114(Closure, ViewDataDictionary)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPagePropertyActivator.Activate(Object page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+
+2025-09-17 09:21:27.114 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Client - 500 null text/html; charset=utf-8 1814.4187ms
+2025-09-17 09:21:27.146 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-09-17 09:21:27.153 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 09:21:27.157 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 3.5975ms
+2025-09-17 09:21:27.163 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 16.7054ms
+2025-09-17 09:21:48.003 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/ - null null
+2025-09-17 09:21:48.006 +05:45  INF  Executing endpoint 'HRMSmvc.Controllers.AuthController.Login (HRMSmvc)'
+2025-09-17 09:21:48.007 +05:45  INF  Route matched with {action = "Login", controller = "Auth", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller HRMSmvc.Controllers.AuthController (HRMSmvc).
+2025-09-17 09:21:48.007 +05:45  INF  Executing ViewResult, running view login.
+2025-09-17 09:21:48.010 +05:45  INF  Executed ViewResult - view login executed in 3.3504ms.
+2025-09-17 09:21:48.011 +05:45  INF  Executed action HRMSmvc.Controllers.AuthController.Login (HRMSmvc) in 4.5259ms
+2025-09-17 09:21:48.011 +05:45  INF  Executed endpoint 'HRMSmvc.Controllers.AuthController.Login (HRMSmvc)'
+2025-09-17 09:21:48.012 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/ - 200 null text/html; charset=utf-8 8.3858ms
+2025-09-17 09:21:48.037 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 09:21:48.037 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 0.7493ms
+2025-09-17 09:24:48.500 +05:45  INF  User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-17 09:24:49.126 +05:45  INF  Now listening on: https://localhost:7189
+2025-09-17 09:24:49.132 +05:45  INF  Now listening on: http://localhost:5227
+2025-09-17 09:24:49.244 +05:45  INF  Application started. Press Ctrl+C to shut down.
+2025-09-17 09:24:49.245 +05:45  INF  Hosting environment: Development
+2025-09-17 09:24:49.245 +05:45  INF  Content root path: C:\Users\ASUS\Desktop\HRMS\HRMSmvc
+2025-09-17 09:24:50.341 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/ - null null
+2025-09-17 09:24:50.495 +05:45  INF  Executing endpoint 'HRMSmvc.Controllers.AuthController.Login (HRMSmvc)'
+2025-09-17 09:24:50.539 +05:45  INF  Route matched with {action = "Login", controller = "Auth", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller HRMSmvc.Controllers.AuthController (HRMSmvc).
+2025-09-17 09:24:50.554 +05:45  INF  Executing ViewResult, running view login.
+2025-09-17 09:24:50.709 +05:45  INF  Executed ViewResult - view login executed in 156.9842ms.
+2025-09-17 09:24:50.729 +05:45  INF  Executed action HRMSmvc.Controllers.AuthController.Login (HRMSmvc) in 189.7571ms
+2025-09-17 09:24:50.731 +05:45  INF  Executed endpoint 'HRMSmvc.Controllers.AuthController.Login (HRMSmvc)'
+2025-09-17 09:24:50.741 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/ - 200 null text/html; charset=utf-8 401.6625ms
+2025-09-17 09:24:50.790 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 09:24:50.803 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 12.9948ms
+2025-09-17 09:24:50.817 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-09-17 09:24:50.858 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 41.3473ms
+2025-09-17 09:25:01.241 +05:45  INF  Request starting HTTP/2 POST https://localhost:7189/ - application/x-www-form-urlencoded; charset=UTF-8 265
+2025-09-17 09:25:01.246 +05:45  INF  Executing endpoint 'HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc)'
+2025-09-17 09:25:01.271 +05:45  INF  Route matched with {action = "Login", controller = "Auth", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginAsync(Domain.DTO.LoginDTO) on controller HRMSmvc.Controllers.AuthController (HRMSmvc).
+2025-09-17 09:25:04.999 +05:45  INF  AuthenticationScheme: Cookies signed in.
+2025-09-17 09:25:05.005 +05:45  INF  Executing JsonResult, writing value of type 'Domain.Models.ApiResponse`1[[Domain.DTO.LoginResponseDto, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-17 09:25:05.011 +05:45  INF  Executed action HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc) in 3739.5051ms
+2025-09-17 09:25:05.011 +05:45  INF  Executed endpoint 'HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc)'
+2025-09-17 09:25:05.011 +05:45  INF  Request finished HTTP/2 POST https://localhost:7189/ - 200 null application/json; charset=utf-8 3770.9369ms
+2025-09-17 09:25:06.419 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Client - null null
+2025-09-17 09:25:06.463 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Client.Controllers.DashboardController.UserIndex (HRMSmvc)'
+2025-09-17 09:25:06.476 +05:45  INF  Route matched with {area = "Client", action = "UserIndex", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserIndex() on controller HRMSmvc.Areas.Client.Controllers.DashboardController (HRMSmvc).
+2025-09-17 09:25:06.780 +05:45  INF  Executing ViewResult, running view UserIndex.
+2025-09-17 09:25:06.839 +05:45  INF  Executed ViewResult - view UserIndex executed in 60.0036ms.
+2025-09-17 09:25:06.840 +05:45  INF  Executed action HRMSmvc.Areas.Client.Controllers.DashboardController.UserIndex (HRMSmvc) in 363.3913ms
+2025-09-17 09:25:06.840 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Client.Controllers.DashboardController.UserIndex (HRMSmvc)'
+2025-09-17 09:25:06.840 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Client - 200 null text/html; charset=utf-8 420.9949ms
+2025-09-17 09:25:06.911 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/js/userindex.js - null null
+2025-09-17 09:25:06.911 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/images/defultpfp.jpg - null null
+2025-09-17 09:25:06.911 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 09:25:06.917 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-09-17 09:25:06.928 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 15.9936ms
+2025-09-17 09:25:06.952 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - null null
+2025-09-17 09:25:06.991 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 75.6127ms
+2025-09-17 09:25:06.998 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - 404 0 null 46.1957ms
+2025-09-17 09:25:07.007 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2, Response status code: 404
+2025-09-17 09:25:07.008 +05:45  INF  Sending file. Request path: '/js/userindex.js'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\js\userindex.js'
+2025-09-17 09:25:07.008 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/js/userindex.js - 200 9454 text/javascript 97.436ms
+2025-09-17 09:25:07.051 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - null null
+2025-09-17 09:25:07.052 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - 404 0 null 1.0096ms
+2025-09-17 09:25:07.052 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff, Response status code: 404
+2025-09-17 09:25:07.624 +05:45  INF  Sending file. Request path: '/images/defultpfp.jpg'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\images\defultpfp.jpg'
+2025-09-17 09:25:07.624 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/images/defultpfp.jpg - 200 28350 image/jpeg 713.4759ms
+2025-09-17 09:25:36.157 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/ - null null
+2025-09-17 09:25:36.191 +05:45  INF  Executing endpoint 'HRMSmvc.Controllers.AuthController.Login (HRMSmvc)'
+2025-09-17 09:25:36.191 +05:45  INF  Route matched with {action = "Login", controller = "Auth", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller HRMSmvc.Controllers.AuthController (HRMSmvc).
+2025-09-17 09:25:36.193 +05:45  INF  Executing ViewResult, running view login.
+2025-09-17 09:25:36.201 +05:45  INF  Executed ViewResult - view login executed in 9.2408ms.
+2025-09-17 09:25:36.202 +05:45  INF  Executed action HRMSmvc.Controllers.AuthController.Login (HRMSmvc) in 10.7696ms
+2025-09-17 09:25:36.203 +05:45  INF  Executed endpoint 'HRMSmvc.Controllers.AuthController.Login (HRMSmvc)'
+2025-09-17 09:25:36.203 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/ - 200 null text/html; charset=utf-8 45.7239ms
+2025-09-17 09:25:36.238 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 09:25:36.239 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 1.0119ms
+2025-09-17 09:25:39.418 +05:45  INF  Request starting HTTP/2 POST https://localhost:7189/ - application/x-www-form-urlencoded; charset=UTF-8 265
+2025-09-17 09:25:39.418 +05:45  INF  Executing endpoint 'HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc)'
+2025-09-17 09:25:39.418 +05:45  INF  Route matched with {action = "Login", controller = "Auth", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginAsync(Domain.DTO.LoginDTO) on controller HRMSmvc.Controllers.AuthController (HRMSmvc).
+2025-09-17 09:25:41.235 +05:45  INF  AuthenticationScheme: Cookies signed in.
+2025-09-17 09:25:41.236 +05:45  INF  Executing JsonResult, writing value of type 'Domain.Models.ApiResponse`1[[Domain.DTO.LoginResponseDto, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-17 09:25:41.237 +05:45  INF  Executed action HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc) in 1818.2515ms
+2025-09-17 09:25:41.237 +05:45  INF  Executed endpoint 'HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc)'
+2025-09-17 09:25:41.238 +05:45  INF  Request finished HTTP/2 POST https://localhost:7189/ - 200 null application/json; charset=utf-8 1820.1325ms
+2025-09-17 09:25:43.191 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Client - null null
+2025-09-17 09:25:43.195 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Client.Controllers.DashboardController.UserIndex (HRMSmvc)'
+2025-09-17 09:25:43.195 +05:45  INF  Route matched with {area = "Client", action = "UserIndex", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserIndex() on controller HRMSmvc.Areas.Client.Controllers.DashboardController (HRMSmvc).
+2025-09-17 09:25:43.250 +05:45  INF  Executing ViewResult, running view UserIndex.
+2025-09-17 09:25:43.267 +05:45  INF  Executed ViewResult - view UserIndex executed in 16.3345ms.
+2025-09-17 09:25:43.267 +05:45  INF  Executed action HRMSmvc.Areas.Client.Controllers.DashboardController.UserIndex (HRMSmvc) in 71.4975ms
+2025-09-17 09:25:43.267 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Client.Controllers.DashboardController.UserIndex (HRMSmvc)'
+2025-09-17 09:25:43.268 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Client - 200 null text/html; charset=utf-8 76.4656ms
+2025-09-17 09:25:43.349 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 09:25:43.349 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-09-17 09:25:43.350 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 0.9ms
+2025-09-17 09:25:43.358 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 8.5571ms
+2025-09-17 09:25:58.175 +05:45  INF  Request starting HTTP/2 POST https://localhost:7189/client/Dashboard/ChangePhoto - multipart/form-data; boundary=----WebKitFormBoundaryDOEoZCbN1jBFy9Rz 5208
+2025-09-17 09:25:58.180 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Client.Controllers.DashboardController.ChangePhoto (HRMSmvc)'
+2025-09-17 09:25:58.186 +05:45  INF  Route matched with {area = "Client", action = "ChangePhoto", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ChangePhoto(Microsoft.AspNetCore.Http.IFormFile, Domain.DTO.ChangePpDTO) on controller HRMSmvc.Areas.Client.Controllers.DashboardController (HRMSmvc).
+2025-09-17 09:25:59.828 +05:45  INF  Executing JsonResult, writing value of type 'Domain.Models.ApiResponse`1[[Domain.DTO.UserDTO, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-17 09:25:59.851 +05:45  INF  Executed action HRMSmvc.Areas.Client.Controllers.DashboardController.ChangePhoto (HRMSmvc) in 1664.6361ms
+2025-09-17 09:25:59.851 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Client.Controllers.DashboardController.ChangePhoto (HRMSmvc)'
+2025-09-17 09:25:59.852 +05:45  INF  Request finished HTTP/2 POST https://localhost:7189/client/Dashboard/ChangePhoto - 200 null application/json; charset=utf-8 1676.6499ms
+2025-09-17 09:26:11.810 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Client - null null
+2025-09-17 09:26:11.812 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Client.Controllers.DashboardController.UserIndex (HRMSmvc)'
+2025-09-17 09:26:11.812 +05:45  INF  Route matched with {area = "Client", action = "UserIndex", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserIndex() on controller HRMSmvc.Areas.Client.Controllers.DashboardController (HRMSmvc).
+2025-09-17 09:26:11.847 +05:45  INF  Executing ViewResult, running view UserIndex.
+2025-09-17 09:26:11.855 +05:45  INF  Executed ViewResult - view UserIndex executed in 8.0953ms.
+2025-09-17 09:26:11.855 +05:45  INF  Executed action HRMSmvc.Areas.Client.Controllers.DashboardController.UserIndex (HRMSmvc) in 43.2068ms
+2025-09-17 09:26:11.855 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Client.Controllers.DashboardController.UserIndex (HRMSmvc)'
+2025-09-17 09:26:11.856 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Client - 200 null text/html; charset=utf-8 46.0958ms
+2025-09-17 09:26:11.928 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 09:26:11.928 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-09-17 09:26:11.931 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 3.5651ms
+2025-09-17 09:26:11.949 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 21.5152ms
+2025-09-17 09:26:12.027 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - null null
+2025-09-17 09:26:12.029 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - 404 0 null 1.7171ms
+2025-09-17 09:26:12.029 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2, Response status code: 404
+2025-09-17 09:26:12.083 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - null null
+2025-09-17 09:26:12.086 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - 404 0 null 2.6813ms
+2025-09-17 09:26:12.086 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff, Response status code: 404
+2025-09-17 09:26:29.538 +05:45  INF  Request starting HTTP/2 POST https://localhost:7189/client/Dashboard/DeletePhoto - application/x-www-form-urlencoded; charset=UTF-8 39
+2025-09-17 09:26:29.544 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Client.Controllers.DashboardController.DeletePhoto (HRMSmvc)'
+2025-09-17 09:26:29.551 +05:45  INF  Route matched with {area = "Client", action = "DeletePhoto", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeletePhoto(System.String) on controller HRMSmvc.Areas.Client.Controllers.DashboardController (HRMSmvc).
+2025-09-17 09:26:31.222 +05:45  INF  Executing JsonResult, writing value of type 'Domain.Models.ApiResponse`1[[Domain.DTO.UserDTO, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-17 09:26:31.223 +05:45  INF  Executed action HRMSmvc.Areas.Client.Controllers.DashboardController.DeletePhoto (HRMSmvc) in 1672.0799ms
+2025-09-17 09:26:31.223 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Client.Controllers.DashboardController.DeletePhoto (HRMSmvc)'
+2025-09-17 09:26:31.223 +05:45  INF  Request finished HTTP/2 POST https://localhost:7189/client/Dashboard/DeletePhoto - 200 null application/json; charset=utf-8 1684.4814ms
+2025-09-17 09:26:36.329 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Client - null null
+2025-09-17 09:26:36.334 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Client.Controllers.DashboardController.UserIndex (HRMSmvc)'
+2025-09-17 09:26:36.334 +05:45  INF  Route matched with {area = "Client", action = "UserIndex", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserIndex() on controller HRMSmvc.Areas.Client.Controllers.DashboardController (HRMSmvc).
+2025-09-17 09:26:36.399 +05:45  INF  Executing ViewResult, running view UserIndex.
+2025-09-17 09:26:36.407 +05:45  INF  Executed ViewResult - view UserIndex executed in 8.1394ms.
+2025-09-17 09:26:36.407 +05:45  INF  Executed action HRMSmvc.Areas.Client.Controllers.DashboardController.UserIndex (HRMSmvc) in 72.8838ms
+2025-09-17 09:26:36.408 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Client.Controllers.DashboardController.UserIndex (HRMSmvc)'
+2025-09-17 09:26:36.408 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Client - 200 null text/html; charset=utf-8 78.7544ms
+2025-09-17 09:26:36.454 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 09:26:36.456 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-09-17 09:26:36.457 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 2.6568ms
+2025-09-17 09:26:36.472 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 16.1629ms
+2025-09-17 09:26:36.505 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - null null
+2025-09-17 09:26:36.506 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - 404 0 null 0.7566ms
+2025-09-17 09:26:36.506 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2, Response status code: 404
+2025-09-17 09:26:36.537 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - null null
+2025-09-17 09:26:36.538 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - 404 0 null 0.8841ms
+2025-09-17 09:26:36.538 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff, Response status code: 404
+2025-09-17 09:34:00.317 +05:45  INF  User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-17 09:34:00.504 +05:45  INF  Now listening on: https://localhost:7189
+2025-09-17 09:34:00.506 +05:45  INF  Now listening on: http://localhost:5227
+2025-09-17 09:34:00.652 +05:45  INF  Application started. Press Ctrl+C to shut down.
+2025-09-17 09:34:00.652 +05:45  INF  Hosting environment: Development
+2025-09-17 09:34:00.652 +05:45  INF  Content root path: C:\Users\ASUS\Desktop\HRMS\HRMSmvc
+2025-09-17 09:34:01.176 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/ - null null
+2025-09-17 09:34:01.327 +05:45  INF  Executing endpoint 'HRMSmvc.Controllers.AuthController.Login (HRMSmvc)'
+2025-09-17 09:34:01.359 +05:45  INF  Route matched with {action = "Login", controller = "Auth", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller HRMSmvc.Controllers.AuthController (HRMSmvc).
+2025-09-17 09:34:01.373 +05:45  INF  Executing ViewResult, running view login.
+2025-09-17 09:34:01.485 +05:45  INF  Executed ViewResult - view login executed in 107.0511ms.
+2025-09-17 09:34:01.494 +05:45  INF  Executed action HRMSmvc.Controllers.AuthController.Login (HRMSmvc) in 133.5881ms
+2025-09-17 09:34:01.495 +05:45  INF  Executed endpoint 'HRMSmvc.Controllers.AuthController.Login (HRMSmvc)'
+2025-09-17 09:34:01.500 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 09:34:01.508 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/ - 200 null text/html; charset=utf-8 336.6924ms
+2025-09-17 09:34:01.508 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 7.7502ms
+2025-09-17 09:34:01.563 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-09-17 09:34:01.601 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 38.7332ms
+2025-09-17 09:34:28.066 +05:45  INF  Request starting HTTP/2 POST https://localhost:7189/ - application/x-www-form-urlencoded; charset=UTF-8 267
+2025-09-17 09:34:28.079 +05:45  INF  Executing endpoint 'HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc)'
+2025-09-17 09:34:28.096 +05:45  INF  Route matched with {action = "Login", controller = "Auth", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginAsync(Domain.DTO.LoginDTO) on controller HRMSmvc.Controllers.AuthController (HRMSmvc).
+2025-09-17 09:34:32.528 +05:45  INF  AuthenticationScheme: Cookies signed in.
+2025-09-17 09:34:32.531 +05:45  INF  Executing JsonResult, writing value of type 'Domain.Models.ApiResponse`1[[Domain.DTO.LoginResponseDto, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-17 09:34:32.534 +05:45  INF  Executed action HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc) in 4438.3821ms
+2025-09-17 09:34:32.534 +05:45  INF  Executed endpoint 'HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc)'
+2025-09-17 09:34:32.535 +05:45  INF  Request finished HTTP/2 POST https://localhost:7189/ - 200 null application/json; charset=utf-8 4468.7259ms
+2025-09-17 09:34:34.278 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Admin/Dashboard/Index - null null
+2025-09-17 09:34:34.302 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Admin.Controllers.DashboardController.Index (HRMSmvc)'
+2025-09-17 09:34:34.315 +05:45  INF  Route matched with {area = "Admin", action = "Index", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller HRMSmvc.Areas.Admin.Controllers.DashboardController (HRMSmvc).
+2025-09-17 09:34:37.611 +05:45  ERR  Exception occurred while making GET request to /api/Employee/GetEmpNewtonsoft.Json.JsonSerializationException: Cannot deserialize the current JSON object (e.g. {"name":"value"}) into type 'System.Collections.Generic.List`1[Domain.Models.User]' because the type requires a JSON array (e.g. [1,2,3]) to deserialize correctly.
+To fix this error either change the JSON to a JSON array (e.g. [1,2,3]) or change the deserialized type so that it is a normal .NET type (e.g. not a primitive type like integer, not a collection type like an array or List<T>) that can be deserialized from a JSON object. JsonObjectAttribute can also be added to the type to force it to deserialize from a JSON object.
+Path 'success', line 1, position 11.
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   at HRMSmvc.Controllers.BaseController.GetAsync[T](String endPoint) in C:\Users\ASUS\Desktop\HRMS\HRMSmvc\Controllers\BaseController.cs:line 104
+
+2025-09-17 09:34:37.639 +05:45  INF  Executing ViewResult, running view Index.
+2025-09-17 09:34:37.662 +05:45  INF  Executed ViewResult - view Index executed in 23.6738ms.
+2025-09-17 09:34:37.664 +05:45  INF  Executed action HRMSmvc.Areas.Admin.Controllers.DashboardController.Index (HRMSmvc) in 3348.2926ms
+2025-09-17 09:34:37.667 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Admin.Controllers.DashboardController.Index (HRMSmvc)'
+2025-09-17 09:34:37.667 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Admin/Dashboard/Index - 200 null text/html; charset=utf-8 3389.336ms
+2025-09-17 09:34:37.688 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-09-17 09:34:37.722 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 09:34:37.723 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 1.0738ms
+2025-09-17 09:34:37.735 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 46.9435ms
+2025-09-17 09:34:37.772 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - null null
+2025-09-17 09:34:37.775 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - 404 0 null 2.4307ms
+2025-09-17 09:34:37.775 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2, Response status code: 404
+2025-09-17 09:34:37.783 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - null null
+2025-09-17 09:34:37.783 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - 404 0 null 0.6478ms
+2025-09-17 09:34:37.783 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff, Response status code: 404
+2025-09-17 09:34:45.186 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/.well-known/appspecific/com.chrome.devtools.json - null null
+2025-09-17 09:34:45.187 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/.well-known/appspecific/com.chrome.devtools.json - 404 0 null 1.0303ms
+2025-09-17 09:34:45.187 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/.well-known/appspecific/com.chrome.devtools.json, Response status code: 404
+2025-09-17 09:35:18.660 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Admin/Dashboard/Index - null null
+2025-09-17 09:35:18.685 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Admin.Controllers.DashboardController.Index (HRMSmvc)'
+2025-09-17 09:35:18.686 +05:45  INF  Route matched with {area = "Admin", action = "Index", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller HRMSmvc.Areas.Admin.Controllers.DashboardController (HRMSmvc).
+2025-09-17 09:36:30.569 +05:45  ERR  Exception occurred while making GET request to /api/Employee/GetEmpNewtonsoft.Json.JsonSerializationException: Cannot deserialize the current JSON object (e.g. {"name":"value"}) into type 'System.Collections.Generic.List`1[Domain.Models.User]' because the type requires a JSON array (e.g. [1,2,3]) to deserialize correctly.
+To fix this error either change the JSON to a JSON array (e.g. [1,2,3]) or change the deserialized type so that it is a normal .NET type (e.g. not a primitive type like integer, not a collection type like an array or List<T>) that can be deserialized from a JSON object. JsonObjectAttribute can also be added to the type to force it to deserialize from a JSON object.
+Path 'success', line 1, position 11.
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   at HRMSmvc.Controllers.BaseController.GetAsync[T](String endPoint) in C:\Users\ASUS\Desktop\HRMS\HRMSmvc\Controllers\BaseController.cs:line 104
+
+2025-09-17 09:36:30.570 +05:45  INF  Executing ViewResult, running view Index.
+2025-09-17 09:36:30.574 +05:45  INF  Executed ViewResult - view Index executed in 3.6625ms.
+2025-09-17 09:36:30.576 +05:45  INF  Executed action HRMSmvc.Areas.Admin.Controllers.DashboardController.Index (HRMSmvc) in 71890.3524ms
+2025-09-17 09:36:30.577 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Admin.Controllers.DashboardController.Index (HRMSmvc)'
+2025-09-17 09:36:30.580 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Admin/Dashboard/Index - 200 null text/html; charset=utf-8 71919.6091ms
+2025-09-17 09:36:30.593 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-09-17 09:36:30.593 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 09:36:30.593 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 0.7383ms
+2025-09-17 09:36:30.604 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 11.2946ms
+2025-09-17 09:36:31.666 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - null null
+2025-09-17 09:36:31.667 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - 404 0 null 0.8874ms
+2025-09-17 09:36:31.667 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2, Response status code: 404
+2025-09-17 09:36:31.672 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - null null
+2025-09-17 09:36:31.673 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - 404 0 null 0.5301ms
+2025-09-17 09:36:31.673 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff, Response status code: 404
+2025-09-17 09:36:40.731 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/.well-known/appspecific/com.chrome.devtools.json - null null
+2025-09-17 09:36:40.732 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/.well-known/appspecific/com.chrome.devtools.json - 404 0 null 0.9269ms
+2025-09-17 09:36:40.732 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/.well-known/appspecific/com.chrome.devtools.json, Response status code: 404
+2025-09-17 10:07:53.511 +05:45  INF  User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-17 10:07:53.667 +05:45  INF  Now listening on: https://localhost:7189
+2025-09-17 10:07:53.669 +05:45  INF  Now listening on: http://localhost:5227
+2025-09-17 10:07:53.730 +05:45  INF  Application started. Press Ctrl+C to shut down.
+2025-09-17 10:07:53.731 +05:45  INF  Hosting environment: Development
+2025-09-17 10:07:53.731 +05:45  INF  Content root path: C:\Users\ASUS\Desktop\HRMS\HRMSmvc
+2025-09-17 10:07:54.315 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/ - null null
+2025-09-17 10:07:54.546 +05:45  INF  Cookies was not authenticated. Failure message: Ticket expired
+2025-09-17 10:07:54.549 +05:45  INF  Executing endpoint 'HRMSmvc.Controllers.AuthController.Login (HRMSmvc)'
+2025-09-17 10:07:54.585 +05:45  INF  Route matched with {action = "Login", controller = "Auth", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller HRMSmvc.Controllers.AuthController (HRMSmvc).
+2025-09-17 10:07:54.594 +05:45  INF  Executing ViewResult, running view login.
+2025-09-17 10:07:54.709 +05:45  INF  Executed ViewResult - view login executed in 115.2338ms.
+2025-09-17 10:07:54.719 +05:45  INF  Executed action HRMSmvc.Controllers.AuthController.Login (HRMSmvc) in 133.1008ms
+2025-09-17 10:07:54.720 +05:45  INF  Executed endpoint 'HRMSmvc.Controllers.AuthController.Login (HRMSmvc)'
+2025-09-17 10:07:54.728 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/ - 200 null text/html; charset=utf-8 415.3164ms
+2025-09-17 10:07:54.758 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 10:07:54.768 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 9.9333ms
+2025-09-17 10:07:54.792 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-09-17 10:07:54.836 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 44.4189ms
+2025-09-17 10:08:02.781 +05:45  INF  Request starting HTTP/2 POST https://localhost:7189/ - application/x-www-form-urlencoded; charset=UTF-8 224
+2025-09-17 10:08:02.788 +05:45  INF  Cookies was not authenticated. Failure message: Ticket expired
+2025-09-17 10:08:02.789 +05:45  INF  Executing endpoint 'HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc)'
+2025-09-17 10:08:02.828 +05:45  INF  Route matched with {action = "Login", controller = "Auth", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginAsync(Domain.DTO.LoginDTO) on controller HRMSmvc.Controllers.AuthController (HRMSmvc).
+2025-09-17 10:08:08.870 +05:45  INF  AuthenticationScheme: Cookies signed in.
+2025-09-17 10:08:08.872 +05:45  INF  Executing JsonResult, writing value of type 'Domain.Models.ApiResponse`1[[Domain.DTO.LoginResponseDto, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-17 10:08:08.876 +05:45  INF  Executed action HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc) in 6047.5832ms
+2025-09-17 10:08:08.876 +05:45  INF  Executed endpoint 'HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc)'
+2025-09-17 10:08:08.876 +05:45  INF  Request finished HTTP/2 POST https://localhost:7189/ - 200 null application/json; charset=utf-8 6095.5177ms
+2025-09-17 10:08:09.785 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Admin/Dashboard/Index - null null
+2025-09-17 10:08:09.835 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Admin.Controllers.DashboardController.Index (HRMSmvc)'
+2025-09-17 10:08:09.855 +05:45  INF  Route matched with {area = "Admin", action = "Index", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller HRMSmvc.Areas.Admin.Controllers.DashboardController (HRMSmvc).
+2025-09-17 10:10:09.477 +05:45  INF  Request starting HTTP/2 POST https://localhost:7189/ - application/x-www-form-urlencoded; charset=UTF-8 224
+2025-09-17 10:10:09.485 +05:45  INF  Executing endpoint 'HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc)'
+2025-09-17 10:10:09.485 +05:45  INF  Route matched with {action = "Login", controller = "Auth", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginAsync(Domain.DTO.LoginDTO) on controller HRMSmvc.Controllers.AuthController (HRMSmvc).
+2025-09-17 10:10:10.163 +05:45  ERR  Error: "0" - null while making GET request to /api/Employee/GetEmp
+2025-09-17 10:10:10.206 +05:45  INF  Executing ViewResult, running view Index.
+2025-09-17 10:10:10.259 +05:45  INF  Executed ViewResult - view Index executed in 62.4442ms.
+2025-09-17 10:10:10.259 +05:45  INF  Executed action HRMSmvc.Areas.Admin.Controllers.DashboardController.Index (HRMSmvc) in 120403.8446ms
+2025-09-17 10:10:10.259 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Admin.Controllers.DashboardController.Index (HRMSmvc)'
+2025-09-17 10:10:10.261 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Admin/Dashboard/Index - 200 null text/html; charset=utf-8 120476.2315ms
+2025-09-17 10:10:10.393 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 10:10:10.395 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-09-17 10:10:10.395 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 2.5327ms
+2025-09-17 10:10:10.406 +05:45  INF  AuthenticationScheme: Cookies signed in.
+2025-09-17 10:10:10.406 +05:45  INF  Executing JsonResult, writing value of type 'Domain.Models.ApiResponse`1[[Domain.DTO.LoginResponseDto, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-17 10:10:10.410 +05:45  INF  Executed action HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc) in 924.3933ms
+2025-09-17 10:10:10.410 +05:45  INF  Executed endpoint 'HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc)'
+2025-09-17 10:10:10.410 +05:45  INF  Request finished HTTP/2 POST https://localhost:7189/ - 499 null application/json; charset=utf-8 933.3695ms
+2025-09-17 10:10:10.418 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 22.8336ms
+2025-09-17 10:10:11.315 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - null null
+2025-09-17 10:10:11.323 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - 404 0 null 8.5245ms
+2025-09-17 10:10:11.325 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2, Response status code: 404
+2025-09-17 10:10:11.385 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - null null
+2025-09-17 10:10:11.390 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - 404 0 null 4.7942ms
+2025-09-17 10:10:11.392 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff, Response status code: 404
+2025-09-17 10:10:13.199 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Admin/Dashboard/Index - null null
+2025-09-17 10:10:13.208 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Admin.Controllers.DashboardController.Index (HRMSmvc)'
+2025-09-17 10:10:13.208 +05:45  INF  Route matched with {area = "Admin", action = "Index", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller HRMSmvc.Areas.Admin.Controllers.DashboardController (HRMSmvc).
+2025-09-17 10:11:20.859 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/.well-known/appspecific/com.chrome.devtools.json - null null
+2025-09-17 10:11:20.870 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/.well-known/appspecific/com.chrome.devtools.json - 499 null null 10.9839ms
+2025-09-17 10:11:20.870 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/.well-known/appspecific/com.chrome.devtools.json, Response status code: 499
+2025-09-17 10:11:20.874 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Admin/Dashboard/Index - null null
+2025-09-17 10:11:20.874 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/.well-known/appspecific/com.chrome.devtools.json - null null
+2025-09-17 10:11:20.875 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/.well-known/appspecific/com.chrome.devtools.json - 404 0 null 1.0737ms
+2025-09-17 10:11:20.875 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/.well-known/appspecific/com.chrome.devtools.json, Response status code: 404
+2025-09-17 10:11:20.878 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Admin.Controllers.DashboardController.Index (HRMSmvc)'
+2025-09-17 10:11:20.878 +05:45  INF  Route matched with {area = "Admin", action = "Index", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller HRMSmvc.Areas.Admin.Controllers.DashboardController (HRMSmvc).
+2025-09-17 10:11:21.265 +05:45  ERR  Exception occurred while making GET request to /api/Employee/GetEmpNewtonsoft.Json.JsonSerializationException: Cannot deserialize the current JSON object (e.g. {"name":"value"}) into type 'System.Collections.Generic.List`1[Domain.Models.User]' because the type requires a JSON array (e.g. [1,2,3]) to deserialize correctly.
+To fix this error either change the JSON to a JSON array (e.g. [1,2,3]) or change the deserialized type so that it is a normal .NET type (e.g. not a primitive type like integer, not a collection type like an array or List<T>) that can be deserialized from a JSON object. JsonObjectAttribute can also be added to the type to force it to deserialize from a JSON object.
+Path 'success', line 1, position 11.
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   at HRMSmvc.Controllers.BaseController.GetAsync[T](String endPoint) in C:\Users\ASUS\Desktop\HRMS\HRMSmvc\Controllers\BaseController.cs:line 104
+
+2025-09-17 10:11:22.833 +05:45  INF  Executing ViewResult, running view Index.
+2025-09-17 10:11:26.233 +05:45  INF  Executed ViewResult - view Index executed in 3400.0971ms.
+2025-09-17 10:11:26.233 +05:45  INF  Executed action HRMSmvc.Areas.Admin.Controllers.DashboardController.Index (HRMSmvc) in 73024.5775ms
+2025-09-17 10:11:26.233 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Admin.Controllers.DashboardController.Index (HRMSmvc)'
+2025-09-17 10:11:26.234 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Admin/Dashboard/Index - 200 null text/html; charset=utf-8 73035.0053ms
+2025-09-17 10:11:51.304 +05:45  ERR  Exception occurred while making GET request to /api/Employee/GetEmpNewtonsoft.Json.JsonSerializationException: Cannot deserialize the current JSON object (e.g. {"name":"value"}) into type 'System.Collections.Generic.List`1[Domain.Models.User]' because the type requires a JSON array (e.g. [1,2,3]) to deserialize correctly.
+To fix this error either change the JSON to a JSON array (e.g. [1,2,3]) or change the deserialized type so that it is a normal .NET type (e.g. not a primitive type like integer, not a collection type like an array or List<T>) that can be deserialized from a JSON object. JsonObjectAttribute can also be added to the type to force it to deserialize from a JSON object.
+Path 'success', line 1, position 11.
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   at HRMSmvc.Controllers.BaseController.GetAsync[T](String endPoint) in C:\Users\ASUS\Desktop\HRMS\HRMSmvc\Controllers\BaseController.cs:line 104
+
+2025-09-17 10:14:40.253 +05:45  INF  User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-17 10:14:40.646 +05:45  INF  Now listening on: https://localhost:7189
+2025-09-17 10:14:40.648 +05:45  INF  Now listening on: http://localhost:5227
+2025-09-17 10:14:40.720 +05:45  INF  Application started. Press Ctrl+C to shut down.
+2025-09-17 10:14:40.720 +05:45  INF  Hosting environment: Development
+2025-09-17 10:14:40.721 +05:45  INF  Content root path: C:\Users\ASUS\Desktop\HRMS\HRMSmvc
+2025-09-17 10:14:41.356 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/ - null null
+2025-09-17 10:14:41.536 +05:45  INF  Executing endpoint 'HRMSmvc.Controllers.AuthController.Login (HRMSmvc)'
+2025-09-17 10:14:41.576 +05:45  INF  Route matched with {action = "Login", controller = "Auth", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller HRMSmvc.Controllers.AuthController (HRMSmvc).
+2025-09-17 10:14:41.594 +05:45  INF  Executing ViewResult, running view login.
+2025-09-17 10:14:41.709 +05:45  INF  Executed ViewResult - view login executed in 118.6431ms.
+2025-09-17 10:14:41.720 +05:45  INF  Executed action HRMSmvc.Controllers.AuthController.Login (HRMSmvc) in 143.0122ms
+2025-09-17 10:14:41.722 +05:45  INF  Executed endpoint 'HRMSmvc.Controllers.AuthController.Login (HRMSmvc)'
+2025-09-17 10:14:41.735 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/ - 200 null text/html; charset=utf-8 380.8896ms
+2025-09-17 10:14:41.755 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 10:14:41.773 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 18.3687ms
+2025-09-17 10:14:41.803 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-09-17 10:14:41.861 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 57.314ms
+2025-09-17 10:14:52.905 +05:45  INF  Request starting HTTP/2 POST https://localhost:7189/ - application/x-www-form-urlencoded; charset=UTF-8 267
+2025-09-17 10:14:52.916 +05:45  INF  Executing endpoint 'HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc)'
+2025-09-17 10:14:52.968 +05:45  INF  Route matched with {action = "Login", controller = "Auth", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginAsync(Domain.DTO.LoginDTO) on controller HRMSmvc.Controllers.AuthController (HRMSmvc).
+2025-09-17 10:15:00.272 +05:45  INF  AuthenticationScheme: Cookies signed in.
+2025-09-17 10:15:00.276 +05:45  INF  Executing JsonResult, writing value of type 'Domain.Models.ApiResponse`1[[Domain.DTO.LoginResponseDto, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-17 10:15:00.280 +05:45  INF  Executed action HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc) in 7311.6402ms
+2025-09-17 10:15:00.281 +05:45  INF  Executed endpoint 'HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc)'
+2025-09-17 10:15:00.281 +05:45  INF  Request finished HTTP/2 POST https://localhost:7189/ - 200 null application/json; charset=utf-8 7376.355ms
+2025-09-17 10:15:01.660 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Admin/Dashboard/Index - null null
+2025-09-17 10:15:01.686 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Admin.Controllers.DashboardController.Index (HRMSmvc)'
+2025-09-17 10:15:01.696 +05:45  INF  Route matched with {area = "Admin", action = "Index", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller HRMSmvc.Areas.Admin.Controllers.DashboardController (HRMSmvc).
+2025-09-17 10:15:05.377 +05:45  INF  Executing ViewResult, running view Index.
+2025-09-17 10:15:05.393 +05:45  INF  Executed action HRMSmvc.Areas.Admin.Controllers.DashboardController.Index (HRMSmvc) in 3696.1868ms
+2025-09-17 10:15:05.395 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Admin.Controllers.DashboardController.Index (HRMSmvc)'
+2025-09-17 10:15:05.403 +05:45  ERR  An unhandled exception has occurred while executing the request.System.InvalidOperationException: The model item passed into the ViewDataDictionary is of type 'System.Collections.Generic.List`1[Domain.DTO.UserDTO]', but this ViewDataDictionary instance requires a model item of type 'System.Collections.Generic.IEnumerable`1[Domain.Models.User]'.
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary.EnsureCompatible(Object value)
+   at lambda_method69(Closure, ViewDataDictionary)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPagePropertyActivator.Activate(Object page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+
+2025-09-17 10:15:05.506 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Admin/Dashboard/Index - 500 null text/html; charset=utf-8 3846.279ms
+2025-09-17 10:15:05.552 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 10:15:05.553 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-09-17 10:15:05.556 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 3.8504ms
+2025-09-17 10:15:05.587 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 35.0254ms
+2025-09-17 10:15:08.635 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/ - null null
+2025-09-17 10:15:08.643 +05:45  INF  Executing endpoint 'HRMSmvc.Controllers.AuthController.Login (HRMSmvc)'
+2025-09-17 10:15:08.644 +05:45  INF  Route matched with {action = "Login", controller = "Auth", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller HRMSmvc.Controllers.AuthController (HRMSmvc).
+2025-09-17 10:15:08.645 +05:45  INF  Executing ViewResult, running view login.
+2025-09-17 10:15:08.673 +05:45  INF  Executed ViewResult - view login executed in 28.3676ms.
+2025-09-17 10:15:08.674 +05:45  INF  Executed action HRMSmvc.Controllers.AuthController.Login (HRMSmvc) in 30.2808ms
+2025-09-17 10:15:08.675 +05:45  INF  Executed endpoint 'HRMSmvc.Controllers.AuthController.Login (HRMSmvc)'
+2025-09-17 10:15:08.676 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/ - 200 null text/html; charset=utf-8 40.8988ms
+2025-09-17 10:15:08.731 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 10:15:08.732 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 0.9295ms
+2025-09-17 10:15:10.204 +05:45  INF  Request starting HTTP/2 POST https://localhost:7189/ - application/x-www-form-urlencoded; charset=UTF-8 267
+2025-09-17 10:15:10.206 +05:45  INF  Executing endpoint 'HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc)'
+2025-09-17 10:15:10.206 +05:45  INF  Route matched with {action = "Login", controller = "Auth", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginAsync(Domain.DTO.LoginDTO) on controller HRMSmvc.Controllers.AuthController (HRMSmvc).
+2025-09-17 10:15:12.269 +05:45  INF  AuthenticationScheme: Cookies signed in.
+2025-09-17 10:15:12.269 +05:45  INF  Executing JsonResult, writing value of type 'Domain.Models.ApiResponse`1[[Domain.DTO.LoginResponseDto, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-17 10:15:12.269 +05:45  INF  Executed action HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc) in 2063.3149ms
+2025-09-17 10:15:12.269 +05:45  INF  Executed endpoint 'HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc)'
+2025-09-17 10:15:12.269 +05:45  INF  Request finished HTTP/2 POST https://localhost:7189/ - 200 null application/json; charset=utf-8 2065.4664ms
+2025-09-17 10:15:14.884 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Admin/Dashboard/Index - null null
+2025-09-17 10:15:14.900 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Admin.Controllers.DashboardController.Index (HRMSmvc)'
+2025-09-17 10:15:14.900 +05:45  INF  Route matched with {area = "Admin", action = "Index", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller HRMSmvc.Areas.Admin.Controllers.DashboardController (HRMSmvc).
+2025-09-17 10:16:52.167 +05:45  INF  User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-17 10:16:52.378 +05:45  INF  Now listening on: https://localhost:7189
+2025-09-17 10:16:52.380 +05:45  INF  Now listening on: http://localhost:5227
+2025-09-17 10:16:52.430 +05:45  INF  Application started. Press Ctrl+C to shut down.
+2025-09-17 10:16:52.430 +05:45  INF  Hosting environment: Development
+2025-09-17 10:16:52.431 +05:45  INF  Content root path: C:\Users\ASUS\Desktop\HRMS\HRMSmvc
+2025-09-17 10:16:53.083 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/ - null null
+2025-09-17 10:16:53.242 +05:45  INF  Executing endpoint 'HRMSmvc.Controllers.AuthController.Login (HRMSmvc)'
+2025-09-17 10:16:53.270 +05:45  INF  Route matched with {action = "Login", controller = "Auth", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller HRMSmvc.Controllers.AuthController (HRMSmvc).
+2025-09-17 10:16:53.280 +05:45  INF  Executing ViewResult, running view login.
+2025-09-17 10:16:53.410 +05:45  INF  Executed ViewResult - view login executed in 113.8992ms.
+2025-09-17 10:16:53.420 +05:45  INF  Executed action HRMSmvc.Controllers.AuthController.Login (HRMSmvc) in 149.1165ms
+2025-09-17 10:16:53.423 +05:45  INF  Executed endpoint 'HRMSmvc.Controllers.AuthController.Login (HRMSmvc)'
+2025-09-17 10:16:53.423 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 10:16:53.439 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/ - 200 null text/html; charset=utf-8 360.0573ms
+2025-09-17 10:16:53.440 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 16.2347ms
+2025-09-17 10:16:53.470 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-09-17 10:16:53.510 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 40.0785ms
+2025-09-17 10:16:56.952 +05:45  INF  Request starting HTTP/2 POST https://localhost:7189/ - application/x-www-form-urlencoded; charset=UTF-8 267
+2025-09-17 10:16:56.955 +05:45  INF  Executing endpoint 'HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc)'
+2025-09-17 10:16:56.968 +05:45  INF  Route matched with {action = "Login", controller = "Auth", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginAsync(Domain.DTO.LoginDTO) on controller HRMSmvc.Controllers.AuthController (HRMSmvc).
+2025-09-17 10:17:00.939 +05:45  INF  AuthenticationScheme: Cookies signed in.
+2025-09-17 10:17:00.943 +05:45  INF  Executing JsonResult, writing value of type 'Domain.Models.ApiResponse`1[[Domain.DTO.LoginResponseDto, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-17 10:17:00.948 +05:45  INF  Executed action HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc) in 3979.6746ms
+2025-09-17 10:17:00.948 +05:45  INF  Executed endpoint 'HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc)'
+2025-09-17 10:17:00.948 +05:45  INF  Request finished HTTP/2 POST https://localhost:7189/ - 200 null application/json; charset=utf-8 3996.0241ms
+2025-09-17 10:17:02.075 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Admin/Dashboard/Index - null null
+2025-09-17 10:17:02.102 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Admin.Controllers.DashboardController.Index (HRMSmvc)'
+2025-09-17 10:17:02.114 +05:45  INF  Route matched with {area = "Admin", action = "Index", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller HRMSmvc.Areas.Admin.Controllers.DashboardController (HRMSmvc).
+2025-09-17 10:17:07.042 +05:45  INF  Executing ViewResult, running view Index.
+2025-09-17 10:17:07.182 +05:45  INF  Executed ViewResult - view Index executed in 143.8059ms.
+2025-09-17 10:17:07.182 +05:45  INF  Executed action HRMSmvc.Areas.Admin.Controllers.DashboardController.Index (HRMSmvc) in 5067.6495ms
+2025-09-17 10:17:07.183 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Admin.Controllers.DashboardController.Index (HRMSmvc)'
+2025-09-17 10:17:07.183 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Admin/Dashboard/Index - 200 null text/html; charset=utf-8 5107.9523ms
+2025-09-17 10:17:07.204 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-09-17 10:17:07.204 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 10:17:07.207 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 2.8126ms
+2025-09-17 10:17:07.222 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 18.6075ms
+2025-09-17 10:17:07.299 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - null null
+2025-09-17 10:17:07.302 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - 404 0 null 3.7536ms
+2025-09-17 10:17:07.303 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2, Response status code: 404
+2025-09-17 10:17:07.330 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - null null
+2025-09-17 10:17:07.332 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - 404 0 null 1.376ms
+2025-09-17 10:17:07.332 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff, Response status code: 404
+2025-09-17 10:17:36.562 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Admin/Dashboard/CreateorEdit - null null
+2025-09-17 10:17:36.579 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Admin.Controllers.DashboardController.CreateorEdit (HRMSmvc)'
+2025-09-17 10:17:36.582 +05:45  INF  Route matched with {area = "Admin", action = "CreateorEdit", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateorEdit(System.String) on controller HRMSmvc.Areas.Admin.Controllers.DashboardController (HRMSmvc).
+2025-09-17 10:17:36.651 +05:45  ERR  Error: "BadRequest" - Bad Request while making GET request to /api/Employee/GetEmpbyID?id=
+2025-09-17 10:17:39.252 +05:45  INF  Executed action HRMSmvc.Areas.Admin.Controllers.DashboardController.CreateorEdit (HRMSmvc) in 2670.2034ms
+2025-09-17 10:17:39.253 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Admin.Controllers.DashboardController.CreateorEdit (HRMSmvc)'
+2025-09-17 10:17:39.257 +05:45  ERR  An unhandled exception has occurred while executing the request.System.NullReferenceException: Object reference not set to an instance of an object.
+   at HRMSmvc.Areas.Admin.Controllers.DashboardController.CreateorEdit(String Id) in C:\Users\ASUS\Desktop\HRMS\HRMSmvc\Areas\Admin\Controllers\DashboardController.cs:line 57
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+
+2025-09-17 10:17:39.409 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Admin/Dashboard/CreateorEdit - 500 null text/html; charset=utf-8 2846.8398ms
+2025-09-17 10:17:39.460 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-09-17 10:17:39.461 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 10:17:39.475 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 14.2587ms
+2025-09-17 10:17:39.518 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 57.749ms
+2025-09-17 10:17:43.567 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 10:17:43.568 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 1.3304ms
+2025-09-17 11:14:31.196 +05:45  INF  User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-17 11:14:31.480 +05:45  INF  Now listening on: https://localhost:7189
+2025-09-17 11:14:31.481 +05:45  INF  Now listening on: http://localhost:5227
+2025-09-17 11:14:31.553 +05:45  INF  Application started. Press Ctrl+C to shut down.
+2025-09-17 11:14:31.553 +05:45  INF  Hosting environment: Development
+2025-09-17 11:14:31.553 +05:45  INF  Content root path: C:\Users\ASUS\Desktop\HRMS\HRMSmvc
+2025-09-17 11:14:32.366 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/ - null null
+2025-09-17 11:14:32.525 +05:45  INF  Cookies was not authenticated. Failure message: Ticket expired
+2025-09-17 11:14:32.528 +05:45  INF  Executing endpoint 'HRMSmvc.Controllers.AuthController.Login (HRMSmvc)'
+2025-09-17 11:14:32.569 +05:45  INF  Route matched with {action = "Login", controller = "Auth", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller HRMSmvc.Controllers.AuthController (HRMSmvc).
+2025-09-17 11:14:32.585 +05:45  INF  Executing ViewResult, running view login.
+2025-09-17 11:14:32.684 +05:45  INF  Executed ViewResult - view login executed in 101.3473ms.
+2025-09-17 11:14:32.693 +05:45  INF  Executed action HRMSmvc.Controllers.AuthController.Login (HRMSmvc) in 123.1064ms
+2025-09-17 11:14:32.694 +05:45  INF  Executed endpoint 'HRMSmvc.Controllers.AuthController.Login (HRMSmvc)'
+2025-09-17 11:14:32.701 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/ - 200 null text/html; charset=utf-8 337.3934ms
+2025-09-17 11:14:32.712 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 11:14:32.734 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 21.6602ms
+2025-09-17 11:14:32.754 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-09-17 11:14:32.788 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 33.3363ms
+2025-09-17 11:15:06.052 +05:45  INF  Request starting HTTP/2 POST https://localhost:7189/ - application/x-www-form-urlencoded; charset=UTF-8 224
+2025-09-17 11:15:06.059 +05:45  INF  Cookies was not authenticated. Failure message: Ticket expired
+2025-09-17 11:15:06.060 +05:45  INF  Executing endpoint 'HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc)'
+2025-09-17 11:15:06.106 +05:45  INF  Route matched with {action = "Login", controller = "Auth", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginAsync(Domain.DTO.LoginDTO) on controller HRMSmvc.Controllers.AuthController (HRMSmvc).
+2025-09-17 11:15:11.126 +05:45  INF  AuthenticationScheme: Cookies signed in.
+2025-09-17 11:15:11.130 +05:45  INF  Executing JsonResult, writing value of type 'Domain.Models.ApiResponse`1[[Domain.DTO.LoginResponseDto, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-17 11:15:11.134 +05:45  INF  Executed action HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc) in 5027.8578ms
+2025-09-17 11:15:11.134 +05:45  INF  Executed endpoint 'HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc)'
+2025-09-17 11:15:11.134 +05:45  INF  Request finished HTTP/2 POST https://localhost:7189/ - 200 null application/json; charset=utf-8 5081.8949ms
+2025-09-17 11:15:11.987 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Admin/Dashboard/Index - null null
+2025-09-17 11:15:12.003 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Admin.Controllers.DashboardController.Index (HRMSmvc)'
+2025-09-17 11:15:12.005 +05:45  INF  Route matched with {area = "Admin", action = "Index", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller HRMSmvc.Areas.Admin.Controllers.DashboardController (HRMSmvc).
+2025-09-17 11:15:15.203 +05:45  INF  Executing ViewResult, running view Index.
+2025-09-17 11:15:15.237 +05:45  INF  Executed ViewResult - view Index executed in 35.2922ms.
+2025-09-17 11:15:15.237 +05:45  INF  Executed action HRMSmvc.Areas.Admin.Controllers.DashboardController.Index (HRMSmvc) in 3232.1579ms
+2025-09-17 11:15:15.237 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Admin.Controllers.DashboardController.Index (HRMSmvc)'
+2025-09-17 11:15:15.238 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Admin/Dashboard/Index - 200 null text/html; charset=utf-8 3250.3929ms
+2025-09-17 11:15:15.265 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 11:15:15.265 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-09-17 11:15:15.270 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 5.0075ms
+2025-09-17 11:15:15.294 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 28.5808ms
+2025-09-17 11:15:15.365 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - null null
+2025-09-17 11:15:15.368 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - 404 0 null 2.9541ms
+2025-09-17 11:15:15.369 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2, Response status code: 404
+2025-09-17 11:15:15.395 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - null null
+2025-09-17 11:15:15.395 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - 404 0 null 0.8055ms
+2025-09-17 11:15:15.396 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff, Response status code: 404
+2025-09-17 11:15:43.563 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Admin/Dashboard/CreateorEdit - null null
+2025-09-17 11:15:43.591 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Admin.Controllers.DashboardController.CreateorEdit (HRMSmvc)'
+2025-09-17 11:15:43.602 +05:45  INF  Route matched with {area = "Admin", action = "CreateorEdit", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateorEdit(System.String) on controller HRMSmvc.Areas.Admin.Controllers.DashboardController (HRMSmvc).
+2025-09-17 11:15:43.781 +05:45  ERR  Error: "BadRequest" - Bad Request while making GET request to /api/Employee/GetEmpbyID?id=
+2025-09-17 11:15:46.035 +05:45  INF  Executed action HRMSmvc.Areas.Admin.Controllers.DashboardController.CreateorEdit (HRMSmvc) in 2431.9647ms
+2025-09-17 11:15:46.036 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Admin.Controllers.DashboardController.CreateorEdit (HRMSmvc)'
+2025-09-17 11:15:46.040 +05:45  ERR  An unhandled exception has occurred while executing the request.System.NullReferenceException: Object reference not set to an instance of an object.
+   at HRMSmvc.Areas.Admin.Controllers.DashboardController.CreateorEdit(String Id) in C:\Users\ASUS\Desktop\HRMS\HRMSmvc\Areas\Admin\Controllers\DashboardController.cs:line 57
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+
+2025-09-17 11:15:46.094 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Admin/Dashboard/CreateorEdit - 500 null text/html; charset=utf-8 2530.707ms
+2025-09-17 11:15:46.120 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-09-17 11:15:46.123 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 11:15:46.137 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 2.2619ms
+2025-09-17 11:15:46.151 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 31.5549ms
+2025-09-17 12:39:16.542 +05:45  INF  User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-17 12:39:16.821 +05:45  INF  Now listening on: https://localhost:7189
+2025-09-17 12:39:16.821 +05:45  INF  Now listening on: http://localhost:5227
+2025-09-17 12:39:16.886 +05:45  INF  Application started. Press Ctrl+C to shut down.
+2025-09-17 12:39:16.886 +05:45  INF  Hosting environment: Development
+2025-09-17 12:39:16.886 +05:45  INF  Content root path: C:\Users\ASUS\Desktop\HRMS\HRMSmvc
+2025-09-17 12:39:17.685 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/ - null null
+2025-09-17 12:39:17.913 +05:45  INF  Cookies was not authenticated. Failure message: Ticket expired
+2025-09-17 12:39:17.917 +05:45  INF  Executing endpoint 'HRMSmvc.Controllers.AuthController.Login (HRMSmvc)'
+2025-09-17 12:39:17.999 +05:45  INF  Route matched with {action = "Login", controller = "Auth", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller HRMSmvc.Controllers.AuthController (HRMSmvc).
+2025-09-17 12:39:18.015 +05:45  INF  Executing ViewResult, running view login.
+2025-09-17 12:39:18.117 +05:45  INF  Executed ViewResult - view login executed in 104.6528ms.
+2025-09-17 12:39:18.130 +05:45  INF  Executed action HRMSmvc.Controllers.AuthController.Login (HRMSmvc) in 130.5459ms
+2025-09-17 12:39:18.131 +05:45  INF  Executed endpoint 'HRMSmvc.Controllers.AuthController.Login (HRMSmvc)'
+2025-09-17 12:39:18.140 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/ - 200 null text/html; charset=utf-8 457.711ms
+2025-09-17 12:39:18.158 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 12:39:18.168 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 9.5762ms
+2025-09-17 12:39:18.194 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-09-17 12:39:18.233 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 38.9265ms
+2025-09-17 12:39:23.384 +05:45  INF  Request starting HTTP/2 POST https://localhost:7189/ - application/x-www-form-urlencoded; charset=UTF-8 224
+2025-09-17 12:39:23.390 +05:45  INF  Cookies was not authenticated. Failure message: Ticket expired
+2025-09-17 12:39:23.390 +05:45  INF  Executing endpoint 'HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc)'
+2025-09-17 12:39:23.493 +05:45  INF  Route matched with {action = "Login", controller = "Auth", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginAsync(Domain.DTO.LoginDTO) on controller HRMSmvc.Controllers.AuthController (HRMSmvc).
+2025-09-17 12:39:30.666 +05:45  INF  AuthenticationScheme: Cookies signed in.
+2025-09-17 12:39:30.671 +05:45  INF  Executing JsonResult, writing value of type 'Domain.Models.ApiResponse`1[[Domain.DTO.LoginResponseDto, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-17 12:39:30.676 +05:45  INF  Executed action HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc) in 7182.2982ms
+2025-09-17 12:39:30.676 +05:45  INF  Executed endpoint 'HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc)'
+2025-09-17 12:39:30.676 +05:45  INF  Request finished HTTP/2 POST https://localhost:7189/ - 200 null application/json; charset=utf-8 7291.9669ms
+2025-09-17 12:39:31.587 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Admin/Dashboard/Index - null null
+2025-09-17 12:39:31.623 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Admin.Controllers.DashboardController.Index (HRMSmvc)'
+2025-09-17 12:39:31.637 +05:45  INF  Route matched with {area = "Admin", action = "Index", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller HRMSmvc.Areas.Admin.Controllers.DashboardController (HRMSmvc).
+2025-09-17 12:39:32.087 +05:45  INF  Executing ViewResult, running view Index.
+2025-09-17 12:39:32.131 +05:45  INF  Executed ViewResult - view Index executed in 44.3158ms.
+2025-09-17 12:39:32.131 +05:45  INF  Executed action HRMSmvc.Areas.Admin.Controllers.DashboardController.Index (HRMSmvc) in 493.6266ms
+2025-09-17 12:39:32.131 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Admin.Controllers.DashboardController.Index (HRMSmvc)'
+2025-09-17 12:39:32.131 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Admin/Dashboard/Index - 200 null text/html; charset=utf-8 544.6322ms
+2025-09-17 12:39:32.170 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-09-17 12:39:32.174 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 12:39:32.175 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 1.3146ms
+2025-09-17 12:39:32.180 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 10.2996ms
+2025-09-17 12:39:32.221 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - null null
+2025-09-17 12:39:32.225 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - 404 0 null 4.2007ms
+2025-09-17 12:39:32.226 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2, Response status code: 404
+2025-09-17 12:39:32.247 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - null null
+2025-09-17 12:39:32.251 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - 404 0 null 3.3879ms
+2025-09-17 12:39:32.252 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff, Response status code: 404
+2025-09-17 12:39:35.358 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Employee/CreateorEdit?id=389f1c51-d416-44cc-9c99-a7145ddf93cb - null null
+2025-09-17 12:39:35.361 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Employee/CreateorEdit?id=389f1c51-d416-44cc-9c99-a7145ddf93cb - 404 0 null 3.2678ms
+2025-09-17 12:39:35.361 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/Employee/CreateorEdit, Response status code: 404
+2025-09-17 12:39:41.602 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 12:39:41.603 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 1.4778ms
+2025-09-17 12:40:45.232 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Employee/CreateorEdit?id=389f1c51-d416-44cc-9c99-a7145ddf93cb - null null
+2025-09-17 12:40:45.265 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Employee/CreateorEdit?id=389f1c51-d416-44cc-9c99-a7145ddf93cb - 404 0 null 33.3342ms
+2025-09-17 12:40:45.265 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/Employee/CreateorEdit, Response status code: 404
+2025-09-17 12:40:47.690 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Employee/CreateorEdit?id=389f1c51-d416-44cc-9c99-a7145ddf93cb - null null
+2025-09-17 12:40:47.694 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Employee/CreateorEdit?id=389f1c51-d416-44cc-9c99-a7145ddf93cb - 404 0 null 4.1982ms
+2025-09-17 12:40:47.694 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/Employee/CreateorEdit, Response status code: 404
+2025-09-17 12:40:49.707 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 12:40:49.710 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 3.4727ms
+2025-09-17 12:40:52.095 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Admin/Dashboard/Index - null null
+2025-09-17 12:40:52.110 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Admin.Controllers.DashboardController.Index (HRMSmvc)'
+2025-09-17 12:40:52.111 +05:45  INF  Route matched with {area = "Admin", action = "Index", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller HRMSmvc.Areas.Admin.Controllers.DashboardController (HRMSmvc).
+2025-09-17 12:40:59.198 +05:45  INF  Executing ViewResult, running view Index.
+2025-09-17 12:40:59.202 +05:45  INF  Executed ViewResult - view Index executed in 3.8654ms.
+2025-09-17 12:40:59.203 +05:45  INF  Executed action HRMSmvc.Areas.Admin.Controllers.DashboardController.Index (HRMSmvc) in 7092.1613ms
+2025-09-17 12:40:59.204 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Admin.Controllers.DashboardController.Index (HRMSmvc)'
+2025-09-17 12:40:59.204 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Admin/Dashboard/Index - 200 null text/html; charset=utf-8 7109.2221ms
+2025-09-17 12:40:59.315 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/bootstrap.min.css - null null
+2025-09-17 12:40:59.423 +05:45  INF  Sending file. Request path: '/vendor/bootstrap.min.css'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\bootstrap.min.css'
+2025-09-17 12:40:59.423 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/bootstrap.min.css - 200 232803 text/css 108.4589ms
+2025-09-17 12:40:59.433 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/bootstrap-icons.css - null null
+2025-09-17 12:40:59.446 +05:45  INF  Sending file. Request path: '/vendor/bootstrap-icons.css'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\bootstrap-icons.css'
+2025-09-17 12:40:59.446 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/bootstrap-icons.css - 200 98255 text/css 13.293ms
+2025-09-17 12:40:59.454 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/bootstrap-icons.min.css - null null
+2025-09-17 12:40:59.464 +05:45  INF  Sending file. Request path: '/vendor/bootstrap-icons.min.css'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\bootstrap-icons.min.css'
+2025-09-17 12:40:59.464 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/bootstrap-icons.min.css - 200 85875 text/css 10.6045ms
+2025-09-17 12:40:59.473 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/quill.bubble.css - null null
+2025-09-17 12:40:59.479 +05:45  INF  Sending file. Request path: '/vendor/quill.bubble.css'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\quill.bubble.css'
+2025-09-17 12:40:59.480 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/quill.bubble.css - 200 25216 text/css 6.6145ms
+2025-09-17 12:40:59.487 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/quill.snow.css - null null
+2025-09-17 12:40:59.492 +05:45  INF  Sending file. Request path: '/vendor/quill.snow.css'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\quill.snow.css'
+2025-09-17 12:40:59.493 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/quill.snow.css - 200 24606 text/css 6.0179ms
+2025-09-17 12:40:59.501 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/remixicon.css - null null
+2025-09-17 12:40:59.516 +05:45  INF  Sending file. Request path: '/vendor/remixicon.css'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\remixicon.css'
+2025-09-17 12:40:59.516 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/remixicon.css - 200 138761 text/css 14.9967ms
+2025-09-17 12:40:59.520 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/style.css - null null
+2025-09-17 12:40:59.524 +05:45  INF  Sending file. Request path: '/vendor/style.css'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\style.css'
+2025-09-17 12:40:59.524 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/style.css - 200 4873 text/css 3.8664ms
+2025-09-17 12:40:59.529 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/css/style.css - null null
+2025-09-17 12:40:59.532 +05:45  INF  Sending file. Request path: '/css/style.css'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\css\style.css'
+2025-09-17 12:40:59.532 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/css/style.css - 200 21002 text/css 3.8439ms
+2025-09-17 12:40:59.535 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/apexcharts.min.js - null null
+2025-09-17 12:40:59.710 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/bootstrap.bundle.min.js - null null
+2025-09-17 12:40:59.768 +05:45  INF  Sending file. Request path: '/vendor/apexcharts.min.js'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\apexcharts.min.js'
+2025-09-17 12:40:59.769 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/apexcharts.min.js - 200 533680 text/javascript 233.8904ms
+2025-09-17 12:40:59.776 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/echarts.min.js - null null
+2025-09-17 12:40:59.822 +05:45  INF  Sending file. Request path: '/vendor/bootstrap.bundle.min.js'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\bootstrap.bundle.min.js'
+2025-09-17 12:40:59.822 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/bootstrap.bundle.min.js - 200 80721 text/javascript 112.1626ms
+2025-09-17 12:40:59.828 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/chart.umd.js - null null
+2025-09-17 12:40:59.834 +05:45  INF  Sending file. Request path: '/vendor/chart.umd.js'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\chart.umd.js'
+2025-09-17 12:40:59.834 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/chart.umd.js - 200 205363 text/javascript 6.1808ms
+2025-09-17 12:40:59.842 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/quill.js - null null
+2025-09-17 12:40:59.848 +05:45  INF  Sending file. Request path: '/vendor/quill.js'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\quill.js'
+2025-09-17 12:40:59.849 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/quill.js - 200 209340 text/javascript 7.095ms
+2025-09-17 12:40:59.854 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/simple-datatables.js - null null
+2025-09-17 12:40:59.859 +05:45  INF  Sending file. Request path: '/vendor/simple-datatables.js'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\simple-datatables.js'
+2025-09-17 12:40:59.859 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/simple-datatables.js - 200 98086 text/javascript 4.2131ms
+2025-09-17 12:40:59.864 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/tinymce.min.js - null null
+2025-09-17 12:40:59.915 +05:45  INF  Sending file. Request path: '/vendor/echarts.min.js'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\echarts.min.js'
+2025-09-17 12:40:59.916 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/echarts.min.js - 200 1029203 text/javascript 139.7335ms
+2025-09-17 12:40:59.940 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/validate.js - null null
+2025-09-17 12:40:59.941 +05:45  INF  Sending file. Request path: '/vendor/validate.js'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\validate.js'
+2025-09-17 12:40:59.942 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/validate.js - 200 2734 text/javascript 1.4944ms
+2025-09-17 12:40:59.955 +05:45  INF  Sending file. Request path: '/vendor/tinymce.min.js'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\tinymce.min.js'
+2025-09-17 12:40:59.955 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/tinymce.min.js - 200 436122 text/javascript 91.6355ms
+2025-09-17 12:40:59.976 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/js/main.js - null null
+2025-09-17 12:40:59.987 +05:45  INF  Sending file. Request path: '/js/main.js'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\js\main.js'
+2025-09-17 12:40:59.987 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/js/main.js - 200 9966 text/javascript 11.088ms
+2025-09-17 12:40:59.990 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 12:40:59.992 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 1.2124ms
+2025-09-17 12:40:59.997 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-09-17 12:41:00.009 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 12.2353ms
+2025-09-17 12:41:00.265 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - null null
+2025-09-17 12:41:00.266 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - 404 0 null 0.789ms
+2025-09-17 12:41:00.266 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2, Response status code: 404
+2025-09-17 12:41:00.290 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - null null
+2025-09-17 12:41:00.291 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - 404 0 null 1.1985ms
+2025-09-17 12:41:00.292 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff, Response status code: 404
+2025-09-17 12:41:00.968 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/favicon.ico - null null
+2025-09-17 12:41:01.060 +05:45  INF  Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\favicon.ico'
+2025-09-17 12:41:01.060 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/favicon.ico - 200 5430 image/x-icon 91.9032ms
+2025-09-17 12:41:02.957 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Employee/CreateorEdit?id=389f1c51-d416-44cc-9c99-a7145ddf93cb - null null
+2025-09-17 12:41:02.962 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Employee/CreateorEdit?id=389f1c51-d416-44cc-9c99-a7145ddf93cb - 404 0 null 5.5846ms
+2025-09-17 12:41:02.963 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/Employee/CreateorEdit, Response status code: 404
+2025-09-17 12:41:09.398 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 12:41:09.400 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 2.1476ms
+2025-09-17 12:41:12.114 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/.well-known/appspecific/com.chrome.devtools.json - null null
+2025-09-17 12:41:12.115 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/.well-known/appspecific/com.chrome.devtools.json - 404 0 null 1.0287ms
+2025-09-17 12:41:12.115 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/.well-known/appspecific/com.chrome.devtools.json, Response status code: 404
+2025-09-17 12:41:19.618 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Employee/CreateorEdit?id=389f1c51-d416-44cc-9c99-a7145ddf93cb - null null
+2025-09-17 12:41:19.645 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Employee/CreateorEdit?id=389f1c51-d416-44cc-9c99-a7145ddf93cb - 404 0 null 27.6789ms
+2025-09-17 12:41:19.645 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/Employee/CreateorEdit, Response status code: 404
+2025-09-17 12:42:09.328 +05:45  INF  User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-17 12:42:09.648 +05:45  INF  Now listening on: https://localhost:7189
+2025-09-17 12:42:09.650 +05:45  INF  Now listening on: http://localhost:5227
+2025-09-17 12:42:09.776 +05:45  INF  Application started. Press Ctrl+C to shut down.
+2025-09-17 12:42:09.776 +05:45  INF  Hosting environment: Development
+2025-09-17 12:42:09.776 +05:45  INF  Content root path: C:\Users\ASUS\Desktop\HRMS\HRMSmvc
+2025-09-17 12:42:10.944 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/ - null null
+2025-09-17 12:42:11.114 +05:45  INF  Executing endpoint 'HRMSmvc.Controllers.AuthController.Login (HRMSmvc)'
+2025-09-17 12:42:11.177 +05:45  INF  Route matched with {action = "Login", controller = "Auth", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller HRMSmvc.Controllers.AuthController (HRMSmvc).
+2025-09-17 12:42:11.206 +05:45  INF  Executing ViewResult, running view login.
+2025-09-17 12:42:11.447 +05:45  INF  Executed ViewResult - view login executed in 245.283ms.
+2025-09-17 12:42:11.458 +05:45  INF  Executed action HRMSmvc.Controllers.AuthController.Login (HRMSmvc) in 279.7994ms
+2025-09-17 12:42:11.459 +05:45  INF  Executed endpoint 'HRMSmvc.Controllers.AuthController.Login (HRMSmvc)'
+2025-09-17 12:42:11.478 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/ - 200 null text/html; charset=utf-8 537.896ms
+2025-09-17 12:42:11.567 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 12:42:11.572 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 5.006ms
+2025-09-17 12:42:11.577 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-09-17 12:42:11.617 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 39.6919ms
+2025-09-17 12:44:25.265 +05:45  INF  Request starting HTTP/2 POST https://localhost:7189/ - application/x-www-form-urlencoded; charset=UTF-8 224
+2025-09-17 12:44:25.269 +05:45  INF  Executing endpoint 'HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc)'
+2025-09-17 12:44:25.286 +05:45  INF  Route matched with {action = "Login", controller = "Auth", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginAsync(Domain.DTO.LoginDTO) on controller HRMSmvc.Controllers.AuthController (HRMSmvc).
+2025-09-17 12:44:34.158 +05:45  INF  AuthenticationScheme: Cookies signed in.
+2025-09-17 12:44:34.161 +05:45  INF  Executing JsonResult, writing value of type 'Domain.Models.ApiResponse`1[[Domain.DTO.LoginResponseDto, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-17 12:44:34.165 +05:45  INF  Executed action HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc) in 8878.6057ms
+2025-09-17 12:44:34.165 +05:45  INF  Executed endpoint 'HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc)'
+2025-09-17 12:44:34.165 +05:45  INF  Request finished HTTP/2 POST https://localhost:7189/ - 200 null application/json; charset=utf-8 8900.1853ms
+2025-09-17 12:44:36.305 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Admin/Dashboard/Index - null null
+2025-09-17 12:44:36.352 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Admin.Controllers.DashboardController.Index (HRMSmvc)'
+2025-09-17 12:44:36.364 +05:45  INF  Route matched with {area = "Admin", action = "Index", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller HRMSmvc.Areas.Admin.Controllers.DashboardController (HRMSmvc).
+2025-09-17 12:44:38.187 +05:45  INF  Executing ViewResult, running view Index.
+2025-09-17 12:44:38.215 +05:45  INF  Executed ViewResult - view Index executed in 28.4584ms.
+2025-09-17 12:44:38.215 +05:45  INF  Executed action HRMSmvc.Areas.Admin.Controllers.DashboardController.Index (HRMSmvc) in 1850.2431ms
+2025-09-17 12:44:38.215 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Admin.Controllers.DashboardController.Index (HRMSmvc)'
+2025-09-17 12:44:38.215 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Admin/Dashboard/Index - 200 null text/html; charset=utf-8 1909.501ms
+2025-09-17 12:44:38.231 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 12:44:38.232 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 0.8961ms
+2025-09-17 12:44:38.239 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-09-17 12:44:38.253 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 13.9799ms
+2025-09-17 12:44:39.485 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - null null
+2025-09-17 12:44:39.495 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - 404 0 null 9.9997ms
+2025-09-17 12:44:39.497 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2, Response status code: 404
+2025-09-17 12:44:39.596 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - null null
+2025-09-17 12:44:39.597 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - 404 0 null 0.8065ms
+2025-09-17 12:44:39.597 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff, Response status code: 404
+2025-09-17 12:44:43.734 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Admin/Dashboard/CreateorEdit - null null
+2025-09-17 12:44:43.748 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Admin.Controllers.DashboardController.CreateorEdit (HRMSmvc)'
+2025-09-17 12:44:43.763 +05:45  INF  Route matched with {area = "Admin", action = "CreateorEdit", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateorEdit(System.String) on controller HRMSmvc.Areas.Admin.Controllers.DashboardController (HRMSmvc).
+2025-09-17 12:47:39.373 +05:45  ERR  Error: "BadRequest" - Bad Request while making GET request to /api/Employee/GetEmpbyID?id=
+2025-09-17 12:47:41.933 +05:45  INF  Executed action HRMSmvc.Areas.Admin.Controllers.DashboardController.CreateorEdit (HRMSmvc) in 178169.9125ms
+2025-09-17 12:47:41.934 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Admin.Controllers.DashboardController.CreateorEdit (HRMSmvc)'
+2025-09-17 12:47:41.937 +05:45  ERR  An unhandled exception has occurred while executing the request.System.NullReferenceException: Object reference not set to an instance of an object.
+   at HRMSmvc.Areas.Admin.Controllers.DashboardController.CreateorEdit(String Id) in C:\Users\ASUS\Desktop\HRMS\HRMSmvc\Areas\Admin\Controllers\DashboardController.cs:line 57
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+
+2025-09-17 12:47:41.995 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Admin/Dashboard/CreateorEdit - 500 null text/html; charset=utf-8 178261.1133ms
+2025-09-17 12:47:42.012 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-09-17 12:47:42.012 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 12:47:42.013 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 0.7955ms
+2025-09-17 12:47:42.025 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 12.8439ms
+2025-09-17 12:47:45.222 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 12:47:45.232 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 10.6971ms
+2025-09-17 12:47:47.225 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Admin/Dashboard/CreateorEdit - null null
+2025-09-17 12:47:47.241 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Admin.Controllers.DashboardController.CreateorEdit (HRMSmvc)'
+2025-09-17 12:47:47.242 +05:45  INF  Route matched with {area = "Admin", action = "CreateorEdit", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateorEdit(System.String) on controller HRMSmvc.Areas.Admin.Controllers.DashboardController (HRMSmvc).
+2025-09-17 12:48:23.511 +05:45  ERR  Error: "BadRequest" - Bad Request while making GET request to /api/Employee/GetEmpbyID?id=
+2025-09-17 12:48:24.191 +05:45  INF  Executed action HRMSmvc.Areas.Admin.Controllers.DashboardController.CreateorEdit (HRMSmvc) in 36948.5621ms
+2025-09-17 12:48:24.191 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Admin.Controllers.DashboardController.CreateorEdit (HRMSmvc)'
+2025-09-17 12:48:24.192 +05:45  ERR  An unhandled exception has occurred while executing the request.System.NullReferenceException: Object reference not set to an instance of an object.
+   at HRMSmvc.Areas.Admin.Controllers.DashboardController.CreateorEdit(String Id) in C:\Users\ASUS\Desktop\HRMS\HRMSmvc\Areas\Admin\Controllers\DashboardController.cs:line 57
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+
+2025-09-17 12:48:24.196 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Admin/Dashboard/CreateorEdit - 500 null text/html; charset=utf-8 36971.7504ms
+2025-09-17 12:48:24.218 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 12:48:24.218 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-09-17 12:48:24.219 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 1.0019ms
+2025-09-17 12:48:24.234 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 15.9599ms
+2025-09-17 12:48:26.097 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 12:48:26.099 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 2.3796ms
+2025-09-17 12:48:28.183 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Admin/Dashboard/CreateorEdit - null null
+2025-09-17 12:48:28.186 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Admin.Controllers.DashboardController.CreateorEdit (HRMSmvc)'
+2025-09-17 12:48:28.186 +05:45  INF  Route matched with {area = "Admin", action = "CreateorEdit", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateorEdit(System.String) on controller HRMSmvc.Areas.Admin.Controllers.DashboardController (HRMSmvc).

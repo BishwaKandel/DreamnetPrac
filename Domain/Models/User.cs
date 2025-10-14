@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Domain.DTO;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,7 @@ namespace Domain.Models
 {
     public class User : IdentityUser
     {
-        public string? Name { get; set; }
+        public string Name { get; set; }
         public string? FirstName { get; set; }
         public string? LastName { get; set; }
         public DateTime DOB { get; set; }
@@ -20,8 +21,18 @@ namespace Domain.Models
         public string Address { get; set; }
         public bool isActive { get; set; }
         public string? ProfilePictureFileName { get; set; }
+        public Guid? DepartmentId { get; set; }
+        public Department Department { get; set; }
 
         //public virtual ICollection<LeaveRequest> LeaveRequest { get; set; } = new List<LeaveRequest>();
 
+    }
+    public class BirthdayService
+    {
+        public bool IsBirthdayToday(UserDTO user, DateTime today)
+        {
+            return user.DOB.Month == today.Month &&
+                   user.DOB.Day == today.Day;
+        }
     }
 }

@@ -1,0 +1,93 @@
+﻿@using Domain.DTO
+@using Domain.Models
+@model UserPayrollDTO
+@{
+	int counter = 1;
+	// Initialize a counter to 1
+}
+@{
+	ViewData["Title"] = "View Payroll";
+	Layout = "_UserLayout";
+
+}
+
+<div class="card-body">
+	<h5 class="card-title">List of Payrolls for @Model.Name</h5>
+
+	@* <div class="card">
+		<div class="row mb-3 ma-3">
+			<div class="col-sm-6">
+				<label class="col-form-label">Year</label>
+				<select class="form-select"  aria-label="Default select example">
+					<option selected>Select Year</option>
+					<option value="1">2020</option>
+					<option value="2">2021</option>
+					<option value="3">2022</option>
+					<option value="3">2023</option>
+					<option value="3">2024</option>
+				</select>
+			</div>
+			<div class="col-sm-6">
+				<label class="col-form-label">Month</label>
+				<select class="form-select" aria-label="Default select example">
+					<option selected>Select Month</option>
+					<option value="1">One</option>
+					<option value="2">Two</option>
+					<option value="3">Three</option>
+				</select>
+			</div>
+		</div>
+
+	</div> *@
+	<table class="inputs">
+		<tbody>
+			<tr>
+				<td>Year : </td>
+				<td><input type="text" id="year" name="year"></td>
+			</tr>
+			<tr>
+				<td>Month : </td>
+				<td><input type="text" id="month" name="month"></td>
+			</tr>
+		</tbody>
+	</table>
+	<!-- Default Table -->
+	<table class="table" id="PayrollTable">
+		<thead>
+			<tr>
+				@* <th scope="col">ID</th> *@
+				<th scope="col">S.N.</th>
+				<th scope="col">Year</th>
+				<th scope="col">Month</th>
+				<th scope="col">Basic Salary</th>
+				<th scope="col">Allowances</th>
+				<th scope="col">Deductions</th>
+				<th scope="col">Net Salary</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var row in Model.payrolls)
+			{
+				<tr>
+					@* <td>@row.Id</td> *@
+					<td>@counter</td>
+					<td>@row.Year</td>
+					<td>@row.Month</td>
+					<td>@row.BasicSalary</td>
+					<td>@row.Allowances</td>
+					<td>@row.Deductions</td>
+					<td>@row.NetSalary</td>
+
+				</tr>
+				counter++;
+			}
+		</tbody>
+	</table>
+</div>
+</div>
+
+
+@section Scripts {
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+	<script src="~/js/payroll.js"></script>
+}

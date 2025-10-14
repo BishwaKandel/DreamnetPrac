@@ -1,0 +1,82 @@
+﻿@using Domain.DTO
+@using Domain.DTO.DepartmentDTO
+@using Domain.Models
+@model List<DeptInfoDTO>
+@{
+	ViewData["Title"] = "Fetching Data from Web API";
+}
+@{
+	int counter = 1;
+	<!-- Initialize a counter to 1 -->
+}
+
+
+@* <div class="pagetitle">
+            <h1>General Tables</h1>
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item">Tables</li>
+                    <li class="breadcrumb-item active">General</li>
+                </ol>
+            </nav> 
+        </div><!-- End Page Title --> *@
+<div class="card">
+	<div class="card-body">
+		<h5 class="card-title">List of Departments</h5>
+		<!-- Default Table -->
+		<table class="table">
+			<thead>
+				<tr>
+					@* <th scope="col">ID</th> *@
+					<th scope="col">S.N.</th>
+					<th scope="col">Name</th>
+					<th scope="col">Description</th>
+					<th scope="col">Location</th>
+					<th scope="col">Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var row in Model)
+				{
+					<tr>
+						@* <td>@row.Id</td> *@
+						<td>@counter</td>
+						<td>@row.Name</td>
+						<td>@row.Description</td>
+						<td>@row.Location</td>
+						<td>
+							<a href="/Admin/Department/CreateorEdit?id=@row.Id">
+								<i class="fa-solid fa-pen"></i>
+							</a>
+						</td>
+						<td>
+							<a href="/Admin/Department/GetEmpByDeptId?id=@row.Id">
+								<i class="fa-solid fa-list"></i>
+							</a>
+						</td>
+						<td>
+							<button class="btn btn-primary" onclick="AddButton('@row.Id')">
+								<i class="fa-solid fa-plus"></i> Add Employee
+							</button>
+						</td>
+						@*<td>
+                            <a href="" class="delete-btn" data-id="@row.Id">
+                                <i class="fa-solid fa-trash"></i>
+                            </a>
+                        </td>*@
+					</tr>
+					counter++;
+				}
+			</tbody>
+		</table>
+	</div>
+</div>
+
+
+@section Scripts {
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+	<script src="~/js/admin.js"></script>
+}
+
+

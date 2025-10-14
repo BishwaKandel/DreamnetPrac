@@ -10,7 +10,7 @@ namespace Application.Interface
 {
     public interface IEmployeeService
     {
-        Task<ApiResponse<List<UserDTO>>> GetAllEmployeesAsync();
+        Task<ApiResponse<List<UserDTO>>> GetAllEmployeesAsync(Guid? deptId);
         Task<ApiResponse<UserDTO>> GetEmployeeByIdAsync(String id);
         Task<ApiResponse<UserDTO>> CreateEmployeeAsync(UserDTO employee);
         Task<ApiResponse<UserDTO>> UpdateEmployeeAsync(UserUpdateDTO employee);

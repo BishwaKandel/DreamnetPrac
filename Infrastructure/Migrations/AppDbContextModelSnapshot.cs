@@ -22,6 +22,41 @@ namespace Infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("Domain.Models.Attendance", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<TimeOnly>("CheckInTime")
+                        .HasColumnType("time");
+
+                    b.Property<TimeOnly?>("CheckOutTime")
+                        .HasColumnType("time");
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<TimeSpan?>("TotalHoursWorked")
+                        .HasColumnType("time");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("status")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Attendances");
+                });
+
             modelBuilder.Entity("Domain.Models.Department", b =>
                 {
                     b.Property<Guid>("Id")
@@ -46,6 +81,90 @@ namespace Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Departments");
+                });
+
+            modelBuilder.Entity("Domain.Models.LeaveRequest", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateOnly>("AppliedOn")
+                        .HasColumnType("date");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateOnly>("EndDate")
+                        .HasColumnType("date");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("LeaveType")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Reason")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Remarks")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RequestedById")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateOnly>("StartDate")
+                        .HasColumnType("date");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RequestedById");
+
+                    b.ToTable("LeaveRequests");
+                });
+
+            modelBuilder.Entity("Domain.Models.Payroll", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<decimal>("Allowances")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("BasicSalary")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("Deductions")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<int?>("Month")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("NetSalary")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int?>("Year")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Payrolls");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -266,6 +385,9 @@ namespace Infrastructure.Migrations
                     b.Property<DateTime>("DOB")
                         .HasColumnType("datetime2");
 
+                    b.Property<Guid?>("DepartmentId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<string>("FirstName")
                         .HasColumnType("nvarchar(max)");
 
@@ -276,6 +398,7 @@ namespace Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Position")
@@ -291,7 +414,42 @@ namespace Infrastructure.Migrations
                     b.Property<bool>("isActive")
                         .HasColumnType("bit");
 
+                    b.HasIndex("DepartmentId");
+
                     b.HasDiscriminator().HasValue("User");
+                });
+
+            modelBuilder.Entity("Domain.Models.Attendance", b =>
+                {
+                    b.HasOne("Domain.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Domain.Models.LeaveRequest", b =>
+                {
+                    b.HasOne("Domain.Models.User", "RequestedBy")
+                        .WithMany()
+                        .HasForeignKey("RequestedById")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("RequestedBy");
+                });
+
+            modelBuilder.Entity("Domain.Models.Payroll", b =>
+                {
+                    b.HasOne("Domain.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -343,6 +501,20 @@ namespace Infrastructure.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Domain.Models.User", b =>
+                {
+                    b.HasOne("Domain.Models.Department", "Department")
+                        .WithMany("Users")
+                        .HasForeignKey("DepartmentId");
+
+                    b.Navigation("Department");
+                });
+
+            modelBuilder.Entity("Domain.Models.Department", b =>
+                {
+                    b.Navigation("Users");
                 });
 #pragma warning restore 612, 618
         }

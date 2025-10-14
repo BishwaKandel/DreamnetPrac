@@ -1,5 +1,71 @@
 [
   {
+    "ContainingType": "Program\u002B\u003C\u003Ec",
+    "Method": "\u003C\u003CMain\u003E$\u003Eb__0_10",
+    "RelativePath": "",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "API.Controllers.AttendanceController",
+    "Method": "CheckIn",
+    "RelativePath": "api/Attendance/CheckIn",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.AttendanceController",
+    "Method": "CheckOut",
+    "RelativePath": "api/Attendance/CheckOut",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.AttendanceController",
+    "Method": "GetAttendanceByEmpID",
+    "RelativePath": "api/Attendance/GetAttendanceByEmpID",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "API.Controllers.AuthController",
     "Method": "Login",
     "RelativePath": "api/Auth/login",
@@ -104,6 +170,22 @@
   },
   {
     "ContainingType": "API.Controllers.DepartmentController",
+    "Method": "AddEmployeesToDepartmentAsync",
+    "RelativePath": "api/Department/AddEmpToDept",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Domain.DTO.AddEmpReq",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.DepartmentController",
     "Method": "CreateDepartmentAsync",
     "RelativePath": "api/Department/CreateDept",
     "HttpMethod": "POST",
@@ -112,7 +194,7 @@
     "Parameters": [
       {
         "Name": "department",
-        "Type": "Domain.DTO.DepartmentDTO",
+        "Type": "Domain.DTO.DepartmentDTO.DeptInfoDTO",
         "IsRequired": true
       }
     ],
@@ -146,6 +228,22 @@
   },
   {
     "ContainingType": "API.Controllers.DepartmentController",
+    "Method": "GetAllEmployeesInDepartmentAsync",
+    "RelativePath": "api/Department/GetAllEmpInDept",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deptId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.DepartmentController",
     "Method": "GetDepartmentById",
     "RelativePath": "api/Department/GetDeptById",
     "HttpMethod": "GET",
@@ -162,18 +260,44 @@
   },
   {
     "ContainingType": "API.Controllers.DepartmentController",
+    "Method": "GetEmpExceptDeptId",
+    "RelativePath": "api/Department/GetEmpExceptDeptId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.DepartmentController",
     "Method": "UpdateDepartmentAsync",
     "RelativePath": "api/Department/UpdateDept",
-    "HttpMethod": "PUT",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "department",
-        "Type": "Domain.DTO.DepartmentDTO",
+        "Type": "Domain.DTO.DepartmentDTO.DeptInfoDTO",
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.EmailController",
+    "Method": "SendEmails",
+    "RelativePath": "api/Email/send",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -227,74 +351,9 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Id",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Name",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "FirstName",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "LastName",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Email",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "PhoneNumber",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "DOB",
-        "Type": "System.DateTime",
-        "IsRequired": false
-      },
-      {
-        "Name": "JoiningDate",
-        "Type": "System.DateTime",
-        "IsRequired": false
-      },
-      {
-        "Name": "Position",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Salary",
-        "Type": "System.Decimal",
-        "IsRequired": false
-      },
-      {
-        "Name": "Address",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "IsActive",
-        "Type": "System.Boolean",
-        "IsRequired": false
-      },
-      {
-        "Name": "formFile",
-        "Type": "Microsoft.AspNetCore.Http.IFormFile",
-        "IsRequired": false
-      },
-      {
-        "Name": "ProfilePictureFileName",
-        "Type": "System.String",
-        "IsRequired": false
+        "Name": "employee",
+        "Type": "Domain.DTO.UserDTO",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -338,7 +397,13 @@
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "deptId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -369,6 +434,138 @@
         "Name": "employee",
         "Type": "Domain.DTO.UserUpdateDTO",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.LeaveController",
+    "Method": "ApproveLeave",
+    "RelativePath": "api/Leave/ApproveLeave",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "leaveRequestId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.LeaveController",
+    "Method": "CreateLeaveAsync",
+    "RelativePath": "api/Leave/CreateLeave",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "leave",
+        "Type": "Domain.DTO.LeaveRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.LeaveController",
+    "Method": "GetAllLeaves",
+    "RelativePath": "api/Leave/GetLeave",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.LeaveController",
+    "Method": "GetLeaveByEmpId",
+    "RelativePath": "api/Leave/GetLeaveByEmpID",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "EmpId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.LeaveController",
+    "Method": "GetLeaveById",
+    "RelativePath": "api/Leave/GetLeaveById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.LeaveController",
+    "Method": "RejectLeave",
+    "RelativePath": "api/Leave/RejectLeave",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "leaveRequestId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.PayrollController",
+    "Method": "CreatePayroll",
+    "RelativePath": "api/Payroll/CreatePayroll",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "payroll",
+        "Type": "Domain.DTO.PayrollDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.PayrollController",
+    "Method": "GetPayrollByEmpId",
+    "RelativePath": "api/Payroll/GetPayrollByEmpID",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "EmpId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Year",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Month",
+        "Type": "System.Int32",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

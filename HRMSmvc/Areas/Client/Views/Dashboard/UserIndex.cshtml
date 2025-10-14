@@ -8,13 +8,13 @@
 
 <div class="pagetitle">
     <h1>Profile</h1>
-    <nav>
+    @* <nav>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.html">Home</a></li>
             <li class="breadcrumb-item">Users</li>
             <li class="breadcrumb-item active">Profile</li>
         </ol>
-    </nav>
+    </nav> *@
 </div><!-- End Page Title -->
 
 <section class="section profile">
@@ -38,6 +38,15 @@
 
 
                     <h3>@Model?.Position</h3>
+
+                    <div class="btn-group row mt-3">
+                        <div class="col">
+                            <button class="btn btn-primary w-100" id="checkinBtn">CheckIn</button>
+                        </div>
+                        <div class="col">
+                            <button class="btn btn-primary w-80" id="checkoutBtn">CheckOut</button>
+                        </div>
+                    </div>
 
                 </div>
             </div>

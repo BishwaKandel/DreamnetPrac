@@ -216,6 +216,71 @@
         });
     });
 
+    //Checkin Button
+    $("#checkinBtn").on("click", function () {
+        $.ajax({
+            type: 'POST',
+            url: 'client/Dashboard/CheckIn', 
+            success: function (response) {
+                if (response.success) {
+                    Swal.fire({
+                        title: "Welcome",
+                        text: "Your attendance has been marked.",
+                        icon: "success"
+                    });
+                } else {
+                    Swal.fire({
+                        title: 'CheckIn Failed!',
+                        text: response.message || 'Please try again.',
+                        icon: 'error',
+                        confirmButtonText: 'OK'
+                    });
+                }
+            },
+            error: function () {
+                Swal.fire({
+                    title: 'CheckIn Failed!',
+                    text: 'An unexpected error occurred. Please try again later.',
+                    icon: 'error',
+                    confirmButtonText: 'OK'
+                });
+            }
+        });
+    });
+
+    //Checkout Button
+    $("#checkoutBtn").on("click", function () {
+        $.ajax({
+            type: 'POST',
+            url: 'client/Dashboard/CheckOut',
+            success: function (response) {
+                if (response.success) {
+                    Swal.fire({
+                        title: "Thankyou",
+                        text: "Your are Checked out",
+                        icon: "success"
+                    });
+                } else {
+                    Swal.fire({
+                        title: 'Checkout Failed!',
+                        text: response.message || 'Please try again.',
+                        icon: 'error',
+                        confirmButtonText: 'OK'
+                    });
+                }
+            },
+            error: function () {
+                Swal.fire({
+                    title: 'Checkout Failed!',
+                    text: 'An unexpected error occurred. Please try again later.',
+                    icon: 'error',
+                    confirmButtonText: 'OK'
+                });
+            }
+        });
+    });
+
+
     
 });
 

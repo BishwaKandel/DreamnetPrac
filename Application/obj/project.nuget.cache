@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "uuEH+RAqKk4=",
+  "dgSpecHash": "/igcCrfjviQ=",
   "success": true,
   "projectFilePath": "C:\\Users\\ASUS\\Desktop\\HRMS\\Application\\Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ASUS\\.nuget\\packages\\automapper\\15.0.1\\automapper.15.0.1.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.aspnet.mvc\\5.3.0\\microsoft.aspnet.mvc.5.3.0.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.aspnet.razor\\3.3.0\\microsoft.aspnet.razor.3.3.0.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.aspnet.webpages\\3.3.0\\microsoft.aspnet.webpages.3.3.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\8.0.18\\microsoft.aspnetcore.cryptography.internal.8.0.18.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\8.0.18\\microsoft.aspnetcore.cryptography.keyderivation.8.0.18.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
@@ -21,7 +24,57 @@
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\8.0.1\\microsoft.identitymodel.jsonwebtokens.8.0.1.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.identitymodel.logging\\8.0.1\\microsoft.identitymodel.logging.8.0.1.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.identitymodel.tokens\\8.0.1\\microsoft.identitymodel.tokens.8.0.1.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.web.infrastructure\\1.0.0\\microsoft.web.infrastructure.1.0.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\system.io.pipelines\\5.0.2\\system.io.pipelines.5.0.2.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "message": "Package 'Microsoft.AspNet.Mvc 5.3.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "projectPath": "C:\\Users\\ASUS\\Desktop\\HRMS\\Application\\Application.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\ASUS\\Desktop\\HRMS\\Application\\Application.csproj",
+      "libraryId": "Microsoft.AspNet.Mvc",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "message": "Package 'Microsoft.AspNet.Razor 3.3.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "projectPath": "C:\\Users\\ASUS\\Desktop\\HRMS\\Application\\Application.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\ASUS\\Desktop\\HRMS\\Application\\Application.csproj",
+      "libraryId": "Microsoft.AspNet.Razor",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "message": "Package 'Microsoft.AspNet.WebPages 3.3.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "projectPath": "C:\\Users\\ASUS\\Desktop\\HRMS\\Application\\Application.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\ASUS\\Desktop\\HRMS\\Application\\Application.csproj",
+      "libraryId": "Microsoft.AspNet.WebPages",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "message": "Package 'Microsoft.Web.Infrastructure 1.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "projectPath": "C:\\Users\\ASUS\\Desktop\\HRMS\\Application\\Application.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\ASUS\\Desktop\\HRMS\\Application\\Application.csproj",
+      "libraryId": "Microsoft.Web.Infrastructure",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

@@ -1,9 +1,12 @@
 ﻿using Application.Interface;
 using AutoMapper;
 using Domain.DTO;
+using Domain.DTO.DepartmentDTO;
 using Domain.Models;
 using Infrastructure.Data;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace Infrastructure.Services
 {
@@ -11,19 +14,21 @@ namespace Infrastructure.Services
     {
         private readonly AppDbContext _context;
         private readonly IMapper _mapper;
-        public DepartmentService(AppDbContext context, IMapper mapper)
+        private readonly UserManager<User> _userManager;
+
+        public DepartmentService(UserManager<User> userManager, AppDbContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;
+            _userManager = userManager;
         }
 
 
         // Create
-        public async Task<DepartmentDTO> CreateDepartmentAsync(DepartmentDTO department)
+        public async Task<ApiResponse<DeptInfoDTO>> CreateDepartmentAsync(DeptInfoDTO department)
         {
             Department departments = new Department
             {
-                Id = department.Id,
                 Name = department.Name,
                 Description = department.Description,
                 Location = department.Location,
@@ -32,8 +37,21 @@ namespace Infrastructure.Services
             _context.Departments.Add(departments);
             await _context.SaveChangesAsync();
 
-            DepartmentDTO departmentDTO = _mapper.Map<DepartmentDTO>(departments);
-            return departmentDTO;
+            var departmentDTO = _mapper.Map<DeptInfoDTO>(departments);
+            return new ApiResponse<DeptInfoDTO>
+            {
+                success = true,
+                message = "Department created Successfully",
+                Data = new DeptInfoDTO
+                {
+                    Id = departmentDTO.Id,
+                    Name = departmentDTO.Name,
+                    Description = departmentDTO.Description,
+                    Location = departmentDTO.Location,
+                    IsActive = departmentDTO.IsActive
+
+                }
+            };
         }
 
         //Delete
@@ -57,35 +75,59 @@ namespace Infrastructure.Services
         }
 
         //GetALL
-        public async Task<IEnumerable<DepartmentDTO>> GetAllDepartmentsAsync()
+        public async Task<ApiResponse<List<DeptInfoDTO>>> GetAllDepartmentsAsync()
         {
             List<Department> dept = await _context.Departments.ToListAsync();
-            List<DepartmentDTO> result = _mapper.Map<List<DepartmentDTO>>(dept);
+            List<DeptInfoDTO> result = _mapper.Map<List<DeptInfoDTO>>(dept);
 
-            return result;
+            return new ApiResponse<List<DeptInfoDTO>>
+            {
+                success = true,
+                message = "Employees retrieved successfully",
+                Data = result
+            };
         }
 
         //Get Dept by ID
-        public async Task<DepartmentDTO?> GetDepartmentByIdAsync(Guid id)
+        public async Task<ApiResponse<DeptInfoDTO>> GetDepartmentByIdAsync(Guid id)
         {
             Department? dept = await _context.Departments.FindAsync(id);
             if (dept == null)
             {
-                return null;
+                return new ApiResponse<DeptInfoDTO>
+                {
+                    success = false,
+                    message = "Department not found"
+                };
             }
-            DepartmentDTO deptDTO = _mapper.Map<DepartmentDTO>(dept);
-            return deptDTO;
+            DeptInfoDTO deptDTO = _mapper.Map<DeptInfoDTO>(dept);
+            return new ApiResponse<DeptInfoDTO>
+            {
+                success = true,
+                message = "Department found",
+                Data = new DeptInfoDTO
+                {
+                    Id = deptDTO.Id,
+                    Name = deptDTO.Name,
+                    Description = deptDTO.Description,
+                    Location = deptDTO.Location,
+                    IsActive = deptDTO.IsActive
+                }
+            }; 
         }
 
-
         //Update 
-        public async Task<DepartmentDTO> UpdateDepartmentAsync(DepartmentDTO department)
+        public async Task<ApiResponse<DeptInfoDTO>> UpdateDepartmentAsync(DeptInfoDTO department)
         {
             Department? existingDept = await _context.Departments.FindAsync(department.Id);
 
             if (existingDept == null)
             {
-                return new();
+                return new ApiResponse<DeptInfoDTO>
+                {
+                    success = false,
+                    message = "Department not found"
+                };
             }
 
             existingDept.Name = department.Name;
@@ -94,10 +136,82 @@ namespace Infrastructure.Services
             existingDept.IsActive = department.IsActive;
             _context.Departments.Update(existingDept);
             await _context.SaveChangesAsync();
-            DepartmentDTO deptDTO = _mapper.Map<DepartmentDTO>(existingDept);
-            return deptDTO;
+            DeptInfoDTO deptDTO = _mapper.Map<DeptInfoDTO>(existingDept);
+            return new ApiResponse<DeptInfoDTO>
+            {
+                success = true,
+                message = "Employee updated Successfully",
+                Data = new DeptInfoDTO
+                {
+                    Id = deptDTO.Id,
+                    Name = deptDTO.Name,
+                    Description = deptDTO.Description,
+                    Location = deptDTO.Location,
+                    IsActive = deptDTO.IsActive
+                }
+            };
         }
 
         //Get all Employees in a Department
+
+        public async Task<ApiResponse<List<UserDTO>>> GetEmployeesExceptDeptIdAsync(Guid departmentId)
+        {
+            var usersInRole = await _userManager.GetUsersInRoleAsync("User");
+            var employees = usersInRole
+                .Where(e => e.DepartmentId != departmentId || e.DepartmentId == null)
+                .ToList();
+            var employeeDTOs = _mapper.Map<List<UserDTO>>(employees);
+            return new ApiResponse<List<UserDTO>>
+            {
+                success = true,
+                message = "Employees retrieved successfully",
+                Data = employeeDTOs
+            };
+        }
+
+        //Add Employee to Department
+
+
+        public async Task<ApiResponse<string>> AddEmployeesToDepartmentAsync(Guid departmentId, List<string> employeeIds)
+        {
+            var department = await _context.Departments.FindAsync(departmentId);
+            if (department == null)
+            {
+                return new ApiResponse<string>
+                {
+                    success = false,
+                    message = "Department not found"
+                };
+            }
+            var employees = await _context.Users
+                .Where(e => employeeIds.Contains(e.Id))
+                .ToListAsync();
+
+            if (!employees.Any())
+            {
+                return new ApiResponse<string>
+                {
+                    success = false,
+                    message = "No employees found for the provided IDs"
+                };
+            }
+
+            foreach (var employee in employees)
+            {
+                employee.DepartmentId = departmentId;
+            }
+
+            _context.Users.UpdateRange(employees);
+            await _context.SaveChangesAsync();
+
+            return new ApiResponse<string>
+            {
+                success = true,
+                message = "Employees added to Department successfully",
+                Data = $"Employees {string.Join(", ", employees.Select(e => e.Id))} added to Department {departmentId}"
+            };
+        }
+
+
     }
 }

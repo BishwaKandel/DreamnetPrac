@@ -5,6 +5,88 @@
     "version": "v1"
   },
   "paths": {
+    "/": {
+      "get": {
+        "tags": [
+          "API"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Attendance/CheckIn": {
+      "post": {
+        "tags": [
+          "Attendance"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Attendance/CheckOut": {
+      "post": {
+        "tags": [
+          "Attendance"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Attendance/GetAttendanceByEmpID": {
+      "get": {
+        "tags": [
+          "Attendance"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Auth/register": {
       "post": {
         "tags": [
@@ -166,17 +248,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/DepartmentDTO"
+                "$ref": "#/components/schemas/DeptInfoDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/DepartmentDTO"
+                "$ref": "#/components/schemas/DeptInfoDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/DepartmentDTO"
+                "$ref": "#/components/schemas/DeptInfoDTO"
               }
             }
           }
@@ -222,7 +304,7 @@
       }
     },
     "/api/Department/UpdateDept": {
-      "put": {
+      "post": {
         "tags": [
           "Department"
         ],
@@ -230,17 +312,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/DepartmentDTO"
+                "$ref": "#/components/schemas/DeptInfoDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/DepartmentDTO"
+                "$ref": "#/components/schemas/DeptInfoDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/DepartmentDTO"
+                "$ref": "#/components/schemas/DeptInfoDTO"
               }
             }
           }
@@ -273,123 +355,113 @@
         }
       }
     },
+    "/api/Department/GetEmpExceptDeptId": {
+      "get": {
+        "tags": [
+          "Department"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Department/AddEmpToDept": {
+      "post": {
+        "tags": [
+          "Department"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddEmpReq"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddEmpReq"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddEmpReq"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Department/GetAllEmpInDept": {
+      "get": {
+        "tags": [
+          "Department"
+        ],
+        "parameters": [
+          {
+            "name": "deptId",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Email/send": {
+      "post": {
+        "tags": [
+          "Email"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Employee/CreateEmp": {
       "post": {
         "tags": [
           "Employee"
         ],
-        "parameters": [
-          {
-            "name": "Id",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Name",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "FirstName",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "LastName",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Email",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "PhoneNumber",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "DOB",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "format": "date-time"
-            }
-          },
-          {
-            "name": "JoiningDate",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "format": "date-time"
-            }
-          },
-          {
-            "name": "Position",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Salary",
-            "in": "query",
-            "schema": {
-              "type": "number",
-              "format": "double"
-            }
-          },
-          {
-            "name": "Address",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "IsActive",
-            "in": "query",
-            "schema": {
-              "type": "boolean"
-            }
-          },
-          {
-            "name": "ProfilePictureFileName",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
         "requestBody": {
           "content": {
-            "multipart/form-data": {
+            "application/json": {
               "schema": {
-                "type": "object",
-                "properties": {
-                  "formFile": {
-                    "type": "string",
-                    "format": "binary"
-                  }
-                }
-              },
-              "encoding": {
-                "formFile": {
-                  "style": "form"
-                }
+                "$ref": "#/components/schemas/UserDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserDTO"
               }
             }
           }
@@ -405,6 +477,16 @@
       "get": {
         "tags": [
           "Employee"
+        ],
+        "parameters": [
+          {
+            "name": "deptId",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
         ],
         "responses": {
           "200": {
@@ -593,6 +675,204 @@
         }
       }
     },
+    "/api/Leave/CreateLeave": {
+      "post": {
+        "tags": [
+          "Leave"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LeaveRequestDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LeaveRequestDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LeaveRequestDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Leave/GetLeave": {
+      "get": {
+        "tags": [
+          "Leave"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Leave/GetLeaveById": {
+      "get": {
+        "tags": [
+          "Leave"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Leave/GetLeaveByEmpID": {
+      "get": {
+        "tags": [
+          "Leave"
+        ],
+        "parameters": [
+          {
+            "name": "EmpId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Leave/ApproveLeave": {
+      "post": {
+        "tags": [
+          "Leave"
+        ],
+        "parameters": [
+          {
+            "name": "leaveRequestId",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Leave/RejectLeave": {
+      "post": {
+        "tags": [
+          "Leave"
+        ],
+        "parameters": [
+          {
+            "name": "leaveRequestId",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Payroll/GetPayrollByEmpID": {
+      "get": {
+        "tags": [
+          "Payroll"
+        ],
+        "parameters": [
+          {
+            "name": "EmpId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Year",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Month",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Payroll/CreatePayroll": {
+      "post": {
+        "tags": [
+          "Payroll"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PayrollDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PayrollDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PayrollDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/WeatherForecast": {
       "get": {
         "tags": [
@@ -635,6 +915,23 @@
   },
   "components": {
     "schemas": {
+      "AddEmpReq": {
+        "type": "object",
+        "properties": {
+          "departmentId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "employeeIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "ChangePasswordDTO": {
         "type": "object",
         "properties": {
@@ -676,7 +973,7 @@
         },
         "additionalProperties": false
       },
-      "DepartmentDTO": {
+      "DeptInfoDTO": {
         "type": "object",
         "properties": {
           "id": {
@@ -701,6 +998,65 @@
         },
         "additionalProperties": false
       },
+      "LeaveRequestDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          },
+          "requestedById": {
+            "type": "string",
+            "nullable": true
+          },
+          "appliedOn": {
+            "type": "string",
+            "format": "date"
+          },
+          "startDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "endDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "reason": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/LeaveStatus"
+          },
+          "leaveType": {
+            "$ref": "#/components/schemas/LeaveType"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LeaveStatus": {
+        "enum": [
+          0,
+          1,
+          2
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "LeaveType": {
+        "enum": [
+          0,
+          1,
+          2
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
       "LoginDTO": {
         "required": [
           "email",
@@ -716,6 +1072,108 @@
           "password": {
             "minLength": 1,
             "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PayrollDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "userId": {
+            "type": "string",
+            "nullable": true
+          },
+          "year": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "month": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "basicSalary": {
+            "type": "number",
+            "format": "double"
+          },
+          "allowances": {
+            "type": "number",
+            "format": "double"
+          },
+          "deductions": {
+            "type": "number",
+            "format": "double"
+          },
+          "netSalary": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "dob": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "joiningDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "position": {
+            "type": "string",
+            "nullable": true
+          },
+          "salary": {
+            "type": "number",
+            "format": "double"
+          },
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "formFile": {
+            "type": "string",
+            "format": "binary",
+            "nullable": true
+          },
+          "profilePictureFileName": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

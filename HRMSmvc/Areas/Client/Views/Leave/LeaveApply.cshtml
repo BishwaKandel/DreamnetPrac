@@ -1,0 +1,43 @@
+﻿@using Domain.Models
+@using HRMSmvc.ViewModel
+
+
+@model LeaveRequestViewModel
+@{
+    ViewData["Title"] = "Create Leave";
+    Layout = "_UserLayout";
+
+}
+<h5 class="card-title">Apply for Leave</h5>
+
+<!-- Vertical Form -->
+<form asp-action="LeaveApply" id="LeaveForm" asp-controller="Leave" asp-area="Client" method="post">
+
+    <div class="col-12">
+        <label asp-for="Reason"></label>
+        <input asp-for="Reason" class="form-control" />
+    </div>
+    <div class="col-12">
+        <label asp-for="Description"></label>
+        <input asp-for="Description" class="form-control" />
+    </div>
+    <div class="col-12">
+        <label asp-for="StartDate"></label>
+        <input asp-for="StartDate" class="form-control" id="StartDate" />
+    </div>
+    <div class="col-12">
+        <label asp-for="EndDate"></label>
+        <input asp-for="EndDate" class="form-control" id="EndDate" />
+    </div>
+    <div class="col-12">
+        <label asp-for="LeaveType"></label>
+        <select class="form-control" asp-for="LeaveType" asp-items="Model.LeaveTypes"></select>
+    </div>
+    <div class="text-center">
+        <button type="submit" class="btn btn-primary mt-3 mb-3">Apply Leave</button>
+    </div>
+</form>
+
+@section Scripts {
+	<script src="~/js/leave.js"></script>
+}

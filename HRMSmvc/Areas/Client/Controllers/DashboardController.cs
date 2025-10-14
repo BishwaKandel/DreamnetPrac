@@ -1,6 +1,7 @@
 ﻿using Domain.DTO;
 using Domain.Models;
 using HRMSmvc.Controllers;
+using HRMSmvc.Extensions;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
@@ -107,5 +108,36 @@ namespace HRMSmvc.Areas.Client.Controllers
             return View("UserIndex", response.Data);
 
         }
+
+        [HttpPost]
+        public async Task<IActionResult> CheckIn()
+        {
+            var userId = User.UserId();
+            var response = await PostAsync<ApiResponse<AttendanceDTO>>($"/api/Attendance/CheckIn?userId={userId}", null, null);
+            return Json(response);
+
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> CheckOut()
+        {
+            var userId = User.UserId();
+            var response = await PostAsync<ApiResponse<AttendanceDTO>>($"/api/Attendance/CheckOut?userId={userId}", null, null);
+            return Json(response);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> AttendanceList()
+        {
+            var userId = User.UserId();
+            var response = await GetAsync<ApiResponse<UserAttendanceDTO>>($"/api/Attendance/GetAttendanceByEmpID?userId={userId}");
+            if (response != null && response.success)
+            {
+                return View(response.Data);
+            }
+            return View(new List<UserAttendanceDTO>());
+        }
+           
+        
     }
 }

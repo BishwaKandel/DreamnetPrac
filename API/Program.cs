@@ -3,6 +3,7 @@ using Application.Mapper;
 using AutoMapper;
 using Domain.Models;
 using Infrastructure.Data;
+using Infrastructure.Job;
 using Infrastructure.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
@@ -11,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Optivem.Framework.Core.Domain;
+using Quartz;
 
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
@@ -79,6 +81,19 @@ builder.Services.AddSwaggerGen(c =>
         }
     });
 });
+builder.Services.AddQuartz(q =>
+{
+    q.UseMicrosoftDependencyInjectionJobFactory();
+
+    // Define a scheduled job
+    var jobKey = new JobKey("ExampleJob");
+    q.AddJob<SendEmailJob>(opts => opts.WithIdentity(jobKey));
+
+    q.AddTrigger(opts => opts
+        .ForJob(jobKey)
+        .WithIdentity("ExampleJob-trigger")
+        .WithCronSchedule("0/10 * * * * ?")); // Trigger every 5 seconds
+});
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -87,9 +102,17 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 builder.Services.AddAutoMapper(cfg => cfg.AddProfile<MappingProfile>()); // Corrected to use a lambda to configure AutoMapper
 builder.Services.AddScoped<IDepartmentService, DepartmentService>();
+builder.Services.AddScoped<IPayrollService, PayrollService>();
 //builder.Services.AddScoped<IDeptEmpService, DeptEmpService>();
-//builder.Services.AddScoped<ILeaveService, LeaveService>();
+builder.Services.AddScoped<ILeaveService, LeaveService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<IAttendanceService, AttendanceService>();
+builder.Services.AddTransient<IEmailService, EmailService>();
+builder.Services.AddScoped<IBirthdayEmailService, BirthdayEmailService>();
+builder.Services.AddSingleton<BirthdayService>(); // domain service
+builder.Services.AddQuartzHostedService(q => q.WaitForJobsToComplete = true);
+
+
 var imagePath = Path.Combine(builder.Environment.WebRootPath, "images");
 
 builder.Services.AddScoped<IImageService>(provider =>
@@ -116,5 +139,8 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.MapGet("/", () => "Quartz scheduled tasks are running!");
+
 
 app.Run();

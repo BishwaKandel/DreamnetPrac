@@ -1,6 +1,6 @@
 [
   {
-    "Name": "New Profile",
+    "Name": "MVC + API",
     "Projects": [
       {
         "Path": "..\\API\\API.csproj",

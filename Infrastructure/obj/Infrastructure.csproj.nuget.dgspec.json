@@ -125,6 +125,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNet.Mvc": {
+              "target": "Package",
+              "version": "[5.3.0, )"
+            },
             "Microsoft.AspNetCore.Http.Features": {
               "target": "Package",
               "version": "[5.0.17, )"
@@ -237,9 +241,25 @@
               "target": "Package",
               "version": "[8.0.0, )"
             },
+            "Microsoft.Extensions.Configuration.Binder": {
+              "target": "Package",
+              "version": "[9.0.9, )"
+            },
             "Optivem.Framework.Infrastructure.FluentValidation": {
               "target": "Package",
               "version": "[1.0.23, )"
+            },
+            "Quartz": {
+              "target": "Package",
+              "version": "[3.15.0, )"
+            },
+            "Quartz.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[3.15.0, )"
+            },
+            "Quartz.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[3.15.0, )"
             }
           },
           "imports": [

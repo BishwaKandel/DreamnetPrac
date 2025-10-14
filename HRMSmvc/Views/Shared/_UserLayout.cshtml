@@ -84,6 +84,10 @@
     <link href="~/vendor/style.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.22.3/dist/sweetalert2.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    @* <link rel="stylesheet" href="https://cdn.datatables.net/2.3.4/css/jquery.dataTables.min.css"> *@
+
+
+
 
 
 
@@ -338,11 +342,11 @@
         <ul class="sidebar-nav" id="sidebar-nav">
 
             <li class="nav-item">
-                <a class="nav-link " href="#">
-                    <i class="fa-solid fa-chart-line"></i>
-                    <span>Dashboard</span>
+                <a class="nav-link" asp-action="UserIndex" asp-controller="Dashboard" asp-area="Client">
+                    <i class="fa-solid fa-chart-line"></i> Dashboard
                 </a>
-            </li><!-- End Dashboard Nav -->
+            </li>
+            <!-- End Dashboard Nav -->
 
             <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
@@ -360,15 +364,18 @@
 
                     </li>
                     <li>
-                        <a href="components-badges.html">
-                            <span>Profiles</span>
-                        </a>
+
+                        <a asp-action="LeaveApply" asp-controller="Leave" asp-area="Client">Apply Leave</a>
+                        @* <i class="bi bi-circle"></i>Directory<span></span> *@
+
                     </li>
-                    @* <li>
-                        <a href="components-breadcrumbs.html">
-                            <i class="bi bi-circle"></i><span>Leaves</span>
-                        </a>
+                    <li>
+                        <a asp-action="MyLeaves" asp-controller="Leave" asp-area="Client">My Leaves</a>
                     </li>
+                    <li>
+                        <a asp-action ="AttendanceList" asp-controller="Dashboard" asp-area="Client">My Attendance</a>
+                    </li>
+                    @*
                     <li>
                         <a href="components-buttons.html">
                             <i class="bi bi-circle"></i><span>Buttons</span>
@@ -420,9 +427,10 @@
                         </a>
                     </li> *@
                 </ul>
-            </li><!-- End Components Nav -->
+            </li>
+            <!-- End Components Nav -->
 
-            <li class="nav-item">
+            @* <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
                     <i class="fa-solid fa-building"></i></i><span>Department</span>
                 </a>
@@ -437,38 +445,33 @@
                             <i class="bi bi-circle"></i><span>Add New</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="forms-editors.html">
-                            <i class="bi bi-circle"></i><span>Add Employee</span>
-                        </a>
-                    </li>
+                    
+                    
+                    
                     <li>
                         <a href="forms-validation.html">
                             <i class="bi bi-circle"></i><span>Profiles</span>
                         </a>
                     </li>
                 </ul>
-            </li><!-- End Forms Nav -->
+            </li><!-- End Forms Nav --> *@
 
-            <li class="nav-item">
+             <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
                     <i class="fa-solid fa-money-bill-1-wave"></i><span>Payroll</span>
                 </a>
                 <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                     <li>
-                        <a href="tables-general.html">
-                            <i class="bi bi-circle"></i><span>General Tables</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="tables-data.html">
-                            <i class="bi bi-circle"></i><span>Data Tables</span>
-                        </a>
-                    </li>
-                </ul>
-            </li><!-- End Tables Nav -->
 
-            <li class="nav-item">
+                        <a asp-action="MyPayroll" asp-controller="Payroll" asp-area="Client">My Payrolls</a>
+                        @* <i class="bi bi-circle"></i>Directory<span></span> *@
+
+                    </li>
+                    
+                </ul>
+            </li><!-- End Tables Nav --> 
+
+            @* <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
                     <i class="fa-solid fa-clipboard-user"></i><span>Attendance</span>
                 </a>
@@ -489,9 +492,9 @@
                         </a>
                     </li>
                 </ul>
-            </li><!-- End Charts Nav -->
+            </li><!-- End Charts Nav --> *@
 
-            <li class="nav-item">
+            @* <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
                     <i class="fa-solid fa-comment-dots"></i><span>Leave Requests</span>
                 </a>
@@ -512,52 +515,25 @@
                         </a>
                     </li>
                 </ul>
-            </li><!-- End Icons Nav -->
+            </li><!-- End Icons Nav --> *@
 
-            <li class="nav-heading">Pages</li>
+            @* <li class="nav-heading">Pages</li>
 
             <li class="nav-item">
                 <a class="nav-link collapsed" href="users-profile.html">
                     <i class="bi bi-person"></i>
                     <span>Profile</span>
                 </a>
-            </li><!-- End Profile Page Nav -->
+            </li><!-- End Profile Page Nav --> *@
 
-            <li class="nav-item">
+            @* <li class="nav-item">
                 <a class="nav-link collapsed" href="pages-faq.html">
                     <i class="bi bi-question-circle"></i>
                     <span>F.A.Q</span>
                 </a>
-            </li><!-- End F.A.Q Page Nav -->
+            </li><!-- End F.A.Q Page Nav --> *@
 
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="pages-contact.html">
-                    <i class="bi bi-envelope"></i>
-                    <span>Contact</span>
-                </a>
-            </li><!-- End Contact Page Nav -->
 
-            <li class="nav-item">
-                @* <a asp-action="Register" asp-controller=Auth">Register</a> *@
-            </li><!-- End Register Page Nav -->
-
-            <li class="nav-item">
-                @* <a asp-action="Login" asp-controller=Auth">Login</a> *@
-            </li><!-- End Login Page Nav -->
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="pages-error-404.html">
-                    <i class="bi bi-dash-circle"></i>
-                    <span>Error 404</span>
-                </a>
-            </li><!-- End Error 404 Page Nav -->
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="pages-blank.html">
-                    <i class="bi bi-file-earmark"></i>
-                    <span>Blank</span>
-                </a>
-            </li><!-- End Blank Page Nav -->
 
         </ul>
 
@@ -588,10 +564,10 @@
     <script src="~/vendor/tinymce.min.js"></script>
     <script src="~/vendor/validate.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    @* <script src="https://cdn.datatables.net/2.3.4/js/dataTables.js"></script> *@
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.22.3/dist/sweetalert2.all.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-
-
 
     <!-- Template Main JS File -->
     <script src="~/js/main.js"></script>

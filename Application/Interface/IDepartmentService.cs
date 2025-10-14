@@ -1,14 +1,18 @@
 ﻿
 using Domain.DTO;
+using Domain.DTO.DepartmentDTO;
+using Domain.Models;
 
 namespace Application.Interface
 {
     public interface IDepartmentService
     {
-        Task<IEnumerable<DepartmentDTO>> GetAllDepartmentsAsync();
-        Task<DepartmentDTO?> GetDepartmentByIdAsync(Guid id);
-        Task<DepartmentDTO> CreateDepartmentAsync(DepartmentDTO department);
-        Task<DepartmentDTO> UpdateDepartmentAsync(DepartmentDTO department);
+        Task<ApiResponse<List<DeptInfoDTO>>> GetAllDepartmentsAsync();
+        Task<ApiResponse<DeptInfoDTO>> GetDepartmentByIdAsync(Guid id);
+        Task<ApiResponse<DeptInfoDTO>> CreateDepartmentAsync(DeptInfoDTO department);
+        Task<ApiResponse<DeptInfoDTO>> UpdateDepartmentAsync(DeptInfoDTO department);
         Task<bool> DeleteDepartmentAsync(Guid id);
+        Task<ApiResponse<List<UserDTO>>> GetEmployeesExceptDeptIdAsync(Guid departmentId);
+        Task<ApiResponse<string>> AddEmployeesToDepartmentAsync(Guid departmentId, List<string> employeeIds);
     }
 }

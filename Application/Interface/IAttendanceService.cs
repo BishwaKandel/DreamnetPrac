@@ -1,4 +1,5 @@
 ﻿using Domain.DTO;
+using Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,13 +10,13 @@ namespace Application.Interface
 {
     public interface IAttendanceService
     {
-        Task<IEnumerable<AttendanceDTO>> GetAllAttendancesAsync();
-        Task<AttendanceDTO?> GetAttendanceByIdAsync(Guid id);
-        Task<AttendanceDTO> CreateAttendanceAsync(AttendanceDTO attendance);
-        Task<AttendanceDTO> UpdateAttendanceAsync(Guid id, AttendanceDTO attendance);
-        Task<bool> DeleteAttendanceAsync(Guid id);
-        Task<IEnumerable<AttendanceDTO>> GetAttendancesByEmployeeIdAsync(Guid employeeId);
-        Task<IEnumerable<AttendanceDTO>> GetAttendancesByDateRangeAsync(DateTime startDate, DateTime endDate);
+        //Task<ApiResponse<List<AttendanceDTO>>> GetAllAttendancesAsync();
+        //Task<ApiResponse<AttendanceDTO?>> GetAttendanceByIdAsync(Guid id);
+        Task<ApiResponse<AttendanceDTO>> CheckInAsync(string userId);
+        Task<ApiResponse<AttendanceDTO>> CheckOutAsync(string userId);
 
+        //Task<ApiResponse<AttendanceDTO>> UpdateAttendanceAsync(Guid id, AttendanceDTO attendance);
+        //Task<bool> DeleteAttendanceAsync(Guid id);
+        Task<ApiResponse<UserAttendanceDTO>> GetAttendancesByEmpIdAsync(string userId);
     }
 }

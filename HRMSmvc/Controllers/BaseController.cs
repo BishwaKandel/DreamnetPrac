@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Domain.Models;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using RestSharp;
 using System.Security.Claims;
@@ -11,8 +12,6 @@ namespace HRMSmvc.Controllers
         private readonly IConfiguration _configuration;
         private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly ILogger<BaseController> _logger;
-
-
 
         public BaseController(IConfiguration configuration, IHttpContextAccessor httpContextAccessor , ILogger<BaseController> logger)
         {
@@ -57,8 +56,9 @@ namespace HRMSmvc.Controllers
                     request.AddFile("formFile", fileBytes, file.FileName, file.ContentType);
                 }
             }
-            else
+            else if(model != null)
             {
+                
                 request.AddJsonBody(model);
             }
                 try
@@ -91,7 +91,6 @@ namespace HRMSmvc.Controllers
             var client = new RestClient(_apiBaseUrl);
             var request = new RestRequest(endPoint, Method.Get)
                 .AddHeader("Authorization", $"Bearer {GetToken()}");
-
             try
             {
                 var response = await client.ExecuteAsync(request);

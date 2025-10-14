@@ -1,0 +1,77 @@
+﻿@using Domain.DTO
+@using Domain.Models
+@model UserAttendanceDTO
+@{
+	int counter = 1;
+	// Initialize a counter to 1
+}
+@{
+	ViewData["Title"] = "View Attendances";
+	Layout = "_UserLayout";
+}
+
+<div class="card-body">
+	<h5 class="card-title">Attendance History</h5>
+
+	@* <div class="card">
+		<div class="row mb-3 ma-3">
+			<div class="col-sm-6">
+				<label class="col-form-label">Year</label>
+				<select class="form-select"  aria-label="Default select example">
+					<option selected>Select Year</option>
+					<option value="1">2020</option>
+					<option value="2">2021</option>
+					<option value="3">2022</option>
+					<option value="3">2023</option>
+					<option value="3">2024</option>
+				</select>
+			</div>
+			<div class="col-sm-6">
+				<label class="col-form-label">Month</label>
+				<select class="form-select" aria-label="Default select example">
+					<option selected>Select Month</option>
+					<option value="1">One</option>
+					<option value="2">Two</option>
+					<option value="3">Three</option>
+				</select>
+			</div>
+		</div>
+
+	</div> *@
+	
+	<!-- Default Table -->
+	<table class="table" id="AttendanceTable">
+		<thead>
+			<tr>
+				@* <th scope="col">ID</th> *@
+				<th scope="col">S.N.</th>
+				<th scope="col">Date</th>
+				<th scope="col">CheckIn Time</th>
+				<th scope="col">CheckOut Time</th>
+				<th scope="col">Total Hours Worked</th>
+				<th scope="col">Status</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var row in Model.attendances)
+			{
+				<tr>
+					@* <td>@row.Id</td> *@
+					<td>@counter</td>
+					<td>@row.Date.ToString("yyyy-MM-dd")</td>
+					<td>@row.CheckInTime</td>
+					<td>@row.CheckOutTime</td>
+					<td>@row.TotalHoursWorked</td>
+					<td>@row.status</td>
+				</tr>
+				counter++;
+			}
+		</tbody>
+	</table>
+</div>
+</div>
+
+
+@section Scripts {
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+}

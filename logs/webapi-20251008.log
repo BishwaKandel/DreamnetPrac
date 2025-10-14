@@ -1,0 +1,872 @@
+2025-10-08 12:24:57.855 +05:45  INF  User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-08 12:24:58.045 +05:45  INF  Now listening on: https://localhost:7189
+2025-10-08 12:24:58.046 +05:45  INF  Now listening on: http://localhost:5227
+2025-10-08 12:24:58.122 +05:45  INF  Application started. Press Ctrl+C to shut down.
+2025-10-08 12:24:58.123 +05:45  INF  Hosting environment: Development
+2025-10-08 12:24:58.123 +05:45  INF  Content root path: C:\Users\ASUS\Desktop\HRMS\HRMSmvc
+2025-10-08 12:25:00.004 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/ - null null
+2025-10-08 12:25:00.234 +05:45  INF  Executing endpoint 'HRMSmvc.Controllers.AuthController.Login (HRMSmvc)'
+2025-10-08 12:25:00.279 +05:45  INF  Route matched with {action = "Login", controller = "Auth", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller HRMSmvc.Controllers.AuthController (HRMSmvc).
+2025-10-08 12:25:00.300 +05:45  INF  Executing ViewResult, running view login.
+2025-10-08 12:25:01.135 +05:45  INF  Executed ViewResult - view login executed in 840.5598ms.
+2025-10-08 12:25:01.151 +05:45  INF  Executed action HRMSmvc.Controllers.AuthController.Login (HRMSmvc) in 870.2712ms
+2025-10-08 12:25:01.152 +05:45  INF  Executed endpoint 'HRMSmvc.Controllers.AuthController.Login (HRMSmvc)'
+2025-10-08 12:25:01.160 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/ - 200 null text/html; charset=utf-8 1158.9805ms
+2025-10-08 12:25:01.251 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-08 12:25:01.262 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 10.6139ms
+2025-10-08 12:25:01.645 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-10-08 12:25:01.675 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 29.4703ms
+2025-10-08 12:25:18.043 +05:45  INF  Request starting HTTP/2 POST https://localhost:7189/ - application/x-www-form-urlencoded; charset=UTF-8 222
+2025-10-08 12:25:18.052 +05:45  INF  Executing endpoint 'HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc)'
+2025-10-08 12:25:18.096 +05:45  INF  Route matched with {action = "Login", controller = "Auth", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginAsync(Domain.DTO.LoginDTO) on controller HRMSmvc.Controllers.AuthController (HRMSmvc).
+2025-10-08 12:25:23.780 +05:45  INF  AuthenticationScheme: Cookies signed in.
+2025-10-08 12:25:23.785 +05:45  INF  Executing JsonResult, writing value of type 'Domain.Models.ApiResponse`1[[Domain.DTO.LoginResponseDto, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-08 12:25:23.790 +05:45  INF  Executed action HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc) in 5693.6718ms
+2025-10-08 12:25:23.791 +05:45  INF  Executed endpoint 'HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc)'
+2025-10-08 12:25:23.791 +05:45  INF  Request finished HTTP/2 POST https://localhost:7189/ - 200 null application/json; charset=utf-8 5747.7739ms
+2025-10-08 12:25:24.742 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Client - null null
+2025-10-08 12:25:24.801 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Client.Controllers.DashboardController.UserIndex (HRMSmvc)'
+2025-10-08 12:25:24.816 +05:45  INF  Route matched with {area = "Client", action = "UserIndex", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserIndex() on controller HRMSmvc.Areas.Client.Controllers.DashboardController (HRMSmvc).
+2025-10-08 12:25:26.772 +05:45  INF  Executing ViewResult, running view UserIndex.
+2025-10-08 12:25:26.837 +05:45  INF  Executed ViewResult - view UserIndex executed in 65.3577ms.
+2025-10-08 12:25:26.838 +05:45  INF  Executed action HRMSmvc.Areas.Client.Controllers.DashboardController.UserIndex (HRMSmvc) in 2020.9775ms
+2025-10-08 12:25:26.838 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Client.Controllers.DashboardController.UserIndex (HRMSmvc)'
+2025-10-08 12:25:26.838 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Client - 200 null text/html; charset=utf-8 2095.9599ms
+2025-10-08 12:25:26.998 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/images/defultpfp.jpg - null null
+2025-10-08 12:25:27.008 +05:45  INF  The file /images/defultpfp.jpg was not modified
+2025-10-08 12:25:27.009 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/images/defultpfp.jpg - 304 null image/jpeg 10.8884ms
+2025-10-08 12:25:27.047 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-08 12:25:27.048 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-10-08 12:25:27.048 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/js/userindex.js - null null
+2025-10-08 12:25:27.049 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 1.4237ms
+2025-10-08 12:25:27.051 +05:45  INF  The file /js/userindex.js was not modified
+2025-10-08 12:25:27.056 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/js/userindex.js - 304 null text/javascript 7.2651ms
+2025-10-08 12:25:27.078 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 30.1978ms
+2025-10-08 12:25:27.155 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 12:25:27.158 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - 404 0 null 2.5727ms
+2025-10-08 12:25:27.159 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2, Response status code: 404
+2025-10-08 12:25:27.166 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 12:25:27.166 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - 404 0 null 0.6367ms
+2025-10-08 12:25:27.166 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff, Response status code: 404
+2025-10-08 12:25:29.638 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Client/Payroll/MyPayroll - null null
+2025-10-08 12:25:29.644 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc)'
+2025-10-08 12:25:29.648 +05:45  INF  Route matched with {area = "Client", action = "MyPayroll", controller = "Payroll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] MyPayroll() on controller HRMSmvc.Areas.Client.Controllers.PayrollController (HRMSmvc).
+2025-10-08 12:25:31.350 +05:45  ERR  Error: "InternalServerError" - Internal Server Error while making GET request to /api/Payroll/GetPayrollByEmpID?EmpId=8167b4fc-d60c-4de1-9437-246b8bdddb04
+2025-10-08 12:25:31.352 +05:45  INF  Executing ViewResult, running view PayrollIndex.
+2025-10-08 12:25:31.357 +05:45  INF  Executed ViewResult - view PayrollIndex executed in 5.6852ms.
+2025-10-08 12:25:31.357 +05:45  INF  Executed action HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc) in 1709.2638ms
+2025-10-08 12:25:31.357 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc)'
+2025-10-08 12:25:31.357 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Client/Payroll/MyPayroll - 200 null text/html; charset=utf-8 1720.0735ms
+2025-10-08 12:25:31.402 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/js/payroll.js - null null
+2025-10-08 12:25:31.402 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-08 12:25:31.403 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 0.9453ms
+2025-10-08 12:25:31.457 +05:45  INF  Sending file. Request path: '/js/payroll.js'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\js\payroll.js'
+2025-10-08 12:25:31.457 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/js/payroll.js - 200 356 text/javascript 55.3991ms
+2025-10-08 12:25:31.490 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-10-08 12:25:31.499 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 9.2214ms
+2025-10-08 12:25:31.630 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 12:25:31.630 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - 404 0 null 0.6423ms
+2025-10-08 12:25:31.630 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2, Response status code: 404
+2025-10-08 12:25:31.636 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 12:25:31.636 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - 404 0 null 0.5182ms
+2025-10-08 12:25:31.636 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff, Response status code: 404
+2025-10-08 12:29:10.675 +05:45  INF  User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-08 12:29:10.893 +05:45  INF  Now listening on: https://localhost:7189
+2025-10-08 12:29:10.894 +05:45  INF  Now listening on: http://localhost:5227
+2025-10-08 12:29:11.049 +05:45  INF  Application started. Press Ctrl+C to shut down.
+2025-10-08 12:29:11.050 +05:45  INF  Hosting environment: Development
+2025-10-08 12:29:11.050 +05:45  INF  Content root path: C:\Users\ASUS\Desktop\HRMS\HRMSmvc
+2025-10-08 12:29:12.353 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/ - null null
+2025-10-08 12:29:12.537 +05:45  INF  Executing endpoint 'HRMSmvc.Controllers.AuthController.Login (HRMSmvc)'
+2025-10-08 12:29:12.588 +05:45  INF  Route matched with {action = "Login", controller = "Auth", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller HRMSmvc.Controllers.AuthController (HRMSmvc).
+2025-10-08 12:29:12.606 +05:45  INF  Executing ViewResult, running view login.
+2025-10-08 12:29:12.742 +05:45  INF  Executed ViewResult - view login executed in 132.9141ms.
+2025-10-08 12:29:12.755 +05:45  INF  Executed action HRMSmvc.Controllers.AuthController.Login (HRMSmvc) in 166.2975ms
+2025-10-08 12:29:12.756 +05:45  INF  Executed endpoint 'HRMSmvc.Controllers.AuthController.Login (HRMSmvc)'
+2025-10-08 12:29:12.764 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/ - 200 null text/html; charset=utf-8 413.9485ms
+2025-10-08 12:29:13.575 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-08 12:29:13.575 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-10-08 12:29:13.598 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 23.0958ms
+2025-10-08 12:29:13.688 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 112.3917ms
+2025-10-08 12:29:40.892 +05:45  INF  Request starting HTTP/2 POST https://localhost:7189/ - application/x-www-form-urlencoded; charset=UTF-8 265
+2025-10-08 12:29:40.900 +05:45  INF  Executing endpoint 'HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc)'
+2025-10-08 12:29:40.953 +05:45  INF  Route matched with {action = "Login", controller = "Auth", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginAsync(Domain.DTO.LoginDTO) on controller HRMSmvc.Controllers.AuthController (HRMSmvc).
+2025-10-08 12:29:46.180 +05:45  INF  AuthenticationScheme: Cookies signed in.
+2025-10-08 12:29:46.184 +05:45  INF  Executing JsonResult, writing value of type 'Domain.Models.ApiResponse`1[[Domain.DTO.LoginResponseDto, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-08 12:29:46.190 +05:45  INF  Executed action HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc) in 5236.7961ms
+2025-10-08 12:29:46.190 +05:45  INF  Executed endpoint 'HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc)'
+2025-10-08 12:29:46.190 +05:45  INF  Request finished HTTP/2 POST https://localhost:7189/ - 200 null application/json; charset=utf-8 5298.7718ms
+2025-10-08 12:29:46.951 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Client - null null
+2025-10-08 12:29:46.966 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Client.Controllers.DashboardController.UserIndex (HRMSmvc)'
+2025-10-08 12:29:46.974 +05:45  INF  Route matched with {area = "Client", action = "UserIndex", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserIndex() on controller HRMSmvc.Areas.Client.Controllers.DashboardController (HRMSmvc).
+2025-10-08 12:29:49.740 +05:45  INF  Executing ViewResult, running view UserIndex.
+2025-10-08 12:29:49.899 +05:45  INF  Executed ViewResult - view UserIndex executed in 159.5999ms.
+2025-10-08 12:29:49.899 +05:45  INF  Executed action HRMSmvc.Areas.Client.Controllers.DashboardController.UserIndex (HRMSmvc) in 2925.2267ms
+2025-10-08 12:29:49.899 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Client.Controllers.DashboardController.UserIndex (HRMSmvc)'
+2025-10-08 12:29:49.900 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Client - 200 null text/html; charset=utf-8 2949.1327ms
+2025-10-08 12:29:50.365 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-08 12:29:50.367 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 1.6758ms
+2025-10-08 12:29:50.375 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-10-08 12:29:50.435 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 60.0233ms
+2025-10-08 12:29:50.521 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 12:29:50.526 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - 404 0 null 5.2281ms
+2025-10-08 12:29:50.527 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2, Response status code: 404
+2025-10-08 12:29:50.566 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 12:29:50.567 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - 404 0 null 1.0745ms
+2025-10-08 12:29:50.567 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff, Response status code: 404
+2025-10-08 12:29:52.291 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Client/Payroll/MyPayroll - null null
+2025-10-08 12:29:52.299 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc)'
+2025-10-08 12:29:52.308 +05:45  INF  Route matched with {area = "Client", action = "MyPayroll", controller = "Payroll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] MyPayroll() on controller HRMSmvc.Areas.Client.Controllers.PayrollController (HRMSmvc).
+2025-10-08 12:29:54.076 +05:45  ERR  Error: "InternalServerError" - Internal Server Error while making GET request to /api/Payroll/GetPayrollByEmpID?EmpId=8167b4fc-d60c-4de1-9437-246b8bdddb04
+2025-10-08 12:29:54.078 +05:45  INF  Executing ViewResult, running view PayrollIndex.
+2025-10-08 12:29:54.087 +05:45  INF  Executed ViewResult - view PayrollIndex executed in 10.7637ms.
+2025-10-08 12:29:54.095 +05:45  INF  Executed action HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc) in 1782.3172ms
+2025-10-08 12:29:54.095 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc)'
+2025-10-08 12:29:54.095 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Client/Payroll/MyPayroll - 200 null text/html; charset=utf-8 1804.3514ms
+2025-10-08 12:29:54.266 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-08 12:29:54.267 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 0.8229ms
+2025-10-08 12:29:54.270 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-10-08 12:29:54.286 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 16.3254ms
+2025-10-08 12:29:54.317 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 12:29:54.317 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - 404 0 null 0.5099ms
+2025-10-08 12:29:54.317 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2, Response status code: 404
+2025-10-08 12:29:54.324 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 12:29:54.325 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - 404 0 null 0.7231ms
+2025-10-08 12:29:54.325 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff, Response status code: 404
+2025-10-08 12:30:30.339 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Client/Payroll/MyPayroll - null null
+2025-10-08 12:30:30.341 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc)'
+2025-10-08 12:30:30.348 +05:45  INF  Route matched with {area = "Client", action = "MyPayroll", controller = "Payroll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] MyPayroll() on controller HRMSmvc.Areas.Client.Controllers.PayrollController (HRMSmvc).
+2025-10-08 12:30:31.958 +05:45  ERR  Error: "InternalServerError" - Internal Server Error while making GET request to /api/Payroll/GetPayrollByEmpID?EmpId=8167b4fc-d60c-4de1-9437-246b8bdddb04
+2025-10-08 12:30:31.960 +05:45  INF  Executing ViewResult, running view PayrollIndex.
+2025-10-08 12:30:31.971 +05:45  INF  Executed ViewResult - view PayrollIndex executed in 12.4195ms.
+2025-10-08 12:30:31.971 +05:45  INF  Executed action HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc) in 1623.1154ms
+2025-10-08 12:30:31.971 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc)'
+2025-10-08 12:30:31.971 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Client/Payroll/MyPayroll - 200 null text/html; charset=utf-8 1632.42ms
+2025-10-08 12:30:32.010 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-10-08 12:30:32.012 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-08 12:30:32.016 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 4.2975ms
+2025-10-08 12:30:32.034 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 23.997ms
+2025-10-08 12:30:32.358 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 12:30:32.359 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - 404 0 null 1.9245ms
+2025-10-08 12:30:32.360 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2, Response status code: 404
+2025-10-08 12:30:32.366 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 12:30:32.366 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - 404 0 null 0.795ms
+2025-10-08 12:30:32.367 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff, Response status code: 404
+2025-10-08 12:31:00.793 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Client/Payroll/MyPayroll - null null
+2025-10-08 12:31:00.799 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc)'
+2025-10-08 12:31:00.808 +05:45  INF  Route matched with {area = "Client", action = "MyPayroll", controller = "Payroll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] MyPayroll() on controller HRMSmvc.Areas.Client.Controllers.PayrollController (HRMSmvc).
+2025-10-08 12:31:03.753 +05:45  ERR  Error: "InternalServerError" - Internal Server Error while making GET request to /api/Payroll/GetPayrollByEmpID?EmpId=8167b4fc-d60c-4de1-9437-246b8bdddb04
+2025-10-08 12:31:03.755 +05:45  INF  Executing ViewResult, running view PayrollIndex.
+2025-10-08 12:31:03.777 +05:45  INF  Executed ViewResult - view PayrollIndex executed in 23.5425ms.
+2025-10-08 12:31:03.778 +05:45  INF  Executed action HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc) in 2969.4251ms
+2025-10-08 12:31:03.778 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc)'
+2025-10-08 12:31:03.778 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Client/Payroll/MyPayroll - 200 null text/html; charset=utf-8 2985.4459ms
+2025-10-08 12:31:04.069 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-08 12:31:04.069 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-10-08 12:31:04.070 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 1.5743ms
+2025-10-08 12:31:04.077 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 8.3579ms
+2025-10-08 12:31:04.143 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 12:31:04.144 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - 404 0 null 1.306ms
+2025-10-08 12:31:04.144 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2, Response status code: 404
+2025-10-08 12:31:04.153 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 12:31:04.153 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - 404 0 null 0.6585ms
+2025-10-08 12:31:04.153 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff, Response status code: 404
+2025-10-08 12:31:50.909 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Client/Payroll/MyPayroll - null null
+2025-10-08 12:31:50.923 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc)'
+2025-10-08 12:31:50.928 +05:45  INF  Route matched with {area = "Client", action = "MyPayroll", controller = "Payroll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] MyPayroll() on controller HRMSmvc.Areas.Client.Controllers.PayrollController (HRMSmvc).
+2025-10-08 12:31:53.252 +05:45  ERR  Error: "InternalServerError" - Internal Server Error while making GET request to /api/Payroll/GetPayrollByEmpID?EmpId=8167b4fc-d60c-4de1-9437-246b8bdddb04
+2025-10-08 12:31:53.255 +05:45  INF  Executing ViewResult, running view PayrollIndex.
+2025-10-08 12:31:53.276 +05:45  INF  Executed ViewResult - view PayrollIndex executed in 23.3846ms.
+2025-10-08 12:31:53.276 +05:45  INF  Executed action HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc) in 2348.1111ms
+2025-10-08 12:31:53.276 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc)'
+2025-10-08 12:31:53.277 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Client/Payroll/MyPayroll - 200 null text/html; charset=utf-8 2367.2285ms
+2025-10-08 12:31:53.620 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-08 12:31:53.620 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-10-08 12:31:53.621 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 0.9403ms
+2025-10-08 12:31:53.660 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 40.3023ms
+2025-10-08 12:31:53.724 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 12:31:53.727 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - 404 0 null 2.4419ms
+2025-10-08 12:31:53.727 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2, Response status code: 404
+2025-10-08 12:31:53.736 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 12:31:53.737 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - 404 0 null 0.5422ms
+2025-10-08 12:31:53.737 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff, Response status code: 404
+2025-10-08 12:33:07.339 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Client/Payroll/MyPayroll - null null
+2025-10-08 12:33:07.349 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc)'
+2025-10-08 12:33:07.353 +05:45  INF  Route matched with {area = "Client", action = "MyPayroll", controller = "Payroll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] MyPayroll() on controller HRMSmvc.Areas.Client.Controllers.PayrollController (HRMSmvc).
+2025-10-08 12:33:10.077 +05:45  ERR  Error: "InternalServerError" - Internal Server Error while making GET request to /api/Payroll/GetPayrollByEmpID?EmpId=8167b4fc-d60c-4de1-9437-246b8bdddb04
+2025-10-08 12:33:10.079 +05:45  INF  Executing ViewResult, running view PayrollIndex.
+2025-10-08 12:33:10.098 +05:45  INF  Executed ViewResult - view PayrollIndex executed in 20.6674ms.
+2025-10-08 12:33:10.098 +05:45  INF  Executed action HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc) in 2745.2751ms
+2025-10-08 12:33:10.098 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc)'
+2025-10-08 12:33:10.098 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Client/Payroll/MyPayroll - 200 null text/html; charset=utf-8 2759.7585ms
+2025-10-08 12:33:10.356 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-08 12:33:10.357 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-10-08 12:33:10.357 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 1.0298ms
+2025-10-08 12:33:10.373 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 15.7687ms
+2025-10-08 12:33:10.526 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 12:33:10.527 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - 404 0 null 1.5269ms
+2025-10-08 12:33:10.527 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2, Response status code: 404
+2025-10-08 12:33:10.533 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 12:33:10.534 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - 404 0 null 0.9008ms
+2025-10-08 12:33:10.534 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff, Response status code: 404
+2025-10-08 12:34:16.822 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Client/Payroll/MyPayroll - null null
+2025-10-08 12:34:16.832 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc)'
+2025-10-08 12:34:16.835 +05:45  INF  Route matched with {area = "Client", action = "MyPayroll", controller = "Payroll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] MyPayroll() on controller HRMSmvc.Areas.Client.Controllers.PayrollController (HRMSmvc).
+2025-10-08 12:34:21.114 +05:45  ERR  Error: "InternalServerError" - Internal Server Error while making GET request to /api/Payroll/GetPayrollByEmpID?EmpId=8167b4fc-d60c-4de1-9437-246b8bdddb04
+2025-10-08 12:34:21.115 +05:45  INF  Executing ViewResult, running view PayrollIndex.
+2025-10-08 12:34:21.138 +05:45  INF  Executed ViewResult - view PayrollIndex executed in 23.5512ms.
+2025-10-08 12:34:21.138 +05:45  INF  Executed action HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc) in 4302.2774ms
+2025-10-08 12:34:21.138 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc)'
+2025-10-08 12:34:21.138 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Client/Payroll/MyPayroll - 200 null text/html; charset=utf-8 4316.3548ms
+2025-10-08 12:34:21.460 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-08 12:34:21.461 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-10-08 12:34:21.464 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 3.163ms
+2025-10-08 12:34:21.475 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 14.396ms
+2025-10-08 12:34:21.523 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 12:34:21.524 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - 404 0 null 1.9005ms
+2025-10-08 12:34:21.525 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2, Response status code: 404
+2025-10-08 12:34:21.539 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 12:34:21.540 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - 404 0 null 1.6133ms
+2025-10-08 12:34:21.540 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff, Response status code: 404
+2025-10-08 12:35:20.090 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Client/Payroll/MyPayroll - null null
+2025-10-08 12:35:20.111 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc)'
+2025-10-08 12:35:20.115 +05:45  INF  Route matched with {area = "Client", action = "MyPayroll", controller = "Payroll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] MyPayroll() on controller HRMSmvc.Areas.Client.Controllers.PayrollController (HRMSmvc).
+2025-10-08 12:35:22.471 +05:45  ERR  Error: "InternalServerError" - Internal Server Error while making GET request to /api/Payroll/GetPayrollByEmpID?EmpId=8167b4fc-d60c-4de1-9437-246b8bdddb04
+2025-10-08 12:35:22.472 +05:45  INF  Executing ViewResult, running view PayrollIndex.
+2025-10-08 12:35:22.497 +05:45  INF  Executed ViewResult - view PayrollIndex executed in 25.5818ms.
+2025-10-08 12:35:22.497 +05:45  INF  Executed action HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc) in 2381.7872ms
+2025-10-08 12:35:22.497 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc)'
+2025-10-08 12:35:22.498 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Client/Payroll/MyPayroll - 200 null text/html; charset=utf-8 2407.9683ms
+2025-10-08 12:35:22.757 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-08 12:35:22.758 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-10-08 12:35:22.758 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 0.9636ms
+2025-10-08 12:35:22.774 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 15.434ms
+2025-10-08 12:35:22.806 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 12:35:22.807 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - 404 0 null 1.6678ms
+2025-10-08 12:35:22.807 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2, Response status code: 404
+2025-10-08 12:35:22.813 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 12:35:22.814 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - 404 0 null 0.7643ms
+2025-10-08 12:35:22.814 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff, Response status code: 404
+2025-10-08 12:41:59.022 +05:45  INF  User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-08 12:41:59.573 +05:45  INF  Now listening on: https://localhost:7189
+2025-10-08 12:41:59.586 +05:45  INF  Now listening on: http://localhost:5227
+2025-10-08 12:41:59.760 +05:45  INF  Application started. Press Ctrl+C to shut down.
+2025-10-08 12:41:59.760 +05:45  INF  Hosting environment: Development
+2025-10-08 12:41:59.760 +05:45  INF  Content root path: C:\Users\ASUS\Desktop\HRMS\HRMSmvc
+2025-10-08 12:42:00.628 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/ - null null
+2025-10-08 12:42:00.789 +05:45  INF  Executing endpoint 'HRMSmvc.Controllers.AuthController.Login (HRMSmvc)'
+2025-10-08 12:42:00.860 +05:45  INF  Route matched with {action = "Login", controller = "Auth", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller HRMSmvc.Controllers.AuthController (HRMSmvc).
+2025-10-08 12:42:00.885 +05:45  INF  Executing ViewResult, running view login.
+2025-10-08 12:42:01.012 +05:45  INF  Executed ViewResult - view login executed in 134.2054ms.
+2025-10-08 12:42:01.017 +05:45  INF  Executed action HRMSmvc.Controllers.AuthController.Login (HRMSmvc) in 155.1354ms
+2025-10-08 12:42:01.017 +05:45  INF  Executed endpoint 'HRMSmvc.Controllers.AuthController.Login (HRMSmvc)'
+2025-10-08 12:42:01.022 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/ - 200 null text/html; charset=utf-8 397.0439ms
+2025-10-08 12:42:01.253 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-08 12:42:01.260 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 7.2424ms
+2025-10-08 12:42:01.348 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-10-08 12:42:01.454 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 105.6381ms
+2025-10-08 12:42:07.467 +05:45  INF  Request starting HTTP/2 POST https://localhost:7189/ - application/x-www-form-urlencoded; charset=UTF-8 222
+2025-10-08 12:42:07.470 +05:45  INF  Executing endpoint 'HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc)'
+2025-10-08 12:42:07.482 +05:45  INF  Route matched with {action = "Login", controller = "Auth", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginAsync(Domain.DTO.LoginDTO) on controller HRMSmvc.Controllers.AuthController (HRMSmvc).
+2025-10-08 12:42:12.358 +05:45  INF  AuthenticationScheme: Cookies signed in.
+2025-10-08 12:42:12.363 +05:45  INF  Executing JsonResult, writing value of type 'Domain.Models.ApiResponse`1[[Domain.DTO.LoginResponseDto, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-08 12:42:12.367 +05:45  INF  Executed action HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc) in 4884.2811ms
+2025-10-08 12:42:12.367 +05:45  INF  Executed endpoint 'HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc)'
+2025-10-08 12:42:12.367 +05:45  INF  Request finished HTTP/2 POST https://localhost:7189/ - 200 null application/json; charset=utf-8 4900.2551ms
+2025-10-08 12:42:13.295 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Client - null null
+2025-10-08 12:42:13.333 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Client.Controllers.DashboardController.UserIndex (HRMSmvc)'
+2025-10-08 12:42:13.348 +05:45  INF  Route matched with {area = "Client", action = "UserIndex", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserIndex() on controller HRMSmvc.Areas.Client.Controllers.DashboardController (HRMSmvc).
+2025-10-08 12:42:15.135 +05:45  INF  Executing ViewResult, running view UserIndex.
+2025-10-08 12:42:15.193 +05:45  INF  Executed ViewResult - view UserIndex executed in 58.4975ms.
+2025-10-08 12:42:15.193 +05:45  INF  Executed action HRMSmvc.Areas.Client.Controllers.DashboardController.UserIndex (HRMSmvc) in 1844.4261ms
+2025-10-08 12:42:15.193 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Client.Controllers.DashboardController.UserIndex (HRMSmvc)'
+2025-10-08 12:42:15.194 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Client - 200 null text/html; charset=utf-8 1898.6157ms
+2025-10-08 12:42:15.243 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-08 12:42:15.243 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/js/userindex.js - null null
+2025-10-08 12:42:15.245 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 2.3058ms
+2025-10-08 12:42:15.249 +05:45  INF  The file /js/userindex.js was not modified
+2025-10-08 12:42:15.250 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/js/userindex.js - 304 null text/javascript 6.6523ms
+2025-10-08 12:42:15.261 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-10-08 12:42:15.276 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 14.3009ms
+2025-10-08 12:42:15.321 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 12:42:15.323 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - 404 0 null 2.3056ms
+2025-10-08 12:42:15.324 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2, Response status code: 404
+2025-10-08 12:42:15.329 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 12:42:15.329 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - 404 0 null 0.816ms
+2025-10-08 12:42:15.330 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff, Response status code: 404
+2025-10-08 12:42:22.989 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Client - null null
+2025-10-08 12:42:22.993 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Client.Controllers.DashboardController.UserIndex (HRMSmvc)'
+2025-10-08 12:42:22.993 +05:45  INF  Route matched with {area = "Client", action = "UserIndex", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserIndex() on controller HRMSmvc.Areas.Client.Controllers.DashboardController (HRMSmvc).
+2025-10-08 12:42:24.265 +05:45  INF  Executing ViewResult, running view UserIndex.
+2025-10-08 12:42:24.271 +05:45  INF  Executed ViewResult - view UserIndex executed in 5.6299ms.
+2025-10-08 12:42:24.271 +05:45  INF  Executed action HRMSmvc.Areas.Client.Controllers.DashboardController.UserIndex (HRMSmvc) in 1277.4429ms
+2025-10-08 12:42:24.271 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Client.Controllers.DashboardController.UserIndex (HRMSmvc)'
+2025-10-08 12:42:24.271 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Client - 200 null text/html; charset=utf-8 1281.9067ms
+2025-10-08 12:42:24.295 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-10-08 12:42:24.296 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-08 12:42:24.297 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 1.094ms
+2025-10-08 12:42:24.321 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 26.5171ms
+2025-10-08 12:42:24.340 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 12:42:24.340 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - 404 0 null 0.476ms
+2025-10-08 12:42:24.340 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2, Response status code: 404
+2025-10-08 12:42:24.343 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 12:42:24.344 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - 404 0 null 0.5259ms
+2025-10-08 12:42:24.344 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff, Response status code: 404
+2025-10-08 12:52:29.996 +05:45  INF  User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-08 12:52:30.243 +05:45  INF  Now listening on: https://localhost:7189
+2025-10-08 12:52:30.244 +05:45  INF  Now listening on: http://localhost:5227
+2025-10-08 12:52:30.341 +05:45  INF  Application started. Press Ctrl+C to shut down.
+2025-10-08 12:52:30.342 +05:45  INF  Hosting environment: Development
+2025-10-08 12:52:30.342 +05:45  INF  Content root path: C:\Users\ASUS\Desktop\HRMS\HRMSmvc
+2025-10-08 12:52:31.176 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/ - null null
+2025-10-08 12:52:31.355 +05:45  INF  Executing endpoint 'HRMSmvc.Controllers.AuthController.Login (HRMSmvc)'
+2025-10-08 12:52:31.400 +05:45  INF  Route matched with {action = "Login", controller = "Auth", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller HRMSmvc.Controllers.AuthController (HRMSmvc).
+2025-10-08 12:52:31.417 +05:45  INF  Executing ViewResult, running view login.
+2025-10-08 12:52:31.533 +05:45  INF  Executed ViewResult - view login executed in 118.8388ms.
+2025-10-08 12:52:31.544 +05:45  INF  Executed action HRMSmvc.Controllers.AuthController.Login (HRMSmvc) in 142.4544ms
+2025-10-08 12:52:31.544 +05:45  INF  Executed endpoint 'HRMSmvc.Controllers.AuthController.Login (HRMSmvc)'
+2025-10-08 12:52:31.551 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/ - 200 null text/html; charset=utf-8 380.8753ms
+2025-10-08 12:52:31.665 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-08 12:52:31.677 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 11.6279ms
+2025-10-08 12:52:31.887 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-10-08 12:52:31.925 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 38.543ms
+2025-10-08 12:52:38.328 +05:45  INF  Request starting HTTP/2 POST https://localhost:7189/ - application/x-www-form-urlencoded; charset=UTF-8 265
+2025-10-08 12:52:38.333 +05:45  INF  Executing endpoint 'HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc)'
+2025-10-08 12:52:38.365 +05:45  INF  Route matched with {action = "Login", controller = "Auth", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginAsync(Domain.DTO.LoginDTO) on controller HRMSmvc.Controllers.AuthController (HRMSmvc).
+2025-10-08 12:52:43.963 +05:45  INF  AuthenticationScheme: Cookies signed in.
+2025-10-08 12:52:43.969 +05:45  INF  Executing JsonResult, writing value of type 'Domain.Models.ApiResponse`1[[Domain.DTO.LoginResponseDto, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-08 12:52:43.974 +05:45  INF  Executed action HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc) in 5609.0318ms
+2025-10-08 12:52:43.974 +05:45  INF  Executed endpoint 'HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc)'
+2025-10-08 12:52:43.975 +05:45  INF  Request finished HTTP/2 POST https://localhost:7189/ - 200 null application/json; charset=utf-8 5646.5394ms
+2025-10-08 12:52:45.199 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Client - null null
+2025-10-08 12:52:45.225 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Client.Controllers.DashboardController.UserIndex (HRMSmvc)'
+2025-10-08 12:52:45.233 +05:45  INF  Route matched with {area = "Client", action = "UserIndex", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserIndex() on controller HRMSmvc.Areas.Client.Controllers.DashboardController (HRMSmvc).
+2025-10-08 12:52:47.510 +05:45  INF  Executing ViewResult, running view UserIndex.
+2025-10-08 12:52:47.590 +05:45  INF  Executed ViewResult - view UserIndex executed in 81.4278ms.
+2025-10-08 12:52:47.591 +05:45  INF  Executed action HRMSmvc.Areas.Client.Controllers.DashboardController.UserIndex (HRMSmvc) in 2356.9243ms
+2025-10-08 12:52:47.591 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Client.Controllers.DashboardController.UserIndex (HRMSmvc)'
+2025-10-08 12:52:47.591 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Client - 200 null text/html; charset=utf-8 2391.7376ms
+2025-10-08 12:52:47.800 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-08 12:52:47.801 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-10-08 12:52:47.804 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 3.5129ms
+2025-10-08 12:52:47.828 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 26.5716ms
+2025-10-08 12:52:47.943 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 12:52:47.947 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - 404 0 null 3.7206ms
+2025-10-08 12:52:47.948 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2, Response status code: 404
+2025-10-08 12:52:47.957 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 12:52:47.958 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - 404 0 null 0.8267ms
+2025-10-08 12:52:47.958 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff, Response status code: 404
+2025-10-08 12:52:51.019 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Client/Payroll/MyPayroll - null null
+2025-10-08 12:52:51.031 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc)'
+2025-10-08 12:52:51.042 +05:45  INF  Route matched with {area = "Client", action = "MyPayroll", controller = "Payroll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] MyPayroll() on controller HRMSmvc.Areas.Client.Controllers.PayrollController (HRMSmvc).
+2025-10-08 12:52:52.510 +05:45  INF  Executing ViewResult, running view PayrollIndex.
+2025-10-08 12:52:52.520 +05:45  INF  Executed ViewResult - view PayrollIndex executed in 10.7299ms.
+2025-10-08 12:52:52.521 +05:45  INF  Executed action HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc) in 1478.6536ms
+2025-10-08 12:52:52.521 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc)'
+2025-10-08 12:52:52.521 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Client/Payroll/MyPayroll - 200 null text/html; charset=utf-8 1502.1771ms
+2025-10-08 12:52:52.557 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-08 12:52:52.559 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 2.3487ms
+2025-10-08 12:52:52.634 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-10-08 12:52:52.648 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 13.4437ms
+2025-10-08 12:52:52.757 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 12:52:52.758 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - 404 0 null 0.6377ms
+2025-10-08 12:52:52.758 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2, Response status code: 404
+2025-10-08 12:52:52.763 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 12:52:52.763 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - 404 0 null 0.4607ms
+2025-10-08 12:52:52.763 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff, Response status code: 404
+2025-10-08 12:53:10.485 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Client/Payroll/MyPayroll - null null
+2025-10-08 12:53:10.490 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc)'
+2025-10-08 12:53:10.490 +05:45  INF  Route matched with {area = "Client", action = "MyPayroll", controller = "Payroll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] MyPayroll() on controller HRMSmvc.Areas.Client.Controllers.PayrollController (HRMSmvc).
+2025-10-08 12:53:11.887 +05:45  INF  Executing ViewResult, running view PayrollIndex.
+2025-10-08 12:53:11.889 +05:45  INF  Executed ViewResult - view PayrollIndex executed in 1.9946ms.
+2025-10-08 12:53:11.889 +05:45  INF  Executed action HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc) in 1399.3434ms
+2025-10-08 12:53:11.889 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc)'
+2025-10-08 12:53:11.890 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Client/Payroll/MyPayroll - 200 null text/html; charset=utf-8 1404.227ms
+2025-10-08 12:53:11.917 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-10-08 12:53:11.918 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-08 12:53:11.919 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 1.0838ms
+2025-10-08 12:53:11.955 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 38.1986ms
+2025-10-08 12:53:12.094 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 12:53:12.095 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - 404 0 null 0.4256ms
+2025-10-08 12:53:12.095 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2, Response status code: 404
+2025-10-08 12:53:12.099 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 12:53:12.100 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - 404 0 null 0.4833ms
+2025-10-08 12:53:12.100 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff, Response status code: 404
+2025-10-08 12:53:51.670 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Client/Payroll/MyPayroll - null null
+2025-10-08 12:53:51.681 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc)'
+2025-10-08 12:53:51.681 +05:45  INF  Route matched with {area = "Client", action = "MyPayroll", controller = "Payroll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] MyPayroll() on controller HRMSmvc.Areas.Client.Controllers.PayrollController (HRMSmvc).
+2025-10-08 12:54:43.091 +05:45  INF  Executing ViewResult, running view PayrollIndex.
+2025-10-08 12:54:43.126 +05:45  INF  Executed ViewResult - view PayrollIndex executed in 38.5099ms.
+2025-10-08 12:54:43.133 +05:45  INF  Executed action HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc) in 51451.6385ms
+2025-10-08 12:54:43.133 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc)'
+2025-10-08 12:54:43.155 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Client/Payroll/MyPayroll - 200 null text/html; charset=utf-8 51484.0418ms
+2025-10-08 12:54:43.373 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-10-08 12:54:43.377 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-08 12:54:43.383 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 5.7652ms
+2025-10-08 12:54:43.395 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 21.2795ms
+2025-10-08 12:54:44.503 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 12:54:44.524 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - 404 0 null 21.8108ms
+2025-10-08 12:54:44.526 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2, Response status code: 404
+2025-10-08 12:54:44.587 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 12:54:44.589 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - 404 0 null 2.0338ms
+2025-10-08 12:54:44.589 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff, Response status code: 404
+2025-10-08 12:54:45.768 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Client/Payroll/MyPayroll - null null
+2025-10-08 12:54:45.775 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc)'
+2025-10-08 12:54:45.782 +05:45  INF  Route matched with {area = "Client", action = "MyPayroll", controller = "Payroll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] MyPayroll() on controller HRMSmvc.Areas.Client.Controllers.PayrollController (HRMSmvc).
+2025-10-08 12:55:05.392 +05:45  INF  Executing ViewResult, running view PayrollIndex.
+2025-10-08 12:55:05.398 +05:45  INF  Executed ViewResult - view PayrollIndex executed in 8.0759ms.
+2025-10-08 12:55:05.399 +05:45  INF  Executed action HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc) in 19616.3469ms
+2025-10-08 12:55:05.399 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc)'
+2025-10-08 12:55:05.399 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Client/Payroll/MyPayroll - 200 null text/html; charset=utf-8 19630.6173ms
+2025-10-08 12:55:05.559 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-08 12:55:05.559 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-10-08 12:55:05.560 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 0.7005ms
+2025-10-08 12:55:05.566 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 7.214ms
+2025-10-08 12:55:05.662 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 12:55:05.663 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - 404 0 null 1.1735ms
+2025-10-08 12:55:05.663 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2, Response status code: 404
+2025-10-08 12:55:05.671 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 12:55:05.672 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - 404 0 null 0.9022ms
+2025-10-08 12:55:05.672 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff, Response status code: 404
+2025-10-08 13:01:08.372 +05:45  INF  User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-08 13:01:08.781 +05:45  INF  Now listening on: https://localhost:7189
+2025-10-08 13:01:08.782 +05:45  INF  Now listening on: http://localhost:5227
+2025-10-08 13:01:08.871 +05:45  INF  Application started. Press Ctrl+C to shut down.
+2025-10-08 13:01:08.872 +05:45  INF  Hosting environment: Development
+2025-10-08 13:01:08.872 +05:45  INF  Content root path: C:\Users\ASUS\Desktop\HRMS\HRMSmvc
+2025-10-08 13:01:09.777 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/ - null null
+2025-10-08 13:01:10.050 +05:45  INF  Executing endpoint 'HRMSmvc.Controllers.AuthController.Login (HRMSmvc)'
+2025-10-08 13:01:10.145 +05:45  INF  Route matched with {action = "Login", controller = "Auth", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller HRMSmvc.Controllers.AuthController (HRMSmvc).
+2025-10-08 13:01:10.174 +05:45  INF  Executing ViewResult, running view login.
+2025-10-08 13:01:10.315 +05:45  INF  Executed ViewResult - view login executed in 143.1831ms.
+2025-10-08 13:01:10.327 +05:45  INF  Executed action HRMSmvc.Controllers.AuthController.Login (HRMSmvc) in 179.7714ms
+2025-10-08 13:01:10.328 +05:45  INF  Executed endpoint 'HRMSmvc.Controllers.AuthController.Login (HRMSmvc)'
+2025-10-08 13:01:10.336 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/ - 200 null text/html; charset=utf-8 569.7626ms
+2025-10-08 13:01:10.381 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-08 13:01:10.410 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 28.7899ms
+2025-10-08 13:01:10.421 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-10-08 13:01:10.489 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 67.2123ms
+2025-10-08 13:01:18.447 +05:45  INF  Request starting HTTP/2 POST https://localhost:7189/ - application/x-www-form-urlencoded; charset=UTF-8 265
+2025-10-08 13:01:18.449 +05:45  INF  Executing endpoint 'HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc)'
+2025-10-08 13:01:18.463 +05:45  INF  Route matched with {action = "Login", controller = "Auth", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginAsync(Domain.DTO.LoginDTO) on controller HRMSmvc.Controllers.AuthController (HRMSmvc).
+2025-10-08 13:01:22.434 +05:45  INF  AuthenticationScheme: Cookies signed in.
+2025-10-08 13:01:22.438 +05:45  INF  Executing JsonResult, writing value of type 'Domain.Models.ApiResponse`1[[Domain.DTO.LoginResponseDto, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-08 13:01:22.442 +05:45  INF  Executed action HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc) in 3979.1103ms
+2025-10-08 13:01:22.442 +05:45  INF  Executed endpoint 'HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc)'
+2025-10-08 13:01:22.442 +05:45  INF  Request finished HTTP/2 POST https://localhost:7189/ - 200 null application/json; charset=utf-8 3995.0272ms
+2025-10-08 13:01:23.677 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Client - null null
+2025-10-08 13:01:23.687 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Client.Controllers.DashboardController.UserIndex (HRMSmvc)'
+2025-10-08 13:01:23.692 +05:45  INF  Route matched with {area = "Client", action = "UserIndex", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserIndex() on controller HRMSmvc.Areas.Client.Controllers.DashboardController (HRMSmvc).
+2025-10-08 13:01:29.312 +05:45  INF  Executing ViewResult, running view UserIndex.
+2025-10-08 13:01:29.366 +05:45  INF  Executed ViewResult - view UserIndex executed in 55.2006ms.
+2025-10-08 13:01:29.367 +05:45  INF  Executed action HRMSmvc.Areas.Client.Controllers.DashboardController.UserIndex (HRMSmvc) in 5674.1773ms
+2025-10-08 13:01:29.367 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Client.Controllers.DashboardController.UserIndex (HRMSmvc)'
+2025-10-08 13:01:29.367 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Client - 200 null text/html; charset=utf-8 5690.405ms
+2025-10-08 13:01:29.428 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-08 13:01:29.429 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 0.5872ms
+2025-10-08 13:01:29.432 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-10-08 13:01:29.451 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 19.1014ms
+2025-10-08 13:01:30.385 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 13:01:30.390 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - 404 0 null 4.2753ms
+2025-10-08 13:01:30.391 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2, Response status code: 404
+2025-10-08 13:01:30.428 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 13:01:30.429 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - 404 0 null 1.0048ms
+2025-10-08 13:01:30.429 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff, Response status code: 404
+2025-10-08 13:01:31.658 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Client/Payroll/MyPayroll - null null
+2025-10-08 13:01:31.668 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc)'
+2025-10-08 13:01:31.680 +05:45  INF  Route matched with {area = "Client", action = "MyPayroll", controller = "Payroll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] MyPayroll() on controller HRMSmvc.Areas.Client.Controllers.PayrollController (HRMSmvc).
+2025-10-08 13:01:38.364 +05:45  INF  Executing ViewResult, running view PayrollIndex.
+2025-10-08 13:01:38.369 +05:45  INF  Executed ViewResult - view PayrollIndex executed in 5.6871ms.
+2025-10-08 13:01:38.370 +05:45  INF  Executed action HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc) in 6689.2063ms
+2025-10-08 13:01:38.370 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc)'
+2025-10-08 13:01:38.370 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Client/Payroll/MyPayroll - 200 null text/html; charset=utf-8 6712.0057ms
+2025-10-08 13:01:38.396 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/js/payroll.js - null null
+2025-10-08 13:01:38.410 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-08 13:01:38.410 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 0.8862ms
+2025-10-08 13:01:38.422 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-10-08 13:01:38.430 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 7.4729ms
+2025-10-08 13:01:38.490 +05:45  INF  Sending file. Request path: '/js/payroll.js'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\js\payroll.js'
+2025-10-08 13:01:38.490 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/js/payroll.js - 200 78 text/javascript 94.5559ms
+2025-10-08 13:01:38.512 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 13:01:38.512 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - 404 0 null 0.579ms
+2025-10-08 13:01:38.512 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2, Response status code: 404
+2025-10-08 13:01:38.518 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 13:01:38.519 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - 404 0 null 0.7916ms
+2025-10-08 13:01:38.519 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff, Response status code: 404
+2025-10-08 13:01:43.916 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/.well-known/appspecific/com.chrome.devtools.json - null null
+2025-10-08 13:01:43.917 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/.well-known/appspecific/com.chrome.devtools.json - 404 0 null 1.0536ms
+2025-10-08 13:01:43.917 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/.well-known/appspecific/com.chrome.devtools.json, Response status code: 404
+2025-10-08 13:01:47.385 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Client/Payroll/MyPayroll - null null
+2025-10-08 13:01:47.394 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc)'
+2025-10-08 13:01:47.394 +05:45  INF  Route matched with {area = "Client", action = "MyPayroll", controller = "Payroll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] MyPayroll() on controller HRMSmvc.Areas.Client.Controllers.PayrollController (HRMSmvc).
+2025-10-08 13:01:52.618 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Client/Payroll/MyPayroll - null null
+2025-10-08 13:01:52.622 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc)'
+2025-10-08 13:01:52.622 +05:45  INF  Route matched with {area = "Client", action = "MyPayroll", controller = "Payroll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] MyPayroll() on controller HRMSmvc.Areas.Client.Controllers.PayrollController (HRMSmvc).
+2025-10-08 13:01:58.099 +05:45  INF  Executing ViewResult, running view PayrollIndex.
+2025-10-08 13:01:58.099 +05:45  INF  Executing ViewResult, running view PayrollIndex.
+2025-10-08 13:01:58.101 +05:45  INF  Executed ViewResult - view PayrollIndex executed in 1.7558ms.
+2025-10-08 13:01:58.101 +05:45  INF  Executed action HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc) in 10706.9408ms
+2025-10-08 13:01:58.101 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc)'
+2025-10-08 13:01:58.102 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Client/Payroll/MyPayroll - 200 null text/html; charset=utf-8 10716.7602ms
+2025-10-08 13:01:58.102 +05:45  INF  Executed ViewResult - view PayrollIndex executed in 2.9924ms.
+2025-10-08 13:01:58.102 +05:45  INF  Executed action HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc) in 5479.7258ms
+2025-10-08 13:01:58.102 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc)'
+2025-10-08 13:01:58.102 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Client/Payroll/MyPayroll - 200 null text/html; charset=utf-8 5484.2353ms
+2025-10-08 13:01:58.133 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/.well-known/appspecific/com.chrome.devtools.json - null null
+2025-10-08 13:01:58.134 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/.well-known/appspecific/com.chrome.devtools.json - 404 0 null 0.7902ms
+2025-10-08 13:01:58.134 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/.well-known/appspecific/com.chrome.devtools.json, Response status code: 404
+2025-10-08 13:01:58.149 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/bootstrap.min.css - null null
+2025-10-08 13:01:58.166 +05:45  INF  Sending file. Request path: '/vendor/bootstrap.min.css'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\bootstrap.min.css'
+2025-10-08 13:01:58.166 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/bootstrap.min.css - 200 232803 text/css 16.8843ms
+2025-10-08 13:01:58.170 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/bootstrap-icons.css - null null
+2025-10-08 13:01:58.176 +05:45  INF  Sending file. Request path: '/vendor/bootstrap-icons.css'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\bootstrap-icons.css'
+2025-10-08 13:01:58.177 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/bootstrap-icons.css - 200 98255 text/css 6.2395ms
+2025-10-08 13:01:58.184 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/bootstrap-icons.min.css - null null
+2025-10-08 13:01:58.187 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/quill.bubble.css - null null
+2025-10-08 13:01:58.189 +05:45  INF  Sending file. Request path: '/vendor/quill.bubble.css'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\quill.bubble.css'
+2025-10-08 13:01:58.189 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/quill.bubble.css - 200 25216 text/css 2.3679ms
+2025-10-08 13:01:58.198 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/quill.snow.css - null null
+2025-10-08 13:01:58.203 +05:45  INF  Sending file. Request path: '/vendor/quill.snow.css'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\quill.snow.css'
+2025-10-08 13:01:58.204 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/quill.snow.css - 200 24606 text/css 5.175ms
+2025-10-08 13:01:58.208 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/remixicon.css - null null
+2025-10-08 13:01:58.216 +05:45  INF  Sending file. Request path: '/vendor/remixicon.css'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\remixicon.css'
+2025-10-08 13:01:58.216 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/remixicon.css - 200 138761 text/css 7.5462ms
+2025-10-08 13:01:58.219 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/style.css - null null
+2025-10-08 13:01:58.221 +05:45  INF  Sending file. Request path: '/vendor/style.css'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\style.css'
+2025-10-08 13:01:58.221 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/style.css - 200 4873 text/css 1.7905ms
+2025-10-08 13:01:58.244 +05:45  INF  Sending file. Request path: '/vendor/bootstrap-icons.min.css'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\bootstrap-icons.min.css'
+2025-10-08 13:01:58.244 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/bootstrap-icons.min.css - 200 85875 text/css 59.939ms
+2025-10-08 13:01:58.266 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/css/style.css - null null
+2025-10-08 13:01:58.268 +05:45  INF  Sending file. Request path: '/css/style.css'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\css\style.css'
+2025-10-08 13:01:58.268 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/css/style.css - 200 21002 text/css 1.94ms
+2025-10-08 13:01:58.271 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/apexcharts.min.js - null null
+2025-10-08 13:01:58.287 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/bootstrap.bundle.min.js - null null
+2025-10-08 13:01:58.327 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/echarts.min.js - null null
+2025-10-08 13:01:58.437 +05:45  INF  Sending file. Request path: '/vendor/bootstrap.bundle.min.js'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\bootstrap.bundle.min.js'
+2025-10-08 13:01:58.441 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/bootstrap.bundle.min.js - 200 80721 text/javascript 150.5858ms
+2025-10-08 13:01:58.442 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/chart.umd.js - null null
+2025-10-08 13:01:58.446 +05:45  INF  Sending file. Request path: '/vendor/apexcharts.min.js'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\apexcharts.min.js'
+2025-10-08 13:01:58.447 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/apexcharts.min.js - 200 533680 text/javascript 175.0852ms
+2025-10-08 13:01:58.453 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/quill.js - null null
+2025-10-08 13:01:58.477 +05:45  INF  Sending file. Request path: '/vendor/echarts.min.js'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\echarts.min.js'
+2025-10-08 13:01:58.477 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/echarts.min.js - 200 1029203 text/javascript 150.5533ms
+2025-10-08 13:01:58.509 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/simple-datatables.js - null null
+2025-10-08 13:01:58.598 +05:45  INF  Sending file. Request path: '/vendor/chart.umd.js'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\chart.umd.js'
+2025-10-08 13:01:58.598 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/chart.umd.js - 200 205363 text/javascript 155.9593ms
+2025-10-08 13:01:58.598 +05:45  INF  Sending file. Request path: '/vendor/quill.js'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\quill.js'
+2025-10-08 13:01:58.598 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/quill.js - 200 209340 text/javascript 145.5271ms
+2025-10-08 13:01:58.606 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/tinymce.min.js - null null
+2025-10-08 13:01:58.607 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/validate.js - null null
+2025-10-08 13:01:58.619 +05:45  INF  Sending file. Request path: '/vendor/simple-datatables.js'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\simple-datatables.js'
+2025-10-08 13:01:58.619 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/simple-datatables.js - 200 98086 text/javascript 110.1816ms
+2025-10-08 13:01:58.666 +05:45  INF  Sending file. Request path: '/vendor/validate.js'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\validate.js'
+2025-10-08 13:01:58.667 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/validate.js - 200 2734 text/javascript 59.8135ms
+2025-10-08 13:01:58.686 +05:45  INF  Sending file. Request path: '/vendor/tinymce.min.js'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\tinymce.min.js'
+2025-10-08 13:01:58.686 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/tinymce.min.js - 200 436122 text/javascript 79.6024ms
+2025-10-08 13:01:58.788 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 13:01:58.789 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - 404 0 null 0.6407ms
+2025-10-08 13:01:58.789 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2, Response status code: 404
+2025-10-08 13:01:58.811 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 13:01:58.812 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - 404 0 null 0.7423ms
+2025-10-08 13:01:58.812 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff, Response status code: 404
+2025-10-08 13:01:58.851 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/js/main.js - null null
+2025-10-08 13:01:58.858 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/js/payroll.js - null null
+2025-10-08 13:01:58.860 +05:45  INF  Sending file. Request path: '/js/payroll.js'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\js\payroll.js'
+2025-10-08 13:01:58.860 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/js/payroll.js - 200 78 text/javascript 2.1058ms
+2025-10-08 13:01:58.867 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-08 13:01:58.867 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 0.7753ms
+2025-10-08 13:01:58.872 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-10-08 13:01:58.882 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 10.4582ms
+2025-10-08 13:01:58.918 +05:45  INF  Sending file. Request path: '/js/main.js'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\js\main.js'
+2025-10-08 13:01:58.918 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/js/main.js - 200 9966 text/javascript 66.6841ms
+2025-10-08 13:01:59.443 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/favicon.ico - null null
+2025-10-08 13:01:59.474 +05:45  INF  Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\favicon.ico'
+2025-10-08 13:01:59.474 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/favicon.ico - 200 5430 image/x-icon 31.6583ms
+2025-10-08 13:02:12.836 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/.well-known/appspecific/com.chrome.devtools.json - null null
+2025-10-08 13:02:12.837 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/.well-known/appspecific/com.chrome.devtools.json - 404 0 null 1.2111ms
+2025-10-08 13:02:12.837 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/.well-known/appspecific/com.chrome.devtools.json, Response status code: 404
+2025-10-08 13:05:56.805 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Client/Payroll/MyPayroll - null null
+2025-10-08 13:05:56.836 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc)'
+2025-10-08 13:05:56.855 +05:45  INF  Route matched with {area = "Client", action = "MyPayroll", controller = "Payroll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] MyPayroll() on controller HRMSmvc.Areas.Client.Controllers.PayrollController (HRMSmvc).
+2025-10-08 13:06:04.070 +05:45  INF  Executing ViewResult, running view PayrollIndex.
+2025-10-08 13:06:04.113 +05:45  INF  Executed ViewResult - view PayrollIndex executed in 45.4482ms.
+2025-10-08 13:06:04.113 +05:45  INF  Executed action HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc) in 7257.6199ms
+2025-10-08 13:06:04.117 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc)'
+2025-10-08 13:06:04.120 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Client/Payroll/MyPayroll - 200 null text/html; charset=utf-8 7314.8662ms
+2025-10-08 13:06:04.175 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/js/payroll.js - null null
+2025-10-08 13:06:04.179 +05:45  INF  The file /js/payroll.js was not modified
+2025-10-08 13:06:04.180 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/js/payroll.js - 304 null text/javascript 5.181ms
+2025-10-08 13:06:04.183 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-08 13:06:04.184 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 1.0265ms
+2025-10-08 13:06:04.189 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-10-08 13:06:04.200 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 11.0023ms
+2025-10-08 13:06:05.531 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 13:06:05.533 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - 404 0 null 2.0217ms
+2025-10-08 13:06:05.533 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2, Response status code: 404
+2025-10-08 13:06:05.544 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 13:06:05.545 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - 404 0 null 0.5863ms
+2025-10-08 13:06:05.545 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff, Response status code: 404
+2025-10-08 13:06:26.370 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Client/Payroll/MyPayroll - null null
+2025-10-08 13:06:26.387 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc)'
+2025-10-08 13:06:26.391 +05:45  INF  Route matched with {area = "Client", action = "MyPayroll", controller = "Payroll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] MyPayroll() on controller HRMSmvc.Areas.Client.Controllers.PayrollController (HRMSmvc).
+2025-10-08 13:06:29.031 +05:45  INF  Executing ViewResult, running view PayrollIndex.
+2025-10-08 13:06:29.050 +05:45  INF  Executed ViewResult - view PayrollIndex executed in 21.1715ms.
+2025-10-08 13:06:29.050 +05:45  INF  Executed action HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc) in 2659.2454ms
+2025-10-08 13:06:29.050 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc)'
+2025-10-08 13:06:29.051 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Client/Payroll/MyPayroll - 200 null text/html; charset=utf-8 2680.2028ms
+2025-10-08 13:06:29.099 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-08 13:06:29.100 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-10-08 13:06:29.102 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 2.4117ms
+2025-10-08 13:06:29.135 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 34.587ms
+2025-10-08 13:06:29.200 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 13:06:29.201 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - 404 0 null 1.6049ms
+2025-10-08 13:06:29.201 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2, Response status code: 404
+2025-10-08 13:06:29.208 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 13:06:29.208 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - 404 0 null 0.6583ms
+2025-10-08 13:06:29.208 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff, Response status code: 404
+2025-10-08 13:06:50.107 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Client/Payroll/MyPayroll - null null
+2025-10-08 13:06:50.109 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc)'
+2025-10-08 13:06:50.112 +05:45  INF  Route matched with {area = "Client", action = "MyPayroll", controller = "Payroll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] MyPayroll() on controller HRMSmvc.Areas.Client.Controllers.PayrollController (HRMSmvc).
+2025-10-08 13:06:51.752 +05:45  INF  Executing ViewResult, running view PayrollIndex.
+2025-10-08 13:06:51.761 +05:45  INF  Executed ViewResult - view PayrollIndex executed in 10.0002ms.
+2025-10-08 13:06:51.761 +05:45  INF  Executed action HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc) in 1648.9675ms
+2025-10-08 13:06:51.762 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc)'
+2025-10-08 13:06:51.763 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Client/Payroll/MyPayroll - 200 null text/html; charset=utf-8 1655.2597ms
+2025-10-08 13:06:51.796 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/js/payroll.js - null null
+2025-10-08 13:06:51.797 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-08 13:06:51.798 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 1.563ms
+2025-10-08 13:06:51.798 +05:45  INF  The file /js/payroll.js was not modified
+2025-10-08 13:06:51.798 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/js/payroll.js - 304 null text/javascript 2.2423ms
+2025-10-08 13:06:51.818 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-10-08 13:06:51.838 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 20.802ms
+2025-10-08 13:06:51.870 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 13:06:51.871 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - 404 0 null 0.9008ms
+2025-10-08 13:06:51.871 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2, Response status code: 404
+2025-10-08 13:06:51.875 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 13:06:51.876 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - 404 0 null 0.6834ms
+2025-10-08 13:06:51.876 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff, Response status code: 404
+2025-10-08 13:06:56.510 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Client/Payroll/MyPayroll - null null
+2025-10-08 13:06:56.515 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc)'
+2025-10-08 13:06:56.515 +05:45  INF  Route matched with {area = "Client", action = "MyPayroll", controller = "Payroll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] MyPayroll() on controller HRMSmvc.Areas.Client.Controllers.PayrollController (HRMSmvc).
+2025-10-08 13:06:58.223 +05:45  INF  Executing ViewResult, running view PayrollIndex.
+2025-10-08 13:06:58.225 +05:45  INF  Executed ViewResult - view PayrollIndex executed in 2.0014ms.
+2025-10-08 13:06:58.225 +05:45  INF  Executed action HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc) in 1709.9008ms
+2025-10-08 13:06:58.225 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc)'
+2025-10-08 13:06:58.226 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Client/Payroll/MyPayroll - 200 null text/html; charset=utf-8 1715.5255ms
+2025-10-08 13:06:58.249 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/bootstrap.min.css - null null
+2025-10-08 13:06:58.263 +05:45  INF  Sending file. Request path: '/vendor/bootstrap.min.css'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\bootstrap.min.css'
+2025-10-08 13:06:58.263 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/bootstrap.min.css - 200 232803 text/css 13.9981ms
+2025-10-08 13:06:58.266 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/bootstrap-icons.css - null null
+2025-10-08 13:06:58.269 +05:45  INF  Sending file. Request path: '/vendor/bootstrap-icons.css'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\bootstrap-icons.css'
+2025-10-08 13:06:58.269 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/bootstrap-icons.css - 200 98255 text/css 2.8806ms
+2025-10-08 13:06:58.271 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/bootstrap-icons.min.css - null null
+2025-10-08 13:06:58.274 +05:45  INF  Sending file. Request path: '/vendor/bootstrap-icons.min.css'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\bootstrap-icons.min.css'
+2025-10-08 13:06:58.274 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/bootstrap-icons.min.css - 200 85875 text/css 2.6481ms
+2025-10-08 13:06:58.276 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/quill.bubble.css - null null
+2025-10-08 13:06:58.278 +05:45  INF  Sending file. Request path: '/vendor/quill.bubble.css'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\quill.bubble.css'
+2025-10-08 13:06:58.278 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/quill.bubble.css - 200 25216 text/css 1.5217ms
+2025-10-08 13:06:58.283 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/quill.snow.css - null null
+2025-10-08 13:06:58.285 +05:45  INF  Sending file. Request path: '/vendor/quill.snow.css'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\quill.snow.css'
+2025-10-08 13:06:58.285 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/quill.snow.css - 200 24606 text/css 2.5172ms
+2025-10-08 13:06:58.288 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/remixicon.css - null null
+2025-10-08 13:06:58.289 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/style.css - null null
+2025-10-08 13:06:58.290 +05:45  INF  Sending file. Request path: '/vendor/style.css'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\style.css'
+2025-10-08 13:06:58.291 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/style.css - 200 4873 text/css 1.5163ms
+2025-10-08 13:06:58.293 +05:45  INF  Sending file. Request path: '/vendor/remixicon.css'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\remixicon.css'
+2025-10-08 13:06:58.293 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/remixicon.css - 200 138761 text/css 5.2875ms
+2025-10-08 13:06:58.330 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/css/style.css - null null
+2025-10-08 13:06:58.332 +05:45  INF  Sending file. Request path: '/css/style.css'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\css\style.css'
+2025-10-08 13:06:58.332 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/css/style.css - 200 21002 text/css 2.1715ms
+2025-10-08 13:06:58.337 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/apexcharts.min.js - null null
+2025-10-08 13:06:58.346 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/bootstrap.bundle.min.js - null null
+2025-10-08 13:06:58.350 +05:45  INF  Sending file. Request path: '/vendor/bootstrap.bundle.min.js'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\bootstrap.bundle.min.js'
+2025-10-08 13:06:58.351 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/bootstrap.bundle.min.js - 200 80721 text/javascript 4.5893ms
+2025-10-08 13:06:58.358 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/echarts.min.js - null null
+2025-10-08 13:06:58.361 +05:45  INF  Sending file. Request path: '/vendor/apexcharts.min.js'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\apexcharts.min.js'
+2025-10-08 13:06:58.364 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/chart.umd.js - null null
+2025-10-08 13:06:58.365 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/apexcharts.min.js - 200 533680 text/javascript 27.6796ms
+2025-10-08 13:06:58.396 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/quill.js - null null
+2025-10-08 13:06:58.416 +05:45  INF  Sending file. Request path: '/vendor/chart.umd.js'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\chart.umd.js'
+2025-10-08 13:06:58.416 +05:45  INF  Sending file. Request path: '/vendor/quill.js'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\quill.js'
+2025-10-08 13:06:58.416 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/quill.js - 200 209340 text/javascript 20.5908ms
+2025-10-08 13:06:58.416 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/chart.umd.js - 200 205363 text/javascript 52.2607ms
+2025-10-08 13:06:58.422 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/simple-datatables.js - null null
+2025-10-08 13:06:58.423 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/tinymce.min.js - null null
+2025-10-08 13:06:58.429 +05:45  INF  Sending file. Request path: '/vendor/simple-datatables.js'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\simple-datatables.js'
+2025-10-08 13:06:58.429 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/simple-datatables.js - 200 98086 text/javascript 7.3215ms
+2025-10-08 13:06:58.434 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/validate.js - null null
+2025-10-08 13:06:58.435 +05:45  INF  Sending file. Request path: '/vendor/validate.js'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\validate.js'
+2025-10-08 13:06:58.436 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/validate.js - 200 2734 text/javascript 2.1493ms
+2025-10-08 13:06:58.446 +05:45  INF  Sending file. Request path: '/vendor/tinymce.min.js'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\tinymce.min.js'
+2025-10-08 13:06:58.446 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/tinymce.min.js - 200 436122 text/javascript 22.6833ms
+2025-10-08 13:06:58.450 +05:45  INF  Sending file. Request path: '/vendor/echarts.min.js'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\echarts.min.js'
+2025-10-08 13:06:58.450 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/echarts.min.js - 200 1029203 text/javascript 91.4986ms
+2025-10-08 13:06:58.508 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/js/main.js - null null
+2025-10-08 13:06:58.510 +05:45  INF  Sending file. Request path: '/js/main.js'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\js\main.js'
+2025-10-08 13:06:58.510 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/js/main.js - 200 9966 text/javascript 1.4487ms
+2025-10-08 13:06:58.520 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/js/payroll.js - null null
+2025-10-08 13:06:58.521 +05:45  INF  Sending file. Request path: '/js/payroll.js'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\js\payroll.js'
+2025-10-08 13:06:58.522 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/js/payroll.js - 200 78 text/javascript 1.9855ms
+2025-10-08 13:06:58.526 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-08 13:06:58.527 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 1.143ms
+2025-10-08 13:06:58.531 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-10-08 13:06:58.544 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 12.636ms
+2025-10-08 13:06:58.646 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 13:06:58.647 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - 404 0 null 0.7813ms
+2025-10-08 13:06:58.647 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2, Response status code: 404
+2025-10-08 13:06:58.684 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 13:06:58.684 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - 404 0 null 0.6749ms
+2025-10-08 13:06:58.685 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff, Response status code: 404
+2025-10-08 13:06:58.751 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/favicon.ico - null null
+2025-10-08 13:06:58.753 +05:45  INF  Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\favicon.ico'
+2025-10-08 13:06:58.754 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/favicon.ico - 200 5430 image/x-icon 2.4631ms
+2025-10-08 13:07:01.292 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/.well-known/appspecific/com.chrome.devtools.json - null null
+2025-10-08 13:07:01.294 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/.well-known/appspecific/com.chrome.devtools.json - 404 0 null 1.5371ms
+2025-10-08 13:07:01.294 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/.well-known/appspecific/com.chrome.devtools.json, Response status code: 404
+2025-10-08 13:07:12.863 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Client/Payroll/MyPayroll - null null
+2025-10-08 13:07:12.875 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc)'
+2025-10-08 13:07:12.875 +05:45  INF  Route matched with {area = "Client", action = "MyPayroll", controller = "Payroll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] MyPayroll() on controller HRMSmvc.Areas.Client.Controllers.PayrollController (HRMSmvc).
+2025-10-08 13:07:15.307 +05:45  INF  Executing ViewResult, running view PayrollIndex.
+2025-10-08 13:07:15.315 +05:45  INF  Executed ViewResult - view PayrollIndex executed in 7.6778ms.
+2025-10-08 13:07:15.316 +05:45  INF  Executed action HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc) in 2440.3637ms
+2025-10-08 13:07:15.316 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc)'
+2025-10-08 13:07:15.317 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Client/Payroll/MyPayroll - 200 null text/html; charset=utf-8 2454.4372ms
+2025-10-08 13:07:15.390 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-08 13:07:15.391 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-10-08 13:07:15.395 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 2.1527ms
+2025-10-08 13:07:15.403 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 12.2948ms
+2025-10-08 13:07:15.409 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/.well-known/appspecific/com.chrome.devtools.json - null null
+2025-10-08 13:07:15.410 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/.well-known/appspecific/com.chrome.devtools.json - 404 0 null 0.7274ms
+2025-10-08 13:07:15.410 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/.well-known/appspecific/com.chrome.devtools.json, Response status code: 404
+2025-10-08 13:07:15.570 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 13:07:15.571 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - 404 0 null 1.1846ms
+2025-10-08 13:07:15.571 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2, Response status code: 404
+2025-10-08 13:07:15.668 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 13:07:15.670 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - 404 0 null 1.3146ms
+2025-10-08 13:07:15.670 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff, Response status code: 404
+2025-10-08 13:08:29.224 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Client/Payroll/MyPayroll - null null
+2025-10-08 13:08:29.246 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc)'
+2025-10-08 13:08:29.247 +05:45  INF  Route matched with {area = "Client", action = "MyPayroll", controller = "Payroll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] MyPayroll() on controller HRMSmvc.Areas.Client.Controllers.PayrollController (HRMSmvc).
+2025-10-08 13:08:31.175 +05:45  INF  Executing ViewResult, running view PayrollIndex.
+2025-10-08 13:08:31.201 +05:45  INF  Executed ViewResult - view PayrollIndex executed in 26.7192ms.
+2025-10-08 13:08:31.201 +05:45  INF  Executed action HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc) in 1954.4ms
+2025-10-08 13:08:31.201 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc)'
+2025-10-08 13:08:31.202 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Client/Payroll/MyPayroll - 200 null text/html; charset=utf-8 1977.3817ms
+2025-10-08 13:08:31.232 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/bootstrap.min.css - null null
+2025-10-08 13:08:31.232 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/.well-known/appspecific/com.chrome.devtools.json - null null
+2025-10-08 13:08:31.235 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/.well-known/appspecific/com.chrome.devtools.json - 404 0 null 2.8483ms
+2025-10-08 13:08:31.239 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/.well-known/appspecific/com.chrome.devtools.json, Response status code: 404
+2025-10-08 13:08:31.252 +05:45  INF  Sending file. Request path: '/vendor/bootstrap.min.css'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\bootstrap.min.css'
+2025-10-08 13:08:31.252 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/bootstrap.min.css - 200 232803 text/css 19.6064ms
+2025-10-08 13:08:31.256 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/bootstrap-icons.css - null null
+2025-10-08 13:08:31.259 +05:45  INF  Sending file. Request path: '/vendor/bootstrap-icons.css'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\bootstrap-icons.css'
+2025-10-08 13:08:31.259 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/bootstrap-icons.css - 200 98255 text/css 4.2344ms
+2025-10-08 13:08:31.262 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/bootstrap-icons.min.css - null null
+2025-10-08 13:08:31.265 +05:45  INF  Sending file. Request path: '/vendor/bootstrap-icons.min.css'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\bootstrap-icons.min.css'
+2025-10-08 13:08:31.265 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/bootstrap-icons.min.css - 200 85875 text/css 2.8063ms
+2025-10-08 13:08:31.267 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/quill.bubble.css - null null
+2025-10-08 13:08:31.269 +05:45  INF  Sending file. Request path: '/vendor/quill.bubble.css'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\quill.bubble.css'
+2025-10-08 13:08:31.269 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/quill.bubble.css - 200 25216 text/css 1.6435ms
+2025-10-08 13:08:31.272 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/quill.snow.css - null null
+2025-10-08 13:08:31.273 +05:45  INF  Sending file. Request path: '/vendor/quill.snow.css'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\quill.snow.css'
+2025-10-08 13:08:31.273 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/quill.snow.css - 200 24606 text/css 1.5947ms
+2025-10-08 13:08:31.277 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/remixicon.css - null null
+2025-10-08 13:08:31.281 +05:45  INF  Sending file. Request path: '/vendor/remixicon.css'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\remixicon.css'
+2025-10-08 13:08:31.281 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/remixicon.css - 200 138761 text/css 4.635ms
+2025-10-08 13:08:31.284 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/style.css - null null
+2025-10-08 13:08:31.285 +05:45  INF  Sending file. Request path: '/vendor/style.css'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\style.css'
+2025-10-08 13:08:31.285 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/style.css - 200 4873 text/css 1.3027ms
+2025-10-08 13:08:31.332 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/css/style.css - null null
+2025-10-08 13:08:31.334 +05:45  INF  Sending file. Request path: '/css/style.css'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\css\style.css'
+2025-10-08 13:08:31.334 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/css/style.css - 200 21002 text/css 1.855ms
+2025-10-08 13:08:31.338 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/apexcharts.min.js - null null
+2025-10-08 13:08:31.341 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/bootstrap.bundle.min.js - null null
+2025-10-08 13:08:31.346 +05:45  INF  Sending file. Request path: '/vendor/bootstrap.bundle.min.js'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\bootstrap.bundle.min.js'
+2025-10-08 13:08:31.346 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/bootstrap.bundle.min.js - 200 80721 text/javascript 4.6351ms
+2025-10-08 13:08:31.360 +05:45  INF  Sending file. Request path: '/vendor/apexcharts.min.js'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\apexcharts.min.js'
+2025-10-08 13:08:31.360 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/apexcharts.min.js - 200 533680 text/javascript 22.1783ms
+2025-10-08 13:08:31.363 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/chart.umd.js - null null
+2025-10-08 13:08:31.363 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/echarts.min.js - null null
+2025-10-08 13:08:31.375 +05:45  INF  Sending file. Request path: '/vendor/chart.umd.js'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\chart.umd.js'
+2025-10-08 13:08:31.375 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/chart.umd.js - 200 205363 text/javascript 11.7094ms
+2025-10-08 13:08:31.376 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/quill.js - null null
+2025-10-08 13:08:31.391 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/simple-datatables.js - null null
+2025-10-08 13:08:31.400 +05:45  INF  Sending file. Request path: '/vendor/simple-datatables.js'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\simple-datatables.js'
+2025-10-08 13:08:31.400 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/simple-datatables.js - 200 98086 text/javascript 9.4751ms
+2025-10-08 13:08:31.402 +05:45  INF  Sending file. Request path: '/vendor/quill.js'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\quill.js'
+2025-10-08 13:08:31.402 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/quill.js - 200 209340 text/javascript 25.8219ms
+2025-10-08 13:08:31.406 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/tinymce.min.js - null null
+2025-10-08 13:08:31.409 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/validate.js - null null
+2025-10-08 13:08:31.411 +05:45  INF  Sending file. Request path: '/vendor/validate.js'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\validate.js'
+2025-10-08 13:08:31.412 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/validate.js - 200 2734 text/javascript 2.691ms
+2025-10-08 13:08:31.431 +05:45  INF  Sending file. Request path: '/vendor/tinymce.min.js'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\tinymce.min.js'
+2025-10-08 13:08:31.431 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/tinymce.min.js - 200 436122 text/javascript 25.9133ms
+2025-10-08 13:08:31.434 +05:45  INF  Sending file. Request path: '/vendor/echarts.min.js'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\vendor\echarts.min.js'
+2025-10-08 13:08:31.434 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/echarts.min.js - 200 1029203 text/javascript 70.634ms
+2025-10-08 13:08:31.521 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/js/main.js - null null
+2025-10-08 13:08:31.522 +05:45  INF  Sending file. Request path: '/js/main.js'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\js\main.js'
+2025-10-08 13:08:31.522 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/js/main.js - 200 9966 text/javascript 2.0028ms
+2025-10-08 13:08:31.527 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/js/payroll.js - null null
+2025-10-08 13:08:31.528 +05:45  INF  Sending file. Request path: '/js/payroll.js'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\js\payroll.js'
+2025-10-08 13:08:31.528 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/js/payroll.js - 200 78 text/javascript 1.7991ms
+2025-10-08 13:08:31.531 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-08 13:08:31.532 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 1.5073ms
+2025-10-08 13:08:31.536 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-10-08 13:08:31.543 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 8.0356ms
+2025-10-08 13:08:31.637 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 13:08:31.638 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - 404 0 null 0.6894ms
+2025-10-08 13:08:31.638 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2, Response status code: 404
+2025-10-08 13:08:31.645 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 13:08:31.645 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - 404 0 null 0.6367ms
+2025-10-08 13:08:31.645 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff, Response status code: 404
+2025-10-08 13:08:31.775 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/favicon.ico - null null
+2025-10-08 13:08:31.777 +05:45  INF  Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\ASUS\Desktop\HRMS\HRMSmvc\wwwroot\favicon.ico'
+2025-10-08 13:08:31.777 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/favicon.ico - 200 5430 image/x-icon 1.9009ms
+2025-10-08 13:10:29.957 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Client/Payroll/MyPayroll - null null
+2025-10-08 13:10:29.972 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc)'
+2025-10-08 13:10:29.983 +05:45  INF  Route matched with {area = "Client", action = "MyPayroll", controller = "Payroll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] MyPayroll() on controller HRMSmvc.Areas.Client.Controllers.PayrollController (HRMSmvc).
+2025-10-08 13:10:33.312 +05:45  INF  Executing ViewResult, running view PayrollIndex.
+2025-10-08 13:10:33.379 +05:45  INF  Executed ViewResult - view PayrollIndex executed in 72.3063ms.
+2025-10-08 13:10:33.381 +05:45  INF  Executed action HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc) in 3398.3412ms
+2025-10-08 13:10:33.382 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc)'
+2025-10-08 13:10:33.382 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Client/Payroll/MyPayroll - 200 null text/html; charset=utf-8 3424.8548ms
+2025-10-08 13:10:33.508 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/.well-known/appspecific/com.chrome.devtools.json - null null
+2025-10-08 13:10:33.510 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/.well-known/appspecific/com.chrome.devtools.json - 404 0 null 1.8612ms
+2025-10-08 13:10:33.511 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/.well-known/appspecific/com.chrome.devtools.json, Response status code: 404
+2025-10-08 13:10:33.756 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/js/payroll.js - null null
+2025-10-08 13:10:33.757 +05:45  INF  The file /js/payroll.js was not modified
+2025-10-08 13:10:33.758 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/js/payroll.js - 304 null text/javascript 2.1201ms
+2025-10-08 13:10:33.769 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-08 13:10:33.770 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 1.2389ms
+2025-10-08 13:10:33.776 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-10-08 13:10:33.782 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 5.6692ms
+2025-10-08 13:10:34.619 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 13:10:34.619 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - 404 0 null 0.8155ms
+2025-10-08 13:10:34.620 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2, Response status code: 404
+2025-10-08 13:10:34.631 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 13:10:34.632 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - 404 0 null 1.0539ms
+2025-10-08 13:10:34.632 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff, Response status code: 404
+2025-10-08 13:20:25.436 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Client/Payroll/MyPayroll - null null
+2025-10-08 13:20:25.473 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc)'
+2025-10-08 13:20:25.487 +05:45  INF  Route matched with {area = "Client", action = "MyPayroll", controller = "Payroll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] MyPayroll() on controller HRMSmvc.Areas.Client.Controllers.PayrollController (HRMSmvc).
+2025-10-08 13:20:29.376 +05:45  INF  Executing ViewResult, running view PayrollIndex.
+2025-10-08 13:20:29.422 +05:45  INF  Executed ViewResult - view PayrollIndex executed in 49.2888ms.
+2025-10-08 13:20:29.422 +05:45  INF  Executed action HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc) in 3935.2686ms
+2025-10-08 13:20:29.422 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Client.Controllers.PayrollController.MyPayroll (HRMSmvc)'
+2025-10-08 13:20:29.423 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Client/Payroll/MyPayroll - 200 null text/html; charset=utf-8 3986.6608ms
+2025-10-08 13:20:29.553 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/.well-known/appspecific/com.chrome.devtools.json - null null
+2025-10-08 13:20:29.557 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/.well-known/appspecific/com.chrome.devtools.json - 404 0 null 4.3773ms
+2025-10-08 13:20:29.558 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/.well-known/appspecific/com.chrome.devtools.json, Response status code: 404
+2025-10-08 13:20:29.654 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/js/payroll.js - null null
+2025-10-08 13:20:29.655 +05:45  INF  The file /js/payroll.js was not modified
+2025-10-08 13:20:29.655 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/js/payroll.js - 304 null text/javascript 0.8334ms
+2025-10-08 13:20:29.657 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-08 13:20:29.659 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 1.2037ms
+2025-10-08 13:20:29.661 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-10-08 13:20:29.681 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 20.5125ms
+2025-10-08 13:20:30.112 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 13:20:30.113 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - 404 0 null 0.5086ms
+2025-10-08 13:20:30.113 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff2, Response status code: 404
+2025-10-08 13:20:30.123 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - null null
+2025-10-08 13:20:30.124 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6 - 404 0 null 1.1655ms
+2025-10-08 13:20:30.124 +05:45  INF  Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7189/vendor/fonts/bootstrap-icons.woff, Response status code: 404

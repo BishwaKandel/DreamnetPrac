@@ -3,6 +3,9 @@ using AutoMapper;
 using Domain.DTO;
 using Domain.Models;
 using Infrastructure.Data;
+using Infrastructure.Migrations;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,45 +18,156 @@ namespace Infrastructure.Services
     {
         private readonly AppDbContext _context;
         private readonly IMapper _mapper;
-        public AttendanceService(AppDbContext context, IMapper mapper)
+        private readonly UserManager<User> _userManager;
+        public AttendanceService(AppDbContext context, IMapper mapper, UserManager<User> userManager)
         {
             _context = context;
             _mapper = mapper;
-        }
-        public async Task<AttendanceDTO> CreateAttendanceAsync(AttendanceDTO attendance)
-        {
-            throw new NotImplementedException();
-
+            _userManager = userManager;
         }
 
-        public Task<bool> DeleteAttendanceAsync(Guid id)
+        public async Task<ApiResponse<AttendanceDTO>> CheckInAsync(string userId)
         {
-            throw new NotImplementedException();
+            var user = await _userManager.FindByIdAsync(userId);
+            var today = DateTime.UtcNow.Date;
+
+            if (user == null)
+            {
+                return new ApiResponse<AttendanceDTO>
+                {
+                    Data = null,
+                    message = "Employee not found",
+                    success = false
+                };
+            }
+            var existingcheckIn = await _context.Attendances.FirstOrDefaultAsync(a => a.UserId == userId && a.Date == today);
+            var exisitingcheckOut = await _context.Attendances.FirstOrDefaultAsync(a => a.UserId == userId && a.Date == today);
+            if (existingcheckIn != null  )
+            {                                                                                        
+                return new ApiResponse<AttendanceDTO>
+                {
+                    Data = null,
+                    message = "You are already checked in today",
+                    success = false
+                };
+            }
+            else if (exisitingcheckOut != null)
+            {
+                return new ApiResponse<AttendanceDTO>
+                {
+                    Data = null,
+                    message = "You are already checked out today",
+                    success = false
+                };
+            }
+
+            AttendanceStatus status;
+
+            var checkInTime = TimeOnly.FromDateTime(DateTime.Now);
+
+            if (checkInTime > TimeOnly.Parse("09:00 AM"))
+            {
+                status = AttendanceStatus.Late;
+            }
+            else
+            {
+                status = AttendanceStatus.Present;
+            }
+
+            Domain.Models.Attendance newAttendance = new Domain.Models.Attendance
+            {
+                Id = Guid.NewGuid(),
+                UserId = userId,
+                Date = DateTime.UtcNow.Date,
+                CheckInTime = TimeOnly.FromDateTime(DateTime.Now),
+                CheckOutTime = null,
+                TotalHoursWorked = null,
+                status = status
+            };
+
+            _context.Attendances.Add(newAttendance);
+            await _context.SaveChangesAsync();
+            var attendanceDto = _mapper.Map<AttendanceDTO>(newAttendance);
+            return new ApiResponse<AttendanceDTO>
+            {
+                Data = attendanceDto,
+                message = "Check-in successful",
+                success = true
+            };
         }
 
-        public Task<IEnumerable<AttendanceDTO>> GetAllAttendancesAsync()
+        public async Task<ApiResponse<AttendanceDTO>> CheckOutAsync(string userId )
         {
-            throw new NotImplementedException();
+            var emp = await _userManager.FindByIdAsync(userId);
+            if (emp == null)
+            {
+                return new ApiResponse<AttendanceDTO>
+                {
+                    Data = null,
+                    message = "Employee not found",
+                    success = false
+                };
+            }
+            var today = DateTime.UtcNow.Date;
+            var existingCheckIn = await _context.Attendances.FirstOrDefaultAsync(a => a.UserId == userId && a.Date == today);
+            if (existingCheckIn == null)
+            {
+                return new ApiResponse<AttendanceDTO>
+                {
+                    Data = null,
+                    message = "You haven't checked in today",
+                    success = false
+                };
+            }
+            if (existingCheckIn.CheckOutTime != null)
+            {
+                return new ApiResponse<AttendanceDTO>
+                {
+                    Data = null,
+                    message = "You are already checked out today",
+                    success = false
+                };
+            }
+            existingCheckIn.CheckOutTime = TimeOnly.FromDateTime(DateTime.Now);
+            existingCheckIn.TotalHoursWorked = existingCheckIn.CheckOutTime.Value.ToTimeSpan() - existingCheckIn.CheckInTime.ToTimeSpan();
+            await _context.SaveChangesAsync();
+            var attendanceDto = _mapper.Map<AttendanceDTO>(existingCheckIn);
+            return new ApiResponse<AttendanceDTO>
+            {
+                Data = attendanceDto,
+                message = "Check-out successful",
+                success = true
+            }; 
         }
 
-        public Task<AttendanceDTO?> GetAttendanceByIdAsync(Guid id)
+        public async Task<ApiResponse<UserAttendanceDTO>> GetAttendancesByEmpIdAsync(string userId)
         {
-            throw new NotImplementedException();
-        }
+           var user = await _userManager.FindByIdAsync(userId);
+            if (user == null)
+            {
+                return new ApiResponse<UserAttendanceDTO>
+                {
+                        Data = null,
+                        message = "Employee not found",
+                        success = false 
+                };
+            }
+            var attendances = await _context.Attendances.Where(a => a.UserId == userId).ToListAsync();
+           
 
-        public Task<IEnumerable<AttendanceDTO>> GetAttendancesByDateRangeAsync(DateTime startDate, DateTime endDate)
-        {
-            throw new NotImplementedException();
-        }
+            var userAttendanceDTO = new UserAttendanceDTO
+            {
+                userId = user.Id,
+                Name = user.Name,
+                attendances = _mapper.Map<List<AttendanceDTO>>(attendances)
+            };
 
-        public Task<IEnumerable<AttendanceDTO>> GetAttendancesByEmployeeIdAsync(Guid employeeId)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<AttendanceDTO> UpdateAttendanceAsync(Guid id, AttendanceDTO attendance)
-        {
-            throw new NotImplementedException();
+            return new ApiResponse<UserAttendanceDTO>
+            {
+                Data = userAttendanceDTO,
+                message = "Attendances retrieved successfully",
+                success = true
+            };
         }
     }
 }

@@ -8,24 +8,28 @@ namespace API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(Roles = "User")]
+    //[Authorize(Roles = "User")]
     public class EmployeeController : Controller
     {
         private readonly IEmployeeService _employeeService;
         //private readonly IDeptEmpService _deptEmpService;
         private readonly IImageService _imageService;
+        private readonly IBirthdayEmailService _birthdayEmailService;
+        private readonly IEmailService _email;
 
-        public EmployeeController(IEmployeeService employeeService , IImageService imageservice)
+        public EmployeeController(IEmployeeService employeeService , IImageService imageservice, IBirthdayEmailService birthdayEmailService , IEmailService email   )
         {
             _employeeService = employeeService;
             //_deptEmpService = deptEmpService;
             _imageService = imageservice;
+            _birthdayEmailService = birthdayEmailService;
+            _email = email;
         }
 
         //Create
         //[Authorize(Roles = "Admin")]
         [HttpPost("CreateEmp")]
-        public async Task<IActionResult> CreateEmployeeAsync(UserDTO employee)
+        public async Task<IActionResult> CreateEmployeeAsync([FromBody] UserDTO employee)
         {
             var CreatedEmployee = await _employeeService.CreateEmployeeAsync(employee);
             return CreatedAtAction(
@@ -37,9 +41,9 @@ namespace API.Controllers
         //Retrieve All
         //[Authorize(Roles = "User")]
         [HttpGet("GetEmp")]
-        public async Task<IActionResult> GetAllEmployees()
+        public async Task<IActionResult> GetAllEmployees(Guid? deptId)
         {
-            var emp = await _employeeService.GetAllEmployeesAsync();
+            var emp = await _employeeService.GetAllEmployeesAsync(deptId);
             return Ok(emp);
         }
 
@@ -95,9 +99,8 @@ namespace API.Controllers
         public async Task<IActionResult> UpdateEmployeeAsync([FromBody] UserUpdateDTO employee)
         {
             
-
             var updatedEmployee = await _employeeService.UpdateEmployeeAsync(employee);
-            if (updatedEmployee == null)
+            if (updatedEmployee.Data == null)
             {
                 return NotFound();
             }
@@ -188,6 +191,15 @@ namespace API.Controllers
         //    }
         //    return Ok(payrolls);
         //}
+
+        //[HttpPost("send")]
+        //public async Task<IActionResult> SendBirthdayEmails()
+        //{
+        //    await _birthdayEmailService.SendBirthdayEmailsAsync();
+        //    return Ok("Birthday emails sent.");
+        //}
+        
+        
     }
 
 }

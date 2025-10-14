@@ -1,0 +1,27 @@
+﻿@using HRMSmvc.ViewModel
+@model AddEmpToDeptViewModel
+
+<div class="modal fade" id="AddModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add Employees to @Model.DepartmentName</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="departmentId" value="@Model.DepartmentId" />
+                <label for="empSelect">Select Employees</label>
+                <select id="empSelect" class="empSelect form-control" name="Employees[]" multiple="multiple">
+                    @foreach (var emp in Model.Employees)
+                    {
+                        <option value="@emp.Id">@emp.Name (@emp.Email)</option>
+                    }
+                </select>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" id="saveEmployeesBtn" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>

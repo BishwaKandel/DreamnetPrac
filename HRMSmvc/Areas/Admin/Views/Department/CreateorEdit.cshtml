@@ -1,0 +1,54 @@
+﻿@model Domain.DTO.DepartmentDTO.DeptInfoDTO
+@{
+	ViewData["Title"] = "Create Department";
+	var action = "Create";
+}
+
+@if (Model.Id == Guid.Empty)
+{
+    action = "Create";
+}
+else
+{
+    action = "Edit";
+}
+
+
+
+<form asp-action=@action asp-controller="Department" asp-area="Admin" id="DeptEditForm" method="post">
+    <input type="hidden" name="Id" value="@Model.Id" />
+
+    <div class="col-12">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+        @* <span asp-validation-for="FirstName" class="text-danger"></span> *@
+    </div>
+    <div class="col-12">
+        <label asp-for="Description"></label>
+        <input asp-for="Description" class="form-control" />
+        @* <span asp-validation-for="Email" class="text-danger"></span> *@
+    </div>
+    <div class="col-12">
+        <label asp-for="Location"></label>
+        <input asp-for="Location" class="form-control" />
+        @* <span asp-validation-for="PhoneNumber" class="text-danger"></span> *@
+    </div>
+    <div class="text-center">
+        @if (action == "Create")
+        {
+            <button type="submit" class="btn btn-primary mt-3 mb-3">Add Department</button>
+        }
+        else
+        {
+            <button type="submit" class="btn btn-primary mt-3 mb-3">Edit Department</button>
+        }
+
+        <a asp-controller="Department" asp-action="Index" asp-area="Admin" class="btn btn-primary">Back</a>
+        <button type="reset" class="btn btn-secondary">Reset</button>
+    </div>
+</form>
+
+@section Scripts {
+    <script src="~/js/userindex.js"></script>
+    <script src="~/js/admin.js"></script>
+}
