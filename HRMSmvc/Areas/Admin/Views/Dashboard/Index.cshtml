@@ -10,7 +10,7 @@
 
 <div class="card">
     <div class="card-body">
-        <h5 class="card-title">List of Employees</h5>
+        <h3 class="card-title">List of Employees</h3>
         <!-- Default Table -->
         <table class="table">
             <thead>
@@ -52,12 +52,7 @@
                                             <i class="fa-solid fa-pen"></i> Edit
                                         </a>
                                     </li>
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li>
-                                        <a class="dropdown-item" href="/users-settings/@row.Id">
-                                            <i class="fa-solid fa-trash"></i> Delete
-                                        </a>
-                                    </li>
+                                    
 
                                     <li><hr class="dropdown-divider"></li>
                                     <li>
@@ -69,6 +64,12 @@
                                     <li>
                                         <a class="dropdown-item" href="/Admin/Attendance/GetAttendanceByEmpID?userId=@row.Id">
                                             <i class="fa-solid fa-calendar-days"></i> Attendance
+                                        </a>
+                                    </li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li>
+                                        <a class="dropdown-item" href="/users-settings/@row.Id">
+                                            <i class="fa-solid fa-trash"></i> Delete
                                         </a>
                                     </li>
                                 </ul>

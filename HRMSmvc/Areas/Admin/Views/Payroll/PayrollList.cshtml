@@ -11,93 +11,75 @@
 
 }
 
-<div class="card-body">
-	<h5 class="card-title">
-		List of Payrolls for @Model.Name
-	</h5>
+
+
 	<div class="card">
 		<div class="card-body">
-			<h5 class="card-title">Generate Payroll</h5>
+			<h3 class="card-title">List of Payrolls for @Model.Name</h3>
+			<div class="card-body mb-3">
+				<div class="row">
+					<div class="col-md-5">
+						<label for="year">Year:</label>
+						<input type="text" id="year" name="year" class="form-control">
+					</div>
+					<div class="col-md-5">
+						<label for="month">Month:</label>
+						<input type="text" id="month" name="month" class="form-control">
+					</div>
+					<div class="col-md-2">
+						<a href="/Admin/Payroll/GeneratePayroll?userId=@Model.userId" class="btn btn-sm btn-primary mt-4" id="generatepayBtn">
+							<i class="fa-solid fa-plus"></i> Generate
+						</a>
+					</div>
+					
+				</div>
+			</div>
 
-			<a href="/Admin/Payroll/GeneratePayroll?userId=@Model.userId" class="btn btn-primary" id="generatepayBtn">
-				<i class="fa-solid fa-plus"></i>
-			</a>
+
 		</div>
 	</div>
-</div>
 
 
-	@* <div class="card">
-		<div class="row mb-3 ma-3">
-			<div class="col-sm-6">
-				<label class="col-form-label">Year</label>
-				<select class="form-select"  aria-label="Default select example">
-					<option selected>Select Year</option>
-					<option value="1">2020</option>
-					<option value="2">2021</option>
-					<option value="3">2022</option>
-					<option value="3">2023</option>
-					<option value="3">2024</option>
-				</select>
-			</div>
-			<div class="col-sm-6">
-				<label class="col-form-label">Month</label>
-				<select class="form-select" aria-label="Default select example">
-					<option selected>Select Month</option>
-					<option value="1">One</option>
-					<option value="2">Two</option>
-					<option value="3">Three</option>
-				</select>
-			</div>
+
+
+
+	<div class="card">
+		<div class="card-body p-5">
+			
+			<!-- Default Table -->
+			<table class="table" id="PayrollTable">
+				<thead>
+					<tr>
+						@* <th scope="col">ID</th> *@
+						<th scope="col">S.N.</th>
+						<th scope="col">Year</th>
+						<th scope="col">Month</th>
+						<th scope="col">Basic Salary</th>
+						<th scope="col">Allowances</th>
+						<th scope="col">Deductions</th>
+						<th scope="col">Net Salary</th>
+					</tr>
+				</thead>
+				<tbody>
+					@foreach (var row in Model.payrolls)
+					{
+						<tr>
+							@* <td>@row.Id</td> *@
+							<td>@counter</td>
+							<td>@row.Year</td>
+							<td>@row.Month</td>
+							<td>@row.BasicSalary</td>
+							<td>@row.Allowances</td>
+							<td>@row.Deductions</td>
+							<td>@row.NetSalary</td>
+
+						</tr>
+						counter++;
+					}
+				</tbody>
+			</table>
 		</div>
-
-	</div> *@
-	<table class="inputs">
-		<tbody>
-			<tr>
-				<td>Year : </td>
-				<td><input type="text" id="year" name="year"></td>
-			</tr>
-			<tr>
-				<td>Month : </td>
-				<td><input type="text" id="month" name="month"></td>
-			</tr>
-		</tbody>
-	</table>
-	<!-- Default Table -->
-	<table class="table" id="PayrollTable">
-		<thead>
-			<tr>
-				@* <th scope="col">ID</th> *@
-				<th scope="col">S.N.</th>
-				<th scope="col">Year</th>
-				<th scope="col">Month</th>
-				<th scope="col">Basic Salary</th>
-				<th scope="col">Allowances</th>
-				<th scope="col">Deductions</th>
-				<th scope="col">Net Salary</th>
-			</tr>
-		</thead>
-		<tbody>
-			@foreach (var row in Model.payrolls)
-			{
-				<tr>
-					@* <td>@row.Id</td> *@
-					<td>@counter</td>
-					<td>@row.Year</td>
-					<td>@row.Month</td>
-					<td>@row.BasicSalary</td>
-					<td>@row.Allowances</td>
-					<td>@row.Deductions</td>
-					<td>@row.NetSalary</td>
-
-				</tr>
-				counter++;
-			}
-		</tbody>
-	</table>
-</div>
-</div>
+	</div>
 
 
 @section Scripts {

@@ -45,26 +45,35 @@
 						<td>@row.Name</td>
 						<td>@row.Description</td>
 						<td>@row.Location</td>
+
 						<td>
-							<a href="/Admin/Department/CreateorEdit?id=@row.Id">
-								<i class="fa-solid fa-pen"></i>
-							</a>
+							<div class="dropdown">
+								<a href="javascript:void(0);" id="dropdownMenuButton-@row.Id" data-bs-toggle="dropdown" aria-expanded="false">
+									<i class="fa-solid fa-ellipsis"></i>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton-@row.Id">
+									<li>
+										<a class="dropdown-item" href="/Admin/Department/CreateorEdit?id=@row.Id">
+											<i class="fa-solid fa-pen"></i>Edit
+										</a>
+									</li>
+									<li><hr class="dropdown-divider"></li>
+									<li>
+										<a class="dropdown-item" href="/Admin/Department/GetEmpByDeptId?id=@row.Id">
+											<i class="fa-solid fa-list"></i> List employee
+										</a>
+									</li>
+
+									<li><hr class="dropdown-divider"></li>
+									<li>
+										<a class="dropdown-item" onclick="AddButton('@row.Id')">
+											<i class="fa-solid fa-plus"></i> Add Employee
+										</a>
+									</li>
+								</ul>
+							</div>
 						</td>
-						<td>
-							<a href="/Admin/Department/GetEmpByDeptId?id=@row.Id">
-								<i class="fa-solid fa-list"></i>
-							</a>
-						</td>
-						<td>
-							<button class="btn btn-primary" onclick="AddButton('@row.Id')">
-								<i class="fa-solid fa-plus"></i> Add Employee
-							</button>
-						</td>
-						@*<td>
-                            <a href="" class="delete-btn" data-id="@row.Id">
-                                <i class="fa-solid fa-trash"></i>
-                            </a>
-                        </td>*@
+						
 					</tr>
 					counter++;
 				}
@@ -75,8 +84,6 @@
 
 
 @section Scripts {
-	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-	<script src="~/js/admin.js"></script>
 }
 
 

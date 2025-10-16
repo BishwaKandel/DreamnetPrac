@@ -2,11 +2,14 @@
 using Domain.Models;
 using HRMSmvc.Controllers;
 using HRMSmvc.ViewModel;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HRMSmvc.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
+
     public class LeaveController : BaseController
     {
         private readonly HttpClient client;

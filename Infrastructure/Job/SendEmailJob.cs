@@ -12,16 +12,20 @@ namespace Infrastructure.Job
     public class SendEmailJob : IJob
     {
         private readonly IEmailService _emailService;
-        public SendEmailJob(IEmailService emailService)
+        private readonly IBirthdayEmailService _birthdayEmailService;
+        public SendEmailJob(IEmailService emailService, IBirthdayEmailService birthdayEmailService)
         {
             _emailService = emailService;
+            _birthdayEmailService = birthdayEmailService;
         }
 
-        public Task Execute(IJobExecutionContext context)
+        public  async Task Execute(IJobExecutionContext context)
         {
-            _emailService.SendEmailAsync(body: "This is a test email body", subject: "Test Email Subject", to: "bisswakandel123@gmail.com");
+          // await _birthdayEmailService.SendBirthdayEmailsAsync();
+            //_emailService.SendEmailAsync(body: "This is a test email body", subject: "Test Email Subject", to: "bisswakandel123@gmail.com");
             Console.WriteLine("Sending email...");
-            return Task.CompletedTask;
+
+            
         }
     }
 }

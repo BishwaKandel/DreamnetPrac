@@ -31,6 +31,10 @@ namespace API.Controllers
         [HttpPost("CreateEmp")]
         public async Task<IActionResult> CreateEmployeeAsync([FromBody] UserDTO employee)
         {
+            if(ModelState.IsValid == false)
+            {
+                return BadRequest(ModelState);
+            }
             var CreatedEmployee = await _employeeService.CreateEmployeeAsync(employee);
             return CreatedAtAction(
                     nameof(GetEmpById),
@@ -65,6 +69,10 @@ namespace API.Controllers
 
         public async Task<IActionResult> ChangePhoto([FromForm] ChangePpDTO employee)
         {
+            if (ModelState.IsValid == false)
+            {
+                return BadRequest(ModelState);
+            }
             string profileImagePath = null;
 
             if (employee.formFile != null)
@@ -82,6 +90,10 @@ namespace API.Controllers
         [HttpPost("DeletePhoto")]
         public async Task<IActionResult> DeletePhoto([FromBody] ChangePpDTO employee)
         {
+            if (ModelState.IsValid == false)
+            {
+                return BadRequest(ModelState);
+            }
             if (!string.IsNullOrEmpty(employee.ProfilePictureFileName))
             {
                 await _imageService.DeleteImageAsync(employee.ProfilePictureFileName);
@@ -98,7 +110,11 @@ namespace API.Controllers
 
         public async Task<IActionResult> UpdateEmployeeAsync([FromBody] UserUpdateDTO employee)
         {
-            
+            if (ModelState.IsValid == false)
+            {
+                return BadRequest(ModelState);
+            }
+
             var updatedEmployee = await _employeeService.UpdateEmployeeAsync(employee);
             if (updatedEmployee.Data == null)
             {
@@ -123,6 +139,10 @@ namespace API.Controllers
         [HttpPost("ChangePassword")]
         public async Task<IActionResult> ChangePasswordAsync([FromBody] ChangePasswordDTO changePasswordDTO)
         {
+            if (ModelState.IsValid == false)
+            {
+                return BadRequest(ModelState);
+            }
             var result = await _employeeService.ChangePasswordAsync(changePasswordDTO);
             if (result.success)
             {

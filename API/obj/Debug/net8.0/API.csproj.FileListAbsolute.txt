@@ -12,6 +12,12 @@ C:\Users\ASUS\Desktop\HRMS\API\bin\Debug\net8.0\Azure.Core.dll
 C:\Users\ASUS\Desktop\HRMS\API\bin\Debug\net8.0\Azure.Identity.dll
 C:\Users\ASUS\Desktop\HRMS\API\bin\Debug\net8.0\FluentValidation.dll
 C:\Users\ASUS\Desktop\HRMS\API\bin\Debug\net8.0\Humanizer.dll
+C:\Users\ASUS\Desktop\HRMS\API\bin\Debug\net8.0\System.Web.Mvc.dll
+C:\Users\ASUS\Desktop\HRMS\API\bin\Debug\net8.0\System.Web.Razor.dll
+C:\Users\ASUS\Desktop\HRMS\API\bin\Debug\net8.0\System.Web.Helpers.dll
+C:\Users\ASUS\Desktop\HRMS\API\bin\Debug\net8.0\System.Web.WebPages.Deployment.dll
+C:\Users\ASUS\Desktop\HRMS\API\bin\Debug\net8.0\System.Web.WebPages.Razor.dll
+C:\Users\ASUS\Desktop\HRMS\API\bin\Debug\net8.0\System.Web.WebPages.dll
 C:\Users\ASUS\Desktop\HRMS\API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\ASUS\Desktop\HRMS\API\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\ASUS\Desktop\HRMS\API\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
@@ -53,6 +59,7 @@ C:\Users\ASUS\Desktop\HRMS\API\bin\Debug\net8.0\Microsoft.IdentityModel.Protocol
 C:\Users\ASUS\Desktop\HRMS\API\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\ASUS\Desktop\HRMS\API\bin\Debug\net8.0\Microsoft.OpenApi.dll
 C:\Users\ASUS\Desktop\HRMS\API\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+C:\Users\ASUS\Desktop\HRMS\API\bin\Debug\net8.0\Microsoft.Web.Infrastructure.dll
 C:\Users\ASUS\Desktop\HRMS\API\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\ASUS\Desktop\HRMS\API\bin\Debug\net8.0\Mono.TextTemplating.dll
 C:\Users\ASUS\Desktop\HRMS\API\bin\Debug\net8.0\Optivem.Framework.Core.All.dll
@@ -61,6 +68,9 @@ C:\Users\ASUS\Desktop\HRMS\API\bin\Debug\net8.0\Optivem.Framework.Core.Applicati
 C:\Users\ASUS\Desktop\HRMS\API\bin\Debug\net8.0\Optivem.Framework.Core.Common.dll
 C:\Users\ASUS\Desktop\HRMS\API\bin\Debug\net8.0\Optivem.Framework.Core.Domain.dll
 C:\Users\ASUS\Desktop\HRMS\API\bin\Debug\net8.0\Optivem.Framework.Infrastructure.FluentValidation.dll
+C:\Users\ASUS\Desktop\HRMS\API\bin\Debug\net8.0\Quartz.dll
+C:\Users\ASUS\Desktop\HRMS\API\bin\Debug\net8.0\Quartz.Extensions.DependencyInjection.dll
+C:\Users\ASUS\Desktop\HRMS\API\bin\Debug\net8.0\Quartz.Extensions.Hosting.dll
 C:\Users\ASUS\Desktop\HRMS\API\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\ASUS\Desktop\HRMS\API\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\ASUS\Desktop\HRMS\API\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -172,13 +182,3 @@ C:\Users\ASUS\Desktop\HRMS\API\obj\Debug\net8.0\refint\API.dll
 C:\Users\ASUS\Desktop\HRMS\API\obj\Debug\net8.0\API.pdb
 C:\Users\ASUS\Desktop\HRMS\API\obj\Debug\net8.0\API.genruntimeconfig.cache
 C:\Users\ASUS\Desktop\HRMS\API\obj\Debug\net8.0\ref\API.dll
-C:\Users\ASUS\Desktop\HRMS\API\bin\Debug\net8.0\System.Web.Mvc.dll
-C:\Users\ASUS\Desktop\HRMS\API\bin\Debug\net8.0\System.Web.Razor.dll
-C:\Users\ASUS\Desktop\HRMS\API\bin\Debug\net8.0\System.Web.Helpers.dll
-C:\Users\ASUS\Desktop\HRMS\API\bin\Debug\net8.0\System.Web.WebPages.Deployment.dll
-C:\Users\ASUS\Desktop\HRMS\API\bin\Debug\net8.0\System.Web.WebPages.Razor.dll
-C:\Users\ASUS\Desktop\HRMS\API\bin\Debug\net8.0\System.Web.WebPages.dll
-C:\Users\ASUS\Desktop\HRMS\API\bin\Debug\net8.0\Microsoft.Web.Infrastructure.dll
-C:\Users\ASUS\Desktop\HRMS\API\bin\Debug\net8.0\Quartz.dll
-C:\Users\ASUS\Desktop\HRMS\API\bin\Debug\net8.0\Quartz.Extensions.DependencyInjection.dll
-C:\Users\ASUS\Desktop\HRMS\API\bin\Debug\net8.0\Quartz.Extensions.Hosting.dll

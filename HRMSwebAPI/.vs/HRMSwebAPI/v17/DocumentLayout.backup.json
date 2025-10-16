@@ -3,52 +3,124 @@
   "WorkspaceRootPath": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSwebAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0FCB1317-E996-4806-A8CB-8E3970B22F52}|..\\API\\API.csproj|c:\\users\\asus\\desktop\\hrms\\api\\controllers\\emailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CF36FB35-AD7B-4199-B30A-5E915EDA9946}|..\\HRMSmvc\\HRMSmvc.csproj|c:\\users\\asus\\desktop\\hrms\\hrmsmvc\\wwwroot\\js\\admin.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0FCB1317-E996-4806-A8CB-8E3970B22F52}|..\\API\\API.csproj|c:\\users\\asus\\desktop\\hrms\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CF36FB35-AD7B-4199-B30A-5E915EDA9946}|..\\HRMSmvc\\HRMSmvc.csproj|c:\\users\\asus\\desktop\\hrms\\hrmsmvc\\areas\\admin\\views\\dashboard\\createoredit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76E5AA66-C53D-4B34-BD99-3711BD50431C}|..\\Infrastructure\\Infrastructure.csproj|c:\\users\\asus\\desktop\\hrms\\infrastructure\\job\\sendemailjob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CF36FB35-AD7B-4199-B30A-5E915EDA9946}|..\\HRMSmvc\\HRMSmvc.csproj|c:\\users\\asus\\desktop\\hrms\\hrmsmvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76E5AA66-C53D-4B34-BD99-3711BD50431C}|..\\Infrastructure\\Infrastructure.csproj|c:\\users\\asus\\desktop\\hrms\\infrastructure\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{76E5AA66-C53D-4B34-BD99-3711BD50431C}|..\\Infrastructure\\Infrastructure.csproj|c:\\users\\asus\\desktop\\hrms\\infrastructure\\services\\attendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CF36FB35-AD7B-4199-B30A-5E915EDA9946}|..\\HRMSmvc\\HRMSmvc.csproj|c:\\users\\asus\\desktop\\hrms\\hrmsmvc\\areas\\client\\controllers\\payrollcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{53E14DAB-5345-41B5-937E-D6EF14558BAA}|..\\Application\\Application.csproj|c:\\users\\asus\\desktop\\hrms\\application\\interface\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CF36FB35-AD7B-4199-B30A-5E915EDA9946}|..\\HRMSmvc\\HRMSmvc.csproj|c:\\users\\asus\\desktop\\hrms\\hrmsmvc\\areas\\admin\\views\\attendance\\attendanceindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0FCB1317-E996-4806-A8CB-8E3970B22F52}|..\\API\\API.csproj|c:\\users\\asus\\desktop\\hrms\\api\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{0FCB1317-E996-4806-A8CB-8E3970B22F52}|..\\API\\API.csproj|c:\\users\\asus\\desktop\\hrms\\api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FCB1317-E996-4806-A8CB-8E3970B22F52}|..\\API\\API.csproj|c:\\users\\asus\\desktop\\hrms\\api\\controllers\\attendancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0FCB1317-E996-4806-A8CB-8E3970B22F52}|..\\API\\API.csproj|c:\\users\\asus\\desktop\\hrms\\api\\controllers\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76E5AA66-C53D-4B34-BD99-3711BD50431C}|..\\Infrastructure\\Infrastructure.csproj|c:\\users\\asus\\desktop\\hrms\\infrastructure\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0FCB1317-E996-4806-A8CB-8E3970B22F52}|..\\API\\API.csproj|c:\\users\\asus\\desktop\\hrms\\api\\controllers\\emailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CF36FB35-AD7B-4199-B30A-5E915EDA9946}|..\\HRMSmvc\\HRMSmvc.csproj|c:\\users\\asus\\desktop\\hrms\\hrmsmvc\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0FCB1317-E996-4806-A8CB-8E3970B22F52}|..\\API\\API.csproj|c:\\users\\asus\\desktop\\hrms\\api\\controllers\\payrollcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CF36FB35-AD7B-4199-B30A-5E915EDA9946}|..\\HRMSmvc\\HRMSmvc.csproj|c:\\users\\asus\\desktop\\hrms\\hrmsmvc\\areas\\admin\\controllers\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0FCB1317-E996-4806-A8CB-8E3970B22F52}|..\\API\\API.csproj|c:\\users\\asus\\desktop\\hrms\\api\\controllers\\leavecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CF36FB35-AD7B-4199-B30A-5E915EDA9946}|..\\HRMSmvc\\HRMSmvc.csproj|c:\\users\\asus\\desktop\\hrms\\hrmsmvc\\areas\\admin\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FD03FE8A-E681-4CD7-8DFF-FE16605D8033}|..\\Domain\\Domain.csproj|c:\\users\\asus\\desktop\\hrms\\domain\\models\\payroll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CF36FB35-AD7B-4199-B30A-5E915EDA9946}|..\\HRMSmvc\\HRMSmvc.csproj|c:\\users\\asus\\desktop\\hrms\\hrmsmvc\\areas\\admin\\views\\department\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{76E5AA66-C53D-4B34-BD99-3711BD50431C}|..\\Infrastructure\\Infrastructure.csproj|c:\\users\\asus\\desktop\\hrms\\infrastructure\\services\\payrollservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76E5AA66-C53D-4B34-BD99-3711BD50431C}|..\\Infrastructure\\Infrastructure.csproj|c:\\users\\asus\\desktop\\hrms\\infrastructure\\services\\departmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FD03FE8A-E681-4CD7-8DFF-FE16605D8033}|..\\Domain\\Domain.csproj|c:\\users\\asus\\desktop\\hrms\\domain\\models\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{53E14DAB-5345-41B5-937E-D6EF14558BAA}|..\\Application\\Application.csproj|c:\\users\\asus\\desktop\\hrms\\application\\interface\\iemployeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FD03FE8A-E681-4CD7-8DFF-FE16605D8033}|..\\Domain\\Domain.csproj|c:\\users\\asus\\desktop\\hrms\\domain\\models\\applicationrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76E5AA66-C53D-4B34-BD99-3711BD50431C}|..\\Infrastructure\\Infrastructure.csproj|c:\\users\\asus\\desktop\\hrms\\infrastructure\\services\\attendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FD03FE8A-E681-4CD7-8DFF-FE16605D8033}|..\\Domain\\Domain.csproj|c:\\users\\asus\\desktop\\hrms\\domain\\models\\attendance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD03FE8A-E681-4CD7-8DFF-FE16605D8033}|..\\Domain\\Domain.csproj|c:\\users\\asus\\desktop\\hrms\\domain\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD03FE8A-E681-4CD7-8DFF-FE16605D8033}|..\\Domain\\Domain.csproj|c:\\users\\asus\\desktop\\hrms\\domain\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD03FE8A-E681-4CD7-8DFF-FE16605D8033}|..\\Domain\\Domain.csproj|c:\\users\\asus\\desktop\\hrms\\domain\\models\\leaverequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD03FE8A-E681-4CD7-8DFF-FE16605D8033}|..\\Domain\\Domain.csproj|c:\\users\\asus\\desktop\\hrms\\domain\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD03FE8A-E681-4CD7-8DFF-FE16605D8033}|..\\Domain\\Domain.csproj|c:\\users\\asus\\desktop\\hrms\\domain\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD03FE8A-E681-4CD7-8DFF-FE16605D8033}|..\\Domain\\Domain.csproj|c:\\users\\asus\\desktop\\hrms\\domain\\models\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF36FB35-AD7B-4199-B30A-5E915EDA9946}|..\\HRMSmvc\\HRMSmvc.csproj|c:\\users\\asus\\desktop\\hrms\\hrmsmvc\\viewmodel\\leaverequestviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF36FB35-AD7B-4199-B30A-5E915EDA9946}|..\\HRMSmvc\\HRMSmvc.csproj|c:\\users\\asus\\desktop\\hrms\\hrmsmvc\\areas\\client\\views\\leave\\leaveapply.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF36FB35-AD7B-4199-B30A-5E915EDA9946}|..\\HRMSmvc\\HRMSmvc.csproj|c:\\users\\asus\\desktop\\hrms\\hrmsmvc\\views\\shared\\_userlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF36FB35-AD7B-4199-B30A-5E915EDA9946}|..\\HRMSmvc\\HRMSmvc.csproj|c:\\users\\asus\\desktop\\hrms\\hrmsmvc\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF36FB35-AD7B-4199-B30A-5E915EDA9946}|..\\HRMSmvc\\HRMSmvc.csproj|c:\\users\\asus\\desktop\\hrms\\hrmsmvc\\areas\\admin\\views\\department\\deptemplist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF36FB35-AD7B-4199-B30A-5E915EDA9946}|..\\HRMSmvc\\HRMSmvc.csproj|c:\\users\\asus\\desktop\\hrms\\hrmsmvc\\areas\\admin\\views\\payroll\\generatepayroll.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF36FB35-AD7B-4199-B30A-5E915EDA9946}|..\\HRMSmvc\\HRMSmvc.csproj|c:\\users\\asus\\desktop\\hrms\\hrmsmvc\\areas\\admin\\views\\department\\createoredit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF36FB35-AD7B-4199-B30A-5E915EDA9946}|..\\HRMSmvc\\HRMSmvc.csproj|c:\\users\\asus\\desktop\\hrms\\hrmsmvc\\areas\\admin\\views\\payroll\\payrolllist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF36FB35-AD7B-4199-B30A-5E915EDA9946}|..\\HRMSmvc\\HRMSmvc.csproj|c:\\users\\asus\\desktop\\hrms\\hrmsmvc\\areas\\client\\views\\payroll\\payrollindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF36FB35-AD7B-4199-B30A-5E915EDA9946}|..\\HRMSmvc\\HRMSmvc.csproj|c:\\users\\asus\\desktop\\hrms\\hrmsmvc\\wwwroot\\js\\leave.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF36FB35-AD7B-4199-B30A-5E915EDA9946}|..\\HRMSmvc\\HRMSmvc.csproj|c:\\users\\asus\\desktop\\hrms\\hrmsmvc\\wwwroot\\js\\payroll.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF36FB35-AD7B-4199-B30A-5E915EDA9946}|..\\HRMSmvc\\HRMSmvc.csproj|c:\\users\\asus\\desktop\\hrms\\hrmsmvc\\areas\\client\\views\\leave\\leaveindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF36FB35-AD7B-4199-B30A-5E915EDA9946}|..\\HRMSmvc\\HRMSmvc.csproj|c:\\users\\asus\\desktop\\hrms\\hrmsmvc\\areas\\client\\controllers\\leavecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76E5AA66-C53D-4B34-BD99-3711BD50431C}|..\\Infrastructure\\Infrastructure.csproj|c:\\users\\asus\\desktop\\hrms\\infrastructure\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF36FB35-AD7B-4199-B30A-5E915EDA9946}|..\\HRMSmvc\\HRMSmvc.csproj|c:\\users\\asus\\desktop\\hrms\\hrmsmvc\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF36FB35-AD7B-4199-B30A-5E915EDA9946}|..\\HRMSmvc\\HRMSmvc.csproj|c:\\users\\asus\\desktop\\hrms\\hrmsmvc\\views\\auth\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF36FB35-AD7B-4199-B30A-5E915EDA9946}|..\\HRMSmvc\\HRMSmvc.csproj|c:\\users\\asus\\desktop\\hrms\\hrmsmvc\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,210 +134,522 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SendEmailJob.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\Infrastructure\\Job\\SendEmailJob.cs",
-              "RelativeDocumentMoniker": "..\\Infrastructure\\Job\\SendEmailJob.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\Infrastructure\\Job\\SendEmailJob.cs",
-              "RelativeToolTip": "..\\Infrastructure\\Job\\SendEmailJob.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-14T11:35:58.092Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "PayrollController.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Areas\\Client\\Controllers\\PayrollController.cs",
-              "RelativeDocumentMoniker": "..\\HRMSmvc\\Areas\\Client\\Controllers\\PayrollController.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Areas\\Client\\Controllers\\PayrollController.cs",
-              "RelativeToolTip": "..\\HRMSmvc\\Areas\\Client\\Controllers\\PayrollController.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAWwAwAAAAkAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\API\\Controllers\\PayrollController.cs",
+              "RelativeDocumentMoniker": "..\\API\\Controllers\\PayrollController.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\API\\Controllers\\PayrollController.cs",
+              "RelativeToolTip": "..\\API\\Controllers\\PayrollController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-14T11:30:27.217Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "EmailController.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\API\\Controllers\\EmailController.cs",
-              "RelativeDocumentMoniker": "..\\API\\Controllers\\EmailController.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\API\\Controllers\\EmailController.cs",
-              "RelativeToolTip": "..\\API\\Controllers\\EmailController.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAA1wA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-14T11:19:51.38Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "EmailService.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\Infrastructure\\Services\\EmailService.cs",
-              "RelativeDocumentMoniker": "..\\Infrastructure\\Services\\EmailService.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\Infrastructure\\Services\\EmailService.cs",
-              "RelativeToolTip": "..\\Infrastructure\\Services\\EmailService.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBUAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-14T11:19:29.401Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IEmailService.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\Application\\Interface\\IEmailService.cs",
-              "RelativeDocumentMoniker": "..\\Application\\Interface\\IEmailService.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\Application\\Interface\\IEmailService.cs",
-              "RelativeToolTip": "..\\Application\\Interface\\IEmailService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-14T11:19:20.336Z",
+              "WhenOpened": "2025-10-16T11:32:28.236Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\API\\Program.cs",
-              "RelativeDocumentMoniker": "..\\API\\Program.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\API\\Program.cs",
-              "RelativeToolTip": "..\\API\\Program.cs",
-              "ViewState": "AgIAAFUAAAAAAAAAAAAMwF4AAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-14T11:14:50.56Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Areas\\Admin\\Views\\Department\\Index.cshtml",
-              "RelativeDocumentMoniker": "..\\HRMSmvc\\Areas\\Admin\\Views\\Department\\Index.cshtml",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Areas\\Admin\\Views\\Department\\Index.cshtml",
-              "RelativeToolTip": "..\\HRMSmvc\\Areas\\Admin\\Views\\Department\\Index.cshtml",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAADIAAAALAAAAAAAAAA==",
+              "Title": "CreateorEdit.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Areas\\Admin\\Views\\Dashboard\\CreateorEdit.cshtml",
+              "RelativeDocumentMoniker": "..\\HRMSmvc\\Areas\\Admin\\Views\\Dashboard\\CreateorEdit.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Areas\\Admin\\Views\\Dashboard\\CreateorEdit.cshtml",
+              "RelativeToolTip": "..\\HRMSmvc\\Areas\\Admin\\Views\\Dashboard\\CreateorEdit.cshtml",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAFMAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-14T10:49:03.213Z",
+              "WhenOpened": "2025-10-16T11:06:27.742Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "BaseController.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Controllers\\BaseController.cs",
-              "RelativeDocumentMoniker": "..\\HRMSmvc\\Controllers\\BaseController.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Controllers\\BaseController.cs",
-              "RelativeToolTip": "..\\HRMSmvc\\Controllers\\BaseController.cs",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAuwFoAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-14T10:42:02.707Z",
+              "DocumentIndex": 0,
+              "Title": "admin.js",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\wwwroot\\js\\admin.js",
+              "RelativeDocumentMoniker": "..\\HRMSmvc\\wwwroot\\js\\admin.js",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\wwwroot\\js\\admin.js",
+              "RelativeToolTip": "..\\HRMSmvc\\wwwroot\\js\\admin.js",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAwwF0AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-10-16T10:08:16.507Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "DepartmentController.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Areas\\Admin\\Controllers\\DepartmentController.cs",
-              "RelativeDocumentMoniker": "..\\HRMSmvc\\Areas\\Admin\\Controllers\\DepartmentController.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Areas\\Admin\\Controllers\\DepartmentController.cs",
-              "RelativeToolTip": "..\\HRMSmvc\\Areas\\Admin\\Controllers\\DepartmentController.cs",
-              "ViewState": "AgIAAGEAAAAAAAAAAAAuwHAAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-14T10:42:02.721Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "DepartmentController.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\API\\Controllers\\DepartmentController.cs",
-              "RelativeDocumentMoniker": "..\\API\\Controllers\\DepartmentController.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\API\\Controllers\\DepartmentController.cs",
-              "RelativeToolTip": "..\\API\\Controllers\\DepartmentController.cs",
-              "ViewState": "AgIAAF4AAAAAAAAAAADwv2oAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-14T10:42:02.737Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "DepartmentService.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\Infrastructure\\Services\\DepartmentService.cs",
-              "RelativeDocumentMoniker": "..\\Infrastructure\\Services\\DepartmentService.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\Infrastructure\\Services\\DepartmentService.cs",
-              "RelativeToolTip": "..\\Infrastructure\\Services\\DepartmentService.cs",
-              "ViewState": "AgIAAKwAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-14T10:42:02.753Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "IEmployeeService.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\Application\\Interface\\IEmployeeService.cs",
-              "RelativeDocumentMoniker": "..\\Application\\Interface\\IEmployeeService.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\Application\\Interface\\IEmployeeService.cs",
-              "RelativeToolTip": "..\\Application\\Interface\\IEmployeeService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-14T10:41:31.677Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "EmployeeService.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\Infrastructure\\Services\\EmployeeService.cs",
-              "RelativeDocumentMoniker": "..\\Infrastructure\\Services\\EmployeeService.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\Infrastructure\\Services\\EmployeeService.cs",
-              "RelativeToolTip": "..\\Infrastructure\\Services\\EmployeeService.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAuwBoAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-14T10:41:15.818Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "AttendanceService.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\Infrastructure\\Services\\AttendanceService.cs",
-              "RelativeDocumentMoniker": "..\\Infrastructure\\Services\\AttendanceService.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\Infrastructure\\Services\\AttendanceService.cs",
-              "RelativeToolTip": "..\\Infrastructure\\Services\\AttendanceService.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-14T10:41:09.957Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "DashboardController.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Areas\\Admin\\Controllers\\DashboardController.cs",
-              "RelativeDocumentMoniker": "..\\HRMSmvc\\Areas\\Admin\\Controllers\\DashboardController.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Areas\\Admin\\Controllers\\DashboardController.cs",
-              "RelativeToolTip": "..\\HRMSmvc\\Areas\\Admin\\Controllers\\DashboardController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAywB0AAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-14T10:39:10.144Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "EmployeeController.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\API\\Controllers\\EmployeeController.cs",
               "RelativeDocumentMoniker": "..\\API\\Controllers\\EmployeeController.cs",
               "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\API\\Controllers\\EmployeeController.cs",
               "RelativeToolTip": "..\\API\\Controllers\\EmployeeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAADAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAADwvw4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-14T10:39:10.181Z",
+              "WhenOpened": "2025-10-16T11:31:11.747Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "..\\HRMSmvc\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "..\\HRMSmvc\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABcCAAAAAAAAAAAkwCQCAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-16T10:50:47.673Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AttendanceController.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\API\\Controllers\\AttendanceController.cs",
+              "RelativeDocumentMoniker": "..\\API\\Controllers\\AttendanceController.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\API\\Controllers\\AttendanceController.cs",
+              "RelativeToolTip": "..\\API\\Controllers\\AttendanceController.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAYwB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T11:33:09.7Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AttendanceService.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\Infrastructure\\Services\\AttendanceService.cs",
+              "RelativeDocumentMoniker": "..\\Infrastructure\\Services\\AttendanceService.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\Infrastructure\\Services\\AttendanceService.cs",
+              "RelativeToolTip": "..\\Infrastructure\\Services\\AttendanceService.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAUwFUAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T11:50:36.857Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\API\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "..\\API\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\API\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "..\\API\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAawDIAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T10:05:44.13Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AttendanceIndex.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Areas\\Admin\\Views\\Attendance\\AttendanceIndex.cshtml",
+              "RelativeDocumentMoniker": "..\\HRMSmvc\\Areas\\Admin\\Views\\Attendance\\AttendanceIndex.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Areas\\Admin\\Views\\Attendance\\AttendanceIndex.cshtml",
+              "RelativeToolTip": "..\\HRMSmvc\\Areas\\Admin\\Views\\Attendance\\AttendanceIndex.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-16T11:43:47.706Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EmailController.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\API\\Controllers\\EmailController.cs",
+              "RelativeDocumentMoniker": "..\\API\\Controllers\\EmailController.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\API\\Controllers\\EmailController.cs",
+              "RelativeToolTip": "..\\API\\Controllers\\EmailController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T11:34:58.111Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DepartmentController.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\API\\Controllers\\DepartmentController.cs",
+              "RelativeDocumentMoniker": "..\\API\\Controllers\\DepartmentController.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\API\\Controllers\\DepartmentController.cs",
+              "RelativeToolTip": "..\\API\\Controllers\\DepartmentController.cs",
+              "ViewState": "AgIAAHAAAAAAAAAAAADwv2kAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T11:37:04.456Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "LeaveController.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\API\\Controllers\\LeaveController.cs",
+              "RelativeDocumentMoniker": "..\\API\\Controllers\\LeaveController.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\API\\Controllers\\LeaveController.cs",
+              "RelativeToolTip": "..\\API\\Controllers\\LeaveController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T11:34:45.394Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PayrollService.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\Infrastructure\\Services\\PayrollService.cs",
+              "RelativeDocumentMoniker": "..\\Infrastructure\\Services\\PayrollService.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\Infrastructure\\Services\\PayrollService.cs",
+              "RelativeToolTip": "..\\Infrastructure\\Services\\PayrollService.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAmwBsAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T11:32:46.146Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ApiResponse.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\Domain\\Models\\ApiResponse.cs",
+              "RelativeDocumentMoniker": "..\\Domain\\Models\\ApiResponse.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\Domain\\Models\\ApiResponse.cs",
+              "RelativeToolTip": "..\\Domain\\Models\\ApiResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T11:29:47.525Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ApplicationRole.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\Domain\\Models\\ApplicationRole.cs",
+              "RelativeDocumentMoniker": "..\\Domain\\Models\\ApplicationRole.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\Domain\\Models\\ApplicationRole.cs",
+              "RelativeToolTip": "..\\Domain\\Models\\ApplicationRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T11:29:44.533Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Payroll.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\Domain\\Models\\Payroll.cs",
+              "RelativeDocumentMoniker": "..\\Domain\\Models\\Payroll.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\Domain\\Models\\Payroll.cs",
+              "RelativeToolTip": "..\\Domain\\Models\\Payroll.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAQwCcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T11:21:47.377Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "LeaveRequest.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\Domain\\Models\\LeaveRequest.cs",
+              "RelativeDocumentMoniker": "..\\Domain\\Models\\LeaveRequest.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\Domain\\Models\\LeaveRequest.cs",
+              "RelativeToolTip": "..\\Domain\\Models\\LeaveRequest.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAxwDQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T11:27:31.757Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Role.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\Domain\\Models\\Role.cs",
+              "RelativeDocumentMoniker": "..\\Domain\\Models\\Role.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\Domain\\Models\\Role.cs",
+              "RelativeToolTip": "..\\Domain\\Models\\Role.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T11:27:30.196Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\Domain\\Models\\User.cs",
+              "RelativeDocumentMoniker": "..\\Domain\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\Domain\\Models\\User.cs",
+              "RelativeToolTip": "..\\Domain\\Models\\User.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAgwCcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T11:17:34.857Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\Domain\\Models\\Employee.cs",
+              "RelativeDocumentMoniker": "..\\Domain\\Models\\Employee.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\Domain\\Models\\Employee.cs",
+              "RelativeToolTip": "..\\Domain\\Models\\Employee.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T11:17:32.59Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Department.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\Domain\\Models\\Department.cs",
+              "RelativeDocumentMoniker": "..\\Domain\\Models\\Department.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\Domain\\Models\\Department.cs",
+              "RelativeToolTip": "..\\Domain\\Models\\Department.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAQwBIAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T11:17:31.687Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Attendance.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\Domain\\Models\\Attendance.cs",
+              "RelativeDocumentMoniker": "..\\Domain\\Models\\Attendance.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\Domain\\Models\\Attendance.cs",
+              "RelativeToolTip": "..\\Domain\\Models\\Attendance.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAwwCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T11:16:53.128Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "UserRole.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\Domain\\Models\\UserRole.cs",
+              "RelativeDocumentMoniker": "..\\Domain\\Models\\UserRole.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\Domain\\Models\\UserRole.cs",
+              "RelativeToolTip": "..\\Domain\\Models\\UserRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T11:27:26.148Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "..\\HRMSmvc\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "..\\HRMSmvc\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-16T11:07:59.117Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "DeptEmpList.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Areas\\Admin\\Views\\Department\\DeptEmpList.cshtml",
+              "RelativeDocumentMoniker": "..\\HRMSmvc\\Areas\\Admin\\Views\\Department\\DeptEmpList.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Areas\\Admin\\Views\\Department\\DeptEmpList.cshtml",
+              "RelativeToolTip": "..\\HRMSmvc\\Areas\\Admin\\Views\\Department\\DeptEmpList.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-16T11:05:40.202Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "_UserLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Views\\Shared\\_UserLayout.cshtml",
+              "RelativeDocumentMoniker": "..\\HRMSmvc\\Views\\Shared\\_UserLayout.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Views\\Shared\\_UserLayout.cshtml",
+              "RelativeToolTip": "..\\HRMSmvc\\Views\\Shared\\_UserLayout.cshtml",
+              "ViewState": "AgIAABMBAAAAAAAAAAAgwCABAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-16T10:00:31.285Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "LeaveApply.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Areas\\Client\\Views\\Leave\\LeaveApply.cshtml",
+              "RelativeDocumentMoniker": "..\\HRMSmvc\\Areas\\Client\\Views\\Leave\\LeaveApply.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Areas\\Client\\Views\\Leave\\LeaveApply.cshtml",
+              "RelativeToolTip": "..\\HRMSmvc\\Areas\\Client\\Views\\Leave\\LeaveApply.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAwwAQAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-16T10:04:49.411Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "LeaveRequestViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\ViewModel\\LeaveRequestViewModel.cs",
+              "RelativeDocumentMoniker": "..\\HRMSmvc\\ViewModel\\LeaveRequestViewModel.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\ViewModel\\LeaveRequestViewModel.cs",
+              "RelativeToolTip": "..\\HRMSmvc\\ViewModel\\LeaveRequestViewModel.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAuwAgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T10:13:40.52Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "GeneratePayroll.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Areas\\Admin\\Views\\Payroll\\GeneratePayroll.cshtml",
+              "RelativeDocumentMoniker": "..\\HRMSmvc\\Areas\\Admin\\Views\\Payroll\\GeneratePayroll.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Areas\\Admin\\Views\\Payroll\\GeneratePayroll.cshtml",
+              "RelativeToolTip": "..\\HRMSmvc\\Areas\\Admin\\Views\\Payroll\\GeneratePayroll.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABMAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-16T11:01:18.32Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "PayrollIndex.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Areas\\Client\\Views\\Payroll\\PayrollIndex.cshtml",
+              "RelativeDocumentMoniker": "..\\HRMSmvc\\Areas\\Client\\Views\\Payroll\\PayrollIndex.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Areas\\Client\\Views\\Payroll\\PayrollIndex.cshtml",
+              "RelativeToolTip": "..\\HRMSmvc\\Areas\\Client\\Views\\Payroll\\PayrollIndex.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-16T10:27:15.54Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "payroll.js",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\wwwroot\\js\\payroll.js",
+              "RelativeDocumentMoniker": "..\\HRMSmvc\\wwwroot\\js\\payroll.js",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\wwwroot\\js\\payroll.js",
+              "RelativeToolTip": "..\\HRMSmvc\\wwwroot\\js\\payroll.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-10-16T10:29:23.283Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "PayrollList.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Areas\\Admin\\Views\\Payroll\\PayrollList.cshtml",
+              "RelativeDocumentMoniker": "..\\HRMSmvc\\Areas\\Admin\\Views\\Payroll\\PayrollList.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Areas\\Admin\\Views\\Payroll\\PayrollList.cshtml",
+              "RelativeToolTip": "..\\HRMSmvc\\Areas\\Admin\\Views\\Payroll\\PayrollList.cshtml",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAwwB0AAABmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-16T10:26:28.961Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "leave.js",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\wwwroot\\js\\leave.js",
+              "RelativeDocumentMoniker": "..\\HRMSmvc\\wwwroot\\js\\leave.js",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\wwwroot\\js\\leave.js",
+              "RelativeToolTip": "..\\HRMSmvc\\wwwroot\\js\\leave.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-10-16T10:07:43.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "CreateorEdit.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Areas\\Admin\\Views\\Department\\CreateorEdit.cshtml",
+              "RelativeDocumentMoniker": "..\\HRMSmvc\\Areas\\Admin\\Views\\Department\\CreateorEdit.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Areas\\Admin\\Views\\Department\\CreateorEdit.cshtml",
+              "RelativeToolTip": "..\\HRMSmvc\\Areas\\Admin\\Views\\Department\\CreateorEdit.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABkAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-16T10:04:54.9Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "LeaveIndex.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Areas\\Client\\Views\\Leave\\LeaveIndex.cshtml",
+              "RelativeDocumentMoniker": "..\\HRMSmvc\\Areas\\Client\\Views\\Leave\\LeaveIndex.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Areas\\Client\\Views\\Leave\\LeaveIndex.cshtml",
+              "RelativeToolTip": "..\\HRMSmvc\\Areas\\Client\\Views\\Leave\\LeaveIndex.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAC8AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-16T10:25:01.459Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "LeaveController.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Areas\\Client\\Controllers\\LeaveController.cs",
+              "RelativeDocumentMoniker": "..\\HRMSmvc\\Areas\\Client\\Controllers\\LeaveController.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Areas\\Client\\Controllers\\LeaveController.cs",
+              "RelativeToolTip": "..\\HRMSmvc\\Areas\\Client\\Controllers\\LeaveController.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAwEEAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T10:13:14.13Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "..\\HRMSmvc\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "..\\HRMSmvc\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAQwGYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T10:05:44.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\Infrastructure\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "..\\Infrastructure\\Services\\AuthService.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\Infrastructure\\Services\\AuthService.cs",
+              "RelativeToolTip": "..\\Infrastructure\\Services\\AuthService.cs",
+              "ViewState": "AgIAALgAAAAAAAAAAAAawMQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T10:05:44.14Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "register.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Views\\Auth\\register.cshtml",
+              "RelativeDocumentMoniker": "..\\HRMSmvc\\Views\\Auth\\register.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Views\\Auth\\register.cshtml",
+              "RelativeToolTip": "..\\HRMSmvc\\Views\\Auth\\register.cshtml",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAADIAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-16T10:08:26.27Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "login.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Views\\Auth\\login.cshtml",
+              "RelativeDocumentMoniker": "..\\HRMSmvc\\Views\\Auth\\login.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\HRMS\\HRMSmvc\\Views\\Auth\\login.cshtml",
+              "RelativeToolTip": "..\\HRMSmvc\\Views\\Auth\\login.cshtml",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-16T10:06:12.04Z",
               "EditorCaption": ""
             }
           ]

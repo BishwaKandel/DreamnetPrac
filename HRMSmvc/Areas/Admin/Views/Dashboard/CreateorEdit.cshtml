@@ -56,65 +56,81 @@
 
 </form> *@
 
-@if (Model.Id == null)
-{
-    action = "Create";
-    Model.Id = Model.Id ?? Guid.Empty.ToString();
-
-}
-else
-{
-    action = "Edit";
-}
 
 
-<form asp-action=@action asp-controller="Dashboard" asp-area="Admin" id="AdminEditForm" method="post">
+<div class="card">
+    <div class="card-body" >
+            @if (Model.Id == null)
+            {
+                action = "Create";
+                Model.Id = Model.Id ?? Guid.Empty.ToString();
+                <h3 class="card-title">Create Employee</h3>
+            }
+            else
+            {
+                action = "Edit";
+                <h3 class="card-title">Edit Employee</h3>
+            }
+    <form asp-action=@action asp-controller="Dashboard" asp-area="Admin" id="AdminEditForm" method="post">
     <input type="hidden" name="Id" value="@Model.Id" />
+            <div class="row mb-3">
+                     <div class="col-4">
+                        <label asp-for="Name"></label>
+                        <input asp-for="Name" class="form-control" required/>
+                        @* <span asp-validation-for="FirstName" class="text-danger"></span> *@
+                    </div>
+                    <div class="col-4">
+                        <label asp-for="Email"></label>
+                        <input asp-for="Email" class="form-control" required email/>
+                        @* <span asp-validation-for="Email" class="text-danger"></span> *@
+                    </div>
+                    <div class="col-4">
+                        <label asp-for="PhoneNumber"></label>
+                        <input asp-for="PhoneNumber" class="form-control" />
+                        @* <span asp-validation-for="PhoneNumber" class="text-danger"></span> *@
+                    </div>
+            </div>
+            <div class="row mb-3">
+                    <div class="col-6">
+                        <label asp-for="DOB"></label>
+                    <input asp-for="DOB" class="form-control" id="DOB" type="text"
+                           value="@Model.DOB.ToString("yyyy-MM-dd")" />
+                    @* <span asp-validation-for="DateOfBirth" class="text-danger"></span> *@
+                    </div>
 
-        <div class="col-12">
-            <label asp-for="Name"></label>
-            <input asp-for="Name" class="form-control" />
-            @* <span asp-validation-for="FirstName" class="text-danger"></span> *@
-        </div>
-        <div class="col-12">
-            <label asp-for="Email"></label>
-            <input asp-for="Email" class="form-control" />
-            @* <span asp-validation-for="Email" class="text-danger"></span> *@
-        </div>
-        <div class="col-12">
-            <label asp-for="PhoneNumber"></label>
-            <input asp-for="PhoneNumber" class="form-control" />
-            @* <span asp-validation-for="PhoneNumber" class="text-danger"></span> *@
-        </div>
-        <div class="col-12">
-            <label asp-for="DOB"></label>
-        <input asp-for="DOB" class="form-control" id="DOB" type="text"
-               value="@Model.DOB.ToString("yyyy-MM-dd")" />
-        @* <span asp-validation-for="DateOfBirth" class="text-danger"></span> *@
-        </div>
+                    <div class="col-6">
+                        <label asp-for="JoiningDate"></label>
+                    <input asp-for="JoiningDate" class="form-control" id="JoiningDate" type="text"
+                           value="@Model.JoiningDate.ToString("yyyy-MM-dd")" />
+                    @* <span asp-validation-for="DateOfBirth" class="text-danger"></span> *@
+                    </div>
+            </div>
+            <div class="row mb-3">
 
-        <div class="col-12">
-            <label asp-for="JoiningDate"></label>
-        <input asp-for="JoiningDate" class="form-control" id="JoiningDate" type="text"
-               value="@Model.JoiningDate.ToString("yyyy-MM-dd")" />
-        @* <span asp-validation-for="DateOfBirth" class="text-danger"></span> *@
-        </div>
-        <div class="col-12">
-            <label asp-for="Position"></label>
-            <input asp-for="Position" class="form-control" />
-            @* <span asp-validation-for="Position" class="text-danger"></span> *@
-        </div>
-        <div class="col-12">
-            <label asp-for="Salary"></label>
-            <input asp-for="Salary" class="form-control" />
-            @* <span asp-validation-for="Salary" class="text-danger"></span> *@
-        </div>
-        <div class="col-12">
-            <label asp-for="Address"></label>
-            <input asp-for="Address" class="form-control" />
-            @* <span asp-validation-for="Address" class="text-danger"></span> *@
-        </div>
-        <div></div>
+                <div class="col-6">
+                    <label asp-for="Position"></label>
+                    <input asp-for="Position" class="form-control" />
+                    @* <span asp-validation-for="Position" class="text-danger"></span> *@
+                </div>
+                <div class="col-6">
+                    <label asp-for="Salary"></label>
+                    <input asp-for="Salary" class="form-control" />
+                    @* <span asp-validation-for="Salary" class="text-danger"></span> *@
+                </div>
+                
+            </div>
+            <div class="row mb-3">
+                <div class="col-12">
+                <label asp-for="Address"></label>
+                <input asp-for="Address" class="form-control" />
+                @* <span asp-validation-for="Address" class="text-danger"></span> *@
+                </div>
+            </div>
+            <div class="form-check form-switch">
+                @Html.CheckBoxFor(model => model.isActive, new { @class = "form-check-input", id = "isActiveSwitch" })
+                <label class="form-check-label" for="isActiveSwitch">Active Status</label>
+            </div>
+
         <div class="text-center">
         @if (action == "Create")
         {
@@ -125,11 +141,11 @@ else
             <button type="submit" class="btn btn-primary mt-3 mb-3">Edit Employee</button>
         }
 
-        <a asp-controller="Dashboard" asp-action="Index" asp-area="Admin" class="btn btn-primary">Back</a>
-            <button type="reset" class="btn btn-secondary">Reset</button>
+        <a asp-controller="Dashboard" asp-action="Index" asp-area="Admin" class="btn btn-secondary">Back</a>
         </div>
     </form>
-
+    </div>
+</div>
 @section Scripts {
 	<script src="~/js/userindex.js"></script>
     <script src="~/js/admin.js"></script>

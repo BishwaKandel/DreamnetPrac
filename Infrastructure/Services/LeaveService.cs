@@ -1,5 +1,6 @@
 ﻿using Application.Interface;
 using AutoMapper;
+using Azure;
 using Domain.DTO;
 using Domain.Models;
 using Infrastructure.Data;
@@ -75,8 +76,11 @@ namespace Infrastructure.Services
                                                 Status = leaveRequest.Status,
                                                 LeaveType = leaveRequest.LeaveType,
                                                 Description = leaveRequest.Description
-                                            }).ToList();
-
+                                            }).
+                                            OrderByDescending(l => l.Status == LeaveStatus.Pending)
+                                            .ThenByDescending(l => l.AppliedOn)
+                                            .ToList();
+            
             var leaveDTOs = _mapper.Map<List<LeaveDetailsDTO>>(leaves);
             return new ApiResponse<List<LeaveDetailsDTO>>
             {
@@ -184,6 +188,8 @@ namespace Infrastructure.Services
 
             var leaves = await _context.LeaveRequests
                 .Where(l => l.RequestedById == employeeId)
+                .OrderByDescending(l => l.Status == LeaveStatus.Pending)
+                .ThenByDescending(l => l.AppliedOn)
                 .ToListAsync();
 
             if (leaves == null || !leaves.Any())

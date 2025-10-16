@@ -56,18 +56,33 @@
                         <td>@row.Description</td>
 						<td>@row.LeaveType</td>
 						<td>@row.Status</td>
+
+
                         @if(@row.Status == LeaveStatus.Pending)
                         {
                             <td>
-                                <button class="btn btn-success ApproveBtn" data-id="@row.Id" title="Approve Leave">
-                                    <i class="fa fa-check"></i> 
-                                </button>
-                            </td>
-                            <td>
-                                <button class="btn btn-danger RejectBtn" data-id="@row.Id" title="Reject Leave">
-                                    <i class="fa fa-times"></i> 
-                                </button>
-                            </td>
+                            <div class="dropdown">
+                                <a href="javascript:void(0);" id="dropdownMenuButton-@row.Id" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton-@row.Id">
+                                    <li>
+                                        <a class="dropdown-item ApproveBtn" href="javascript:void(0);" data-id="@row.Id" title="Approve Leave">
+                                            <i class="fa fa-check"></i> Approve
+                                        </a>
+
+                                    </li>
+
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li>
+                                        <a class="dropdown-item RejectBtn" href="javascript:void(0);" data-id="@row.Id" title="Reject Leave">
+                                             <i class="fa fa-times"></i> Reject
+                                        </a>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                           </td>    
                         }
                         else
                         {

@@ -92,7 +92,7 @@ builder.Services.AddQuartz(q =>
     q.AddTrigger(opts => opts
         .ForJob(jobKey)
         .WithIdentity("ExampleJob-trigger")
-        .WithCronSchedule("0/10 * * * * ?")); // Trigger every 5 seconds
+        .WithCronSchedule("0 */30 * * * ?")); // Trigger every 2 minutes
 });
 
 builder.Services.AddControllers();
@@ -109,7 +109,6 @@ builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IAttendanceService, AttendanceService>();
 builder.Services.AddTransient<IEmailService, EmailService>();
 builder.Services.AddScoped<IBirthdayEmailService, BirthdayEmailService>();
-builder.Services.AddSingleton<BirthdayService>(); // domain service
 builder.Services.AddQuartzHostedService(q => q.WaitForJobsToComplete = true);
 
 

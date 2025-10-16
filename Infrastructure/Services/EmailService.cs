@@ -36,7 +36,15 @@ namespace Infrastructure.Services
 
             var mail = new MailMessage(email!, to, subject, body);
 
+            foreach (var address in to.Split(new[] { ',', ';' }, StringSplitOptions.RemoveEmptyEntries))
+            {
+                mail.To.Add(address.Trim());
+            }
+
             await smtp.SendMailAsync(mail);
         }
+
+
+        
     }
 }

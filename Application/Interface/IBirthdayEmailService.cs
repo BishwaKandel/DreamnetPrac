@@ -8,6 +8,8 @@ namespace Application.Interface
 {
     public interface IBirthdayEmailService
     {
-        Task SendBirthdayEmailsAsync(Guid deptId);
+        Task SendBirthdayEmailsAsync();
+
+        //Task NotifyBirthdaytoAdminAsync(Guid? deptId);
     }
 }

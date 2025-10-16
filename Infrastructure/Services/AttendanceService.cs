@@ -82,7 +82,7 @@ namespace Infrastructure.Services
                 CheckInTime = TimeOnly.FromDateTime(DateTime.Now),
                 CheckOutTime = null,
                 TotalHoursWorked = null,
-                status = status
+                Status = status
             };
 
             _context.Attendances.Add(newAttendance);
@@ -129,7 +129,10 @@ namespace Infrastructure.Services
                 };
             }
             existingCheckIn.CheckOutTime = TimeOnly.FromDateTime(DateTime.Now);
-            existingCheckIn.TotalHoursWorked = existingCheckIn.CheckOutTime.Value.ToTimeSpan() - existingCheckIn.CheckInTime.ToTimeSpan();
+            TimeSpan duration = existingCheckIn.CheckOutTime.Value.ToTimeSpan() - existingCheckIn.CheckInTime.ToTimeSpan();
+            duration = new TimeSpan(duration.Hours, duration.Minutes, duration.Seconds);  // Remove milliseconds
+
+            existingCheckIn.TotalHoursWorked = duration;
             await _context.SaveChangesAsync();
             var attendanceDto = _mapper.Map<AttendanceDTO>(existingCheckIn);
             return new ApiResponse<AttendanceDTO>

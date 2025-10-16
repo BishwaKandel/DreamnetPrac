@@ -8,35 +8,43 @@
     Layout = "_UserLayout";
 
 }
-<h5 class="card-title">Apply for Leave</h5>
+<div class="card">
+    <div class="card-body">
+        <h3 class="card-title">Apply Leave</h3>
 
 <!-- Vertical Form -->
 <form asp-action="LeaveApply" id="LeaveForm" asp-controller="Leave" asp-area="Client" method="post">
-
-    <div class="col-12">
-        <label asp-for="Reason"></label>
-        <input asp-for="Reason" class="form-control" />
-    </div>
-    <div class="col-12">
-        <label asp-for="Description"></label>
-        <input asp-for="Description" class="form-control" />
-    </div>
-    <div class="col-12">
-        <label asp-for="StartDate"></label>
-        <input asp-for="StartDate" class="form-control" id="StartDate" />
-    </div>
-    <div class="col-12">
-        <label asp-for="EndDate"></label>
-        <input asp-for="EndDate" class="form-control" id="EndDate" />
-    </div>
-    <div class="col-12">
-        <label asp-for="LeaveType"></label>
-        <select class="form-control" asp-for="LeaveType" asp-items="Model.LeaveTypes"></select>
-    </div>
+            <div class="row mb-3 mt-3">
+                <div class="col-6">
+                    <label asp-for="Reason"></label>
+                    <input asp-for="Reason" class="form-control" />
+                </div>
+                <div class="col-6">
+                    <label asp-for="LeaveType"></label>
+                    <select class="form-control" asp-for="LeaveType" asp-items="Model.LeaveTypes"></select>
+                </div>
+            </div>
+            <div class="row mb-3 mt-3">
+                <div class="col-6">
+                    <label asp-for="StartDate"></label>
+                    <input asp-for="StartDate" class="form-control" id="StartDate" />
+                </div>
+                <div class="col-6">
+                    <label asp-for="EndDate"></label>
+                    <input asp-for="EndDate" class="form-control" id="EndDate" />
+                </div>
+            </div>
+            <div class="col-12">
+                <label asp-for="Description"></label>
+                <input asp-for="Description" class="form-control" />
+            </div>
+    
     <div class="text-center">
         <button type="submit" class="btn btn-primary mt-3 mb-3">Apply Leave</button>
     </div>
 </form>
+</div>
+</div>
 
 @section Scripts {
 	<script src="~/js/leave.js"></script>

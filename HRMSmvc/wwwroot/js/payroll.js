@@ -1,10 +1,14 @@
 ﻿$(document).ready(function () {
-    $('#PayrollTable').DataTable();
+    $('#PayrollTable').DataTable(
+        {
+        //    searching: false
+        });
 
     var yearEl = $('#year');
     var monthEl = $('#month');
 
-    var table = $('#PayrollTable').DataTable();
+    //var table = $('#PayrollTable').DataTable();
+    $('#PayrollTable_filter').hide()
 
     $.fn.dataTable.ext.search.push(function (settings, data, dataIndex) {
         var selectedYear = parseInt(yearEl.val(), 10);

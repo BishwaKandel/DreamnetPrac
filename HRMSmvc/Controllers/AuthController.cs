@@ -52,6 +52,8 @@ namespace HRMSmvc.Controllers
                     {
                         new Claim(ClaimTypes.Hash, loginResponse.Token),  // User Id claim
                         new Claim(ClaimTypes.NameIdentifier, loginResponse.Id),  // Id claim
+                        new Claim(ClaimTypes.Name, loginResponse.Name ),
+                        new Claim(ClaimTypes.Email, loginResponse.Email)
                     };
 
                 // Add roles to the claims
@@ -95,9 +97,13 @@ namespace HRMSmvc.Controllers
             return View("login");
         }
 
-
-
-
-
+        //Logout 
+        [HttpPost]
+        public async Task<IActionResult> Logout()
+        {
+            var response = await PostAsync<ApiResponse<string>>("/api/Auth/Logout", null, null);
+            Response.Cookies.Delete(".AspNetCore.Cookies");
+            return Json(response);
+        }
     }
 }

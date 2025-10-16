@@ -48,9 +48,6 @@ namespace Infrastructure.Services
                     Data = userDTOs
                 };
             }
-
-
-
         }
 
 

@@ -45,5 +45,12 @@ namespace API.Controllers
             var result = await _authService.CreateRoleAsync(roleName);
             return Ok(result);
         }
+
+        [HttpPost("Logout")]
+        public async Task<IActionResult> Logout()
+        {
+            var result = await _authService.LogoutUserAsync();
+            return Ok(result);
+        }
     }
 }

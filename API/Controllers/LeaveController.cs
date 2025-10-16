@@ -1,5 +1,6 @@
 ﻿using Application.Interface;
 using Domain.DTO;
+using Domain.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 
@@ -30,8 +31,10 @@ namespace API.Controllers
         [HttpGet("GetLeave")]
         public async Task<IActionResult> GetAllLeaves()
         {
-            var leaves = await _leaveService.GetAllLeavesAsync();
-            return Ok(leaves);
+
+            var response = await _leaveService.GetAllLeavesAsync();
+            return Ok(response);
+           
         }
 
         [HttpGet("GetLeaveById")]

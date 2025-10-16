@@ -42,8 +42,11 @@ namespace HRMSmvc.Areas.Client.Controllers
         [HttpGet]
         public IActionResult LeaveApply()
         {
+
             var viewModel = new LeaveRequestViewModel
             {
+                StartDate = DateOnly.FromDateTime(DateTime.Now), 
+                EndDate = DateOnly.FromDateTime(DateTime.Now.AddDays(1)),
                 // Populate LeaveTypes with enum values as SelectListItems
                 LeaveTypes = Enum.GetValues(typeof(LeaveType))
                                 .Cast<LeaveType>()
@@ -52,8 +55,9 @@ namespace HRMSmvc.Areas.Client.Controllers
                                     Value = ((int)e).ToString(),
                                     Text = e.ToString()
                                 })
-            };
 
+
+            };
 
             return View(viewModel);
         }

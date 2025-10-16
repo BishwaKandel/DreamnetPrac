@@ -1,5 +1,12 @@
 ﻿$(document).ready(function () {
    
+    // Initialize End Date first, so it's ready for updating
+    var endPicker = $("#EndDate").flatpickr({
+        dateFormat: "Y-m-d",
+        allowInput: true,
+        minDate: "today"
+    });
+
     // Initialize Start Date
     var startPicker = $("#StartDate").flatpickr({
         dateFormat: "Y-m-d",
@@ -12,13 +19,6 @@
                 endPicker.set('minDate', dateStr);
             }
         }
-    });
-
-    // Initialize End Date
-    var endPicker = $("#EndDate").flatpickr({
-        dateFormat: "Y-m-d",
-        allowInput: true,
-        minDate: "today"
     });
 
 
@@ -38,7 +38,7 @@
                         icon: "success",
                         confirmButtonText: "OK"
                     }).then(function () {
-                        window.location.href = '/client/Dashboard/UserIndex';
+                        window.location.href = '/client/Leave/MyLeaves';
                     });
                 } else {
                     Swal.fire({

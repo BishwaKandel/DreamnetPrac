@@ -1,6 +1,7 @@
 ﻿using Application.Interface;
 using Domain.DTO;
 using Domain.Models;
+using Infrastructure.Migrations;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
@@ -20,6 +21,11 @@ namespace API.Controllers
         [HttpPost("CheckIn")]
         public async Task<IActionResult> CheckIn(string userId)
         {
+            if (ModelState.IsValid == false)
+            {
+                return BadRequest(ModelState);
+            }
+
             var result = await _attendanceService.CheckInAsync(userId);
             return Ok(result);
         }
@@ -27,6 +33,10 @@ namespace API.Controllers
         [HttpPost("CheckOut")]
         public async Task<IActionResult> CheckOut(string userId)
         {
+            if (ModelState.IsValid == false)
+            {
+                return BadRequest(ModelState);
+            }
             var result = await _attendanceService.CheckOutAsync(userId);
             return Ok(result);
         }

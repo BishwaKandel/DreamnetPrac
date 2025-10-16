@@ -74,9 +74,7 @@ namespace Infrastructure.Services
                     PhoneNumber = registerDTO.PhoneNumber,
                     Name = registerDTO.Name,
                     ProfilePictureFileName = registerDTO.ProfilePictureFileName,
-
-
-
+                    isActive = false
                 };
 
             var result = await _userManager.CreateAsync(user, registerDTO.Password);
@@ -90,7 +88,7 @@ namespace Infrastructure.Services
             //await  CreateRoleAsync(roleName);
             //await _userManager.AddToRoleAsync(user, roleName);
             // Optionally assign default role
-            await _userManager.AddToRoleAsync(user, "Admin");
+            await _userManager.AddToRoleAsync(user, "User");
 
             return new ApiResponse<string>
             {
@@ -107,9 +105,12 @@ namespace Infrastructure.Services
                     success = false,
                     message = "User not found"
                 };
-
-            
-
+            //if (user.isActive == false)
+            //    return new ApiResponse<LoginResponseDto>
+            //    {
+            //        success = false,
+            //        message = "User is not active. Please contact admin."
+            //    };
             var result = await _signInManager.CheckPasswordSignInAsync(user, loginDTO.Password, false);
             if (!result.Succeeded)
                 return new ApiResponse<LoginResponseDto>
@@ -130,7 +131,8 @@ namespace Infrastructure.Services
                     Token = token,
                     Email = user.Email,
                     Roles = roles.ToList(),
-                    Id = user.Id
+                    Id = user.Id,
+                    Name = user.Name
                 }
             };
         }
@@ -168,6 +170,8 @@ namespace Infrastructure.Services
             {
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
                 new Claim(ClaimTypes.Email, user.Email),
+                new Claim(ClaimTypes.Name, user.Name),
+                new Claim(ClaimTypes.Email, user.Email)
             };
 
             foreach (var role in roles)
@@ -185,6 +189,20 @@ namespace Infrastructure.Services
                 signingCredentials: creds
             );
             return new JwtSecurityTokenHandler().WriteToken(token);
+        }
+
+        //Logout 
+
+        public async Task<ApiResponse<string>> LogoutUserAsync()
+        {
+
+            await _signInManager.SignOutAsync(); // Sign out the user from the current session
+
+            return new ApiResponse<string>
+            {
+                success = true,
+                message = "You are Logged out !"
+            };
         }
     }
 }

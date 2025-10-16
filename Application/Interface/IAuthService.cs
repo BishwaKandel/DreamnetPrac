@@ -12,9 +12,9 @@ namespace Application.Interface
     {
         Task<ApiResponse<string>> RegisterAsync(RegisterDTO registerDTO);
         Task<ApiResponse<LoginResponseDto>> LoginAsync(LoginDTO loginDTO);
-        Task LogoutAsync();
 
         Task<string> CreateRoleAsync(string roleName);
 
+        Task<ApiResponse<string>> LogoutUserAsync();
     }
 }

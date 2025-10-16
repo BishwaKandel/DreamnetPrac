@@ -2,42 +2,66 @@
 using Domain.Models;
 using Infrastructure.Data;
 using Microsoft.AspNetCore.Identity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Services
 {
     public class BirthdayEmailService : IBirthdayEmailService
     {
-        private readonly IEmployeeService _employeeService;
         private readonly IEmailService _emailService;
-        private readonly BirthdayService _birthdayService;
+        private readonly UserManager<User> _userManager;
+        private readonly AppDbContext _context;
 
-        public BirthdayEmailService(IEmployeeService employeeService,
+
+
+        public BirthdayEmailService(AppDbContext context,
                                     IEmailService emailService,
-                                    BirthdayService birthdayService)
+                                    UserManager<User> userManager
+                                    )
         {
-            _employeeService = employeeService;
             _emailService = emailService;
-            _birthdayService = birthdayService;
+            _userManager = userManager;
+            _context = context;
+
         }
 
-        public async Task SendBirthdayEmailsAsync(Guid deptId)
+        public async Task SendBirthdayEmailsAsync()
         {
-            var response = await _employeeService.GetAllEmployeesAsync(deptId);
-            if (!response.success || response.Data == null)
+            var today = DateTime.UtcNow.Date;
+            var tommorow = today.AddDays(1);
+
+            List<User> todayBirthdayUsersList = await _context.Users.Where(u =>
+                                                           u.DOB.Month == today.Month
+                                                        && u.DOB.Day == today.Day
+                                                       ).ToListAsync();
+
+            List<User> tommorowBirthdayUsersList = await _context.Users.Where(u => 
+                                                        u.DOB.Month == tommorow.Month
+                                                        && u.DOB.Day == tommorow.Day
+                                                       ).ToListAsync();
+
+            List<User> admins = _userManager.GetUsersInRoleAsync("Admin").Result
+                .Select(u => new User
+                {
+                    Id = u.Id,
+                    Name = u.Name,
+                    Email = u.Email,
+                })
+                .ToList();
+
+            // Notify admins about upcoming birthdays
+
+            if (tommorowBirthdayUsersList.Count>0)
             {
-                throw new InvalidOperationException("Failed to fetch employee data or data is null.");
+                await _emailService.SendEmailAsync(
+                string.Join(",", admins.Select(a => a.Email)),
+                "Upcoming Birthdays",
+               $"The following employees have birthdays tomorrow: {string.Join(", ", tommorowBirthdayUsersList.Select(u => u.Name))}.");
             }
 
-            var today = DateTime.UtcNow.Date;
-
-            foreach (var user in response.Data)
+            if (todayBirthdayUsersList.Count > 0)
             {
-                if (_birthdayService.IsBirthdayToday(user, today))
+                foreach (var user in todayBirthdayUsersList)
                 {
                     await _emailService.SendEmailAsync(
                         user.Email,
@@ -45,7 +69,11 @@ namespace Infrastructure.Services
                         $"Dear {user.Name}, we wish you a very Happy Birthday!"
                     );
                 }
-            }
+
+            }   
         }
     }
 }
+
+
+

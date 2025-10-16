@@ -1,12 +1,14 @@
 ﻿using Domain.DTO;
 using Domain.Models;
 using HRMSmvc.Controllers;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
 namespace HRMSmvc.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
     public class DashboardController : BaseController
     {
         private readonly HttpClient client;

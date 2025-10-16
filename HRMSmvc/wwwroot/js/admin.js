@@ -39,6 +39,11 @@
     
         $('#AdminEditForm').submit(function (event) {
             event.preventDefault(); // Prevent normal form submission
+
+            var isValid = $(this).valid();  // Check if the form is valid using jQuery Validation
+            if (!isValid) {
+                return; // If the form is invalid, do not submit the form
+            }
             var formData = new FormData(this);
 
             // Determine the action URL dynamically
@@ -80,6 +85,35 @@
                 }
             });
         });
+
+    $('#AdminEditForm').validate({
+        rules: {
+            // Define your custom validation rules here
+            Name: {
+                required: true,
+                minlength: 5
+            },
+            Description: {
+                required: true,
+                maxlength: 500
+            },
+            // You can add more rules for other form fields as needed
+        },
+        messages: {
+            // Custom error messages
+            Name: {
+                required: "Name is required.",
+                minlength: "Name should be at least 3 characters."
+            },
+            Description: {
+                required: "Description is required.",
+                maxlength: "Description cannot exceed 500 characters."
+            }
+        },
+        errorClass: 'is-invalid',  // Optional: Custom error class for invalid fields
+        validClass: 'is-valid'     // Optional: Custom valid class for valid fields
+    });
+
         $(document).on("click", ".delete-btn", function () {
         var id = $(this).data("id");
 
@@ -196,6 +230,60 @@
             }
         });
     });
+
+    $(document).on("click", "#logoutBtn", function (e) {
+        e.preventDefault();
+        Swal.fire({
+            title: "Logout?",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes Logout!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                $.ajax({
+                    type: "POST",
+                    url: "/Auth/Logout",
+                    success: function (response) {
+                        if (response.success) {
+                            Swal.fire({
+                                title: "Logged out!",
+                                icon: "success",
+                                confirmButtonText: "OK",
+                            }).then(() => {
+                                window.location.href = '/Auth/login';
+                            });
+                        } else {
+                            Swal.fire({
+                                title: "Error!",
+                                text: response.message || "Please try again.",
+                                icon: "error",
+                                confirmButtonText: "OK",
+                            });
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        console.error("Error occurred:", error);
+                        Swal.fire({
+                            title: "Error!",
+                            text: "An unexpected error occurred.",
+                            icon: "error",
+                            confirmButtonText: "OK",
+                        });
+                    },
+                });
+            } else {
+                Swal.fire({
+                    title: 'Cancelled',
+                    text: 'Logout has been cancelled.',
+                    icon: 'info',
+                    confirmButtonText: 'OK'
+                });
+            }
+        });
+    });
+
 
 });
 

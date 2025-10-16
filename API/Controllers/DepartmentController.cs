@@ -22,6 +22,10 @@ namespace API.Controllers
         [HttpPost("CreateDept")]
         public async Task<IActionResult> CreateDepartmentAsync(DeptInfoDTO department)
         {
+            if (ModelState.IsValid == false)
+            {
+                return BadRequest(ModelState);
+            }
             var createdDepartment = await _deptService.CreateDepartmentAsync(department);
             return CreatedAtAction(
                     nameof(GetDepartmentById),
@@ -56,6 +60,10 @@ namespace API.Controllers
         [HttpPost("UpdateDept")]
         public async Task<IActionResult> UpdateDepartmentAsync([FromBody] DeptInfoDTO department)
         {
+            if (ModelState.IsValid == false)
+            {
+                return BadRequest(ModelState);
+            }
             var updatedDepartment = await _deptService.UpdateDepartmentAsync(department);
             if (updatedDepartment == null)
             {
@@ -92,6 +100,10 @@ namespace API.Controllers
         [HttpPost("AddEmpToDept")]
         public async Task<IActionResult> AddEmployeesToDepartmentAsync([FromBody] AddEmpReq request)
         {
+            if (ModelState.IsValid == false)
+            {
+                return BadRequest(ModelState);
+            }
             var result = await _deptService.AddEmployeesToDepartmentAsync(request.DepartmentId , request.EmployeeIds);
             if (result == null || !result.success)  
             {
