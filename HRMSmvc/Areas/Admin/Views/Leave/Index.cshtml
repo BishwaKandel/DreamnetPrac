@@ -2,7 +2,7 @@
 @using Domain.Models
 @model List<LeaveDetailsDTO>
 @{
-    ViewData["Title"] = "Fetching Data from Web API";
+    ViewData["Title"] = "Leave Index";
 }
 @{
     int counter = 1;
@@ -22,9 +22,10 @@
         </div><!-- End Page Title --> *@
 <div class="card">
     <div class="card-body">
-        <h5 class="card-title">List of Employees</h5>
+        <h5 class="card-title">List of Leaves</h5>
         <!-- Default Table -->
-        <table class="table">
+        <div class="table-responsive">
+            <table class="table" id="leavetable">
             <thead>
                 <tr>
                     @* <th scope="col">ID</th> *@
@@ -55,7 +56,24 @@
 						<td>@row.Reason</td>
                         <td>@row.Description</td>
 						<td>@row.LeaveType</td>
-						<td>@row.Status</td>
+                            <td>
+                                @if (row.Status == LeaveStatus.Pending)
+                                {
+                                    <span class="badge bg-warning">Pending</span>
+                                }
+                                else if (row.Status == LeaveStatus.Approved)
+                                {
+                                    <span class="badge bg-success">Approved</span>
+                                }
+                                else if (row.Status == LeaveStatus.Rejected)
+                                {
+                                    <span class="badge bg-danger">Rejected</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-secondary">Unknown</span>
+                                }
+                            </td>
 
 
                         @if(@row.Status == LeaveStatus.Pending)
@@ -96,6 +114,7 @@
                 }
             </tbody>
         </table>
+        </div>
     </div>
 </div>
 
@@ -104,3 +123,4 @@
     }
 
 
+@await Html.PartialAsync("_RejectLeaveModal")

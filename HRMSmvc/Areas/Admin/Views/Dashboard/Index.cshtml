@@ -2,7 +2,7 @@
 @using Domain.Models
 @model List<UserDTO>
 @{
-    ViewData["Title"] = "Fetching Data from Web API";
+    ViewData["Title"] = "Dashboard";
 }
 @{
     int counter = 1;
@@ -12,100 +12,116 @@
     <div class="card-body">
         <h3 class="card-title">List of Employees</h3>
         <!-- Default Table -->
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">S.N.</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Phone Number</th>
-                    <th scope="col">Date of Birth</th>
-                    <th scope="col">Joining Date</th>
-                    <th scope="col">Position</th>
-                    <th scope="col">Salary</th>
-                    <th scope="col">Address</th>
-                    <th scope="col">Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var row in Model)
-                {
+                <div class="table-responsive">
+
+                <table class="table" id="EmployeeTable">
+                <thead>
                     <tr>
-                        <td>@counter</td>
-                        <td>@row.Name</td>
-                        <td>@row.Email</td>
-                        <td>@row.PhoneNumber</td>
-                        <td>@row.DOB.ToShortDateString()</td>
-                        <td>@row.JoiningDate.ToShortDateString()</td>
-                        <td>@row.Position</td>
-                        <td>@row.Salary</td>
-                        <td>@row.Address</td>
-                        <td>
-                            <!-- Dropdown Menu for Actions -->
-                            <div class="dropdown">
-                                <a href="javascript:void(0);" id="dropdownMenuButton-@row.Id" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="fa-solid fa-ellipsis"></i>
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton-@row.Id">
-                                    <li>
-                                        <a class="dropdown-item" href="/Admin/Dashboard/CreateorEdit?id=@row.Id">
-                                            <i class="fa-solid fa-pen"></i> Edit
+                        <th scope="col">S.N.</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Phone Number</th>
+                        <th scope="col">Date of Birth</th>
+                        <th scope="col">Joining Date</th>
+                        <th scope="col">Position</th>
+                        <th scope="col">Salary</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var row in Model)
+                    {
+                        <tr>
+                            <td>@counter</td>
+                            <td>@row.Name</td>
+                            <td>@row.Email</td>
+                            <td>@row.PhoneNumber</td>
+                            <td>@row.DOB.ToShortDateString()</td>
+                            <td>@row.JoiningDate.ToShortDateString()</td>
+                            <td>@row.Position</td>
+                            <td>@row.Salary</td>
+                            <td>@row.Address</td>
+                            <td>
+                                @* <div class="dropdown dropstart">
+                                        <a href="#" class="link" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fa-solid fa-ellipsis"></i>
                                         </a>
-                                    </li>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                          <li><a class="dropdown-item" href="#"><i class="fa-regular fa-pen-to-square"></i> Edit</a></li>
+                                          <li><a class="dropdown-item" href="#"><i class="fa-regular fa-trash-can"></i> Delete</a></li>
+                                        <li><a class="dropdown-item" href="#"><i class="fa-regular fa-trash-can"></i> Delete</a></li>
+
+                                        <li><a class="dropdown-item" href="#"><i class="fa-regular fa-trash-can"></i> Delete</a></li>
+
+                                        </ul>
+                                      </div> *@
+
+
+
+
+                                <!-- Dropdown Menu for Actions -->
+                                 <div class="dropdown dropstart">
+                                    <a href="javascript:void(0);" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton-@row.Id">
+                                        <li>
+                                            <a class="dropdown-item" href="/Admin/Dashboard/CreateorEdit?id=@row.Id">
+                                                <i class="fa-solid fa-pen"></i> Edit
+                                            </a>
+                                        </li>
                                     
 
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li>
-                                        <a class="dropdown-item" href="/Admin/Payroll/ViewPayroll?userId=@row.Id">
-                                            <i class="fa-solid fa-money-bill"></i> Payroll
-                                        </a>
-                                    </li>
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li>
-                                        <a class="dropdown-item" href="/Admin/Attendance/GetAttendanceByEmpID?userId=@row.Id">
-                                            <i class="fa-solid fa-calendar-days"></i> Attendance
-                                        </a>
-                                    </li>
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li>
-                                        <a class="dropdown-item" href="/users-settings/@row.Id">
-                                            <i class="fa-solid fa-trash"></i> Delete
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </td>
-                    </tr>
-                    counter++;
-                }
-            </tbody>
-        </table>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li>
+                                            <a class="dropdown-item" href="/Admin/Payroll/ViewPayroll?userId=@row.Id">
+                                                <i class="fa-solid fa-money-bill"></i> Payroll
+                                            </a>
+                                        </li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li>
+                                            <a class="dropdown-item" href="/Admin/Attendance/GetAttendanceByEmpID?userId=@row.Id">
+                                                <i class="fa-solid fa-calendar-days"></i> Attendance
+                                            </a>
+                                        </li>
+                                        @if (row.IsActive == false)
+                                        {
+                                            <li><hr class="dropdown-divider"></li>
+                                            <li>
+                                                <a class="dropdown-item activeBtn" href="javascript:void(0);" data-id="@row.Id" title="Set Active">
+                                                    <i class="fas fa-toggle-on"></i> Set Active
+                                                </a>
+                                            </li>
+                                        
+                                        }
+                                        else
+                                        {
+                                            <li><hr class="dropdown-divider"></li>
+                                            <li>
+                                                <a class="dropdown-item activeBtn" href="javascript:void(0);" data-id="@row.Id" title="Set Inactive">
+                                                    <i class="fas fa-toggle-off"></i> Set Inactive
+                                                </a>
+                                            </li>
+                                        
+                                        }
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li>
+                                            <a class="dropdown-item deleteEmpBtn" href="javascript:void(0);" data-id="@row.Id">
+                                                <i class="fa-solid fa-trash"></i> Delete
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div> 
+                            </td>
+                        </tr>
+                        counter++;
+                    }
+                </tbody>
+            </table>
+            </div>
     </div>
 </div>
 
 @section Scripts {
-    <script>
-        $(document).on("click", ".delete-btn", function () {
-            var id = $(this).data("id");
-
-            if (confirm("Are you sure you want to delete this employee?")) {
-                $.ajax({
-                    type: 'POST',
-                    url: '@Url.Action("Delete", "Employee")',
-                    data: { id: id },
-                    success: function (response) {
-                        if (response.success) {
-                            alert(response.message);
-                            location.reload(); // refresh table
-                        } else {
-                            alert(response.message);
-                        }
-                    },
-                    error: function () {
-                        alert("Something went wrong!");
-                    }
-                });
-            }
-        });
-    </script>
 }

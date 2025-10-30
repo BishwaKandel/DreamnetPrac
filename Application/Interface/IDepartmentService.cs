@@ -11,7 +11,7 @@ namespace Application.Interface
         Task<ApiResponse<DeptInfoDTO>> GetDepartmentByIdAsync(Guid id);
         Task<ApiResponse<DeptInfoDTO>> CreateDepartmentAsync(DeptInfoDTO department);
         Task<ApiResponse<DeptInfoDTO>> UpdateDepartmentAsync(DeptInfoDTO department);
-        Task<bool> DeleteDepartmentAsync(Guid id);
+        Task<ApiResponse<string>> DeleteDepartmentAsync(Guid id);
         Task<ApiResponse<List<UserDTO>>> GetEmployeesExceptDeptIdAsync(Guid departmentId);
         Task<ApiResponse<string>> AddEmployeesToDepartmentAsync(Guid departmentId, List<string> employeeIds);
     }

@@ -73,19 +73,11 @@ namespace API.Controllers
         }
 
         //Delete Department
-        [HttpDelete("DeleteDept")]
-        public async Task<IActionResult> DeleteDepartmentAsync(string id)
+        [HttpPost("DeleteDept")]
+        public async Task<IActionResult> DeleteDepartmentAsync(Guid id)
         {
-            if (!Guid.TryParse(id, out Guid entityGuid))
-            {
-                return BadRequest("Format is incorrect");
-            }
-            var isDeleted = await _deptService.DeleteDepartmentAsync(entityGuid);
-            if (!isDeleted)
-            {
-                return NotFound();
-            }
-            return NoContent();
+            var response = await _deptService.DeleteDepartmentAsync(id);
+            return Ok(response);
         }
 
         //Get Employees EXCEPT it's department 

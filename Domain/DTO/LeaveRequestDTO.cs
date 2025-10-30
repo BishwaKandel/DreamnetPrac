@@ -12,6 +12,7 @@ namespace Domain.DTO
     {
         public Guid? Id { get; set; }
         public string RequestedById { get; set; }
+        public string RequestedByEmail { get; set; }
         public DateOnly AppliedOn { get; set; } 
         public DateOnly StartDate { get; set; }
         public DateOnly EndDate { get; set; }

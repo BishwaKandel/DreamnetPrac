@@ -38,7 +38,24 @@
 					<td>@row.Reason</td>
 					<td>@row.Description</td>
 					<td>@row.LeaveType</td>
-					<td>@row.Status</td>
+						<td>
+							@if (row.Status == LeaveStatus.Pending)
+							{
+								<span class="badge bg-warning">Pending</span>
+							}
+							else if (row.Status == LeaveStatus.Approved)
+							{
+								<span class="badge bg-success">Approved</span>
+							}
+							else if (row.Status == LeaveStatus.Rejected)
+							{
+								<span class="badge bg-danger">Rejected</span>
+							}
+							else
+							{
+								<span class="badge bg-secondary">Unknown</span>
+							}
+						</td>
 					
 				</tr>
 				counter++;

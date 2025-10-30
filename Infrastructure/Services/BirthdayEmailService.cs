@@ -25,22 +25,70 @@ namespace Infrastructure.Services
 
         }
 
+        //    public async Task SendBirthdayEmailsAsync()
+        //    {
+        //        var today = DateTime.UtcNow.Date;
+        //        var tommorow = today.AddDays(1);
+
+        //        List<User> todayBirthdayUsersList = await _context.Users.Where(u =>
+        //                                                       u.DOB.Month == today.Month
+        //                                                    && u.DOB.Day == today.Day
+        //                                                   ).ToListAsync();
+
+        //        List<User> tommorowBirthdayUsersList = await _context.Users.Where(u => 
+        //                                                    u.DOB.Month == tommorow.Month
+        //                                                    && u.DOB.Day == tommorow.Day
+        //                                                   ).ToListAsync();
+
+        //        List<User> admins = _userManager.GetUsersInRoleAsync("Admin").Result
+        //            .Select(u => new User
+        //            {
+        //                Id = u.Id,
+        //                Name = u.Name,
+        //                Email = u.Email,
+        //            })
+        //            .ToList();
+
+        //        // Notify admins about upcoming birthdays
+
+        //        if (tommorowBirthdayUsersList.Count>0)
+        //        {
+        //            await _emailService.SendEmailAsync(
+        //            string.Join(",", admins.Select(a => a.Email)),
+        //            "Upcoming Birthdays",
+        //           $"The following employees have birthdays tomorrow: {string.Join(", ", tommorowBirthdayUsersList.Select(u => u.Name))}.");
+        //        }
+
+        //        if (todayBirthdayUsersList.Count > 0)
+        //        {
+        //            foreach (var user in todayBirthdayUsersList)
+        //            {
+        //                await _emailService.SendEmailAsync(
+        //                    user.Email,
+        //                    "Happy Birthday!",
+        //                    $"Dear {user.Name}, we wish you a very Happy Birthday!"
+        //                );
+        //            }
+
+        //        }   
+        //    }
         public async Task SendBirthdayEmailsAsync()
         {
             var today = DateTime.UtcNow.Date;
-            var tommorow = today.AddDays(1);
+            var tomorrow = today.AddDays(1);
 
-            List<User> todayBirthdayUsersList = await _context.Users.Where(u =>
-                                                           u.DOB.Month == today.Month
-                                                        && u.DOB.Day == today.Day
-                                                       ).ToListAsync();
+            // Fetch all users' birthdays once, and filter later in memory
+            var allUsers = await _context.Users
+                                          .Where(u => u.DOB.Month == today.Month || u.DOB.Month == tomorrow.Month)
+                                          .ToListAsync();
 
-            List<User> tommorowBirthdayUsersList = await _context.Users.Where(u => 
-                                                        u.DOB.Month == tommorow.Month
-                                                        && u.DOB.Day == tommorow.Day
-                                                       ).ToListAsync();
+            var todayBirthdayUsersList = allUsers.Where(u =>
+                u.DOB.Month == today.Month && u.DOB.Day == today.Day).ToList();
 
-            List<User> admins = _userManager.GetUsersInRoleAsync("Admin").Result
+            var tomorrowBirthdayUsersList = allUsers.Where(u =>
+                u.DOB.Month == tomorrow.Month && u.DOB.Day == tomorrow.Day).ToList();
+
+            var admins = _userManager.GetUsersInRoleAsync("Admin").Result
                 .Select(u => new User
                 {
                     Id = u.Id,
@@ -50,15 +98,16 @@ namespace Infrastructure.Services
                 .ToList();
 
             // Notify admins about upcoming birthdays
-
-            if (tommorowBirthdayUsersList.Count>0)
+            if (tomorrowBirthdayUsersList.Count > 0)
             {
                 await _emailService.SendEmailAsync(
-                string.Join(",", admins.Select(a => a.Email)),
-                "Upcoming Birthdays",
-               $"The following employees have birthdays tomorrow: {string.Join(", ", tommorowBirthdayUsersList.Select(u => u.Name))}.");
+                    string.Join(",", admins.Select(a => a.Email)),
+                    "Upcoming Birthdays",
+                    $"The following employees have birthdays tomorrow: {string.Join(", ", tomorrowBirthdayUsersList.Select(u => u.Name))}."
+                );
             }
 
+            // Notify users about today's birthdays
             if (todayBirthdayUsersList.Count > 0)
             {
                 foreach (var user in todayBirthdayUsersList)
@@ -69,9 +118,9 @@ namespace Infrastructure.Services
                         $"Dear {user.Name}, we wish you a very Happy Birthday!"
                     );
                 }
-
-            }   
+            }
         }
+
     }
 }
 

@@ -318,28 +318,28 @@
 
 })();
 
-document.addEventListener('DOMContentLoaded', function () {
-    // Password Toggle for the first input (Password)
-    const togglePassword = document.getElementById("toggle-password");
-    const passwordField = document.getElementById("yourPassword");
-    if (togglePassword) {
-        togglePassword.addEventListener("click", function () {
-            const type = passwordField.type === "password" ? "text" : "password";
-            passwordField.type = type;
-            togglePassword.classList.toggle("bx-hide");
-            togglePassword.classList.toggle("bx-show");
-        });
-    }
+//document.addEventListener('DOMContentLoaded', function () {
+//    // Password Toggle for the first input (Password)
+//    const togglePassword = document.getElementById("toggle-password");
+//    const passwordField = document.getElementById("yourPassword");
+//    if (togglePassword) {
+//        togglePassword.addEventListener("click", function () {
+//            const type = passwordField.type === "password" ? "text" : "password";
+//            passwordField.type = type;
+//            togglePassword.classList.toggle("bx-hide");
+//            togglePassword.classList.toggle("bx-show");
+//        });
+//    }
 
-    // Confirm Password Toggle for the second input (Confirm Password)
-    const toggleConfirmPassword = document.getElementById("toggle-confirm-password");
-    const confirmPasswordField = document.getElementById("confirmPassword");
-    if (toggleConfirmPassword) {
-        toggleConfirmPassword.addEventListener("click", function () {
-            const type = confirmPasswordField.type === "password" ? "text" : "password";
-            confirmPasswordField.type = type;
-            toggleConfirmPassword.classList.toggle("bx-hide");
-            toggleConfirmPassword.classList.toggle("bx-show");
-        });
-    }
-});
+//    // Confirm Password Toggle for the second input (Confirm Password)
+//    const toggleConfirmPassword = document.getElementById("toggle-confirm-password");
+//    const confirmPasswordField = document.getElementById("confirmPassword");
+//    if (toggleConfirmPassword) {
+//        toggleConfirmPassword.addEventListener("click", function () {
+//            const type = confirmPasswordField.type === "password" ? "text" : "password";
+//            confirmPasswordField.type = type;
+//            toggleConfirmPassword.classList.toggle("bx-hide");
+//            toggleConfirmPassword.classList.toggle("bx-show");
+//        });
+//    }
+//});

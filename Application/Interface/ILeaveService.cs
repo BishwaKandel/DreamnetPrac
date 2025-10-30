@@ -17,7 +17,7 @@ namespace Application.Interface
         Task<ApiResponse<bool>> DeleteLeaveAsync(Guid id);
 
         Task<ApiResponse<LeaveRequestDTO>> ApproveLeave(Guid leaveRequestId);
-        Task<ApiResponse<LeaveRequestDTO>> RejectLeave(Guid leaveRequestId);
+        Task<ApiResponse<LeaveRequestDTO>> RejectLeave(RejectLeaveRequestDTO rejectLeaveRequest);
         Task<ApiResponse<List<LeaveRequestDTO>>> GetLeavesByEmployeeIdAsync(string employeeId);
         Task<ApiResponse<IEnumerable<LeaveRequestDTO>>> GetLeavesByDateRangeAsync(DateTime startDate, DateTime endDate);
     }

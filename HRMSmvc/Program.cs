@@ -41,12 +41,14 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
     {
         options.LoginPath = "/Auth/Login"; // Redirect to login page if not authenticated
         options.LogoutPath = "/Auth/Logout"; // Redirect to logout page
+        options.AccessDeniedPath = "/Auth/AccessDenied";
         options.ExpireTimeSpan = TimeSpan.FromMinutes(30); // Set cookie expiry time
         options.SlidingExpiration = true; // Refresh cookie expiry time as long as user is active
     });
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 // Register IHttpContextAccessor to access HttpContext
 builder.Services.AddHttpContextAccessor();
+
 
 //builder.Services.AddScoped<IAuthService, AuthService>();
 

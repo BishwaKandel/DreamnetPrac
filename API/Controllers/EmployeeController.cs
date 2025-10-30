@@ -114,26 +114,17 @@ namespace API.Controllers
             {
                 return BadRequest(ModelState);
             }
-
-            var updatedEmployee = await _employeeService.UpdateEmployeeAsync(employee);
-            if (updatedEmployee.Data == null)
-            {
-                return NotFound();
-            }
-            return Ok(updatedEmployee);
+            var response = await _employeeService.UpdateEmployeeAsync(employee);           
+            return Ok(response);
         }
 
         //Delete by EmpID
 
-        [HttpDelete("DeleteEmp")]
-        public async Task<IActionResult> DeleteEmployeeAsync(Guid id)
+        [HttpPost("DeleteEmp")]
+        public async Task<IActionResult> DeleteEmployeeAsync(string id)
         {
             var deleted = await _employeeService.DeleteEmployeeAsync(id);
-            if (deleted == false)
-            {
-                return NotFound();
-            }
-            return NoContent();
+            return Ok(deleted);
         }
 
         [HttpPost("ChangePassword")]
@@ -144,11 +135,16 @@ namespace API.Controllers
                 return BadRequest(ModelState);
             }
             var result = await _employeeService.ChangePasswordAsync(changePasswordDTO);
-            if (result.success)
-            {
-                return Ok(result);
-            }
-            return BadRequest(result);
+            return Ok(result);
+
+            
+        }
+
+        [HttpPost("ChangeActiveStatus")]
+        public async Task<IActionResult> ChangeActiveStatus(string id)
+        {
+            var result = await _employeeService.ChangeActiveStatus(id);
+            return Ok(result);
         }
 
         //Add Employee to Department
@@ -218,8 +214,8 @@ namespace API.Controllers
         //    await _birthdayEmailService.SendBirthdayEmailsAsync();
         //    return Ok("Birthday emails sent.");
         //}
-        
-        
+
+
     }
 
 }

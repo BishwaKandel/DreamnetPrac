@@ -6,7 +6,6 @@ using Domain.Models;
 using Infrastructure.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using System.Linq;
 
 namespace Infrastructure.Services
 {
@@ -27,12 +26,25 @@ namespace Infrastructure.Services
         // Create
         public async Task<ApiResponse<DeptInfoDTO>> CreateDepartmentAsync(DeptInfoDTO department)
         {
+            var existingDept = await _context.Departments.FindAsync(department.Id);
+            if (existingDept != null)
+            {
+                if (existingDept.Name == department.Name)
+                {
+                    return new ApiResponse<DeptInfoDTO>
+                    {
+                        success = false,
+                        message = "Department with this name already Exists",
+                        Data = null
+                    };
+                }
+            }
             Department departments = new Department
             {
                 Name = department.Name,
                 Description = department.Description,
                 Location = department.Location,
-                IsActive = department.IsActive
+                IsActive = true
             };
             _context.Departments.Add(departments);
             await _context.SaveChangesAsync();
@@ -49,41 +61,68 @@ namespace Infrastructure.Services
                     Description = departmentDTO.Description,
                     Location = departmentDTO.Location,
                     IsActive = departmentDTO.IsActive
-
                 }
             };
         }
 
         //Delete
-        public async Task<bool> DeleteDepartmentAsync(Guid id)
+        public async Task<ApiResponse<string>> DeleteDepartmentAsync(Guid id)
         {
             try
             {
                 Department? dept = await _context.Departments.FindAsync(id);
                 if (dept == null)
                 {
-                    return false;
+                    return new ApiResponse<string>
+                    {
+                        success = false,
+                        message = "Department Not Found",
+                        Data = null
+
+                    };
                 }
-                _context.Departments.Remove(dept);
+                dept.IsDeleted = true;
+                _context.Departments.Update(dept);
                 await _context.SaveChangesAsync();
-                return true;
+                var users = _context.Users.Where(u => u.DepartmentId == id);
+                foreach(var user in users)
+                {
+                    user.DepartmentId = null;
+                }
+                _context.Users.UpdateRange(users);
+                await _context.SaveChangesAsync();
+
+                return new ApiResponse<string>
+                {
+                    success = true,
+                    message = "Department deleted Succesfully",
+                    Data = null
+                };
             }
             catch (Exception ex)
             {
-                return false;
+                return new ApiResponse<string>
+                {
+                    success = false,
+                    message = "An error occurred while deleting the department.",
+                    Data = null
+                };
             }
         }
 
         //GetALL
         public async Task<ApiResponse<List<DeptInfoDTO>>> GetAllDepartmentsAsync()
         {
-            List<Department> dept = await _context.Departments.ToListAsync();
-            List<DeptInfoDTO> result = _mapper.Map<List<DeptInfoDTO>>(dept);
+            var filteredDept = await _context.Departments
+                                .Where(d => !d.IsDeleted)
+                                .ToListAsync();
+
+            List<DeptInfoDTO> result = _mapper.Map<List<DeptInfoDTO>>(filteredDept);
 
             return new ApiResponse<List<DeptInfoDTO>>
             {
                 success = true,
-                message = "Employees retrieved successfully",
+                message = "Department retrieved successfully",
                 Data = result
             };
         }
@@ -113,20 +152,31 @@ namespace Infrastructure.Services
                     Location = deptDTO.Location,
                     IsActive = deptDTO.IsActive
                 }
-            }; 
+            };
         }
 
         //Update 
         public async Task<ApiResponse<DeptInfoDTO>> UpdateDepartmentAsync(DeptInfoDTO department)
         {
-            Department? existingDept = await _context.Departments.FindAsync(department.Id);
-
+            var existingDept = await _context.Departments.FindAsync(department.Id);
+            var existingDeptByName = await _context.Departments
+                .FirstOrDefaultAsync(d => d.Name == department.Name && d.Id != department.Id);
             if (existingDept == null)
             {
                 return new ApiResponse<DeptInfoDTO>
                 {
                     success = false,
                     message = "Department not found"
+                };
+            }
+
+            if(existingDeptByName!=null)
+            {
+                return new ApiResponse<DeptInfoDTO>
+                {
+                    success = false,
+                    message = "Department with this Name already exists",
+                    Data = null
                 };
             }
 
@@ -140,7 +190,7 @@ namespace Infrastructure.Services
             return new ApiResponse<DeptInfoDTO>
             {
                 success = true,
-                message = "Employee updated Successfully",
+                message = "Department updated Successfully",
                 Data = new DeptInfoDTO
                 {
                     Id = deptDTO.Id,
@@ -158,7 +208,7 @@ namespace Infrastructure.Services
         {
             var usersInRole = await _userManager.GetUsersInRoleAsync("User");
             var employees = usersInRole
-                .Where(e => e.DepartmentId != departmentId || e.DepartmentId == null)
+                .Where(e => (e.DepartmentId != departmentId || e.DepartmentId == null) && e.IsDeleted == false)
                 .ToList();
             var employeeDTOs = _mapper.Map<List<UserDTO>>(employees);
             return new ApiResponse<List<UserDTO>>
@@ -184,7 +234,7 @@ namespace Infrastructure.Services
                 };
             }
             var employees = await _context.Users
-                .Where(e => employeeIds.Contains(e.Id))
+                .Where(e => employeeIds.Contains(e.Id) && e.IsDeleted == false)
                 .ToListAsync();
 
             if (!employees.Any())

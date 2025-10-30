@@ -13,22 +13,25 @@ namespace Infrastructure.Services
         private readonly AppDbContext _context;
         private readonly IMapper _mapper;
         private readonly UserManager<User> _userManager;
+        private readonly IEmailService _emailService;
 
-        public EmployeeService(AppDbContext context, IMapper mapper, UserManager<User> userManager)
+        public EmployeeService(AppDbContext context, IMapper mapper, UserManager<User> userManager , IEmailService emailservice)
         {
             _userManager = userManager;
             _context = context;
             _mapper = mapper;
+            _emailService = emailservice;
 
         }
-        
+
         public async Task<ApiResponse<List<UserDTO>>> GetAllEmployeesAsync(Guid? deptId)
         {
             IList<User> usersInRole = await _userManager.GetUsersInRoleAsync("User");
 
             if (deptId == null)
             {
-                List<UserDTO> userDTOs = _mapper.Map<List<UserDTO>>(usersInRole);
+                var employees = usersInRole.Where(e => e.IsDeleted==false).ToList();
+                List<UserDTO> userDTOs = _mapper.Map<List<UserDTO>>(employees);
 
                 return new ApiResponse<List<UserDTO>>
                 {
@@ -39,7 +42,7 @@ namespace Infrastructure.Services
             }
             else
             {
-                var employees = usersInRole.Where(e => e.DepartmentId == deptId).ToList();
+                var employees = usersInRole.Where(e => e.DepartmentId == deptId && e.IsDeleted==false).ToList();
                 List<UserDTO> userDTOs = _mapper.Map<List<UserDTO>>(employees);
                 return new ApiResponse<List<UserDTO>>
                 {
@@ -49,7 +52,6 @@ namespace Infrastructure.Services
                 };
             }
         }
-
 
         public async Task<ApiResponse<UserDTO>> GetEmployeeByIdAsync(String id)
         {
@@ -62,37 +64,46 @@ namespace Infrastructure.Services
                     message = "Employee not found"
                 };
             }
+            var today = DateTime.Today;
+            var attendance = await _context.Attendances
+                .FirstOrDefaultAsync(a => a.UserId == id && a.Date == today);
 
-            UserDTO employeeDTO = _mapper.Map<UserDTO>(employee);
+            bool? isCheckedIn = attendance != null;
+            bool? isCheckedOut = attendance?.CheckOutTime != null;
+
+            var employeeDTO = _mapper.Map<UserDTO>(employee);
+            employeeDTO.IsCheckedIn = isCheckedIn;
+            employeeDTO.IsCheckedOut = isCheckedOut;
+
+            // Return the response with the employee details
             return new ApiResponse<UserDTO>
             {
                 success = true,
                 message = "Employee found",
-                Data = new UserDTO
-                {
-                    Id = employeeDTO.Id,
-                    Name = employeeDTO.Name,
-                    FirstName = employeeDTO.FirstName,
-                    LastName = employeeDTO.LastName,
-                    Email = employeeDTO.Email,
-                    PhoneNumber = employeeDTO.PhoneNumber,
-                    DOB = employeeDTO.DOB,
-                    JoiningDate = employeeDTO.JoiningDate,
-                    Position = employeeDTO.Position,
-                    Salary = employeeDTO.Salary,
-                    Address = employeeDTO.Address,
-                    IsActive = employeeDTO.IsActive,
-                    ProfilePictureFileName = employeeDTO.ProfilePictureFileName
-                }
-            }; 
+                Data = employeeDTO
+            };
         }
 
         public async Task<ApiResponse<UserDTO>> CreateEmployeeAsync(UserDTO user)
         {
-            User userDTO = new User
+            var existingUser = await _userManager.FindByEmailAsync(user.Email);
+            if (existingUser != null)
             {
-                FirstName = user.FirstName,
-                LastName = user.LastName,
+                return new ApiResponse<UserDTO>
+                {
+                    success = false,
+                    message = "Email is already registered",
+                    Data = null
+                };
+            }
+
+            // Generate a random password
+            var generator = new Generator();
+            string generatedPassword = generator.GenerateRandomPassword();
+
+            var newUser = new User
+            {
+                UserName = user.UserName,
                 Name = user.Name,
                 Email = user.Email,
                 PhoneNumber = user.PhoneNumber,
@@ -101,33 +112,35 @@ namespace Infrastructure.Services
                 Position = user.Position,
                 Salary = user.Salary,
                 Address = user.Address,
-                isActive = user.IsActive,
+                IsActive = user.IsActive,
+                IsDeleted = false,
                 ProfilePictureFileName = user.ProfilePictureFileName,
             };
-            _context.Users.Add(userDTO);
 
-            await _context.SaveChangesAsync();
+            var result = await _userManager.CreateAsync(newUser, generatedPassword);
+            if (!result.Succeeded)
+            {
+                return new ApiResponse<UserDTO>
+                {
+                    success = false,
+                    message = string.Join(" ", result.Errors.Select(e => e.Description))
+                };
+            }
+            await _userManager.AddToRoleAsync(newUser, "User");
 
-            var UserDTO = _mapper.Map<UserDTO>(userDTO);
+            var userDTO = _mapper.Map<UserDTO>(newUser);
+            userDTO.Password = generatedPassword;
+            await _emailService.SendEmailAsync(
+                userDTO.Email,
+                "Email and Password",
+                $"Dear User , Your email :  " + userDTO.Email +"\n"+ "and Password is : " + userDTO.Password
+                );
+
             return new ApiResponse<UserDTO>
             {
                 success = true,
-                message = "Employee created Successfully",
-                Data = new UserDTO
-                {
-                    Id = UserDTO.Id,
-                    FirstName = UserDTO.FirstName,
-                    LastName = UserDTO.LastName,
-                    Email = UserDTO.Email,
-                    PhoneNumber = UserDTO.PhoneNumber,
-                    DOB = UserDTO.DOB,
-                    JoiningDate = UserDTO.JoiningDate,
-                    Position = UserDTO.Position,
-                    Salary = UserDTO.Salary,
-                    Address = UserDTO.Address,
-                    IsActive = UserDTO.IsActive,
-                    ProfilePictureFileName = UserDTO.ProfilePictureFileName
-                }
+                message = "Employee created successfully",
+                Data = userDTO
             };
         }
 
@@ -195,55 +208,72 @@ namespace Infrastructure.Services
         {
             try
             {
-                User? existingEmployee = await _context.Users.FindAsync(employee.Id);
+                var existingEmployee = await _userManager.FindByIdAsync(employee.Id);
+                var existingEmployeeByEmail = await _userManager.FindByEmailAsync(employee.Email); //data
+
                 if (existingEmployee == null)
                 {
                     return new ApiResponse<UserDTO>
                     {
                         success = false,
-                        message = "Employee not found"
+                        message = "User doesn't exist"
                     };
                 }
-                existingEmployee.Name = employee.Name ?? existingEmployee.Name;
-                existingEmployee.FirstName = employee.FirstName ?? existingEmployee.FirstName;
-                existingEmployee.LastName = employee.LastName ?? existingEmployee.LastName;
-                existingEmployee.Email = employee.Email ?? existingEmployee.Email;
-                existingEmployee.PhoneNumber = employee.PhoneNumber ?? existingEmployee.PhoneNumber;
-                existingEmployee.DOB = employee.DOB.HasValue ? employee.DOB.Value : existingEmployee.DOB;
 
-                existingEmployee.JoiningDate = employee.JoiningDate.HasValue ? employee.JoiningDate.Value : existingEmployee.JoiningDate;
-                existingEmployee.Position = employee.Position ?? existingEmployee.Position;
-                existingEmployee.Salary = employee.Salary.HasValue ? employee.Salary.Value : existingEmployee.Salary;
-                existingEmployee.Address = employee.Address ?? existingEmployee.Address;
-                existingEmployee.isActive = employee.IsActive.HasValue ? employee.IsActive.Value : existingEmployee.isActive;
-                //existingEmployee.ProfilePictureFileName = employee.ProfilePictureFileName ?? existingEmployee.ProfilePictureFileName;
-                _context.Users.Update(existingEmployee);
-                await _context.SaveChangesAsync();
-                UserDTO updatedEmployeeDTO = _mapper.Map<UserDTO>(existingEmployee);
-                return new ApiResponse<UserDTO>
+                if (existingEmployeeByEmail != null)
                 {
-                    success = true,
-                    message = "Employee updated Successfully",
-                    Data = new UserDTO
+                    if (employee.Id != existingEmployeeByEmail.Id)
                     {
-                        Id = updatedEmployeeDTO.Id,
-                        Name = updatedEmployeeDTO.Name,
-                        FirstName = updatedEmployeeDTO.FirstName,
-                        LastName = updatedEmployeeDTO.LastName,
-                        Email = updatedEmployeeDTO.Email,
-                        PhoneNumber = updatedEmployeeDTO.PhoneNumber,
-                        DOB = updatedEmployeeDTO.DOB,
-                        JoiningDate = updatedEmployeeDTO.JoiningDate,
-                        Position = updatedEmployeeDTO.Position,
-                        Salary = updatedEmployeeDTO.Salary,
-                        Address = updatedEmployeeDTO.Address,
-                        ProfilePictureFileName = updatedEmployeeDTO.ProfilePictureFileName,
-                        IsActive = updatedEmployeeDTO.IsActive
+                        return new ApiResponse<UserDTO>
+                        {
+                            success = false,
+                            message = "User with this Email already exists"
+                        };
                     }
-                };
+
+                }
+                    existingEmployee.Name = employee.Name ?? existingEmployee.Name;
+                    existingEmployee.FirstName = employee.FirstName ?? existingEmployee.FirstName;
+                    existingEmployee.LastName = employee.LastName ?? existingEmployee.LastName;
+                    existingEmployee.Email = employee.Email ?? existingEmployee.Email;
+                    existingEmployee.PhoneNumber = employee.PhoneNumber ?? existingEmployee.PhoneNumber;
+                    existingEmployee.DOB = employee.DOB.HasValue ? employee.DOB.Value : existingEmployee.DOB;
+
+                    existingEmployee.JoiningDate = employee.JoiningDate.HasValue ? employee.JoiningDate.Value : existingEmployee.JoiningDate;
+                    existingEmployee.Position = employee.Position ?? existingEmployee.Position;
+                    existingEmployee.Salary = employee.Salary.HasValue ? employee.Salary.Value : existingEmployee.Salary;
+                    existingEmployee.Address = employee.Address ?? existingEmployee.Address;
+                    existingEmployee.IsActive = employee.IsActive.HasValue ? employee.IsActive.Value : existingEmployee.IsActive;
+                    //existingEmployee.ProfilePictureFileName = employee.ProfilePictureFileName ?? existingEmployee.ProfilePictureFileName;
+                    _context.Users.Update(existingEmployee);
+                    await _userManager.UpdateNormalizedEmailAsync(existingEmployee);
+                    await _context.SaveChangesAsync();
+                    UserDTO updatedEmployeeDTO = _mapper.Map<UserDTO>(existingEmployee);
+                    return new ApiResponse<UserDTO>
+                    {
+                        success = true,
+                        message = "Employee updated Successfully",
+                        Data = new UserDTO
+                        {
+                            Id = updatedEmployeeDTO.Id,
+                            Name = updatedEmployeeDTO.Name,
+                            Email = updatedEmployeeDTO.Email,
+                            PhoneNumber = updatedEmployeeDTO.PhoneNumber,
+                            DOB = updatedEmployeeDTO.DOB,
+                            JoiningDate = updatedEmployeeDTO.JoiningDate,
+                            Position = updatedEmployeeDTO.Position,
+                            Salary = updatedEmployeeDTO.Salary,
+                            Address = updatedEmployeeDTO.Address,
+                            ProfilePictureFileName = updatedEmployeeDTO.ProfilePictureFileName,
+                            IsActive = updatedEmployeeDTO.IsActive
+                        }
+                    };
+
+                
+               
             }
 
-            catch(Exception e)
+            catch (Exception e)
             {
                 return new ApiResponse<UserDTO>
                 {
@@ -251,25 +281,41 @@ namespace Infrastructure.Services
                     message = "An error occurred while updating the employee."
                 };
             }
-            
+
         }
 
-        public async Task<bool> DeleteEmployeeAsync(Guid Id)
+        public async Task<ApiResponse<string>> DeleteEmployeeAsync(string Id)
         {
             try
             {
-                User? employees = await _context.Users.FindAsync(Id);
-                if (employees == null)
+                User? user = await _context.Users.FindAsync(Id);
+                if (user == null)
                 {
-                    return false;
+                    return new ApiResponse<string>
+                    {
+                        success = false,
+                        message = "Employee not found",
+                        Data = null
+                    };
                 }
-                _context.Users.Remove(employees);
+                user.IsDeleted = true;
+                _context.Users.Update(user);
                 await _context.SaveChangesAsync();
-                return true;
+                return new ApiResponse<string>
+                {
+                    success = true,
+                    message = "Employee deleted successfully",
+                    Data = null
+                } ;
             }
             catch (Exception ex)
             {
-                return false;
+                return new ApiResponse<string>
+                {
+                    success = false,
+                    message = "An error occurred while deleting the employee.",
+                    Data = null
+                };
             }
         }
 
@@ -350,7 +396,35 @@ namespace Infrastructure.Services
 
         }
 
-    }
+        public async Task<ApiResponse<UserDTO>> ChangeActiveStatus(string id)
+        {
+            var user = await _context.Users.FindAsync(id);
+            if (user == null)
+            {
+                return new ApiResponse<UserDTO>
+                {
+                    success = false,
+                    message = "Employee not found"
+                };
+            }
+            else
+            {
+                user.IsActive = !user.IsActive;
+                _context.Users.Update(user);
+                await _context.SaveChangesAsync();
+                return new ApiResponse<UserDTO>
+                {
+                    success = true,
+                    message = "Employee active status changed successfully",
+                    Data = new UserDTO
+                    {
+                        Id = user.Id,
+                        IsActive = user.IsActive
+                    }
+                };
+            }
+        }
 
+    };
 }
 

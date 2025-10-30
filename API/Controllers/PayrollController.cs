@@ -31,12 +31,7 @@ namespace API.Controllers
 
         [HttpPost("CreatePayroll")]
         public async Task<IActionResult> CreatePayroll([FromBody] PayrollDTO payroll)
-        {
-            if (payroll.NetSalary != payroll.BasicSalary + payroll.Allowances - payroll.Deductions)
-            {
-                ModelState.AddModelError("NetSalary", "Net Salary is not correctly calculated.");
-            }
-            
+        {           
             var result = await _payrollService.CreatePayrollAsync(payroll);
             return Ok(result);
         }

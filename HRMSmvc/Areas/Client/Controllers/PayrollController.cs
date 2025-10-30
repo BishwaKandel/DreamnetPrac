@@ -3,10 +3,13 @@ using Domain.Models;
 using HRMSmvc.Controllers;
 using HRMSmvc.Extensions;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
+
 
 namespace HRMSmvc.Areas.Client.Controllers
 {
     [Area("Client")]
+    [Authorize(Roles = "User")]
 
     public class PayrollController : BaseController
     {

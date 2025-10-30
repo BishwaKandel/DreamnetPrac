@@ -12,6 +12,8 @@ namespace Domain.Models
         [ForeignKey("RequestedById")]
         public User RequestedBy { get; set; }  // Should have Role = "User"
 
+        public string RequestedByEmail { get; set; }
+
         [Required(ErrorMessage = "AppliedOn date is required.")]
         public DateOnly AppliedOn { get; set; }
 
@@ -34,6 +36,8 @@ namespace Domain.Models
 
         [EnumDataType(typeof(LeaveType))]
         public LeaveType LeaveType { get; set; }
+
+        public string? RejectionReason { get; set; }
     }
 
     public enum LeaveStatus

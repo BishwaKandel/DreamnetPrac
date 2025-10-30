@@ -1,11 +1,36 @@
 ﻿$(document).ready(function () {
 
+    function showLoadingSpinner() {
+        $('#loading-container').fadeIn()
+       /* document.getElementById("loading-container").style.display = "block";*/
+    }
+
+    function hideLoadingSpinner() {
+        document.getElementById("loading-container").style.display = "none";
+    }
+
+    $('#EmployeeTable').DataTable(
+        {
+            responsive: true
+
+        });
+    $('#DeptTable').DataTable(
+        {
+            responsive: true
+
+        });
+    $('#admninAttendanceTable').DataTable(
+        {
+            responsive: true
+
+        });
+
+
     $(document).on('click', '#saveEmployeesBtn', function () {
         var deptId = $("#departmentId").val();
         var employeeIds = $("#empSelect").val(); // array of selected IDs
 
         console.log("Clicked Save! Dept:", deptId, "Employee IDs:", employeeIds); // DEBUG
-
         $.ajax({
             url: '/Admin/Department/AddEmployeesToDepartment',
             type: 'POST',
@@ -36,34 +61,121 @@
         dateFormat: "Y-m-d",  // Format of the selected date
         allowInput: true      // Allow the user to type the date manually
     });
-    
-        $('#AdminEditForm').submit(function (event) {
-            event.preventDefault(); // Prevent normal form submission
 
-            var isValid = $(this).valid();  // Check if the form is valid using jQuery Validation
-            if (!isValid) {
-                return; // If the form is invalid, do not submit the form
+    $('#AdminEditForm').validate({
+        rules: {
+            Name: {
+                required: true,
+                minlength: 3
+            },
+            UserName: {
+                required: true,
+                minlength: 3
+            },
+            Email: {
+                required: true,
+                email: true
+            },
+            PhoneNumber: {
+                required: true,
+                digits: true,
+                minlength: 10,
+                maxlength: 10
+            },
+            DOB: {
+                required: true,
+                date: true
+            },
+            JoiningDate: {
+                required: true,
+                date: true
+            },
+            Position: {
+                required: true
+            },
+            Salary: {
+                required: true,
+                number: true,
+                min: 1000
+            },
+            Address: {
+                required: true,
+                minlength: 5
+            },
+            Password: {
+                required: true,
+                minlength: 6
+            },
+            ConfirmPassword: {
+                required: true,
+                equalTo: "#yourPassword"
             }
-            var formData = new FormData(this);
-
+        },
+        messages: {
+            Name: {
+                required: "Name is required.",
+                minlength: "Name should be at least 3 characters."
+            },
+            Email: {
+                required: "Email is required.",
+                email: "Please enter a valid email address."
+            },
+            PhoneNumber: {
+                required: "Phone number is required.",
+                digits: "Phone number must contain only digits.",
+                minlength: "Phone number must be 10 digits.",
+                maxlength: "Phone number must be 10 digits."
+            },
+            DOB: {
+                required: "Date of birth is required.",
+                date: "Please enter a valid date."
+            },
+            JoiningDate: {
+                required: "Joining date is required.",
+                date: "Please enter a valid date."
+            },
+            Position: {
+                required: "Position is required."
+            },
+            Salary: {
+                required: "Salary is required.",
+                number: "Please enter a valid number.",
+                min: "Salary must be at least 1000."
+            },
+            Address: {
+                required: "Address is required.",
+                minlength: "Address must be at least 5 characters long."
+            }
+        },
+        errorClass: 'is-invalid',
+        validClass: 'is-valid',
+        errorPlacement: function (error, element) {
+            error.addClass('text-danger');
+            error.insertAfter(element);
+        },
+        submitHandler: function (form) {
             // Determine the action URL dynamically
-            var actionUrl = $(this).attr('action'); // This will be "/Admin/Dashboard/Create" or "/Admin/Dashboard/Edit"
-
+            var actionUrl = $(form).attr('action'); // This will be "/Admin/Dashboard/Create" or "/Admin/Dashboard/Edit"
+            showLoadingSpinner();
             $.ajax({
                 type: 'POST',
                 url: actionUrl,
-                data: formData,               // Use FormData instead of serialize()
-                processData: false,           // Required for FormData
-                contentType: false,
+                data: $(form).serialize(),
                 success: function (response) {
+                    hideLoadingSpinner();
                     if (response && response.success) {
+                        
                         Swal.fire({
                             title: "Success!",
                             text: response.message,
                             icon: "success",
                             confirmButtonText: "OK"
-                        }).then(function () {
-                            window.location.href = '/Admin/Dashboard/Index';
+                        }).then(function (result) {
+                            // Check if the user clicked "OK"
+                            if (result.isConfirmed) {
+                                // Redirect to dashboard after clicking "OK"
+                                window.location.href = '/Admin/Dashboard/Index';
+                            }
                         });
                     } else {
                         Swal.fire({
@@ -75,6 +187,7 @@
                     }
                 },
                 error: function (xhr, status, error) {
+                    hideLoadingSpinner();
                     console.error('Error occurred:', error);
                     Swal.fire({
                         title: 'Error!',
@@ -84,58 +197,196 @@
                     });
                 }
             });
-        });
-
-    $('#AdminEditForm').validate({
-        rules: {
-            // Define your custom validation rules here
-            Name: {
-                required: true,
-                minlength: 5
-            },
-            Description: {
-                required: true,
-                maxlength: 500
-            },
-            // You can add more rules for other form fields as needed
-        },
-        messages: {
-            // Custom error messages
-            Name: {
-                required: "Name is required.",
-                minlength: "Name should be at least 3 characters."
-            },
-            Description: {
-                required: "Description is required.",
-                maxlength: "Description cannot exceed 500 characters."
-            }
-        },
-        errorClass: 'is-invalid',  // Optional: Custom error class for invalid fields
-        validClass: 'is-valid'     // Optional: Custom valid class for valid fields
+        }
     });
 
-        $(document).on("click", ".delete-btn", function () {
-        var id = $(this).data("id");
 
-        if (confirm("Are you sure you want to delete this Department?")) {
-            $.ajax({
-                type: 'POST',
-                url: '@Url.Action("Department", "Delete")',
-                data: { id: id },
-                success: function (response) {
-                    if (response.success) {
-                        alert(response.message);
-                        location.reload(); // refresh table
+    //Mark active Button
+    $(document).on("click", ".activeBtn", function () {
+        var userId = $(this).data("id");
+       
+        $.ajax({
+            success: function (response) {
+                Swal.fire({
+                    title: "Are you sure?",
+                    //text: "You won't be able to revert this!",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#3085d6",
+                    cancelButtonColor: "#d33",
+                    confirmButtonText: "Yes !"
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        showLoadingSpinner();
+                        $.ajax({
+                            type: 'POST',
+                            url: '/admin/Dashboard/ChangeStatus',
+                            data: { id : userId },
+                            success: function (response) {
+                                hideLoadingSpinner();
+                                Swal.fire({
+                                    title: "Success!",
+                                    text: response.message,
+                                    icon: "success",
+                                    confirmButtonText: "OK"
+                                }).then(function () {
+                                    window.location.href = '/Admin/Dashboard/Index';
+                                });
+                            },
+                            error: function (xhr, status, error) {
+                                console.error('Error occurred ', error);
+                                hideLoadingSpinner();
+                                Swal.fire({
+                                    title: 'Error!',
+                                    text: 'An unexpected error occurred',
+                                    icon: 'error',
+                                    confirmButtonText: 'OK'
+                                });
+                            }
+                        });
                     } else {
-                        alert(response.message);
+                        window.location.href = '/Admin/Dashboard/Index';
                     }
-                },
-                error: function () {
-                    alert("Something went wrong!");
-                }
-            });
-        }
+                });
+            },
+            error: function (xhr, status, error) {
+                hideLoadingSpinner();
+                console.error('Error occurred while fetching leave data:', error);
+                Swal.fire({
+                    title: 'Error!',
+                    text: 'An unexpected error occurred.',
+                    icon: 'error',
+                    confirmButtonText: 'OK'
+                });
+            }
         });
+    });
+
+
+    //delete employee button
+    $(document).on("click", ".deleteEmpBtn", function () {
+        var userId = $(this).data("id");
+        $.ajax({
+            success: function (response) {
+                Swal.fire({
+                    title: "Are you sure?",
+                    //text: "You won't be able to revert this!",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#d33",
+                    cancelButtonColor: "#3085d6",
+                    confirmButtonText: "Yes !"
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        showLoadingSpinner();
+                        $.ajax({
+                            type: 'POST',
+                            url: '/admin/Dashboard/Delete',
+                            data: { id: userId },
+                            success: function (response) {
+                                hideLoadingSpinner();
+
+                                Swal.fire({
+                                    title: "Success!",
+                                    text: response.message,
+                                    icon: "success",
+                                    confirmButtonText: "OK"
+                                }).then(function () {
+                                    window.location.href = '/Admin/Dashboard/Index';
+                                });
+                            },
+                            error: function (xhr, status, error) {
+                                console.error('Error occurred :', error);
+                                hideLoadingSpinner();
+
+                                Swal.fire({
+                                    title: 'Error!',
+                                    text: 'An unexpected error occurred.',
+                                    icon: 'error',
+                                    confirmButtonText: 'OK'
+                                });
+                            }
+                        });
+                    } else {
+                        hideLoadingSpinner();
+
+                        window.location.href = '/Admin/Dashboard/Index';
+
+                    }
+                });
+            },
+            error: function (xhr, status, error) {
+                hideLoadingSpinner();
+                console.error('Error occurred while fetching leave data:', error);
+                Swal.fire({
+                    title: 'Error!',
+                    text: 'An unexpected error occurred.',
+                    icon: 'error',
+                    confirmButtonText: 'OK'
+                });
+            }
+        });
+    });
+
+    $(document).on("click", ".deleteDeptBtn", function () {
+        var deptId = $(this).data("id");
+        $.ajax({
+            success: function (response) {
+                Swal.fire({
+                    title: "Are you sure?",
+                    //text: "You won't be able to revert this!",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#d33",
+                    cancelButtonColor: "#3085d6",
+                    confirmButtonText: "Yes !"
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        showLoadingSpinner();
+                        $.ajax({
+                            type: 'POST',
+                            url: '/admin/Department/Delete',
+                            data: { deptId: deptId },
+                            success: function (response) {
+                                hideLoadingSpinner();
+                                Swal.fire({
+                                    title: "Success!",
+                                    text: response.message,
+                                    icon: "success",
+                                    confirmButtonText: "OK"
+                                }).then(function () {
+                                    window.location.href = '/Admin/Department/Index';
+                                });
+                            },
+                            error: function (xhr, status, error) {
+                                hideLoadingSpinner();
+                                console.error('Error occurred :', error);
+                                Swal.fire({
+                                    title: 'Error!',
+                                    text: 'An unexpected error occurred.',
+                                    icon: 'error',
+                                    confirmButtonText: 'OK'
+                                });
+                            }
+                        });
+                    } else {
+                        window.location.href = '/Admin/Department/Index';            
+                    }
+                });
+            },
+            error: function (xhr, status, error) {
+                hideLoadingSpinner();
+                console.error('Error occurred while fetching leave data:', error);
+                Swal.fire({
+                    title: 'Error!',
+                    text: 'An unexpected error occurred.',
+                    icon: 'error',
+                    confirmButtonText: 'OK'
+                });
+            }
+        });
+    });
+
 
     //$(document).on("click", "#AddButton", function () {
     //    var deptId = $(this).data("id"); // Get deptId from button
@@ -187,102 +438,181 @@
 
 
     // Department Edit Form
-    $('#DeptEditForm').submit(function (event) {
-        event.preventDefault(); // Prevent normal form submission
-        var formData = new FormData(this);
+    //$('#DeptEditForm123').on('submit', function (event) {
+    //    event.preventDefault(); // Prevent normal form submission
+    //    var isValid = $(this).valid();  // Check if the form is valid using jQuery Validation
+    //    if (!isValid) {
+    //        return; // If the form is invalid, do not submit the form
+    //    }
 
-        // Determine the action URL dynamically
-        var actionUrl = $(this).attr('action'); // This will be "/Admin/Dashboard/Create" or "/Admin/Dashboard/Edit"
+    //    // Determine the action URL dynamically
+    //    var actionUrl = $(this).attr('action'); // This will be "/Admin/Dashboard/Create" or "/Admin/Dashboard/Edit"
 
-        $.ajax({
-            type: 'POST',
-            url: actionUrl,
-            data: formData,               // Use FormData instead of serialize()
-            processData: false,           // Required for FormData
-            contentType: false,
-            success: function (response) {
-                if (response && response.success) {
+    //    $.ajax({
+    //        type: 'POST',
+    //        url: actionUrl,
+    //        data: $(this).serialize(),
+    //        success: function (response) {
+    //            if (response.success) {
+    //                Swal.fire({
+    //                    title: "Success!",
+    //                    text: response.message, // Display the message from the response
+    //                    icon: "success",
+    //                    confirmButtonText: "OK"
+    //                }).then(function (result) {
+    //                    if (result.isConfirmed) {
+    //                        // Redirect to department index page after clicking OK
+    //                        window.location.href = '/Admin/Department/Index';
+    //                    }
+    //                });
+    //            } else {
+    //                Swal.fire({
+    //                    title: 'Failed!',
+    //                    text: response.message || 'Please try again.',
+    //                    icon: 'error',
+    //                    confirmButtonText: 'OK'
+    //                });
+    //            }
+    //        },
+    //        error: function (xhr, status, error) {
+    //            console.error('Error occurred:', error);
+    //            Swal.fire({
+    //                title: 'Error!',
+    //                text: 'An unexpected error occurred.',
+    //                icon: 'error',
+    //                confirmButtonText: 'OK'
+    //            });
+    //        }
+    //    });
+    //});
+
+
+
+
+    //Department Form Validation
+    $("#DeptEditForm").validate({
+        rules: {
+            Name: {
+                required: true,
+                minlength: 5
+            },
+            Location: {
+                required: true,
+                minlength: 5
+            },
+            Description: {
+                required: true,
+                minlength: 5
+            }
+        },
+        messages: {
+            Name: {
+                required: "Please enter a department name",
+                minlength: "Name must be at least 5 characters long"
+            },
+            Location: {
+                required: "Please enter the location",
+                minlength: "Location must be at least 5 characters long"
+            },
+            Description: {
+                required: "Please enter a description",
+                minlength: "Description must be at least 5 characters long"
+            }
+        },
+        errorClass: "text-danger",
+        errorPlacement: function (error, element) {
+            error.insertAfter(element); // place error below each input
+        },
+        highlight: function (element) {
+            $(element).addClass("is-invalid");
+        },
+        unhighlight: function (element) {
+            $(element).removeClass("is-invalid");
+        },
+        submitHandler: function (form) {
+            // Optional: You can do additional custom validation here before submission
+            /*event.preventDefault();*/ // Prevent normal form submission
+            //var isValid = $(this).valid();  // Check if the form is valid using jQuery Validation
+            //if (!isValid) {
+            //    return; // If the form is invalid, do not submit the form
+            //}
+
+            // Determine the action URL dynamically
+            var actionUrl = $(form).attr('action'); // This will be "/Admin/Dashboard/Create" or "/Admin/Dashboard/Edit"
+            showLoadingSpinner();
+            $.ajax({
+                type: 'POST',
+                url: actionUrl,
+                data: $(form).serialize(),
+                success: function (response) {
+                    hideLoadingSpinner();
+                    if (response.success) {
+                        Swal.fire({
+                            title: "Success!",
+                            text: response.message, // Display the message from the response
+                            icon: "success",
+                            confirmButtonText: "OK"
+                        }).then(function (result) {
+                            if (result.isConfirmed) {
+                                // Redirect to department index page after clicking OK
+                                window.location.href = '/Admin/Department/Index';
+                            }
+                        });
+                    } else {
+                        Swal.fire({
+                            title: 'Failed!',
+                            text: response.message || 'Please try again.',
+                            icon: 'error',
+                            confirmButtonText: 'OK'
+                        });
+                    }
+                },
+                error: function (xhr, status, error) {
+                    console.error('Error occurred:', error);
+                    hideLoadingSpinner();
                     Swal.fire({
-                        title: "Success!",
-                        text: response.message,
-                        icon: "success",
-                        confirmButtonText: "OK"
-                    }).then(function () {
-                        window.location.href = '/Admin/Department/Index';
-                    });
-                } else {
-                    Swal.fire({
-                        title: 'Failed!',
-                        text: response ? response.message : 'Please try again.',
+                        title: 'Error!',
+                        text: 'An unexpected error occurred.',
                         icon: 'error',
                         confirmButtonText: 'OK'
                     });
                 }
+            });
+        }
+    });
+
+    
+
+    $(document).on("click", "#logoutBtn", function (e) {
+        showLoadingSpinner();
+        $.ajax({
+            type: "POST",            
+            url: "/Auth/Logout",     
+            success: function (response) {
+                hideLoadingSpinner();
+                Swal.fire({
+                    title: "Logged out!",
+                    icon: "success",
+                    confirmButtonText: "OK"
+                }).then(function () {
+                    window.location.href = '/Auth/login';  
+                });
             },
             error: function (xhr, status, error) {
-                console.error('Error occurred:', error);
+                console.error("Error occurred during logout:", error);
+                hideLoadingSpinner();
                 Swal.fire({
-                    title: 'Error!',
-                    text: 'An unexpected error occurred.',
-                    icon: 'error',
-                    confirmButtonText: 'OK'
+                    title: "Error!",
+                    text: "An unexpected error occurred during logout.",
+                    icon: "error",
+                    confirmButtonText: "OK"
                 });
             }
         });
     });
 
-    $(document).on("click", "#logoutBtn", function (e) {
-        e.preventDefault();
-        Swal.fire({
-            title: "Logout?",
-            icon: "warning",
-            showCancelButton: true,
-            confirmButtonColor: "#3085d6",
-            cancelButtonColor: "#d33",
-            confirmButtonText: "Yes Logout!"
-        }).then((result) => {
-            if (result.isConfirmed) {
-                $.ajax({
-                    type: "POST",
-                    url: "/Auth/Logout",
-                    success: function (response) {
-                        if (response.success) {
-                            Swal.fire({
-                                title: "Logged out!",
-                                icon: "success",
-                                confirmButtonText: "OK",
-                            }).then(() => {
-                                window.location.href = '/Auth/login';
-                            });
-                        } else {
-                            Swal.fire({
-                                title: "Error!",
-                                text: response.message || "Please try again.",
-                                icon: "error",
-                                confirmButtonText: "OK",
-                            });
-                        }
-                    },
-                    error: function (xhr, status, error) {
-                        console.error("Error occurred:", error);
-                        Swal.fire({
-                            title: "Error!",
-                            text: "An unexpected error occurred.",
-                            icon: "error",
-                            confirmButtonText: "OK",
-                        });
-                    },
-                });
-            } else {
-                Swal.fire({
-                    title: 'Cancelled',
-                    text: 'Logout has been cancelled.',
-                    icon: 'info',
-                    confirmButtonText: 'OK'
-                });
-            }
-        });
-    });
+
+
 
 
 });

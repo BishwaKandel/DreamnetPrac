@@ -45,14 +45,23 @@ namespace HRMSmvc.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> RejectLeave(Guid leaveRequestId)
+        public async Task<IActionResult> RejectLeave(Guid leaveRequestId, string rejectionReason)
         {
-            var response = await PostAsync<ApiResponse<LeaveRequestDTO>>($"/api/Leave/RejectLeave?leaveRequestId={leaveRequestId}", null , null);
+            var request = new RejectLeaveRequestDTO
+            {
+                LeaveRequestId = leaveRequestId,
+                RejectionReason = rejectionReason
+            };
+
+            var response = await PostAsync<ApiResponse<LeaveRequestDTO>>("/api/Leave/RejectLeave", request, null);
+
             if (response == null || !response.success)
             {
                 ModelState.AddModelError(string.Empty, "Error rejecting leave request.");
             }
+
             return RedirectToAction("ViewAllLeaves");
         }
+
     }
 }

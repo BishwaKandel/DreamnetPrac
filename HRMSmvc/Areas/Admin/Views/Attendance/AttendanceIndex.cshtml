@@ -10,9 +10,10 @@
 	Layout = "_Layout";
 }
 
-<div class="card-body">
-	<h5 class="card-title">Attendance History of @Model.Name</h5>
 
+<div class="card">
+	<div class="card-body">
+		<h3 class="card-title">Attendance History of @Model.Name</h3>
 	@* <div class="card">
 		<div class="row mb-3 ma-3">
 			<div class="col-sm-6">
@@ -40,7 +41,7 @@
 	</div> *@
 
 	<!-- Default Table -->
-	<table class="table" id="AttendanceTable">
+	<table class="table" id="admninAttendanceTable">
 		<thead>
 			<tr>
 				@* <th scope="col">ID</th> *@
@@ -62,16 +63,36 @@
 					<td>@row.CheckInTime</td>
 					<td>@row.CheckOutTime</td>
 					<td>@row.TotalHoursWorked</td>
-					<td>@row.status</td>
+						<td>
+							@if (row.status == AttendanceStatus.Present)
+							{
+								<span class="badge bg-success">Present</span>
+							}
+							else if (row.status == AttendanceStatus.OnLeave)
+							{
+								<span class="badge bg-info">On Leave</span>
+							}
+							else if (row.status == AttendanceStatus.Late)
+							{
+								<span class="badge bg-danger">Late</span>
+							}
+							else
+							{
+								<span class="badge bg-secondary">Unknown</span>
+							}
+
+						</td>
 				</tr>
 				counter++;
 			}
 		</tbody>
 	</table>
 </div>
+</div>
 <a asp-controller="Dashboard" asp-action="Index" asp-area="Admin" class="btn btn-primary">Back</a>
 
-</div>
+
+
 
 
 @section Scripts {

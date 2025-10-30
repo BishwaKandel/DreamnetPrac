@@ -38,6 +38,8 @@
     <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.22.3/dist/sweetalert2.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/metismenu/dist/metisMenu.min.css">
 
 
 
@@ -59,12 +61,14 @@
 </head>
 
 <body>
+    @await Html.PartialAsync("_LoadingPartial")
+
 
     <!-- ======= Header ======= -->
     <header id="header" class="header fixed-top d-flex align-items-center">
 
         <div class="d-flex align-items-center justify-content-between">
-            <a href="index.html" class="logo d-flex align-items-center">
+            <a class="logo d-flex align-items-center">
                 @* <img src="assets/img/logo.png" alt=""> *@
                 <span class="d-none d-lg-block">HRMS</span>
             </a>
@@ -81,7 +85,7 @@
         </div><!-- End Search Bar --> *@
 
         <nav class="header-nav ms-auto">
-            <ul class="d-flex align-items-center">
+            <ul class="d-flex align-items-center" >
 
                 @* <li class="nav-item d-block d-lg-none">
                     <a class="nav-link nav-icon search-bar-toggle " href="#">
@@ -299,10 +303,10 @@
     <!-- ======= Sidebar ======= -->
     <aside id="sidebar" class="sidebar">
 
-        <ul class="sidebar-nav" id="sidebar-nav">
+        <ul class="sidebar-nav" id="metismenu">
 
             <li class="nav-item">
-                <a class="nav-link" asp-action="UserIndex" asp-controller="Dashboard" asp-area="Client">
+                <a class="nav-link collapsed" asp-action="UserIndex" asp-controller="Dashboard" asp-area="Client">
                     <i class="fa-solid fa-chart-line"></i> Dashboard
                 </a>
             </li>
@@ -312,188 +316,29 @@
                 <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
                     <i class="fa-solid fa-user"></i><span>Employee</span>
                 </a>
-                <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <ul id="components-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
                     <li>
-
-                        @* <a asp-action="Index" asp-controller="Employee">Directory</a> *@
-                        @* <i class="bi bi-circle"></i>Directory<span></span> *@
-
-                    </li>
-                    <li>
-                        @* <a asp-action="CreateorEdit" asp-controller="Employee">Add New</a> *@
-
-                    </li>
-                    <li>
-
                         <a asp-action="LeaveApply" asp-controller="Leave" asp-area="Client">Apply Leave</a>
-                        @* <i class="bi bi-circle"></i>Directory<span></span> *@
-
                     </li>
                     <li>
                         <a asp-action="MyLeaves" asp-controller="Leave" asp-area="Client">My Leaves</a>
                     </li>
                     <li>
-                        <a asp-action ="AttendanceList" asp-controller="Dashboard" asp-area="Client">My Attendance</a>
+                        <a asp-action="AttendanceList" asp-controller="Dashboard" asp-area="Client">My Attendance</a>
                     </li>
-                    @*
-                    <li>
-                        <a href="components-buttons.html">
-                            <i class="bi bi-circle"></i><span>Buttons</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="components-cards.html">
-                            <i class="bi bi-circle"></i><span>Cards</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="components-carousel.html">
-                            <i class="bi bi-circle"></i><span>Carousel</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="components-list-group.html">
-                            <i class="bi bi-circle"></i><span>List group</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="components-modal.html">
-                            <i class="bi bi-circle"></i><span>Modal</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="components-tabs.html">
-                            <i class="bi bi-circle"></i><span>Tabs</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="components-pagination.html">
-                            <i class="bi bi-circle"></i><span>Pagination</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="components-progress.html">
-                            <i class="bi bi-circle"></i><span>Progress</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="components-spinners.html">
-                            <i class="bi bi-circle"></i><span>Spinners</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="components-tooltips.html">
-                            <i class="bi bi-circle"></i><span>Tooltips</span>
-                        </a>
-                    </li> *@
                 </ul>
             </li>
-            <!-- End Components Nav -->
 
-            @* <li class="nav-item">
-                <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
-                    <i class="fa-solid fa-building"></i></i><span>Department</span>
-                </a>
-                <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-                    <li>
-                        <a href="forms-elements.html">
-                            <i class="bi bi-circle"></i><span>Directory</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="forms-layouts.html">
-                            <i class="bi bi-circle"></i><span>Add New</span>
-                        </a>
-                    </li>
-                    
-                    
-                    
-                    <li>
-                        <a href="forms-validation.html">
-                            <i class="bi bi-circle"></i><span>Profiles</span>
-                        </a>
-                    </li>
-                </ul>
-            </li><!-- End Forms Nav --> *@
-
-             <li class="nav-item">
+            <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
                     <i class="fa-solid fa-money-bill-1-wave"></i><span>Payroll</span>
                 </a>
-                <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <ul id="tables-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
                     <li>
-
                         <a asp-action="MyPayroll" asp-controller="Payroll" asp-area="Client">My Payrolls</a>
-                        @* <i class="bi bi-circle"></i>Directory<span></span> *@
-
-                    </li>
-                    
-                </ul>
-            </li><!-- End Tables Nav --> 
-
-            @* <li class="nav-item">
-                <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
-                    <i class="fa-solid fa-clipboard-user"></i><span>Attendance</span>
-                </a>
-                <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-                    <li>
-                        <a href="charts-chartjs.html">
-                            <i class="bi bi-circle"></i><span>Chart.js</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="charts-apexcharts.html">
-                            <i class="bi bi-circle"></i><span>ApexCharts</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="charts-echarts.html">
-                            <i class="bi bi-circle"></i><span>ECharts</span>
-                        </a>
                     </li>
                 </ul>
-            </li><!-- End Charts Nav --> *@
-
-            @* <li class="nav-item">
-                <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
-                    <i class="fa-solid fa-comment-dots"></i><span>Leave Requests</span>
-                </a>
-                <ul id="icons-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-                    <li>
-                        <a href="icons-bootstrap.html">
-                            <i class="bi bi-circle"></i><span>Bootstrap Icons</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="icons-remix.html">
-                            <i class="bi bi-circle"></i><span>Remix Icons</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="icons-boxicons.html">
-                            <i class="bi bi-circle"></i><span>Boxicons</span>
-                        </a>
-                    </li>
-                </ul>
-            </li><!-- End Icons Nav --> *@
-
-            @* <li class="nav-heading">Pages</li>
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="users-profile.html">
-                    <i class="bi bi-person"></i>
-                    <span>Profile</span>
-                </a>
-            </li><!-- End Profile Page Nav --> *@
-
-            @* <li class="nav-item">
-                <a class="nav-link collapsed" href="pages-faq.html">
-                    <i class="bi bi-question-circle"></i>
-                    <span>F.A.Q</span>
-                </a>
-            </li><!-- End F.A.Q Page Nav --> *@
-
-
+            </li>
 
         </ul>
 
@@ -528,10 +373,27 @@
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.22.3/dist/sweetalert2.all.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.20.0/dist/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/metismenu"></script>
+
 
     <!-- Template Main JS File -->
 	<script src="~/js/main.js"></script>
 	<script src="~/js/admin.js"></script>
+
+    <script>
+             $(document).on('show.bs.dropdown', 'table .dropdown', function () {
+            $(this).css({
+                position: 'static',
+            })
+        });
+        $(document).on('hidden.bs.dropdown', 'table .dropdown', function () {
+            $(this).css({
+                position: 'relative',
+            })
+        });
+    </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 

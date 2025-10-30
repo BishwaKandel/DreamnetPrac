@@ -136,6 +136,9 @@
                   },
                   "ConfirmPassword": {
                     "type": "string"
+                  },
+                  "LeaveType": {
+                    "$ref": "#/components/schemas/LeaveType"
                   }
                 }
               },
@@ -174,6 +177,9 @@
                   "style": "form"
                 },
                 "ConfirmPassword": {
+                  "style": "form"
+                },
+                "LeaveType": {
                   "style": "form"
                 }
               }
@@ -347,7 +353,7 @@
       }
     },
     "/api/Department/DeleteDept": {
-      "delete": {
+      "post": {
         "tags": [
           "Department"
         ],
@@ -356,7 +362,8 @@
             "name": "id",
             "in": "query",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "format": "uuid"
             }
           }
         ],
@@ -635,7 +642,7 @@
       }
     },
     "/api/Employee/DeleteEmp": {
-      "delete": {
+      "post": {
         "tags": [
           "Employee"
         ],
@@ -644,8 +651,7 @@
             "name": "id",
             "in": "query",
             "schema": {
-              "type": "string",
-              "format": "uuid"
+              "type": "string"
             }
           }
         ],
@@ -680,6 +686,27 @@
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Employee/ChangeActiveStatus": {
+      "post": {
+        "tags": [
+          "Employee"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -800,16 +827,25 @@
         "tags": [
           "Leave"
         ],
-        "parameters": [
-          {
-            "name": "leaveRequestId",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "format": "uuid"
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RejectLeaveRequestDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RejectLeaveRequestDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RejectLeaveRequestDTO"
+              }
             }
           }
-        ],
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -1022,6 +1058,10 @@
             "type": "string",
             "nullable": true
           },
+          "requestedByEmail": {
+            "type": "string",
+            "nullable": true
+          },
           "appliedOn": {
             "type": "string",
             "format": "date"
@@ -1128,6 +1168,20 @@
         },
         "additionalProperties": false
       },
+      "RejectLeaveRequestDTO": {
+        "type": "object",
+        "properties": {
+          "leaveRequestId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "rejectionReason": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "UserDTO": {
         "type": "object",
         "properties": {
@@ -1139,11 +1193,7 @@
             "type": "string",
             "nullable": true
           },
-          "firstName": {
-            "type": "string",
-            "nullable": true
-          },
-          "lastName": {
+          "userName": {
             "type": "string",
             "nullable": true
           },
@@ -1185,6 +1235,21 @@
           },
           "profilePictureFileName": {
             "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          },
+          "isDeleted": {
+            "type": "boolean"
+          },
+          "isCheckedIn": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "isCheckedOut": {
+            "type": "boolean",
             "nullable": true
           }
         },

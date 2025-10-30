@@ -2,13 +2,14 @@
 using Domain.Models;
 using HRMSmvc.Controllers;
 using HRMSmvc.Extensions;
-using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 
 namespace HRMSmvc.Areas.Client.Controllers
 {
     [Area("Client")]
+    [Authorize(Roles = "User")]
     public class DashboardController : BaseController
     {
         private readonly HttpClient client;
@@ -20,8 +21,12 @@ namespace HRMSmvc.Areas.Client.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> UserIndex()
+        public async Task<IActionResult> UserIndex(int? mode)
         {
+            if(mode==null)
+            {
+                mode = 0;
+            }
             // Get the logged-in user's ID from claims
             var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value;
 
@@ -39,6 +44,7 @@ namespace HRMSmvc.Areas.Client.Controllers
                 return View("Error", "User not found");
             }
             ViewData["APIurl"] = _configuration.GetValue<string>("ApiSettings:BaseUrl");
+            ViewBag.mode = mode;
 
             return View(response.Data);  // Pass the user model to the view
         }

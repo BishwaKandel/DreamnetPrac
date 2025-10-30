@@ -12,7 +12,7 @@ namespace HRMSmvc.Controllers
 
         private readonly IHttpContextAccessor _httpContextAccessor;
 
-        public AuthController(IConfiguration configuration, IHttpClientFactory httpClientFactory, IHttpContextAccessor httpContextAccessor,  ILogger<BaseController> logger) : base(configuration, httpContextAccessor , logger)
+        public AuthController(IConfiguration configuration, IHttpClientFactory httpClientFactory, IHttpContextAccessor httpContextAccessor, ILogger<BaseController> logger) : base(configuration, httpContextAccessor, logger)
         {
             _httpContextAccessor = httpContextAccessor;
 
@@ -52,7 +52,7 @@ namespace HRMSmvc.Controllers
                     {
                         new Claim(ClaimTypes.Hash, loginResponse.Token),  // User Id claim
                         new Claim(ClaimTypes.NameIdentifier, loginResponse.Id),  // Id claim
-                        new Claim(ClaimTypes.Name, loginResponse.Name ),
+                        new Claim(ClaimTypes.Name, loginResponse.Name??loginResponse.Email ),
                         new Claim(ClaimTypes.Email, loginResponse.Email)
                     };
 
@@ -104,6 +104,14 @@ namespace HRMSmvc.Controllers
             var response = await PostAsync<ApiResponse<string>>("/api/Auth/Logout", null, null);
             Response.Cookies.Delete(".AspNetCore.Cookies");
             return Json(response);
+        }
+
+        [HttpGet]
+        public IActionResult AccessDenied(string returnUrl = null)
+        {
+            // You can pass the ReturnUrl to the view if needed
+            ViewBag.ReturnUrl = returnUrl;
+            return View();
         }
     }
 }

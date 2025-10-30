@@ -62,37 +62,45 @@
         </div> *@
 
 
-        
+
     
       <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
+
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
-
               <div class="card mb-3">
+                    
+
 
                 <div class="card-body">
 
                   <div class="pt-4 pb-2">
                     <h5 class="card-title text-center pb-0 fs-4">Login to Your Account</h5>
-                    <p class="text-center small">Enter your username & password to login</p>
+                    <p class="text-center small">Enter your email & password to login</p>
                   </div>
 
                         <form id="loginForm" asp-action="Login" method="post">
                             <div class="col-12">
-                                <label for="yourUsername" class="form-label">Username</label>
+                                <label for="yourUsername" class="form-label">Email</label>
                                 <div class="input-group has-validation">
                                     <span id="inputGroupPrepend"></span>
-                                    <input asp-for="Email" class="form-control" id="yourUsername" required>
+                                    <input asp-for="Email" class="form-control" id="yourUsername" autocomplete="off" required>
                                     <div class="invalid-feedback">Please enter your username.</div>
                                 </div>
                             </div>
 
                             <div class="col-12">
                                 <label for="yourPassword" class="form-label">Password</label>
-                                <input asp-for="Password" class="form-control" id="yourPassword" required>
+                                <div class="input-group">
+                                    <input asp-for="Password" class="form-control" id="yourPassword" type="password" autocomplete="off" required>
+                                    <span class="input-group-text" id="togglePassword">
+                                        <i class="fas fa-eye"></i> 
+                                    </span>
+                                </div>
                                 <div class="invalid-feedback">Please enter your password!</div>
                             </div>
+
 
                             <div class="col-12">
                                 <button class="btn btn-primary w-100 mt-3 mb-3" type="submit">Login</button>
@@ -103,6 +111,7 @@
                         </form>
 
                 </div>
+                   
               </div>
 
             </div>
@@ -111,12 +120,38 @@
 
       </section>
 
+
 @section Scripts {
     <script>
             $(document).ready(function() {
+                    function showLoadingSpinner() {
+            document.getElementById("loading-container").style.display = "block";
+        }
+
+        function hideLoadingSpinner() {
+            document.getElementById("loading-container").style.display = "none";
+        }
+            $(document).ready(function() {
+            $('#togglePassword').on('click', function() {
+                var passwordField = $('#yourPassword');
+                var icon = $(this).find('i');
+
+                // Toggle the type between 'password' and 'text'
+                if (passwordField.attr('type') === 'password') {
+                    passwordField.attr('type', 'text');  // Show password
+                    icon.removeClass('fa-eye');          // Remove eye icon
+                    icon.addClass('fa-eye-slash');       // Add eye-slash icon
+                } else {
+                    passwordField.attr('type', 'password'); // Hide password
+                    icon.removeClass('fa-eye-slash');        // Remove eye-slash icon
+                    icon.addClass('fa-eye');                 // Add eye icon
+                }
+            });
+        });
+
             $('#loginForm').submit(function(event) {
             event.preventDefault(); // Prevent default form submission
-
+            showLoadingSpinner();
             // Send the AJAX request
             $.ajax({
                 type: 'POST',
@@ -125,31 +160,27 @@
 
                 dataType: 'json', // Expect JSON response
                 success: function(response) {
+                    hideLoadingSpinner();
                     console.log('Response:', response); // For debugging
-                    if (response.success) {                                //Changes Data to LOGIN
-                        // Show success message with SweetAlert
-                        Swal.fire({
-                            title: "Login successful!",
-                            icon: "success",
-                            confirmButtonText: "OK",
-                        }).then((result) => {
-                            // If user clicks 'OK', redirect to login page
-                            if (result.isConfirmed) {
-                                window.location.href = response.message; // Redirect to login
-                            }
-                        });
-                    } else {
+                    if (response.success) 
+                    {                                //Changes Data to LOGIN
+                        window.location.href = response.message;
+                    } 
+                    else 
+                    {
+                        hideLoadingSpinner();
                         // If registration fails, show the error message from the server
                         Swal.fire({
                             title: 'Login Failed!',
                             text: response.message || 'Please try again.',
                             icon: 'error',
                             confirmButtonText: 'OK'
-                        });
+                    });
                     }
                 },
                 error: function(xhr, status, error) {
                     console.error('Error occurred:', error);
+                    hideLoadingSpinner();
                     Swal.fire({
                         title: 'Login Failed!',
                         text: 'An unexpected error occurred. Please try again later.',
@@ -163,5 +194,16 @@
         });
     </script>
 }
+
+ @* // Show success message with SweetAlert
+                        Swal.fire({
+                            title: "Login successful!",
+                            icon: "success",
+                            confirmButtonText: "OK",
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                window.location.href = response.message;
+                            }
+                        }); *@
 
 

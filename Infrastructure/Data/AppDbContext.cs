@@ -31,10 +31,9 @@ namespace Infrastructure.Data
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            base.OnModelCreating(builder);
-
+            base.OnModelCreating(builder); // Keep this to configure Identity tables
+            //builder.Seed();
         }
-
-
     }
 }
+ 

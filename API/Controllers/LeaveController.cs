@@ -72,9 +72,9 @@ namespace API.Controllers
         }
 
         [HttpPost("RejectLeave")]
-        public async Task<IActionResult> RejectLeave(Guid leaveRequestId)
+        public async Task<IActionResult> RejectLeave([FromBody] RejectLeaveRequestDTO request)
         {
-            var rejectedLeave = await _leaveService.RejectLeave(leaveRequestId);
+            var rejectedLeave = await _leaveService.RejectLeave(request);
             if (rejectedLeave == null)
             {
                 return NotFound();

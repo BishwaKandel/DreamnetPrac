@@ -20,7 +20,7 @@ namespace HRMSmvc.Areas.Admin.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            var employee = await GetAsync<ApiResponse<List<UserDTO>>> ("/api/Employee/GetEmp");
+            var employee = await GetAsync<ApiResponse<List<UserDTO>>>("/api/Employee/GetEmp");
 
             if (employee == null)
             {
@@ -67,28 +67,21 @@ namespace HRMSmvc.Areas.Admin.Controllers
         {
             var response = await PostAsync<ApiResponse<UserDTO>>("/api/Employee/UpdateEmp", employee, null);
 
-            return Json(response);  
+            return Json(response);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Delete(Guid Id)
+        public async Task<IActionResult> Delete(string Id)
         {
-            var employee = await GetAsync<User>($"/api/Employee/GetEmpbyID?id={Id}");
-            if (employee == null)
-            {
-                ModelState.AddModelError(string.Empty, "Employee not found.");
-                return View("Index");
-            }
+            var response = await PostAsync<ApiResponse<string>>($"/api/Employee/DeleteEmp?id={Id}",null,null);
+            return Json(response);
+        }
 
-            // Use the HttpClient instance to send a DELETE request
-            var response = await client.DeleteAsync($"/api/Employee/DeleteEmp?id={Id}");
-            if (!response.IsSuccessStatusCode)
-            {
-                ModelState.AddModelError(string.Empty, "Error deleting employee.");
-                return View("Index");
-            }
-
-            return Json(new { success = true, message = "Employee deleted successfully." });
+        [HttpPost]
+        public async Task<IActionResult> ChangeStatus(string Id)
+        {
+            var response = await PostAsync<ApiResponse<UserDTO>>($"/api/Employee/ChangeActiveStatus?id={Id}", null, null);
+            return Json(response);
         }
     }
 }

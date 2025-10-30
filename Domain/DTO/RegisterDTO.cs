@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Domain.Models;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +22,8 @@ namespace Domain.DTO
         public string? ProfilePictureFileName { get; set; } 
         public string? Password { get; set; } 
         public string? ConfirmPassword { get; set; }
-        
+        public LeaveType LeaveType { get; set; }
+
     }
     public enum Role
     {

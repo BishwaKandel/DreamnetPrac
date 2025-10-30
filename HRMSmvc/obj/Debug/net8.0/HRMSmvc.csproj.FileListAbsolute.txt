@@ -33,6 +33,9 @@ C:\Users\ASUS\Desktop\HRMS\HRMSmvc\bin\Debug\net8.0\Microsoft.CodeAnalysis.Scrip
 C:\Users\ASUS\Desktop\HRMS\HRMSmvc\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
 C:\Users\ASUS\Desktop\HRMS\HRMSmvc\bin\Debug\net8.0\Microsoft.DiaSymReader.dll
 C:\Users\ASUS\Desktop\HRMS\HRMSmvc\bin\Debug\net8.0\Microsoft.DotNet.Scaffolding.Shared.dll
+C:\Users\ASUS\Desktop\HRMS\HRMSmvc\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\ASUS\Desktop\HRMS\HRMSmvc\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\ASUS\Desktop\HRMS\HRMSmvc\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
 C:\Users\ASUS\Desktop\HRMS\HRMSmvc\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
 C:\Users\ASUS\Desktop\HRMS\HRMSmvc\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll
 C:\Users\ASUS\Desktop\HRMS\HRMSmvc\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll

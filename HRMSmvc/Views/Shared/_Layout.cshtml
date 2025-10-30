@@ -105,6 +105,8 @@
 </head>
 
 <body>
+    @await Html.PartialAsync("_LoadingPartial")
+
 
     <!-- ======= Header ======= -->
     <header id="header" class="header fixed-top d-flex align-items-center">
@@ -560,6 +562,18 @@
     <!-- Template Main JS File -->
 	<script src="~/js/main.js"></script>
 	<script src="~/js/admin.js"></script>
+    <script>
+             $(document).on('show.bs.dropdown', 'table .dropdown', function () {
+            $(this).css({
+                position: 'static',
+            })
+        });
+        $(document).on('hidden.bs.dropdown', 'table .dropdown', function () {
+            $(this).css({
+                position: 'relative',
+            })
+        });
+    </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 

@@ -10,9 +10,8 @@ namespace Domain.DTO
     public class UserDTO    
     {
         public string Id { get; set; } = string.Empty;
-        public string Name { get; set; }
-        public string? FirstName { get; set; }
-        public string? LastName { get; set; }
+        public string? Name { get; set; }
+        public string UserName { get; set; } 
         public string Email { get; set; } = string.Empty;
         public string PhoneNumber { get; set; } = string.Empty;
         public DateTime DOB { get; set; }
@@ -22,8 +21,11 @@ namespace Domain.DTO
         public string Address { get; set; } = string.Empty;
         public bool IsActive { get; set; }
         public IFormFile? formFile { get; set; }
-
         public string? ProfilePictureFileName { get; set; }
+        public string? Password { get; set; }
+        public bool IsDeleted { get; set; }
+        public bool? IsCheckedIn { get; set; }
+        public  bool? IsCheckedOut { get; set; }
 
     }
 

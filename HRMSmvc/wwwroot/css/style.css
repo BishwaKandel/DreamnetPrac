@@ -225,6 +225,68 @@ h6 {
     box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
 }
 
+/*div#loading {
+    position: absolute;
+  left:50%;
+  top:50%;
+  margin-left:-25px;
+    z-index: 999;
+}
+
+.loading-container {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.6);
+}*/
+#loading {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -25px;
+    z-index: 1000;
+}
+
+.loading-container {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.6);
+    z-index:9
+}
+
+
+#cropModal .modal-dialog {
+}
+
+#cropModal .modal-body {
+    max-height: 70vh; /* 70% of viewport height */
+    overflow-y: auto;
+}
+
+/* Keep the image fully visible inside modal */
+#cropImage {
+    max-width: 100%;
+    max-height: 60vh; /* image height limited */
+    object-fit: contain;
+    border-radius: 50%; /* optional: to preview circular crop */
+}
+.cropper-view-box,
+.cropper-face {
+    border-radius: 50% !important; /* Makes the crop box circular */
+}
+
+.cropper-view-box {
+    outline: none !important;
+}
+
+.cropper-container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+
+
 .card-header,
 .card-footer {
   border-color: #ebeef4;
@@ -250,6 +312,7 @@ h6 {
 .card-body {
   padding: 0 20px 20px 20px;
 }
+
 
 .card-img-overlay {
   background-color: rgba(255, 255, 255, 0.6);

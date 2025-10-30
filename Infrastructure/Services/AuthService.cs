@@ -62,7 +62,16 @@ namespace Infrastructure.Services
             //    string folder = "images/ProfilePicture";
 
             //}
-                var user = new User
+            var existingUser = await _userManager.FindByEmailAsync(registerDTO.Email);
+            if (existingUser != null)
+            {
+                return new ApiResponse<string>
+                {
+                    success = false,
+                    message = "Email is already registered"
+                };
+            }
+            var user = new User
                 {
 
                     Email = registerDTO.Email,
@@ -74,7 +83,8 @@ namespace Infrastructure.Services
                     PhoneNumber = registerDTO.PhoneNumber,
                     Name = registerDTO.Name,
                     ProfilePictureFileName = registerDTO.ProfilePictureFileName,
-                    isActive = false
+                    IsActive = false,
+                    IsDeleted = false,
                 };
 
             var result = await _userManager.CreateAsync(user, registerDTO.Password);
@@ -99,18 +109,18 @@ namespace Infrastructure.Services
         public async Task<ApiResponse<LoginResponseDto>> LoginAsync(LoginDTO loginDTO)
         {
             var user = await _userManager.FindByEmailAsync(loginDTO.Email);
-            if (user == null)
+            if (user == null || user.IsDeleted==true)
                 return new ApiResponse<LoginResponseDto>
                 {
                     success = false,
                     message = "User not found"
                 };
-            //if (user.isActive == false)
-            //    return new ApiResponse<LoginResponseDto>
-            //    {
-            //        success = false,
-            //        message = "User is not active. Please contact admin."
-            //    };
+            if (user.IsActive == false)
+                return new ApiResponse<LoginResponseDto>
+                {
+                    success = false,
+                    message = "User is not active. Please contact admin."
+                };
             var result = await _signInManager.CheckPasswordSignInAsync(user, loginDTO.Password, false);
             if (!result.Succeeded)
                 return new ApiResponse<LoginResponseDto>
@@ -170,7 +180,7 @@ namespace Infrastructure.Services
             {
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
                 new Claim(ClaimTypes.Email, user.Email),
-                new Claim(ClaimTypes.Name, user.Name),
+                new Claim(ClaimTypes.Name, user.Name??user.Email),
                 new Claim(ClaimTypes.Email, user.Email)
             };
 

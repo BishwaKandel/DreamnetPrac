@@ -1,0 +1,75 @@
+2025-10-26 22:29:59.402 +05:45  INF  User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-26 22:29:59.666 +05:45  INF  Now listening on: https://localhost:7189
+2025-10-26 22:29:59.668 +05:45  INF  Now listening on: http://localhost:5227
+2025-10-26 22:29:59.735 +05:45  INF  Application started. Press Ctrl+C to shut down.
+2025-10-26 22:29:59.735 +05:45  INF  Hosting environment: Development
+2025-10-26 22:29:59.735 +05:45  INF  Content root path: C:\Users\ASUS\Desktop\HRMS\HRMSmvc
+2025-10-26 22:30:02.157 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/ - null null
+2025-10-26 22:30:02.356 +05:45  INF  Executing endpoint 'HRMSmvc.Controllers.AuthController.Login (HRMSmvc)'
+2025-10-26 22:30:02.405 +05:45  INF  Route matched with {action = "Login", controller = "Auth", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller HRMSmvc.Controllers.AuthController (HRMSmvc).
+2025-10-26 22:30:02.425 +05:45  INF  Executing ViewResult, running view login.
+2025-10-26 22:30:02.595 +05:45  INF  Executed ViewResult - view login executed in 166.5283ms.
+2025-10-26 22:30:02.609 +05:45  INF  Executed action HRMSmvc.Controllers.AuthController.Login (HRMSmvc) in 201.1141ms
+2025-10-26 22:30:02.609 +05:45  INF  Executed endpoint 'HRMSmvc.Controllers.AuthController.Login (HRMSmvc)'
+2025-10-26 22:30:02.618 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/ - 200 null text/html; charset=utf-8 463.2295ms
+2025-10-26 22:30:02.658 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/vendor/style.css - null null
+2025-10-26 22:30:02.660 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-26 22:30:02.675 +05:45  INF  The file /vendor/style.css was not modified
+2025-10-26 22:30:02.692 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/vendor/style.css - 304 null text/css 20.0556ms
+2025-10-26 22:30:02.693 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 36.4623ms
+2025-10-26 22:30:02.709 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-10-26 22:30:02.777 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 67.5256ms
+2025-10-26 22:30:12.208 +05:45  INF  Request starting HTTP/2 POST https://localhost:7189/ - application/x-www-form-urlencoded; charset=UTF-8 224
+2025-10-26 22:30:12.210 +05:45  INF  Executing endpoint 'HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc)'
+2025-10-26 22:30:12.222 +05:45  INF  Route matched with {action = "Login", controller = "Auth", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginAsync(Domain.DTO.LoginDTO) on controller HRMSmvc.Controllers.AuthController (HRMSmvc).
+2025-10-26 22:30:29.111 +05:45  INF  AuthenticationScheme: Cookies signed in.
+2025-10-26 22:30:29.116 +05:45  INF  Executing JsonResult, writing value of type 'Domain.Models.ApiResponse`1[[Domain.DTO.LoginResponseDto, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-26 22:30:29.121 +05:45  INF  Executed action HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc) in 16898.7752ms
+2025-10-26 22:30:29.122 +05:45  INF  Executed endpoint 'HRMSmvc.Controllers.AuthController.LoginAsync (HRMSmvc)'
+2025-10-26 22:30:29.122 +05:45  INF  Request finished HTTP/2 POST https://localhost:7189/ - 200 null application/json; charset=utf-8 16913.9091ms
+2025-10-26 22:30:30.266 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Admin/Dashboard/Index - null null
+2025-10-26 22:30:30.308 +05:45  INF  Executing endpoint 'HRMSmvc.Areas.Admin.Controllers.DashboardController.Index (HRMSmvc)'
+2025-10-26 22:30:30.313 +05:45  INF  Route matched with {area = "Admin", action = "Index", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller HRMSmvc.Areas.Admin.Controllers.DashboardController (HRMSmvc).
+2025-10-26 22:30:31.991 +05:45  INF  Executing ViewResult, running view Index.
+2025-10-26 22:30:32.036 +05:45  INF  Executed ViewResult - view Index executed in 47.4415ms.
+2025-10-26 22:30:32.036 +05:45  INF  Executed action HRMSmvc.Areas.Admin.Controllers.DashboardController.Index (HRMSmvc) in 1722.3082ms
+2025-10-26 22:30:32.036 +05:45  INF  Executed endpoint 'HRMSmvc.Areas.Admin.Controllers.DashboardController.Index (HRMSmvc)'
+2025-10-26 22:30:32.036 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Admin/Dashboard/Index - 200 null text/html; charset=utf-8 1770.217ms
+2025-10-26 22:30:32.172 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-26 22:30:32.173 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-10-26 22:30:32.174 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 1.5817ms
+2025-10-26 22:30:32.182 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/js/admin.js - null null
+2025-10-26 22:30:32.188 +05:45  INF  The file /js/admin.js was not modified
+2025-10-26 22:30:32.188 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/js/admin.js - 304 null text/javascript 7.9603ms
+2025-10-26 22:30:32.202 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 29.0743ms
+2025-10-26 22:30:40.410 +05:45  INF  Request starting HTTP/2 POST https://localhost:7189/Auth/Logout - null 0
+2025-10-26 22:30:40.414 +05:45  INF  Executing endpoint 'HRMSmvc.Controllers.AuthController.Logout (HRMSmvc)'
+2025-10-26 22:30:40.417 +05:45  INF  Route matched with {action = "Logout", controller = "Auth", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Logout() on controller HRMSmvc.Controllers.AuthController (HRMSmvc).
+2025-10-26 22:30:41.895 +05:45  INF  Executing JsonResult, writing value of type 'Domain.Models.ApiResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-26 22:30:41.897 +05:45  INF  Executed action HRMSmvc.Controllers.AuthController.Logout (HRMSmvc) in 1479.281ms
+2025-10-26 22:30:41.897 +05:45  INF  Executed endpoint 'HRMSmvc.Controllers.AuthController.Logout (HRMSmvc)'
+2025-10-26 22:30:41.897 +05:45  INF  Request finished HTTP/2 POST https://localhost:7189/Auth/Logout - 200 null application/json; charset=utf-8 1487.4123ms
+2025-10-26 22:30:44.111 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Auth/login - null null
+2025-10-26 22:30:44.120 +05:45  INF  Executing endpoint 'HRMSmvc.Controllers.AuthController.Login (HRMSmvc)'
+2025-10-26 22:30:44.120 +05:45  INF  Route matched with {action = "Login", controller = "Auth", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller HRMSmvc.Controllers.AuthController (HRMSmvc).
+2025-10-26 22:30:44.121 +05:45  INF  Executing ViewResult, running view login.
+2025-10-26 22:30:44.148 +05:45  INF  Executed ViewResult - view login executed in 27.4425ms.
+2025-10-26 22:30:44.148 +05:45  INF  Executed action HRMSmvc.Controllers.AuthController.Login (HRMSmvc) in 28.0768ms
+2025-10-26 22:30:44.148 +05:45  INF  Executed endpoint 'HRMSmvc.Controllers.AuthController.Login (HRMSmvc)'
+2025-10-26 22:30:44.149 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Auth/login - 200 null text/html; charset=utf-8 37.7778ms
+2025-10-26 22:30:44.189 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-10-26 22:30:44.197 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-26 22:30:44.199 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 1.9603ms
+2025-10-26 22:30:44.204 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 14.7167ms
+2025-10-26 22:30:49.325 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/Auth/Register - null null
+2025-10-26 22:30:49.328 +05:45  INF  Executing endpoint 'HRMSmvc.Controllers.AuthController.Register (HRMSmvc)'
+2025-10-26 22:30:49.331 +05:45  INF  Route matched with {action = "Register", controller = "Auth", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register() on controller HRMSmvc.Controllers.AuthController (HRMSmvc).
+2025-10-26 22:30:49.332 +05:45  INF  Executing ViewResult, running view register.
+2025-10-26 22:30:49.382 +05:45  INF  Executed ViewResult - view register executed in 50.4742ms.
+2025-10-26 22:30:49.382 +05:45  INF  Executed action HRMSmvc.Controllers.AuthController.Register (HRMSmvc) in 51.1074ms
+2025-10-26 22:30:49.382 +05:45  INF  Executed endpoint 'HRMSmvc.Controllers.AuthController.Register (HRMSmvc)'
+2025-10-26 22:30:49.382 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/Auth/Register - 200 null text/html; charset=utf-8 57.2996ms
+2025-10-26 22:30:49.414 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - null null
+2025-10-26 22:30:49.414 +05:45  INF  Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-26 22:30:49.415 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 1.1242ms
+2025-10-26 22:30:49.424 +05:45  INF  Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 10.1563ms

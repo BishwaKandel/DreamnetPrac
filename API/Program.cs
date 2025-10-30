@@ -141,5 +141,11 @@ app.MapControllers();
 
 app.MapGet("/", () => "Quartz scheduled tasks are running!");
 
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    var seeder = new DatabaseSeeder(dbContext);
+    await seeder.SeedAsync();
+}
 
 app.Run();

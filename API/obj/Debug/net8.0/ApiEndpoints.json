@@ -158,6 +158,11 @@
         "Name": "ConfirmPassword",
         "Type": "System.String",
         "IsRequired": false
+      },
+      {
+        "Name": "LeaveType",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -214,13 +219,13 @@
     "ContainingType": "API.Controllers.DepartmentController",
     "Method": "DeleteDepartmentAsync",
     "RelativePath": "api/Department/DeleteDept",
-    "HttpMethod": "DELETE",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.String",
+        "Type": "System.Guid",
         "IsRequired": false
       }
     ],
@@ -312,6 +317,22 @@
   },
   {
     "ContainingType": "API.Controllers.EmployeeController",
+    "Method": "ChangeActiveStatus",
+    "RelativePath": "api/Employee/ChangeActiveStatus",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.EmployeeController",
     "Method": "ChangePasswordAsync",
     "RelativePath": "api/Employee/ChangePassword",
     "HttpMethod": "POST",
@@ -372,13 +393,13 @@
     "ContainingType": "API.Controllers.EmployeeController",
     "Method": "DeleteEmployeeAsync",
     "RelativePath": "api/Employee/DeleteEmp",
-    "HttpMethod": "DELETE",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Guid",
+        "Type": "System.String",
         "IsRequired": false
       }
     ],
@@ -531,9 +552,9 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "leaveRequestId",
-        "Type": "System.Guid",
-        "IsRequired": false
+        "Name": "request",
+        "Type": "Domain.DTO.RejectLeaveRequestDTO",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

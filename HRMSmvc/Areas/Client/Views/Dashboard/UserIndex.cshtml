@@ -39,12 +39,23 @@
 
                     <h3>@Model?.Position</h3>
 
-                    <div class="btn-group row mt-3">
+                     
+                       <div class="btn-group row mt-3">
+                        @if (Model.IsCheckedIn == false)
+                        {
+                                <div class="col">
+                           
+                                        <button class="btn btn-primary w-100" id="checkinBtn">CheckIn</button>
+
+                            
+                                </div>
+                        }
                         <div class="col">
-                            <button class="btn btn-primary w-100" id="checkinBtn">CheckIn</button>
-                        </div>
-                        <div class="col">
-                            <button class="btn btn-primary w-80" id="checkoutBtn">CheckOut</button>
+                            @if (Model.IsCheckedOut == false)
+                            {
+                                <button class="btn btn-primary w-80" id="checkoutBtn">CheckOut</button>
+
+                            }
                         </div>
                     </div>
 
@@ -61,26 +72,30 @@
                     <ul class="nav nav-tabs nav-tabs-bordered">
 
                         <li class="nav-item">
-                            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#profile-overview">Overview</button>
+                            <button class="nav-link @(ViewBag.mode == 0 ? "active" : "")" data-bs-toggle="tab" data-bs-target="#profile-overview">Overview</button>
                         </li>
 
                         <li class="nav-item">
-                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit">Edit Profile</button>
+                            <button class="nav-link  @(ViewBag.mode == 1 ? "active" : "")" data-bs-toggle="tab" data-bs-target="#profile-edit">Edit Profile</button>
                         </li>
 
                         <li class="nav-item">
-                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-change-password">Change Password</button>
+                            <button class="nav-link  @(ViewBag.mode == 2 ? "active" : "")" data-bs-toggle="tab" data-bs-target="#profile-change-password">Change Password</button>
                         </li>
 
                     </ul>
                     <div class="tab-content pt-2">
 
-                        <div class="tab-pane fade show active profile-overview" id="profile-overview">
+                        <div class="tab-pane fade  @(ViewBag.mode == 0 ? "show active" : "") profile-overview" id="profile-overview">
 
                             <h5 class="card-title">Profile Details</h5>
 
                             <div class="row">
-                                <div class="col-lg-3 col-md-4 label ">Full Name</div>
+                                <div class="col-lg-3 col-md-4 label ">UserName</div>
+                                <div class="col-lg-9 col-md-8">@Model.UserName</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-3 col-md-4 label ">Name</div>
                                 <div class="col-lg-9 col-md-8">@Model.Name</div>
                             </div>
 
@@ -120,7 +135,7 @@
 
                         </div>
 
-                        <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
+                        <div class="tab-pane  @(ViewBag.mode == 1 ? "show active" : "")" fade profile-edit pt-3" id="profile-edit">
 
                             <!-- Profile Edit Form -->
                             <form asp-controller="Client" asp-action="ChangePhoto" enctype="multipart/form-data" id="photoForm" method="post">
@@ -153,6 +168,27 @@
                                 </div>
                             </form>
 
+                            @* modal for cropping *@
+                            <!-- Crop Modal -->
+                            <div class="modal fade" id="cropModal" tabindex="-1" aria-labelledby="cropModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="cropModalLabel">Crop Profile Picture</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body text-center">
+                                            <img id="cropImage" style="max-width:100%; display:block;" />
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                            <button type="button" class="btn btn-primary" id="cropAndUploadBtn">Crop & Upload</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
                             <form asp-controller="Client" asp-action="Edit" id="editForm" method="post">
                                 <div class="row mb-3">
                                     <label asp-for="Name" class="col-md-4 col-lg-3 col-form-label">Name</label>
@@ -161,7 +197,10 @@
                                     </div>
                                 </div>
                                 <input type="hidden" name="Id" value="@Model.Id"/>
-                                <input type="hidden" asp-for="JoiningDate" />
+                                <input type="hidden" name="IsActive" value="@Model.IsActive.ToString()" />
+                                <input type="hidden" name="JoiningDate" value="@Model.JoiningDate.ToString("yyyy-MM-dd")" />
+                                <input type="hidden" name="Email" value="@Model.Email" />
+
                                 <input type="hidden" asp-for="Salary" />
 
 
@@ -188,13 +227,6 @@
                                 </div>
 
                                 <div class="row mb-3">
-                                    <label asp-for="Email" class="col-md-4 col-lg-3 col-form-label">Email</label>
-                                    <div class="col-md-8 col-lg-9">
-                                        <input asp-for="Email" class="form-control" value="@Model.Email" />
-                                    </div>
-                                </div>
-
-                                <div class="row mb-3">
                                     <label asp-for="DOB" class="col-md-4 col-lg-3 col-form-label">Date of Birth </label>
                                     <div class="col-md-8 col-lg-9">
                                         <input type="text" asp-for="DOB" value="@Model.DOB.ToString("yyyy-MM-dd")" class="form-control" />
@@ -216,7 +248,7 @@
                             </form><!-- End Profile Edit Form -->
 
                         </div>
-                        <div class="tab-pane fade pt-3" id="profile-change-password">
+                        <div class="tab-pane  @(ViewBag.mode == 2 ? "show active" : "")" fade pt-3" id="profile-change-password">
                             <!-- Change Password Form -->
                             <form asp-controller="Dashboard" asp-action="ChangePassword" id="changepasswordForm" method="post">
                                 <input type="hidden" name="Id" value="@Model.Id" />

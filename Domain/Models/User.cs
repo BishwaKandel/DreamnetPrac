@@ -39,7 +39,11 @@ namespace Domain.Models
         public string Address { get; set; }
 
         [Required(ErrorMessage = "Please specify if the employee is active.")]
-        public bool isActive { get; set; }
+        public bool IsActive { get; set; }
+
+        [Required(ErrorMessage = "Please specify if the employee is active.")]
+        public bool IsDeleted { get; set; }
+
         public string? ProfilePictureFileName { get; set; }
         public Guid? DepartmentId { get; set; }
         public Department Department { get; set; }
@@ -47,4 +51,5 @@ namespace Domain.Models
         //public virtual ICollection<LeaveRequest> LeaveRequest { get; set; } = new List<LeaveRequest>();
 
     }
+
 }

@@ -3,7 +3,7 @@
 @using Domain.Models
 @model List<DeptInfoDTO>
 @{
-	ViewData["Title"] = "Fetching Data from Web API";
+	ViewData["Title"] = "Department List";
 }
 @{
 	int counter = 1;
@@ -24,8 +24,10 @@
 <div class="card">
 	<div class="card-body">
 		<h5 class="card-title">List of Departments</h5>
+		<div class="table-responsive">
+
 		<!-- Default Table -->
-		<table class="table">
+		<table class="table" id="DeptTable">
 			<thead>
 				<tr>
 					@* <th scope="col">ID</th> *@
@@ -47,8 +49,8 @@
 						<td>@row.Location</td>
 
 						<td>
-							<div class="dropdown">
-								<a href="javascript:void(0);" id="dropdownMenuButton-@row.Id" data-bs-toggle="dropdown" aria-expanded="false">
+								<div class="dropdown dropstart">
+								<a href="javascript:void(0);" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
 									<i class="fa-solid fa-ellipsis"></i>
 								</a>
 								<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton-@row.Id">
@@ -70,6 +72,12 @@
 											<i class="fa-solid fa-plus"></i> Add Employee
 										</a>
 									</li>
+										<li><hr class="dropdown-divider"></li>
+										<li>
+											<a class="dropdown-item deleteDeptBtn" href="javascript:void(0);" data-id="@row.Id">
+												<i class="fa-solid fa-trash"></i> Delete
+											</a>
+										</li>
 								</ul>
 							</div>
 						</td>
@@ -79,6 +87,7 @@
 				}
 			</tbody>
 		</table>
+		</div>
 	</div>
 </div>
 

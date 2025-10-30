@@ -1,18 +1,10 @@
 ﻿using Application.Interface;
 using AutoMapper;
-using Azure;
 using Domain.DTO;
 using Domain.Models;
 using Infrastructure.Data;
-using Infrastructure.Migrations;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Infrastructure.Services
 {
@@ -21,14 +13,16 @@ namespace Infrastructure.Services
         private readonly AppDbContext _context;
         private readonly IMapper _mapper;
         private readonly UserManager<User> _userManager;
-        public LeaveService(AppDbContext context, IMapper mapper, UserManager<User> userManager)
+        private readonly IEmailService _emailService;
+        public LeaveService(AppDbContext context, IMapper mapper, UserManager<User> userManager, IEmailService emailService)
         {
             _context = context;
             _mapper = mapper;
             _userManager = userManager;
+            _emailService = emailService;
         }
 
-        public async Task<ApiResponse<LeaveRequestDTO>> CreateLeaveAsync(LeaveRequestDTO leave , string userId)
+        public async Task<ApiResponse<LeaveRequestDTO>> CreateLeaveAsync(LeaveRequestDTO leave, string userId)
         {
             LeaveRequest leaveRequest = new LeaveRequest
             {
@@ -40,7 +34,9 @@ namespace Infrastructure.Services
                 Reason = leave.Reason,
                 AppliedOn = DateOnly.FromDateTime(DateTime.Now),
                 LeaveType = leave.LeaveType,
-                Status = LeaveStatus.Pending
+                Status = LeaveStatus.Pending,
+                RequestedByEmail = leave.RequestedByEmail
+
             };
             _context.LeaveRequests.Add(leaveRequest);
             await _context.SaveChangesAsync();
@@ -63,11 +59,12 @@ namespace Infrastructure.Services
             List<LeaveDetailsDTO> leaves = (from user in _context.Users
                                             join leaveRequest in _context.LeaveRequests
                                             on user.Id equals leaveRequest.RequestedById
+                                            where user.IsDeleted == false
                                             select new LeaveDetailsDTO
                                             {
                                                 Id = leaveRequest.Id,
                                                 RequestedById = leaveRequest.RequestedById,
-                                                Name = user.Name, 
+                                                Name = user.Name,
                                                 Email = user.Email,
                                                 AppliedOn = leaveRequest.AppliedOn,
                                                 StartDate = leaveRequest.StartDate,
@@ -80,7 +77,7 @@ namespace Infrastructure.Services
                                             OrderByDescending(l => l.Status == LeaveStatus.Pending)
                                             .ThenByDescending(l => l.AppliedOn)
                                             .ToList();
-            
+
             var leaveDTOs = _mapper.Map<List<LeaveDetailsDTO>>(leaves);
             return new ApiResponse<List<LeaveDetailsDTO>>
             {
@@ -127,6 +124,11 @@ namespace Infrastructure.Services
             }
 
             leaveRequest.Status = LeaveStatus.Approved;
+            await _emailService.SendEmailAsync(
+                to: leaveRequest.RequestedByEmail,
+                subject: "Leave Request Approved",
+                   body: $"Dear User,\n\nYour leave request from {leaveRequest.StartDate:yyyy-MM-dd} to {leaveRequest.EndDate:yyyy-MM-dd} has been approved.\n\nBest regards,\nHR Team"
+            );
             await _context.SaveChangesAsync();
             var leaveDTO = _mapper.Map<LeaveRequestDTO>(leaveRequest);
             return new ApiResponse<LeaveRequestDTO>
@@ -136,10 +138,10 @@ namespace Infrastructure.Services
                 success = true
             };
         }
-        public async Task<ApiResponse<LeaveRequestDTO>> RejectLeave(Guid leaveRequestId)
+        public async Task<ApiResponse<LeaveRequestDTO>> RejectLeave(RejectLeaveRequestDTO request)
         {
             var leaveRequest = await _context.LeaveRequests
-                .FirstOrDefaultAsync(lr => lr.Id == leaveRequestId && lr.Status == LeaveStatus.Pending);
+                .FirstOrDefaultAsync(lr => lr.Id == request.LeaveRequestId && lr.Status == LeaveStatus.Pending);
 
             if (leaveRequest == null)
             {
@@ -151,16 +153,28 @@ namespace Infrastructure.Services
                 };
             }
 
+            // Save rejection reason
+            leaveRequest.RejectionReason = request.RejectionReason;
             leaveRequest.Status = LeaveStatus.Rejected;
+                await _emailService.SendEmailAsync(
+                    to: leaveRequest.RequestedByEmail,
+                    subject: "Leave Request Rejected",
+                   body: $"Dear User,\n\nYour leave request from {leaveRequest.StartDate:yyyy-MM-dd} to {leaveRequest.EndDate:yyyy-MM-dd} has been rejected.\nReason: {request.RejectionReason}\r\n\n\nBest regards,\nHR Team"
+
+                );
+     
             await _context.SaveChangesAsync();
+
             var leaveDTO = _mapper.Map<LeaveRequestDTO>(leaveRequest);
+
             return new ApiResponse<LeaveRequestDTO>
             {
                 Data = leaveDTO,
-                message = "Leave request Rejected successfully.",
+                message = "Leave request rejected successfully.",
                 success = true
             };
         }
+
 
         public Task<ApiResponse<IEnumerable<LeaveRequestDTO>>> GetLeavesByDateRangeAsync(DateTime startDate, DateTime endDate)
         {
@@ -212,7 +226,7 @@ namespace Infrastructure.Services
             };
         }
 
-        
+
 
         public Task<ApiResponse<LeaveRequestDTO>> UpdateLeaveAsync(Guid id, LeaveRequestDTO leave)
         {

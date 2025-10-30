@@ -5,10 +5,14 @@ using HRMSmvc.Extensions;
 using HRMSmvc.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Authorization;
+
 
 namespace HRMSmvc.Areas.Client.Controllers
 {
     [Area("Client")]
+    [Authorize(Roles = "User")]
+
     public class LeaveController : BaseController
     {
         private readonly HttpClient client;
@@ -32,7 +36,8 @@ namespace HRMSmvc.Areas.Client.Controllers
                 Reason = leaveRequestVm.Reason,
                 Status = leaveRequestVm.Status,
                 LeaveType = leaveRequestVm.LeaveType,
-                Description = leaveRequestVm.Description
+                Description = leaveRequestVm.Description,
+                RequestedByEmail = User.Email()
             };
 
             var response = await PostAsync<ApiResponse<LeaveRequestDTO>>("/api/Leave/CreateLeave", dto, null);

@@ -1458,6 +1458,7 @@
         "dependencies": {
           "Microsoft.AspNet.Mvc": "5.3.0",
           "Microsoft.AspNetCore.Http.Features": "5.0.17",
+          "Microsoft.EntityFrameworkCore": "8.0.18",
           "Microsoft.Extensions.Identity.Stores": "8.0.18"
         },
         "runtime": {

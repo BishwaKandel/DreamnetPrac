@@ -5,6 +5,7 @@ wwwroot\font\bootstrap-icons.woff
 wwwroot\font\bootstrap-icons.woff2
 wwwroot\images\defultpfp.jpg
 wwwroot\js\admin.js
+wwwroot\js\Auth\Register.js
 wwwroot\js\leave.js
 wwwroot\js\main.js
 wwwroot\js\payroll.js

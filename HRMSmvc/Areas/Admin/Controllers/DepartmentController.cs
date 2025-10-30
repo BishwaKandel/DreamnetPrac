@@ -66,9 +66,9 @@ namespace HRMSmvc.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Delete(string Id)
+        public async Task<IActionResult> Delete(string deptId)
         {
-            var response = await PostAsync<ApiResponse<DeptInfoDTO>>("/api/Department/DeleteDept?id=" + Id, null, null);
+            var response = await PostAsync<ApiResponse<DeptInfoDTO>>("/api/Department/DeleteDept?id=" + deptId, null, null);
             return Json(response);  // Always return JSON
         }
 

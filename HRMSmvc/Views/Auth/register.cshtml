@@ -19,48 +19,82 @@
                         </div>
                         <form id="registerForm" asp-action="Register" enctype="multipart/form-data" method="post">
                             <div class="row mb-3">
-                                <div class="col-8">
+                                <div class="col-9">
                                     <label for="Name" class="form-label">Name</label>
-                                    <input asp-for="Name" class="form-control" required>
-                                    <div class="invalid-feedback">Please, enter your Name!</div>
+                                    <input asp-for="Name" class="form-control" autocomplete="off">
                                 </div>
-                            
-                            <div class="col-4">
-                                <label for="ProfilePicture" class="form-label">Profile Picture</label>
-                                <div class="custom-file">
-                                        <input asp-for="formFile" class="custom-file-input" id="customFile" />
+
+                                <div class="col-3 text-center">
+                                    <!-- Profile Picture Section -->
+                                    <div class="position-relative d-inline-block">
+                                        <img id="registerPreview"
+                                             src="~/images/defultpfp.jpg"
+                                             alt="Profile"
+                                             style="width: 60px; height: 55px; border-radius: 50%; object-fit: cover; border: 1px solid #ccc;">
+
+                                        <a class="btn btn-primary btn-sm position-absolute"
+                                           id="registerUploadBtn"
+                                           style="bottom: 0; right: 0; transform: translate(30%, 30%); border-radius: 50%; padding: 4px 6px;">
+                                            <i class="fa-solid fa-pen"></i>
+                                        </a>
+
+                                        <input asp-for="formFile" type="file" class="d-none" id="registerFile" accept="image/*" />
+                                    </div>
+
+                                    <label for="ProfilePicture" class="form-label mt-2 d-block">Profile Picture</label>
                                 </div>
-                                <div class="invalid-feedback">Please enter a valid photo</div>
-                            </div>
+
+                                <!-- Crop Modal -->
+                                <div class="modal fade" id="registerCropModal" tabindex="-1" aria-labelledby="registerCropModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="registerCropModalLabel">Crop Profile Picture</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body text-center">
+                                                <img id="registerCropImage" style="max-width:100%; display:block;" />
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                                <button type="button" class="btn btn-primary" id="registerCropAndSetBtn">Crop & Set</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="row mb-3">
                                 <div class="col-6">
-                                    <label for="Name" class="form-label">UserName</label>
-                                    <input asp-for="UserName" class="form-control" required>
-                                    <div class="invalid-feedback">Please, enter your UserName!</div>
+                                    <label for="UserName" class="form-label">UserName</label>
+                                    <input asp-for="UserName" class="form-control" autocomplete="off">
                                 </div>
-                                    <div class="col-6">
-                                        <label for="Position" class="form-label">Position</label>
-                                        <input asp-for="Position" name="Position" class="form-control" required>
-                                        <div class="invalid-feedback">Please enter your Position</div>
-                                    </div>
+                                <div class="col-6">
+                                    <label for="Position" class="form-label">Position</label>
+                                    <select asp-for="Position" class="form-control">
+                                        <option value="">-- Select Position --</option>
+                                        <option value="Manager">Manager</option>
+                                        <option value="Developer">Developer</option>
+                                        <option value="HR">HR</option>
+                                        <option value="Support">Support</option>
+                                    </select>
+                                </div>
+
+
                              </div>
                             <div class="row mb-3">
                                 <div class="col-6">
                                     <label for="DOB" class="form-label">Date Of Birth</label>
-                                    <input asp-for="DOB" name="DOB" class="form-control" required>
-                                    <div class="invalid-feedback">Please enter a valid Date</div>
+                                    <input asp-for="DOB" name="DOB" class="form-control" autocomplete="off">
                                 </div>
                                 <div class="col-6">
                                     <label for="JoiningDate" class="form-label">Joining Date</label>
-                                    <input asp-for="JoiningDate" name="JoiningDate" class="form-control" required>
-                                    <div class="invalid-feedback">Please enter a valid JoiningDate!</div>
+                                    <input asp-for="JoiningDate" name="JoiningDate" class="form-control" autocomplete="off">
                                 </div>
                             </div>
                             <div class="row mb-3">
                             <div class="col-6">
                                 <label for="PhoneNumber">Phone Number</label>
-                                <input asp-for="PhoneNumber" class="form-control" />
+                                    <input asp-for="PhoneNumber" class="form-control" autocomplete="off" />
                                 @* <span asp-validation-for="PhoneNumber" class="text-danger"></span> *@
                             </div>
                             <div class="col-6">
@@ -70,26 +104,19 @@
                             </div>
                             </div>
                             <div class="col-12">
-                                <label for="Email" class="form-label">Email</label>
-                                <input asp-for="Email" name="email" class="form-control" required>
-                                <div class="invalid-feedback">Please enter a valid Email adddress!</div>
+                                <label asp-for="Email"></label>
+                                <input asp-for="Email" class="form-control" autocomplete="off">
                             </div>
-                           
-                            
-                           
-
                             <div class="col-12">
-                                <label for="Password" class="form-label">Password</label>
-                                <input asp-for="Password" class="form-control" id="yourPassword" type="password" required>
-                                <i class='bx bx-hide eye-icon' id="toggle-password"></i>
-                                <div class="invalid-feedback">Please enter your password!</div>
+                                <label for="Password" class="form-label" autocomplete="off">Password</label>
+                                <input asp-for="Password" class="form-control" id="yourPassword" type="password" >
+                                
                             </div>
 
                             <div class="col-12">
-                                <label for="ConfPassword" class="form-label">Confirm Password</label>
-                                <input asp-for="ConfirmPassword" class="form-control" id="confirmPassword" type="password" required>
-                                <i class='bx bx-hide eye-icon' id="toggle-confirm-password"></i>
-                                <div class="invalid-feedback">Please enter your password!</div>
+                                <label for="ConfPassword" class="form-label" autocomplete="off">Confirm Password</label>
+                                <input asp-for="ConfirmPassword" class="form-control" id="confirmPassword" type="password" >
+                                
                             </div>
                               
 
@@ -102,6 +129,8 @@
                             </div>
                         </form>
                     </div>
+                    @await Html.PartialAsync("_LoadingPartial")
+
                 </div>
 
             </div>
@@ -111,69 +140,7 @@
 
 
 @section Scripts {
-    <script>
-                   $(document).ready(function() {
-            $('#registerForm').submit(function(event) {
-            event.preventDefault(); // Prevent default form submission
 
-            // Serialize the form data
-             var formData = new FormData(this);
-            // Send the AJAX request
-            $.ajax({
-                type: 'POST',
-                url: '@Url.Action("Register", "Auth")',
-                   data: formData,               // Use FormData instead of serialize()
-            processData: false,           // Required for FormData
-            contentType: false,
-            //dataType: 'json', //
-                success: function(response) {
-                    console.log('Response:', response); // For debugging
-                    if (response.success) {
-                        // Show success message with SweetAlert
-                        Swal.fire({
-                            title: "Registration successful!",
-                            icon: "success",
-                            confirmButtonText: "OK",
-                        }).then((result) => {
-                            // If user clicks 'OK', redirect to login page
-                            if (result.isConfirmed) {
-                                window.location.href = '@Url.Action("Login", "Auth")'; // Redirect to login
-                            }
-                        });
-                    } else {
-                        // If registration fails, show the error message from the server
-                        Swal.fire({
-                            title: 'Registration Failed!',
-                            text: response.message || 'Please try again.',
-                            icon: 'error',
-                            confirmButtonText: 'OK'
-                        });
-                    }
-                },
-                error: function(xhr, status, error) {
-                    console.error('Error occurred:', error);
-                    Swal.fire({
-                        title: 'Registration Failed!',
-                        text: 'An unexpected error occurred. Please try again later.',
-                        icon: 'error',
-                        confirmButtonText: 'OK'
-                    });
-                }
-            });
-        });
-
-          $("#DOB").flatpickr({
-            dateFormat: "Y-m-d",  // Format of the selected date
-            maxDate: "today",     // Prevent past dates
-            allowInput: true      // Allow the user to type the date manually
-          });
-               $("#JoiningDate").flatpickr({
-          dateFormat: "Y-m-d",  // Format of the selected date
-          allowInput: true      // Allow the user to type the date manually
-        });
-        });
-
-
-    </script>
+	<script src="~/js/auth/register.js"></script>
 }
 

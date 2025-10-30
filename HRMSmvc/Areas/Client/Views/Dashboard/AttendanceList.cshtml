@@ -10,8 +10,9 @@
 	Layout = "_UserLayout";
 }
 
-<div class="card-body">
-	<h5 class="card-title">Attendance History</h5>
+<div class="card">
+	<div class="card-body">
+		<h3 class="card-title">Attendance History</h3>
 
 	@* <div class="card">
 		<div class="row mb-3 ma-3">
@@ -62,13 +63,35 @@
 					<td>@row.CheckInTime</td>
 					<td>@row.CheckOutTime</td>
 					<td>@row.TotalHoursWorked</td>
-					<td>@row.status</td>
+
+						<td>
+							@if (row.status == AttendanceStatus.Present)
+							{
+								<span class="badge bg-success">Present</span>
+							}
+							else if (row.status == AttendanceStatus.OnLeave)
+							{
+								<span class="badge bg-info">On Leave</span>
+							}
+							else if (row.status == AttendanceStatus.Late)
+							{
+								<span class="badge bg-danger">Late</span>
+							}
+							else
+							{
+								<span class="badge bg-secondary">Unknown</span>
+							}
+
+						</td>
 				</tr>
 				counter++;
 			}
 		</tbody>
 	</table>
 </div>
+</div>
+</<div>
+
 </div>
 
 

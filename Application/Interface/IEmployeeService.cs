@@ -14,10 +14,12 @@ namespace Application.Interface
         Task<ApiResponse<UserDTO>> GetEmployeeByIdAsync(String id);
         Task<ApiResponse<UserDTO>> CreateEmployeeAsync(UserDTO employee);
         Task<ApiResponse<UserDTO>> UpdateEmployeeAsync(UserUpdateDTO employee);
-        Task<bool> DeleteEmployeeAsync(Guid id);
+        Task<ApiResponse<string>> DeleteEmployeeAsync(string Id);
         Task<ApiResponse<UserDTO>> ChangePasswordAsync(ChangePasswordDTO employee);
         Task<ApiResponse<UserDTO>> UpdateProfilePicAsync(ChangePpDTO employee);
         Task<ApiResponse<UserDTO>> DeleteProfilePicAsync(ChangePpDTO employee);
+
+        Task<ApiResponse<UserDTO>> ChangeActiveStatus(string id);
 
 
 
