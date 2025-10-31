@@ -113,5 +113,37 @@ namespace HRMSmvc.Controllers
             ViewBag.ReturnUrl = returnUrl;
             return View();
         }
+
+
+        [HttpGet]
+        public IActionResult ForgotPassword()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ForgotPassword(ForgotPasswordDTO model)
+        {
+            var response = await PostAsync<ApiResponse<string>>("api/Auth/forgot-password", model, null);
+            return Json(response);
+        }
+
+        [HttpGet]
+        public IActionResult ResetPassword(string email, string token)
+        {
+            var model = new ResetPasswordDTO
+            {
+                Email = email,
+                Token = token
+            };
+            return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ResetPassword(ResetPasswordDTO model)
+        {
+            var response = await PostAsync<ApiResponse<string>>("api/Auth/reset-password", model, null);
+            return Json(response);
+        }
     }
 }

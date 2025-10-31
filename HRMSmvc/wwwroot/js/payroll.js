@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
     $('#PayrollTable').DataTable(
         {
-        //    searching: false
+            responsive: true
         });
    
 
@@ -56,7 +56,7 @@
             BasicSalary: {
                 required: true,
                 number: true,
-                min: 0,
+                min: 1,
                 validNetSalary: true // apply custom net salary rule
             },
             Allowances: {
@@ -86,7 +86,7 @@
             BasicSalary: {
                 required: "Please enter the basic salary.",
                 number: "Basic salary must be a valid number.",
-                min: "Basic salary cannot be negative."
+                min: "Basic salary cannot be negative or zero."
             },
             Allowances: {
                 required: "Please enter allowances.",

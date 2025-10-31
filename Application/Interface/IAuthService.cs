@@ -16,5 +16,10 @@ namespace Application.Interface
         Task<string> CreateRoleAsync(string roleName);
 
         Task<ApiResponse<string>> LogoutUserAsync();
+        Task<ApiResponse<string>> SendPasswordResetLinkAsync(ForgotPasswordDTO model);
+
+        Task<ApiResponse<string>> ResetPassword(ResetPasswordDTO model);
+
+
     }
 }

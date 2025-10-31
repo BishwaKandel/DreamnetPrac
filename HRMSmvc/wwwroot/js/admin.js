@@ -19,11 +19,6 @@
             responsive: true
 
         });
-    $('#admninAttendanceTable').DataTable(
-        {
-            responsive: true
-
-        });
 
 
     $(document).on('click', '#saveEmployeesBtn', function () {
@@ -611,7 +606,16 @@
         });
     });
 
+    $('#admninAttendanceTable').DataTable(
+        {
+            responsive: true
 
+        });
+    $('#deptEmpTable').DataTable(
+        {
+            responsive: true
+
+        });
 
 
 

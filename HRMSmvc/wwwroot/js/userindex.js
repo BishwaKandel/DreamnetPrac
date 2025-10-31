@@ -328,7 +328,7 @@
     $("#checkinBtn").on("click", function () {
         $.ajax({
             type: 'POST',
-            url: 'client/Dashboard/CheckIn', 
+            url: '/client/Dashboard/CheckIn', 
             success: function (response) {
                 if (response.success) {
                     Swal.fire({
@@ -363,11 +363,11 @@
     $("#checkoutBtn").on("click", function () {
         $.ajax({
             type: 'POST',
-            url: 'client/Dashboard/CheckOut',
+            url: '/client/Dashboard/CheckOut',
             success: function (response) {
                 if (response.success) {
                     Swal.fire({
-                        title: "Thankyou",
+                        title: "Success",
                         text: "Your are Checked out",
                         icon: "success"
                     })
@@ -394,6 +394,11 @@
         });
     });
 
+    $('#AttendanceTable').DataTable(
+        {
+            responsive: true
+
+        });
 
     
 });

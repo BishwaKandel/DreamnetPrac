@@ -11,7 +11,7 @@ namespace API.Controllers
     {
         private readonly IAuthService _authService;
         private readonly IImageService _imageService;
-        public AuthController(IAuthService authService , IImageService imageservice)
+        public AuthController(IAuthService authService, IImageService imageservice)
         {
             _authService = authService;
             _imageService = imageservice;
@@ -50,6 +50,20 @@ namespace API.Controllers
         public async Task<IActionResult> Logout()
         {
             var result = await _authService.LogoutUserAsync();
+            return Ok(result);
+        }
+
+        [HttpPost("forgot-password")]
+        public async Task<IActionResult> ForgotPassword([FromBody] ForgotPasswordDTO dto)
+        {
+            var result = await _authService.SendPasswordResetLinkAsync(dto);
+            return Ok(result);
+        }
+
+        [HttpPost("reset-password")]
+        public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordDTO dto)
+        {
+            var result = await _authService.ResetPassword(dto);
             return Ok(result);
         }
     }

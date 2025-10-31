@@ -21,7 +21,7 @@ namespace Infrastructure.Job
 
         public  async Task Execute(IJobExecutionContext context)
         {
-          // await _birthdayEmailService.SendBirthdayEmailsAsync();
+            await _birthdayEmailService.SendBirthdayEmailsAsync();
             //_emailService.SendEmailAsync(body: "This is a test email body", subject: "Test Email Subject", to: "bisswakandel123@gmail.com");
             Console.WriteLine("Sending email...");
 

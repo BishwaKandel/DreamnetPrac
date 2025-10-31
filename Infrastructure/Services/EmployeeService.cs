@@ -133,7 +133,7 @@ namespace Infrastructure.Services
             await _emailService.SendEmailAsync(
                 userDTO.Email,
                 "Email and Password",
-                $"Dear User , Your email :  " + userDTO.Email +"\n"+ "and Password is : " + userDTO.Password
+                $"Dear User ,\n Your email :  " + userDTO.Email +"\n"+ "and Password : " + userDTO.Password
                 );
 
             return new ApiResponse<UserDTO>

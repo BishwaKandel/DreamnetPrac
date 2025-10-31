@@ -7,6 +7,13 @@
     function hideLoadingSpinner() {
         document.getElementById("loading-container").style.display = "none";
     }
+
+
+    $('#userLeaveTable').DataTable(
+        {
+            responsive: true
+        });
+
     // Initialize End Date first, so it's ready for updating
     var endPicker = $("#EndDate").flatpickr({
         dateFormat: "Y-m-d",

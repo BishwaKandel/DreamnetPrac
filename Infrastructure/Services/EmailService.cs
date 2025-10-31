@@ -34,7 +34,7 @@ namespace Infrastructure.Services
 
             smtp.Credentials = new NetworkCredential(email, password);
 
-            var mail = new MailMessage(email!, to, subject, body);
+            var mail = new MailMessage(email!, to, subject, body) { IsBodyHtml = true };
 
             foreach (var address in to.Split(new[] { ',', ';' }, StringSplitOptions.RemoveEmptyEntries))
             {

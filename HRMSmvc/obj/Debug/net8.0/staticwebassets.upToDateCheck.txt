@@ -8,6 +8,7 @@ wwwroot\js\admin.js
 wwwroot\js\Auth\Register.js
 wwwroot\js\leave.js
 wwwroot\js\main.js
+wwwroot\js\PasswordReset.js
 wwwroot\js\payroll.js
 wwwroot\js\site.js
 wwwroot\js\userindex.js

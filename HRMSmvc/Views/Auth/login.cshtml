@@ -86,7 +86,7 @@
                                 <div class="input-group has-validation">
                                     <span id="inputGroupPrepend"></span>
                                     <input asp-for="Email" class="form-control" id="yourUsername" autocomplete="off" required>
-                                    <div class="invalid-feedback">Please enter your username.</div>
+                                    <div class="invalid-feedback">Please enter your Email.</div>
                                 </div>
                             </div>
 
@@ -105,9 +105,20 @@
                             <div class="col-12">
                                 <button class="btn btn-primary w-100 mt-3 mb-3" type="submit">Login</button>
                             </div>
-                            <div class="col-12">
-                                <p class="small mb-0">Don't have an account? <a asp-controller="Auth" asp-action="Register">Create an account</a></p>
+                            <div class="row mb-3">
+                                <div class="col-6">
+                                    <p class="small mb-0">
+                                        <a asp-controller="Auth" asp-action="Register">Create an account</a>
+                                    </p>
+                                </div>
+                                <div class="col-6 text-end">
+                                    <p class="small mb-0">
+                                        <a asp-controller="Auth" asp-action="ForgotPassword">Forgot Password</a>
+                                    </p>
+                                </div>
                             </div>
+
+                            
                         </form>
 
                 </div>
@@ -124,7 +135,7 @@
 @section Scripts {
     <script>
             $(document).ready(function() {
-                    function showLoadingSpinner() {
+            function showLoadingSpinner() {
             document.getElementById("loading-container").style.display = "block";
         }
 

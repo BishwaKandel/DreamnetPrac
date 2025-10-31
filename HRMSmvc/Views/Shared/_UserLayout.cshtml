@@ -19,8 +19,8 @@
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> *@
 
     <!-- Google Fonts -->
-    <a href="~/font/bootstrap-icons.woff">~/font/bootstrap-icons.woff</a>
-    <a href="~/font/bootstrap-icons.woff2">~/font/bootstrap-icons.woff2</a>
+    @* <a href="~/font/bootstrap-icons.woff">~/font/bootstrap-icons.woff</a> *@
+    @* <a href="~/font/bootstrap-icons.woff2">~/font/bootstrap-icons.woff2</a> *@
     <link href="https://fonts.gstatic.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
@@ -314,7 +314,7 @@
 
             <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
-                    <i class="fa-solid fa-user"></i><span>Employee</span>
+                    <i class="fa-solid fa-user"></i><span>Leave</span>
                 </a>
                 <ul id="components-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
                     <li>
@@ -323,6 +323,14 @@
                     <li>
                         <a asp-action="MyLeaves" asp-controller="Leave" asp-area="Client">My Leaves</a>
                     </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+                    <i class="fa-solid fa-calendar-days"></i><span>Attendance</span>
+                </a>
+                <ul id="forms-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+
                     <li>
                         <a asp-action="AttendanceList" asp-controller="Dashboard" asp-area="Client">My Attendance</a>
                     </li>
@@ -381,6 +389,7 @@
     <!-- Template Main JS File -->
 	<script src="~/js/main.js"></script>
 	<script src="~/js/admin.js"></script>
+	<script src="~/js/userindex.js"></script>
 
     <script>
              $(document).on('show.bs.dropdown', 'table .dropdown', function () {

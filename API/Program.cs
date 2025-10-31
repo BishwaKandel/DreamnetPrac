@@ -30,10 +30,12 @@ builder.Services.AddIdentity<User , IdentityRole> (options =>
     options.Password.RequireNonAlphanumeric = false;
     options.Password.RequireUppercase = false;
 }).AddRoles<IdentityRole>()
-  .AddEntityFrameworkStores<AppDbContext>();
+  .AddEntityFrameworkStores<AppDbContext>()
+  .AddDefaultTokenProviders(); 
 
 
-    builder.Services.AddAuthentication((options =>
+
+builder.Services.AddAuthentication((options =>
     {
         options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
         options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -92,7 +94,7 @@ builder.Services.AddQuartz(q =>
     q.AddTrigger(opts => opts
         .ForJob(jobKey)
         .WithIdentity("ExampleJob-trigger")
-        .WithCronSchedule("0 */30 * * * ?")); // Trigger every 2 minutes
+        .WithCronSchedule("0 0/2 * * * ?")); // Trigger every 2 minutes
 });
 
 builder.Services.AddControllers();

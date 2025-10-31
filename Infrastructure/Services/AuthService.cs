@@ -35,12 +35,12 @@ namespace Infrastructure.Services
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly AppDbContext _context;
         private readonly IImageService _imageService;
-
+        private readonly IEmailService _emailService;
 
         public AuthService(UserManager<User> userManager,
                            SignInManager<User> signInManager,
                            IConfiguration configuration, RoleManager<IdentityRole> roleManager,
-                           AppDbContext context , IImageService imageService)
+                           AppDbContext context , IImageService imageService, IEmailService emailService)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -48,6 +48,7 @@ namespace Infrastructure.Services
             _roleManager = roleManager;
             _context = context;
             _imageService = imageService;
+            _emailService = emailService;
         }
         public async Task<ApiResponse<string>> RegisterAsync(RegisterDTO registerDTO)
         {
@@ -202,7 +203,6 @@ namespace Infrastructure.Services
         }
 
         //Logout 
-
         public async Task<ApiResponse<string>> LogoutUserAsync()
         {
 
@@ -214,8 +214,137 @@ namespace Infrastructure.Services
                 message = "You are Logged out !"
             };
         }
+
+        public async Task<ApiResponse<string>> SendPasswordResetLinkAsync(ForgotPasswordDTO model)
+        {
+            var user = await _userManager.FindByEmailAsync(model.Email);
+            if (user == null)
+            {
+                return new ApiResponse<string>
+                {
+                    success = false,
+                    message = "No user found with that email."
+                };
+            }
+
+            // Generate reset token
+            var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+
+            // Encode token for URL safety
+            var encodedToken = System.Net.WebUtility.UrlEncode(token);
+
+            string baseurl = _configuration["WebSettings:BaseUrl"];
+
+            var resetLink = $"{baseurl}/Auth/ResetPassword?email={model.Email}&token={encodedToken}";
+            // after computing `resetLink` string...
+
+            // optional: a safely escaped user display name
+            var displayName = string.IsNullOrWhiteSpace(user.Name) ? user.Email : System.Net.WebUtility.HtmlEncode(user.Name);
+
+            // HTML email (inline CSS, button, fallback link)
+            string htmlBody = $@"
+                        <!doctype html>
+                        <html>
+                        <head>
+                          <meta charset='utf-8'>
+                          <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+                          <title>Reset your password</title>
+                        </head>
+                        <body style='margin:0;padding:0;background:#f4f4f5;color:#333;font-family:Arial,Helvetica,sans-serif;'>
+                          <table width='100%' cellpadding='0' cellspacing='0' role='presentation'>
+                            <tr>
+                              <td align='center' style='padding:20px 10px;'>
+                                <table width='600' cellpadding='0' cellspacing='0' role='presentation' style='background:#ffffff;border-radius:8px;overflow:hidden;'>
+                                  <tr>
+                                    <td style='padding:28px 32px; text-align:left;'>
+                                      <h2 style='margin:0 0 8px 0;font-size:20px;color:#111;'>Hi {displayName},</h2>
+                                      <p style='margin:0 0 18px 0;line-height:1.5;color:#555;font-size:14px;'>
+                                        We received a request to reset the password for your account. Click the button below to set a new password.
+                                      </p>
+
+                                      <div style='text-align:center;margin:22px 0;'>
+                                        <a href='{resetLink}' target='_blank'
+                                           style='display:inline-block;padding:12px 24px;background:#0d6efd;color:#ffffff;text-decoration:none;border-radius:6px;font-weight:600;'>
+                                          Reset Password
+                                        </a>
+                                      </div>
+
+                                      <p style='margin:0 0 12px 0;color:#777;font-size:13px;line-height:1.5;'>
+                                        If the button above doesn't work, copy and paste the following URL into your browser:
+                                      </p>
+
+                                      <p style='word-break:break-all; font-size:12px; color:#0d6efd;'>
+                                        <a href='{resetLink}' target='_blank' style='color:#0d6efd;text-decoration:underline;'>{resetLink}</a>
+                                      </p>
+
+                                      <hr style='border:none;border-top:1px solid #eee;margin:20px 0;' />
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td style='background:#fafafa;padding:14px 32px;font-size:12px;color:#888;text-align:center;'>
+                                      &copy; {DateTime.UtcNow.Year} HRMS. All rights reserved.
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </table>
+                        </body>
+                        </html>
+                        ";
+
+            // send as HTML
+            await _emailService.SendEmailAsync(model.Email, "Reset your password", htmlBody);
+
+            return new ApiResponse<string>
+            {
+                success = true,
+                message = "Password reset link has been sent to your email."
+            };
+        }
+
+        public async Task<ApiResponse<string>> ResetPassword(ResetPasswordDTO model)
+        {
+            var user = await _userManager.FindByEmailAsync(model.Email);
+            if (user == null)
+            {
+                return new ApiResponse<string>
+                {
+                    success = false,
+                    message = "Invalid request. User not found."
+                };
+            }
+
+            if (model.NewPassword != model.ConfirmPassword)
+            {
+                return new ApiResponse<string>
+                {
+                    success = false,
+                    message = "Passwords do not match."
+                };
+            }
+
+            var result = await _userManager.ResetPasswordAsync(user, model.Token, model.NewPassword);
+
+            if (result.Succeeded)
+            {
+                return new ApiResponse<string>
+                {
+                    success = true,
+                    message = "Password has been reset successfully."
+                };
+            }
+
+            return new ApiResponse<string>
+            {
+                success = false,
+                message = string.Join("; ", result.Errors.Select(e => e.Description))
+            };
+        }
     }
 }
+
     
     
 
